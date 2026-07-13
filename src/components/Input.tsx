@@ -1,7 +1,7 @@
 import React, { useId } from "react";
 
 interface BaseInputProps {
-  label: string;
+  label?: string;
   error?: string;
   helperText?: string;
   required?: boolean;
@@ -27,12 +27,14 @@ export const Input: React.FC<InputProps> = ({
 
   return (
     <div className="w-full">
-      <label 
-        htmlFor={id} 
-        className="block text-sm font-semibold text-stone-700 mb-1.5"
-      >
-        {label} {required && <span className="text-red-600" aria-hidden="true">*</span>}
-      </label>
+      {label && (
+        <label 
+          htmlFor={id} 
+          className="block text-sm font-semibold text-stone-700 mb-1.5"
+        >
+          {label} {required && <span className="text-red-600" aria-hidden="true">*</span>}
+        </label>
+      )}
       <input
         id={id}
         required={required}
@@ -72,12 +74,14 @@ export const TextArea: React.FC<TextAreaProps> = ({
 
   return (
     <div className="w-full">
-      <label 
-        htmlFor={id} 
-        className="block text-sm font-semibold text-stone-700 mb-1.5"
-      >
-        {label} {required && <span className="text-red-600" aria-hidden="true">*</span>}
-      </label>
+      {label && (
+        <label 
+          htmlFor={id} 
+          className="block text-sm font-semibold text-stone-700 mb-1.5"
+        >
+          {label} {required && <span className="text-red-600" aria-hidden="true">*</span>}
+        </label>
+      )}
       <textarea
         id={id}
         required={required}
@@ -118,12 +122,14 @@ export const Select: React.FC<SelectProps> = ({
 
   return (
     <div className="w-full">
-      <label 
-        htmlFor={id} 
-        className="block text-sm font-semibold text-stone-700 mb-1.5"
-      >
-        {label} {required && <span className="text-red-600" aria-hidden="true">*</span>}
-      </label>
+      {label && (
+        <label 
+          htmlFor={id} 
+          className="block text-sm font-semibold text-stone-700 mb-1.5"
+        >
+          {label} {required && <span className="text-red-600" aria-hidden="true">*</span>}
+        </label>
+      )}
       <div className="relative">
         <select
           id={id}

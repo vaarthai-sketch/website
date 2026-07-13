@@ -3,6 +3,7 @@ import Link from "next/link";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
+  as?: "button" | "span" | "div";
   variant?: "primary" | "secondary" | "accent" | "outline" | "white";
   size?: "sm" | "md" | "lg";
   fullWidth?: boolean;
@@ -11,6 +12,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button: React.FC<ButtonProps> = ({
   href,
+  as = "button",
   variant = "primary",
   size = "md",
   fullWidth = false,
@@ -56,6 +58,22 @@ export const Button: React.FC<ButtonProps> = ({
       <Link href={href} className={combinedClasses}>
         {children}
       </Link>
+    );
+  }
+
+  if (as === "span") {
+    return (
+      <span className={combinedClasses} {...(props as React.HTMLAttributes<HTMLSpanElement>)}>
+        {children}
+      </span>
+    );
+  }
+
+  if (as === "div") {
+    return (
+      <div className={combinedClasses} {...(props as React.HTMLAttributes<HTMLDivElement>)}>
+        {children}
+      </div>
     );
   }
 
