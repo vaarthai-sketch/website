@@ -35,7 +35,7 @@ export default function HomePage() {
                 </svg>
                 வார்த்தை சுவிசேஷ திருச்சபைக்கு உங்களை அன்போடு வரவேற்கிறோம்
               </span>
-              <h1 className="font-kavivanar text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide leading-[1.3] text-white">
+              <h1 className="font-kavivanar text-2xl sm:text-3xl md:text-4xl font-normal tracking-wide leading-[1.3] text-white">
                 வார்த்தையைக் கேட்போம் <span className="text-accent">வார்த்தையின்படி நடப்போம்</span> வார்த்தையைப் பகிர்வோம்
               </h1>
               <p className="text-base text-stone-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
