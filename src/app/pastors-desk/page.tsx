@@ -37,36 +37,53 @@ export default function PastorsDeskPage() {
           <div className="bg-white rounded-lg shadow-sm border border-border p-6 md:p-10 mb-8">
             <div className="flex items-center gap-2 text-sm text-accent-dark font-bold mb-4">
               <CalendarIcon className="w-4 h-4" />
-              <span>This Week's Letter</span>
+              <span>இந்த வார மடல் (This Week's Letter)</span>
             </div>
             
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary mb-6">
-              Grace in Every Season
+              புதிய வருட வாழ்த்துக்கள் (New Year Message)
             </h2>
             
-            <div className="prose prose-stone max-w-none text-stone-700 space-y-6">
-              <p>
-                Dear Church Family,
+            <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg">
+              <p className="font-medium text-stone-900">
+                கிறிஸ்துவுக்குள் எனக்கு அன்பானவர்களே, இயேசு கிறிஸ்துவின் மிகுந்த இனிய பெயராலே உங்களுக்கு என்னுடைய அன்பான புதிய வருட வாழ்த்துக்கள்.
               </p>
               <p>
-                As we enter this new week, I am reminded of the steadfast love of God that never ceases. His mercies are new every morning, and His faithfulness is great. It is a joy to journey with you all as we seek to know Him more deeply and make Him known in our community.
+                நாங்கள் குடும்பமாக விடுமுறைக்கு தமிழகம் சென்று வந்தது ஆசீர்வாதமாக இருந்தது. பயணங்களில் தேவன் எங்களைப் பாதுகாத்தார்! தேவனுக்கே எல்லாப் புகழும், கனமும், மகிமையும் உண்டாகட்டும்!
               </p>
               <p>
-                This week, let us focus on what it means to extend grace to one another, just as Christ has extended grace to us. In our daily interactions, may our words be seasoned with love, and our actions reflect the heart of our Savior.
+                சிருஷ்டி கர்த்தராகிய தேவன், இந்த உலகத்தையும், அண்ட சராசரங்களையும் படைத்த சர்வ வல்லமையுள்ள தேவன்! அவர் செயல்கள் ஆச்சரியமானவைகள், நம்முடைய மனித சிந்தனைகளால் புரிந்து கொள்ள முடியாதவைகள்! ஒரு பார்வையிலே தேவனை அப்படிப்பட்ட உயர்வான தேவனாக நாம் பார்க்கிற அதே வேளையில், மற்றொரு பார்வையிலே, அதே தேவன் எனக்கும் உங்களுக்கும் மிகவும் நெருக்கமானவராகவும் இருக்கிறார்! நம்முடைய தகப்பன் அவர்! நாம் அவருடைய பிள்ளைகளாக இருக்கிறோம்.
               </p>
               <p>
-                Please keep our upcoming community outreach in your prayers. We have a wonderful opportunity to be the hands and feet of Jesus to those around us.
+                இந்த வருடம் தேவன் நமக்கு மிகவும் நெருக்கமானவர் என்ற புரிதல் உங்களுக்கு உண்டாயிருக்கட்டும். நாம் எப்படிப்பட்ட சூழ்நிலைகளை சந்தித்தாலும் அவர் நம்மோடு கூடவே இருக்கிறார் என்ற சத்தியம் உங்களுக்கு பலனை கொடுக்கட்டும்.
               </p>
               <p>
-                In His Grace,
+                லூக்கா 4ம் அதிகாரத்தில், இயேசு கிறிஸ்து ஜெப ஆலயத்திற்குச் சென்று, ஏசாயாவின் தீர்க்கதரிசன புத்தகத்தை எடுத்து இந்த வசனங்களை வாசித்தார்:
               </p>
-              <div className="mt-8 flex items-center gap-3">
-                <div className="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center">
-                  <User className="w-6 h-6 text-stone-400" />
+              
+              <blockquote className="bg-accent/5 border-l-4 border-accent p-5 rounded-r-lg text-primary italic font-serif my-6">
+                <p className="mb-2">
+                  “கர்த்தருடைய ஆவியானவர் என்மேலிருக்கிறார்; தரித்திரருக்குச் சுவிசேஷத்தைப் பிரசங்கிக்கும்படி என்னை அபிஷேகம்பண்ணினார்; இருதயம் நொருங்குண்டவர்களைக் குணமாக்கவும், சிறைப்பட்டவர்களுக்கு விடுதலையையும், குருடருக்குப் பார்வையையும் பிரசித்தப்படுத்தவும், நொறுங்குண்டவர்களை விடுதலையாக்கவும், கர்த்தருடைய அநுக்கிரக வருஷத்தைப் பிரசித்தப்படுத்தவும், என்னை அனுப்பினார்.”
+                </p>
+                <cite className="block text-right font-sans font-bold text-sm text-accent-dark not-italic mt-2">
+                  — லூக்கா 4:18-19
+                </cite>
+              </blockquote>
+
+              <p>
+                இயேசு கிறிஸ்துவை உயிரோடு எழுப்பின, அவர் மீது இருந்த, அதே ஆவியானவர் இன்று நம்மோடும் இருக்கிறார்! இயேசு கிறிஸ்து இந்த உலகத்திலே துவங்கி வைத்த காரியங்களை நாமும் செய்யும்படியாக அழைக்கிறார்! நாம் இந்த கர்த்தருடைய அநுக்கிரக வருடத்திலே நாம் தொடர்ந்து ஆசீர்வதிக்கப்படவும், 18ம் வசனத்திலே சொல்லப்பட்ட காரியங்களை நாம் மற்றவர்களுக்குச் செய்து அவர்களை ஆசீர்வதிக்கவும், உங்கள் யாவரையும் வாழ்த்துகிறேன்!
+              </p>
+              <p className="pt-2 font-medium text-stone-800">
+                அன்புடன்,
+              </p>
+              
+              <div className="mt-6 pt-6 border-t border-stone-200 flex items-center gap-4">
+                <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-accent shrink-0 shadow-sm">
+                  <img src="/staff-pastor.png" alt="Ps. ஜெயகரன் வெஸ்லின்" className="w-full h-full object-cover object-top" />
                 </div>
                 <div>
-                  <p className="font-bold text-primary m-0">The Pastoral Team</p>
-                  <p className="text-sm text-stone-500 m-0">{churchConfig.name}</p>
+                  <p className="font-bold text-primary m-0 text-lg">Ps. ஜெயகரன் வெஸ்லின் (Jeyakaran Weslyn)</p>
+                  <p className="text-sm text-stone-500 m-0">போதகர் (Senior Pastor), {churchConfig.name}</p>
                 </div>
               </div>
             </div>
