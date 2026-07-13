@@ -1,27 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { Calendar, MapPin, Play, Clock, ArrowRight, Compass, Heart, MessageSquare } from "lucide-react";
+import { Calendar, MapPin, Clock, ArrowRight, Compass, Heart, MessageSquare } from "lucide-react";
 import { churchConfig } from "@/data/config";
 import { Button } from "@/components/Button";
-import { SermonCard, EventCard, MinistryCard } from "@/components/Card";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
-// Import sample data
-import { sermonsData } from "@/data/sermons";
-import { eventsData } from "@/data/events";
-import { ministriesData } from "@/data/ministries";
-
 export default function HomePage() {
-  // Get featured sermon (newest sermon)
-  const featuredSermon = sermonsData[0];
-
-  // Get next three events
-  const upcomingEvents = eventsData
-    .filter(event => new Date(event.date) >= new Date("2026-06-22")) // Based on current local time
-    .slice(0, 3);
-
-  // Get 4 core ministries for preview
-  const previewMinistries = ministriesData.slice(0, 4);
 
   return (
     <div className="space-y-20 pb-20">
@@ -226,126 +210,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. FEATURED SERMON */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="border border-border rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow">
-          <div className="grid grid-cols-1 lg:grid-cols-12">
-            
-            {/* Sermon Video Thumbnail */}
-            <div className="lg:col-span-6 relative aspect-video lg:aspect-auto min-h-[300px] bg-neutral-light overflow-hidden flex flex-col justify-between p-8 text-white">
-              {/* Abstract Visual gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#020617] to-[#1E293B] opacity-95"></div>
-              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
-
-              <span className="relative z-10 self-start text-xs font-bold uppercase tracking-widest text-accent">
-                சமீபத்திய பிரசங்கம்
-              </span>
-              
-              {/* Large Play Icon */}
-              <Link 
-                href={`/sermons/${featuredSermon.id}`}
-                className="relative z-10 self-center w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
-                aria-label="Play featured sermon video"
-              >
-                <Play className="w-6 h-6 fill-current translate-x-0.5" />
-              </Link>
-              
-              <div className="relative z-10 mt-auto flex justify-between items-center text-xs text-stone-300">
-                <span>{featuredSermon.series}</span>
-                <span>{featuredSermon.duration} நிமிடங்கள்</span>
-              </div>
-            </div>
-
-            {/* Sermon Description Info */}
-            <div className="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-center space-y-4">
-              <div className="text-xs text-stone-500 font-mono">
-                வேதப்பகுதி: <span className="font-semibold text-stone-700">{featuredSermon.scriptureReference}</span>
-              </div>
-              <h3 className="font-serif text-2xl sm:text-3xl font-black text-primary leading-tight">
-                {featuredSermon.title}
-              </h3>
-              <p className="text-stone-600 text-sm leading-relaxed">
-                {featuredSermon.description}
-              </p>
-              
-              <div className="border-t border-border pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div className="text-xs text-stone-500">
-                  போதிப்பவர்: <strong className="text-stone-800">{featuredSermon.speaker}</strong>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <Button href={`/sermons/${featuredSermon.id}`} variant="primary" size="sm" className="font-semibold">
-                    பிரசங்கத்தைக் கேட்க
-                  </Button>
-                  <Link 
-                    href="/sermons" 
-                    className="text-xs font-bold text-accent hover:text-accent-dark inline-flex items-center gap-1 transition-colors"
-                  >
-                    அனைத்து செய்திகள் <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 5. MINISTRIES PREVIEW */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div className="space-y-2">
-            <h2 className="font-serif text-3xl font-black text-primary">
-              சபையின் ஊழியங்கள்
-            </h2>
-            <p className="text-sm text-stone-600 max-w-xl">
-              குடும்ப உறுப்பினர்கள் அனைவரும் விசுவாசத்திலும் சகோதரத்துவத்திலும் வளர பல்வேறு குழுக்கள் செயல்படுகின்றன.
-            </p>
-          </div>
-          <Link 
-            href="/ministries" 
-            className="font-bold text-primary hover:text-accent inline-flex items-center gap-1 transition-colors shrink-0 text-sm border-b-2 border-primary/10 pb-0.5"
-          >
-            அனைத்து ஊழியங்கள் <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {previewMinistries.map((ministry) => (
-            <MinistryCard key={ministry.id} ministry={ministry} />
-          ))}
-        </div>
-      </section>
-
-      {/* 6. UPCOMING EVENTS */}
-      <section className="bg-neutral-light/30 border-y border-border py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div className="space-y-2">
-              <h2 className="font-serif text-3xl font-black text-primary">
-                வரவிருக்கும் நிகழ்வுகள்
-              </h2>
-              <p className="text-sm text-stone-600 max-w-xl">
-                சபையின் மாதாந்திரக் கூட்டங்கள், ஜெபக் கூடுகைகள் மற்றும் விசேஷித்த நிகழ்வுகள் குறித்த அறிவிப்புகள்.
-              </p>
-            </div>
-            <Link 
-              href="/events" 
-              className="font-bold text-primary hover:text-accent inline-flex items-center gap-1 transition-colors shrink-0 text-sm border-b-2 border-primary/10 pb-0.5"
-            >
-              நிகழ்வுகள் நாட்காட்டி <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {upcomingEvents.map((event) => (
-              <EventCard key={event.id} event={event} view="grid" />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. NEW VISITOR CALLOUT & PRAYER / GIVING BLOCKS */}
+      {/* 4. NEW VISITOR CALLOUT & PRAYER / GIVING BLOCKS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
