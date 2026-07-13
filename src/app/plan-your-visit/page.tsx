@@ -14,6 +14,7 @@ export default function PlanYourVisitPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     adultsCount: "1",
     kidsCount: "0",
     kidsAges: "",
@@ -55,6 +56,11 @@ export default function PlanYourVisitPage() {
       setErrorMessage("தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.");
       return;
     }
+    if (!formData.phone.trim()) {
+      setFormStatus("error");
+      setErrorMessage("தயவுசெய்து உங்கள் தொலைபேசி எண்ணை உள்ளிடவும்.");
+      return;
+    }
     if (!formData.plannedDate) {
       setFormStatus("error");
       setErrorMessage("வருகை தரும் தேதியைத் தேர்ந்தெடுக்கவும்.");
@@ -70,6 +76,7 @@ export default function PlanYourVisitPage() {
 
 பெயர்: ${formData.name}
 மின்னஞ்சல்: ${formData.email}
+தொலைபேசி எண்: ${formData.phone}
 வருகை தரும் தேதி: ${formData.plannedDate}
 பெரியவர்கள் எண்ணிக்கை: ${formData.adultsCount}
 சிறுவர்கள் எண்ணிக்கை: ${formData.kidsCount}${formData.kidsCount !== "0" && formData.kidsAges ? `\nசிறுவர்களின் வயது: ${formData.kidsAges}` : ""}${formData.specialNeeds ? `\nசிறப்புத் தேவைகள் / கேள்விகள்: ${formData.specialNeeds}` : ""}
@@ -87,6 +94,7 @@ export default function PlanYourVisitPage() {
     setFormData({
       name: "",
       email: "",
+      phone: "",
       adultsCount: "1",
       kidsCount: "0",
       kidsAges: "",
@@ -242,6 +250,16 @@ export default function PlanYourVisitPage() {
                   type="email"
                   placeholder="எ.கா: mail@example.com"
                   value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+
+                <Input
+                  label="தொலைபேசி எண்:"
+                  name="phone"
+                  type="tel"
+                  placeholder="எ.கா: 0412 345 678"
+                  value={formData.phone}
                   onChange={handleInputChange}
                   required
                 />
