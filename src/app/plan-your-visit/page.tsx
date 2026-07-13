@@ -167,7 +167,7 @@ export default function PlanYourVisitPage() {
               </p>
               <div className="pt-2 text-xs text-stone-500 font-semibold flex items-center gap-1.5">
                 <Info className="w-4 h-4 text-accent shrink-0" />
-                <span>நவজাত குழந்தைகள் முதல் 6-ம் வகுப்பு வரையிலான சிறுவர்களுக்கான வகுப்புகள்.</span>
+                <span>நான்கு வயது குழந்தைகள் முதல் 6-ம் வகுப்பு வரையிலான சிறுவர்களுக்கான வகுப்புகள்.</span>
               </div>
             </div>
 
