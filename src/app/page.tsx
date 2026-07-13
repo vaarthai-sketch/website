@@ -165,7 +165,7 @@ export default function HomePage() {
                 <Clock className="w-5 h-5" />
               </div>
               <div className="space-y-1">
-                <h3 className="font-serif font-bold text-stone-900">ஆராதனை நேரங்கள்</h3>
+                <h3 className="font-serif font-bold text-stone-900">ஆராதனை நேரம்</h3>
                 <p className="text-sm text-stone-600">ஞாயிறு காலை 10:00 மணி</p>
                 <p className="text-xs text-stone-500">ஆராதனை நேரத்தில் சிறுவர்களுக்கான விசேஷித்த வகுப்புகள் நடைபெறும்.</p>
               </div>
