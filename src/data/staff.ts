@@ -17,8 +17,8 @@ export const staffData: StaffMember[] = [
     image: "/staff-pastor.png"
   },
   {
-    id: "deva-irakkam-paul",
-    name: "Mr Deva Irakkam Paul",
+    id: "devairakkam-paul",
+    name: "Mr Devairakkam Paul",
     role: "Secretary",
     bio: "திருச்சபையின் நிர்வாக மற்றும் அலுவலகப் பணிகளைப் பொறுப்புடன் கவனித்து, சபையின் செயல்பாடுகளுக்கு உதவுகிறார்.",
     email: "deva@vaarthai.org.au",
