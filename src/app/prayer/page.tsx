@@ -9,6 +9,7 @@ export default function PrayerRequestPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     prayerText: "",
     privacyLevel: "prayer-team", // "pastoral-only" or "prayer-team"
     allowContact: false,
@@ -40,6 +41,12 @@ export default function PrayerRequestPage() {
       return;
     }
     
+    if (!formData.phone.trim()) {
+      setStatus("error");
+      setErrorMessage("தயவுசெய்து உங்கள் தொலைபேசி எண்ணை உள்ளிடவும்.");
+      return;
+    }
+
     if (formData.allowContact && !formData.email.trim()) {
       setStatus("error");
       setErrorMessage("உங்களைத் தொடர்பு கொள்ள அனுமதித்தால், மின்னஞ்சல் முகவரியைக் குறிப்பிடவும்.");
@@ -56,6 +63,7 @@ export default function PrayerRequestPage() {
 
 பெயர்: ${formData.name || "குறிப்பிடப்படவில்லை"}
 மின்னஞ்சல்: ${formData.email || "குறிப்பிடப்படவில்லை"}
+தொலைபேசி எண்: ${formData.phone}
 ஜெபப் பாதுகாப்பு விருப்பம்: ${formData.privacyLevel === "prayer-team" ? "போதகர் மற்றும் சபையின் ஜெபக் குழுவினரோடு பகிர்ந்து கொள்ள" : "போதகரோடு மட்டும் பகிர்ந்து கொள்ள (ரகசியமாக)"}
 அவசர ஜெபத் தேவை: ${formData.isUrgent ? "ஆம் (அவசரம்)" : "இல்லை"}
 தொடர்பு கொள்ள அனுமதி: ${formData.allowContact ? "ஆம்" : "இல்லை"}
@@ -76,6 +84,7 @@ ${formData.prayerText}
     setFormData({
       name: "",
       email: "",
+      phone: "",
       prayerText: "",
       privacyLevel: "prayer-team",
       allowContact: false,
@@ -170,17 +179,17 @@ ${formData.prayerText}
             ) : (
               <form onSubmit={handleFormSubmit} className="space-y-4">
                 
+                <Input
+                  label="உங்கள் பெயர்"
+                  name="name"
+                  type="text"
+                  placeholder="உங்கள் பெயர் (Your Name)"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                />
+                
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Input
-                    label="உங்கள் பெயர்"
-                    name="name"
-                    type="text"
-                    placeholder="உங்கள் பெயர் (Your Name)"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                  />
-                  
                   <Input
                     label="மின்னஞ்சல் முகவரி"
                     name="email"
@@ -189,6 +198,16 @@ ${formData.prayerText}
                     value={formData.email}
                     onChange={handleInputChange}
                     helperText={formData.allowContact ? "தொடர்பு கொள்ள இந்த மின்-அஞ்சல் கட்டாயம்." : ""}
+                    required
+                  />
+
+                  <Input
+                    label="தொலைபேசி எண்:"
+                    name="phone"
+                    type="tel"
+                    placeholder="எ.கா: 0412 345 678"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     required
                   />
                 </div>
