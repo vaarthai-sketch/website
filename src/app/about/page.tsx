@@ -255,7 +255,7 @@ export default function AboutPage() {
           <span className="text-xs font-bold text-accent uppercase tracking-widest">ஆலயத் தலைவர்கள்</span>
           <h2 className="font-serif text-3xl font-black text-primary mt-1">திருச்சபை ஊழியர்கள்</h2>
           <p className="text-sm text-stone-500 mt-2">
-            எங்களது சபையை வழிநடத்தும் மற்றும் பராமரிக்கும் போதகக் குழுவினரைச் சந்தியுங்கள்.
+            எங்களது சபையை வழிநடத்தும் மற்றும் பராமரிக்கும் குழுவினரைச் சந்தியுங்கள்.
           </p>
         </div>
 
