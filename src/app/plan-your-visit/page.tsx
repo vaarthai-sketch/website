@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { 
-  Calendar, MapPin, Clock, Compass, Info, Check, CheckCircle2, ChevronDown, ChevronUp, Map, Eye, Accessibility
+  Calendar, MapPin, Clock, Compass, Info, Check, CheckCircle2, ChevronDown, ChevronUp, Map, Accessibility
 } from "lucide-react";
 import { churchConfig } from "@/data/config";
 import { faqsData } from "@/data/faqs";
@@ -118,16 +118,6 @@ export default function PlanYourVisitPage() {
                 </div>
                 <p className="text-xs text-stone-600 leading-relaxed">
                   ஆராதனை சுமார் <strong>65 நிமிடங்கள்</strong> நடைபெறும். ஆராதனை தொடங்குவதற்கு 10-15 நிமிடங்களுக்கு முன்பாக வருவது நல்லது.
-                </p>
-              </div>
-
-              <div className="border border-border p-5 rounded-lg bg-white space-y-2">
-                <div className="flex items-center gap-2 text-primary font-bold">
-                  <Eye className="w-5 h-5 text-accent shrink-0" />
-                  <h3>ஆடை உடுத்தும் முறை</h3>
-                </div>
-                <p className="text-xs text-stone-600 leading-relaxed">
-                  எந்தவொரு ஆடை கட்டுப்பாடும் இல்லை. உங்களுக்கு வசதியான உடைகளை உடுத்திக் கொண்டு வரலாம். நீங்கள் வருவதே எங்களுக்கு மகிழ்ச்சி.
                 </p>
               </div>
 
