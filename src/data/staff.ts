@@ -5,6 +5,7 @@ export interface StaffMember {
   bio: string;
   email: string;
   image: string;
+  imageStyle?: React.CSSProperties;
 }
 
 export const staffData: StaffMember[] = [
@@ -30,6 +31,7 @@ export const staffData: StaffMember[] = [
     role: "Treasurer",
     bio: "திருச்சபையின் நிதி நிர்வாகப் பணிகளை நேர்மையுடனும் பொறுப்புடனும் கவனித்து, ஆலயத்தின் நற்பணிகளுக்குத் துணைபுரிகிறார்.",
     email: "jeykath@yahoo.com",
-    image: "/staff-treasurer.png"
+    image: "/staff-treasurer.png",
+    imageStyle: { objectPosition: "center 25%", transform: "scale(1.20) translateY(-12px)" }
   }
 ];

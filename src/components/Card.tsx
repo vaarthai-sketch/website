@@ -284,7 +284,8 @@ export const StaffCard: React.FC<{ staff: StaffMember }> = ({ staff }) => {
           <img 
             src={staff.image} 
             alt={staff.name} 
-            className="w-full h-full object-cover object-top rounded-full bg-white" 
+            className="w-full h-full object-cover rounded-full bg-white transition-transform duration-300" 
+            style={staff.imageStyle || { objectPosition: 'top' }}
           />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-[#0F172A] to-[#334155] flex items-center justify-center text-white relative">

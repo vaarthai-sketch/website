@@ -253,7 +253,7 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center max-w-2xl mx-auto">
           <span className="text-xs font-bold text-accent uppercase tracking-widest">ஆலயத் தலைவர்கள்</span>
-          <h2 className="font-serif text-3xl font-black text-primary mt-1">திருச்சபை போதகர்கள் & ஊழியர்கள்</h2>
+          <h2 className="font-serif text-3xl font-black text-primary mt-1">திருச்சபை ஊழியர்கள்</h2>
           <p className="text-sm text-stone-500 mt-2">
             எங்களது சபையை வழிநடத்தும் மற்றும் பராமரிக்கும் போதகக் குழுவினரைச் சந்தியுங்கள்.
           </p>
