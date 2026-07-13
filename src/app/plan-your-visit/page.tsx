@@ -63,10 +63,24 @@ export default function PlanYourVisitPage() {
 
     setFormStatus("loading");
 
-    // Simulate API call
+    const subject = `புதிய வருகை பதிவு (Plan Your Visit) - ${formData.name}`;
+    const body = `வணக்கம்,
+
+வார்த்தை சபையின் ஆராதனைக்கு வர கீழ்க்கண்ட வருகை பதிவு செய்யப்பட்டுள்ளது:
+
+பெயர்: ${formData.name}
+மின்னஞ்சல்: ${formData.email}
+வருகை தரும் தேதி: ${formData.plannedDate}
+பெரியவர்கள் எண்ணிக்கை: ${formData.adultsCount}
+சிறுவர்கள் எண்ணிக்கை: ${formData.kidsCount}${formData.kidsCount !== "0" && formData.kidsAges ? `\nசிறுவர்களின் வயது: ${formData.kidsAges}` : ""}${formData.specialNeeds ? `\nசிறப்புத் தேவைகள் / கேள்விகள்: ${formData.specialNeeds}` : ""}
+
+நன்றி!`;
+
+    window.location.href = `mailto:info@vaarthai.org.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     setTimeout(() => {
       setFormStatus("success");
-    }, 1200);
+    }, 600);
   };
 
   const resetForm = () => {
