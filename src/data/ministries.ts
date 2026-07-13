@@ -1,6 +1,7 @@
 export interface Ministry {
   id: string;
   name: string;
+  englishName: string;
   purpose: string;
   audience: string;
   schedule?: string;
@@ -16,7 +17,8 @@ export interface Ministry {
 export const ministriesData: Ministry[] = [
   {
     id: "children",
-    name: "வார்த்தை சிறுவர் ஊழியம் (Vaarthai Kids)",
+    englishName: "Vaarthai Kids Ministry",
+    name: "வார்த்தை சிறுவர் ஊழியம்",
     purpose: "பெற்றோருடன் இணைந்து, குழந்தைகளின் இருதயங்களில் விசுவாசத்தின் வலுவான அடித்தளத்தை உருவாக்குதல்.",
     audience: "குழந்தைகள் மற்றும் 6-ம் வகுப்பு வரையிலான சிறுவர்கள்",
     schedule: "ஞாயிறு காலை 10:00 மணி",
@@ -35,7 +37,8 @@ export const ministriesData: Ministry[] = [
   },
   {
     id: "youth",
-    name: "இளைஞர் ஊழியம் (Encounter Youth)",
+    englishName: "Vaarthai Youth Ministry",
+    name: "வார்த்தை இளைஞர் ஊழியம்",
     purpose: "இளம்பருவத்தினர் கிறிஸ்துவுக்குள் வளரவும், நல்ல நட்பு வட்டாரத்தை வளர்க்கவும் உதவுதல்.",
     audience: "7 முதல் 12-ம் வகுப்பு வரையிலான மாணவர்கள்",
     location: "இளைஞர் அரங்கு",
@@ -53,7 +56,8 @@ export const ministriesData: Ministry[] = [
   },
   {
     id: "young-adults",
-    name: "வாலிபர் ஊழியம் (Young Adults)",
+    englishName: "Vaarthai Young Adults",
+    name: "வார்த்தை வாலிபர் ஊழியம்",
     purpose: "கல்லூரி மாணவர்கள் மற்றும் இளம் பணியாளர்கள் தேவனுடைய அன்பில் வளரவும், திருச்சபையில் சேவை செய்யவும் உதவுதல்.",
     audience: "18 முதல் 30 வயது வரையிலான இளைஞர்கள்",
 
@@ -72,7 +76,8 @@ export const ministriesData: Ministry[] = [
   },
   {
     id: "small-groups",
-    name: "இல்லக் கூட்டங்கள் (LifeGroups)",
+    englishName: "Vaarthai Life Groups",
+    name: "வார்த்தை இல்லக் கூட்டங்கள்",
     purpose: "வாராந்திர சிறு குழுக்கள் மூலம் விசுவாசத்தில் வளரவும், ஒருவருக்கொருவர் ஜெபிக்கவும் தாங்கவும் உதவுதல்.",
     audience: "அனைத்து பெரியவர்கள் மற்றும் தம்பதியினர்",
 
@@ -91,7 +96,8 @@ export const ministriesData: Ministry[] = [
   },
   {
     id: "men",
-    name: "ஆண்கள் ஊழியம் (Vaarthai Men)",
+    englishName: "Vaarthai Men",
+    name: "வார்த்தை ஆண்கள் ஊழியம்",
     purpose: "ஆண்களை ஆன்மீகத் தலைவர்களாக வளர்க்கவும், குடும்பத்திலும் சமூகத்திலும் பொறுப்புடன் செயல்படவும்Equip செய்தல்.",
     audience: "அனைத்து வயது ஆண்கள்",
     schedule: "மாதாந்திர காலை உணவுக் கூட்டங்கள் மற்றும் வாராந்திர வேதப் படிப்பு",
@@ -110,7 +116,8 @@ export const ministriesData: Ministry[] = [
   },
   {
     id: "women",
-    name: "பெண்கள் ஊழியம் (Vaarthai Women)",
+    englishName: "Vaarthai Women",
+    name: "வார்த்தை பெண்கள் ஊழியம்",
     purpose: "பெண்களை விசுவாசத்தில் பலப்படுத்தவும், கிறிஸ்தவ நட்புறவை வளர்க்கவும், சமூகத்தில் சேவை செய்யவும் ஊக்கப்படுத்துதல்.",
     audience: "அனைத்து வயது பெண்கள்",
     schedule: "செவ்வாய்க்கிழமை காலை மற்றும் மாலை வேதப் படிப்புகள்",
@@ -129,7 +136,8 @@ export const ministriesData: Ministry[] = [
   },
   {
     id: "worship",
-    name: "ஆராதனை மற்றும் இசை ஊழியம்",
+    englishName: "Vaarthai Worship & Music Ministry",
+    name: "வார்த்தை ஆராதனை மற்றும் இசை ஊழியம்",
     purpose: "இசை மற்றும் கலைகள் மூலம் சபை மக்கள் தேவனை ஆராதிக்க வழிகாட்டுதல்.",
     audience: "பாடகர்கள், வாசிப்பாளர்கள் மற்றும் தொழில்நுட்ப வல்லுநர்கள்",
 
@@ -148,7 +156,8 @@ export const ministriesData: Ministry[] = [
   },
   {
     id: "missions",
-    name: "உலகளாவிய சுவிசேஷ ஊழியம்",
+    englishName: "Vaarthai Global Evangelical Work",
+    name: "வார்த்தை உலகளாவிய சுவிசேஷ ஊழியம்",
     purpose: "உலகமெங்கும் நற்செய்தியைக் கொண்டு செல்லும் மிஷனரிகளை ஆதரித்தல் மற்றும் அனுப்புதல்.",
     audience: "சுவிசேஷப் பணியில் ஆர்வம் கொண்ட அனைவரும்",
     schedule: "காலாண்டு கூட்டங்கள் மற்றும் வருடாந்திர மிஷனரி பயணங்கள்",
@@ -167,7 +176,8 @@ export const ministriesData: Ministry[] = [
   },
   {
     id: "community-outreach",
-    name: "சமூக நற்பணி ஊழியம்",
+    englishName: "Vaarthai Social Service Ministry",
+    name: "வார்த்தை சமூக நற்பணி ஊழியம்",
     purpose: "ஏழைகளுக்கும் தேவையிலுள்ளோருக்கும் உதவிக்கரம் நீட்டி கிறிஸ்துவின் அன்பை வெளிப்படுத்துதல்.",
     audience: "சேவை செய்ய விரும்பும் அனைத்து சபை மக்கள்",
 
@@ -186,7 +196,8 @@ export const ministriesData: Ministry[] = [
   },
   {
     id: "pastoral-care",
-    name: "போதக பராமரிப்பு மற்றும் ஆலோசனை",
+    englishName: "Vaarthai Pastoral Care & Counselling",
+    name: "வார்த்தை போதக பராமரிப்பு மற்றும் ஆலோசனை",
     purpose: "துக்கங்கள், சவால்கள் மற்றும் ஆன்மீகக் கேள்விகளுக்கு மத்தியில் தனிநபர்களையும் குடும்பங்களையும் பராமரித்தல்.",
     audience: "ஜெபம் மற்றும் ஆலோசனைகள் தேவைப்படும் அனைவரும்",
     schedule: "நேரம் முன்பதிவு செய்தல் அவசியம்",

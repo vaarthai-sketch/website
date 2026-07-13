@@ -61,7 +61,7 @@ export default async function MinistryDetailPage({ params }: PageProps) {
             {/* Custom styled gradient illustration block placeholder */}
             <div className="aspect-[21/9] w-full rounded-xl overflow-hidden bg-gradient-to-br from-[#0F172A] to-[#020617] relative p-8 flex flex-col justify-end text-white shadow-sm">
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-              <span className="text-xs uppercase font-bold tracking-widest text-accent mb-1">Vaarthai Evangelical Church</span>
+              <span className="text-xs uppercase font-bold tracking-widest text-accent mb-1">{ministry.englishName || "Vaarthai Evangelical Church"}</span>
               <h2 className="font-serif text-xl font-bold">{ministry.name} Program</h2>
             </div>
 

@@ -7,7 +7,7 @@ import { Ministry } from "@/data/ministries";
 import { StaffMember } from "@/data/staff";
 
 // Helper to render placeholder illustration using CSS gradients matching our theme
-const ImagePlaceholder: React.FC<{ type: string; title: string }> = ({ type, title }) => {
+const ImagePlaceholder: React.FC<{ type: string; title: string; subtitle?: string }> = ({ type, title, subtitle }) => {
   const gradients: Record<string, string> = {
     sermon: "from-[#0F172A] to-[#1E293B]",
     event: "from-[#0F172A] via-[#1E293B] to-[#C5A059]",
@@ -28,7 +28,7 @@ const ImagePlaceholder: React.FC<{ type: string; title: string }> = ({ type, tit
       </div>
 
       <div className={isStaff ? "mt-auto text-primary" : "mt-auto text-white"}>
-        {!isStaff && <div className="text-xs uppercase tracking-wider opacity-70 mb-1">Vaarthai Evangelical Church</div>}
+        {!isStaff && <div className="text-xs uppercase tracking-wider opacity-70 mb-1">{subtitle || "Vaarthai Evangelical Church"}</div>}
         <h4 className="font-serif text-lg font-bold line-clamp-2 leading-snug">
           {title}
         </h4>
@@ -213,10 +213,15 @@ export const MinistryCard: React.FC<{ ministry: Ministry }> = ({ ministry }) => 
   return (
     <div className="group bg-white rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
       <div className="h-40 w-full relative overflow-hidden bg-neutral-light">
-        <ImagePlaceholder type="ministry" title={ministry.name} />
+        <ImagePlaceholder type="ministry" title={ministry.name} subtitle={ministry.englishName} />
       </div>
 
       <div className="p-5 flex flex-col flex-grow">
+        {ministry.englishName && (
+          <div className="text-xs font-bold uppercase tracking-wider text-accent mb-1">
+            {ministry.englishName}
+          </div>
+        )}
         <h3 className="font-serif text-lg font-bold text-primary group-hover:text-accent transition-colors mb-2">
           <Link href={`/ministries/${ministry.id}`}>
             {ministry.name}
