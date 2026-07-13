@@ -6,10 +6,9 @@ import { ministriesData } from "@/data/ministries";
 import { MinistryCard } from "@/components/Card";
 
 export default function MinistriesPage() {
-  const [activeTab, setActiveTab] = useState<"all" | "kids-students" | "adults" | "serve" | "care">("all");
+  const [activeTab, setActiveTab] = useState<"kids-students" | "adults" | "serve" | "care">("kids-students");
 
   const tabs = [
-    { id: "all", label: "All Ministries" },
     { id: "kids-students", label: "Kids & Students" },
     { id: "adults", label: "Adult Groups" },
     { id: "serve", label: "Worship & Serving" },
@@ -27,7 +26,7 @@ export default function MinistriesPage() {
       case "care":
         return ministriesData.filter(m => ["pastoral-care"].includes(m.id));
       default:
-        return ministriesData;
+        return ministriesData.filter(m => ["children", "youth", "young-adults"].includes(m.id));
     }
   }, [activeTab]);
 
