@@ -48,10 +48,28 @@ export default function PrayerRequestPage() {
 
     setStatus("loading");
 
-    // Simulate API call
+    const recipient = formData.privacyLevel === "prayer-team" ? "info@vaarthai.org.au" : "pastor@vaarthai.org.au";
+    const subject = `ஜெப விண்ணப்பம் (Prayer Request) - ${formData.name || "விசுவாசி"}`;
+    const body = `வணக்கம்,
+
+வார்த்தை சபைக்கு கீழ்க்கண்ட ஜெப விண்ணப்பம் அனுப்பப்பட்டுள்ளது:
+
+பெயர்: ${formData.name || "குறிப்பிடப்படவில்லை"}
+மின்னஞ்சல்: ${formData.email || "குறிப்பிடப்படவில்லை"}
+ஜெபப் பாதுகாப்பு விருப்பம்: ${formData.privacyLevel === "prayer-team" ? "போதகர் மற்றும் சபையின் ஜெபக் குழுவினரோடு பகிர்ந்து கொள்ள" : "போதகரோடு மட்டும் பகிர்ந்து கொள்ள (ரகசியமாக)"}
+அவசர ஜெபத் தேவை: ${formData.isUrgent ? "ஆம் (அவசரம்)" : "இல்லை"}
+தொடர்பு கொள்ள அனுமதி: ${formData.allowContact ? "ஆம்" : "இல்லை"}
+
+ஜெப விண்ணப்பம்:
+${formData.prayerText}
+
+நன்றி!`;
+
+    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     setTimeout(() => {
       setStatus("success");
-    }, 1000);
+    }, 600);
   };
 
   const handleReset = () => {
