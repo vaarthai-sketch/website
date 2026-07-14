@@ -99,16 +99,20 @@ export default function PlanYourVisitPage() {
         body: JSON.stringify(formData),
       }).catch((e) => console.warn("Visit API warn:", e));
 
-      // 3. If Google Form URL is configured via environment variables
+      // 3. Submit directly to Google Forms right from the browser if configured
       let googleFormPromise: Promise<any> = Promise.resolve();
-      if (process.env.NEXT_PUBLIC_VISIT_GOOGLE_FORM_URL) {
-        const url = process.env.NEXT_PUBLIC_VISIT_GOOGLE_FORM_URL;
+      const actionUrl = process.env.NEXT_PUBLIC_VISIT_GOOGLE_FORM_URL || churchConfig.planVisitForm?.actionUrl;
+      if (actionUrl) {
         const gData = new URLSearchParams();
-        if (process.env.NEXT_PUBLIC_VISIT_ENTRY_NAME) gData.append(process.env.NEXT_PUBLIC_VISIT_ENTRY_NAME, formData.name);
-        if (process.env.NEXT_PUBLIC_VISIT_ENTRY_EMAIL) gData.append(process.env.NEXT_PUBLIC_VISIT_ENTRY_EMAIL, formData.email);
-        if (process.env.NEXT_PUBLIC_VISIT_ENTRY_PHONE) gData.append(process.env.NEXT_PUBLIC_VISIT_ENTRY_PHONE, formData.phone);
-        if (process.env.NEXT_PUBLIC_VISIT_ENTRY_DATE) gData.append(process.env.NEXT_PUBLIC_VISIT_ENTRY_DATE, formData.plannedDate);
-        googleFormPromise = fetch(url, {
+        const eName = process.env.NEXT_PUBLIC_VISIT_ENTRY_NAME || churchConfig.planVisitForm?.entryNameId;
+        const eEmail = process.env.NEXT_PUBLIC_VISIT_ENTRY_EMAIL || churchConfig.planVisitForm?.entryEmailId;
+        const ePhone = process.env.NEXT_PUBLIC_VISIT_ENTRY_PHONE || churchConfig.planVisitForm?.entryPhoneId;
+        const eDate = process.env.NEXT_PUBLIC_VISIT_ENTRY_DATE || churchConfig.planVisitForm?.entryDateId;
+        if (eName) gData.append(eName, formData.name);
+        if (eEmail) gData.append(eEmail, formData.email);
+        if (ePhone) gData.append(ePhone, formData.phone);
+        if (eDate) gData.append(eDate, formData.plannedDate);
+        googleFormPromise = fetch(actionUrl, {
           method: "POST",
           mode: "no-cors",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },

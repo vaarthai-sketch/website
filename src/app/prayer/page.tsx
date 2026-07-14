@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { MessageSquare, Heart, Shield, CheckCircle2, AlertTriangle, PhoneCall } from "lucide-react";
 import { Button } from "@/components/Button";
 import { Input, TextArea, Select } from "@/components/Input";
+import { churchConfig } from "@/data/config";
 
 export default function PrayerRequestPage() {
   const [formData, setFormData] = useState({
@@ -86,9 +87,31 @@ export default function PrayerRequestPage() {
         body: JSON.stringify(formData),
       }).catch((e) => console.warn("Prayer API warn:", e));
 
+      // 3. Submit directly to Google Forms right from the browser if configured
+      let googleFormPromise: Promise<any> = Promise.resolve();
+      const actionUrl = process.env.NEXT_PUBLIC_PRAYER_GOOGLE_FORM_URL || churchConfig.prayerForm?.actionUrl;
+      if (actionUrl) {
+        const gData = new URLSearchParams();
+        const eName = process.env.NEXT_PUBLIC_PRAYER_ENTRY_NAME || churchConfig.prayerForm?.entryNameId;
+        const eEmail = process.env.NEXT_PUBLIC_PRAYER_ENTRY_EMAIL || churchConfig.prayerForm?.entryEmailId;
+        const ePhone = process.env.NEXT_PUBLIC_PRAYER_ENTRY_PHONE || churchConfig.prayerForm?.entryPhoneId;
+        const eText = process.env.NEXT_PUBLIC_PRAYER_ENTRY_TEXT || churchConfig.prayerForm?.entryPrayerTextId;
+        if (eName) gData.append(eName, formData.name || "Anonymous");
+        if (eEmail) gData.append(eEmail, formData.email || "N/A");
+        if (ePhone) gData.append(ePhone, formData.phone);
+        if (eText) gData.append(eText, formData.prayerText);
+
+        googleFormPromise = fetch(actionUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: gData.toString(),
+        }).catch((e) => console.warn("Prayer Google Form warn:", e));
+      }
+
       // Execute in parallel with a 1.2 second race timeout so the button never freezes
       await Promise.race([
-        Promise.allSettled([formSubmitPromise, internalApiPromise]),
+        Promise.allSettled([formSubmitPromise, internalApiPromise, googleFormPromise]),
         new Promise((resolve) => setTimeout(resolve, 1200)),
       ]);
 

@@ -37,6 +37,22 @@ export interface ChurchConfig {
     entryNameId: string;
     entryEmailId: string;
   };
+  prayerForm?: {
+    actionUrl?: string;
+    entryNameId?: string;
+    entryEmailId?: string;
+    entryPhoneId?: string;
+    entryPrayerTextId?: string;
+    entryPrivacyLevelId?: string;
+    entryIsUrgentId?: string;
+  };
+  planVisitForm?: {
+    actionUrl?: string;
+    entryNameId?: string;
+    entryEmailId?: string;
+    entryPhoneId?: string;
+    entryDateId?: string;
+  };
   theme: {
     primary: string; // e.g. navy blue
     accent: string;  // e.g. gold
@@ -84,6 +100,22 @@ export const churchConfig: ChurchConfig = {
     actionUrl: "https://docs.google.com/forms/d/e/1FAIpQLSckkROVclnNhbbWj0hn-SOsz4dCH7cYCEfl4VWlqSybOdxd3g/formResponse",
     entryNameId: "entry.10155832",
     entryEmailId: "entry.124012456"
+  },
+  prayerForm: {
+    actionUrl: "",
+    entryNameId: "",
+    entryEmailId: "",
+    entryPhoneId: "",
+    entryPrayerTextId: "",
+    entryPrivacyLevelId: "",
+    entryIsUrgentId: ""
+  },
+  planVisitForm: {
+    actionUrl: "",
+    entryNameId: "",
+    entryEmailId: "",
+    entryPhoneId: "",
+    entryDateId: ""
   },
   theme: {
     primary: "#0F172A", // Dignified Deep Navy Blue
