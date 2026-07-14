@@ -14,8 +14,8 @@ export default function PastorsDeskPage() {
     <main className="min-h-screen bg-stone-50 py-12">
       {/* Header section */}
       <section 
-        className="relative text-white py-16 md:py-24 text-center overflow-hidden bg-cover bg-[position:-30%_15%] bg-no-repeat bg-[#0F172A]"
-        style={{ backgroundImage: "url('/pastor-hero.png')" }}
+        className="relative text-white py-16 md:py-24 text-center overflow-hidden bg-cover bg-center bg-no-repeat bg-[#0F172A]"
+        style={{ backgroundImage: "url('/pastor-desk-hero.jpg')" }}
       >
         <div className="absolute inset-0 bg-[#0F172A]/40 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-[#0F172A]/30"></div>
