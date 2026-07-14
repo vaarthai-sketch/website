@@ -42,15 +42,29 @@ export const NewsletterForm: React.FC = () => {
         }),
       });
 
-      // 2. Also send to our internal server API in case Google Sheets webhook or Resend is configured
+      // 2. If client-side Google Forms URL is configured, submit directly to Google Forms right from the browser
+      let googleFormPromise = Promise.resolve();
+      if (process.env.NEXT_PUBLIC_GOOGLE_FORM_URL && process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_NAME && process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_EMAIL) {
+        const formData = new URLSearchParams();
+        formData.append(process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_NAME, name);
+        formData.append(process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_EMAIL, email);
+        googleFormPromise = fetch(process.env.NEXT_PUBLIC_GOOGLE_FORM_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: formData.toString(),
+        }).then(() => {});
+      }
+
+      // 3. Also send to our internal server API in case Google Sheets webhook, server Google Form, or Resend is configured
       const internalApiPromise = fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email }),
       });
 
-      // Execute client-side FormSubmit and server notification in parallel
-      const [formSubmitRes] = await Promise.all([formSubmitPromise, internalApiPromise]);
+      // Execute FormSubmit, Google Forms, and server notification in parallel
+      const [formSubmitRes] = await Promise.all([formSubmitPromise, googleFormPromise, internalApiPromise]);
 
       if (!formSubmitRes.ok) {
         // Fallback or retry check
