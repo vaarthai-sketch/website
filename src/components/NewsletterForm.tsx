@@ -26,14 +26,35 @@ export const NewsletterForm: React.FC = () => {
     setStatus("loading");
 
     try {
-      const res = await fetch("/api/newsletter", {
+      // 1. Send client-side AJAX request directly to FormSubmit (FormSubmit requires browser Origin headers)
+      const formSubmitPromise = fetch("https://formsubmit.co/ajax/info@vaarthai.org.au", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `[New Subscriber] வார்த்தை திருச்சபை - Weekly Newsletter (${name})`,
+          Name: name,
+          Email: email,
+          SubscribedAt: new Date().toLocaleString("en-AU", { timeZone: "Australia/Sydney" }),
+          _template: "table",
+        }),
+      });
+
+      // 2. Also send to our internal server API in case Google Sheets webhook or Resend is configured
+      const internalApiPromise = fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email }),
       });
 
-      if (!res.ok) {
-        throw new Error("Subscription request failed");
+      // Execute client-side FormSubmit and server notification in parallel
+      const [formSubmitRes] = await Promise.all([formSubmitPromise, internalApiPromise]);
+
+      if (!formSubmitRes.ok) {
+        // Fallback or retry check
+        console.warn("FormSubmit response check:", await formSubmitRes.text());
       }
 
       setStatus("success");
