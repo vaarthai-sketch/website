@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { churchConfig } from "@/data/config";
 
 export async function POST(request: Request) {
   try {
@@ -16,21 +17,23 @@ export async function POST(request: Request) {
       timeZone: "Australia/Sydney",
     });
 
-    // 1. If Google Forms URL and Entry IDs are configured, submit directly to Google Forms (which saves to Google Sheets automatically!)
-    if (process.env.GOOGLE_FORM_URL && process.env.GOOGLE_FORM_ENTRY_NAME && process.env.GOOGLE_FORM_ENTRY_EMAIL) {
-      try {
-        const formData = new URLSearchParams();
-        formData.append(process.env.GOOGLE_FORM_ENTRY_NAME, name);
-        formData.append(process.env.GOOGLE_FORM_ENTRY_EMAIL, email);
+    // 1. Submit directly to Google Forms (which saves to Google Sheets automatically!)
+    try {
+      const actionUrl = process.env.GOOGLE_FORM_URL || churchConfig.newsletterForm.actionUrl;
+      const entryName = process.env.GOOGLE_FORM_ENTRY_NAME || churchConfig.newsletterForm.entryNameId;
+      const entryEmail = process.env.GOOGLE_FORM_ENTRY_EMAIL || churchConfig.newsletterForm.entryEmailId;
 
-        await fetch(process.env.GOOGLE_FORM_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: formData.toString(),
-        });
-      } catch (err) {
-        console.error("Failed to submit to Google Forms:", err);
-      }
+      const formData = new URLSearchParams();
+      formData.append(entryName, name);
+      formData.append(entryEmail, email);
+
+      await fetch(actionUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData.toString(),
+      });
+    } catch (err) {
+      console.error("Failed to submit to Google Forms:", err);
     }
 
     // 2. If Google Sheets Webhook URL is configured, send directly to Google Sheets

@@ -32,6 +32,11 @@ export interface ChurchConfig {
     give: string;
     livestream: string;
   };
+  newsletterForm: {
+    actionUrl: string;
+    entryNameId: string;
+    entryEmailId: string;
+  };
   theme: {
     primary: string; // e.g. navy blue
     accent: string;  // e.g. gold
@@ -74,6 +79,11 @@ export const churchConfig: ChurchConfig = {
   links: {
     give: "https://vaarthaichurch.org/give", // Mock external platform URL
     livestream: "https://youtube.com/c/vaarthaichurch/live"
+  },
+  newsletterForm: {
+    actionUrl: "https://docs.google.com/forms/d/e/1FAIpQLSckkROVclnNhbbWj0hn-SOsz4dCH7cYCEfl4VWlqSybOdxd3g/formResponse",
+    entryNameId: "entry.10155832",
+    entryEmailId: "entry.124012456"
   },
   theme: {
     primary: "#0F172A", // Dignified Deep Navy Blue

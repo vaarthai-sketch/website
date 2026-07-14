@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Mail, CheckCircle2 } from "lucide-react";
 import { Button } from "./Button";
+import { churchConfig } from "@/data/config";
 
 export const NewsletterForm: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -26,7 +27,23 @@ export const NewsletterForm: React.FC = () => {
     setStatus("loading");
 
     try {
-      // 1. Send client-side AJAX request directly to FormSubmit (FormSubmit requires browser Origin headers)
+      // 1. Submit directly to Google Forms right from the browser (100% background, no-cors)
+      const actionUrl = process.env.NEXT_PUBLIC_GOOGLE_FORM_URL || churchConfig.newsletterForm.actionUrl;
+      const entryName = process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_NAME || churchConfig.newsletterForm.entryNameId;
+      const entryEmail = process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_EMAIL || churchConfig.newsletterForm.entryEmailId;
+
+      const formData = new URLSearchParams();
+      formData.append(entryName, name);
+      formData.append(entryEmail, email);
+
+      const googleFormPromise = fetch(actionUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData.toString(),
+      }).then(() => {});
+
+      // 2. Also send client-side AJAX request to FormSubmit as backup
       const formSubmitPromise = fetch("https://formsubmit.co/ajax/info@vaarthai.org.au", {
         method: "POST",
         headers: {
@@ -40,36 +57,17 @@ export const NewsletterForm: React.FC = () => {
           SubscribedAt: new Date().toLocaleString("en-AU", { timeZone: "Australia/Sydney" }),
           _template: "table",
         }),
-      });
+      }).catch(() => {});
 
-      // 2. If client-side Google Forms URL is configured, submit directly to Google Forms right from the browser
-      let googleFormPromise = Promise.resolve();
-      if (process.env.NEXT_PUBLIC_GOOGLE_FORM_URL && process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_NAME && process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_EMAIL) {
-        const formData = new URLSearchParams();
-        formData.append(process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_NAME, name);
-        formData.append(process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_EMAIL, email);
-        googleFormPromise = fetch(process.env.NEXT_PUBLIC_GOOGLE_FORM_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: formData.toString(),
-        }).then(() => {});
-      }
-
-      // 3. Also send to our internal server API in case Google Sheets webhook, server Google Form, or Resend is configured
+      // 3. Also send to our internal server API
       const internalApiPromise = fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email }),
-      });
+      }).catch(() => {});
 
-      // Execute FormSubmit, Google Forms, and server notification in parallel
-      const [formSubmitRes] = await Promise.all([formSubmitPromise, googleFormPromise, internalApiPromise]);
-
-      if (!formSubmitRes.ok) {
-        // Fallback or retry check
-        console.warn("FormSubmit response check:", await formSubmitRes.text());
-      }
+      // Execute Google Forms, FormSubmit, and internal server API in parallel
+      await Promise.all([googleFormPromise, formSubmitPromise, internalApiPromise]);
 
       setStatus("success");
       setEmail("");
