@@ -281,22 +281,15 @@ export default function HomePage() {
 
       {/* 8. NEWSLETTER SIGNUP */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-neutral-light border border-border rounded-xl p-8 sm:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <div className="lg:col-span-5 space-y-2 text-center lg:text-left">
-              <h2 className="font-serif text-2xl sm:text-3xl font-black text-primary">
-                திருச்சபையுடன் இணைந்திருங்கள்
-              </h2>
-              <p className="text-sm text-stone-600">
-                நமது வார்த்தை சபையின் வாராந்திர நற்செய்தி அறிவிப்புகள் மற்றும் தியானங்களைப் பெறப் பதிவு செய்யவும்.
-              </p>
-            </div>
-
-            <div className="lg:col-span-7">
-              <NewsletterForm />
-            </div>
-
+        <div className="bg-neutral-light border border-border rounded-xl p-8 sm:p-12 text-center">
+          <h2 className="font-serif text-2xl sm:text-3xl font-black text-primary mb-3">
+            Subscribe to our Weekly Newsletter (திருச்சபையுடன் இணைந்திருங்கள்)
+          </h2>
+          <p className="text-sm sm:text-base text-stone-600 mb-8 max-w-lg mx-auto leading-relaxed">
+            Get the Pastor&apos;s weekly letter and church announcements delivered straight to your inbox every Wednesday morning.
+          </p>
+          <div className="max-w-md mx-auto text-left">
+            <NewsletterForm />
           </div>
         </div>
       </section>

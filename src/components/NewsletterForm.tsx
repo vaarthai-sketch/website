@@ -154,7 +154,7 @@ export const NewsletterForm: React.FC = () => {
           className="w-full sm:w-auto px-6 py-3 font-semibold shrink-0"
           disabled={status === "loading"}
         >
-          {status === "loading" ? "Subscribing..." : "Subscribe"}
+          {status === "loading" ? "Subscribing..." : "Subscribe (பதிவு செய்க)"}
         </Button>
       </div>
 
