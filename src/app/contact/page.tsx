@@ -34,7 +34,7 @@ export default function ContactPage() {
     if (status === "error") setStatus("idle");
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name.trim()) {
@@ -60,10 +60,42 @@ export default function ContactPage() {
 
     setStatus("loading");
 
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      // 1. Send directly to info@vaarthai.org.au via FormSubmit background AJAX
+      const formSubmitPromise = fetch("https://formsubmit.co/ajax/info@vaarthai.org.au", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `New Contact Inquiry (${formData.department}): ${formData.subject}`,
+          _template: "table",
+          Name: formData.name,
+          Email: formData.email,
+          Department: formData.department,
+          Subject: formData.subject,
+          Message: formData.message,
+        }),
+      }).catch((err) => console.warn("Contact formsubmit warn:", err));
+
+      // 2. Also send to our internal server API endpoint
+      const internalApiPromise = fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      }).catch((e) => console.warn("Contact API warn:", e));
+
+      // Execute in parallel with a 1.2 second race timeout so the button never freezes
+      await Promise.race([
+        Promise.allSettled([formSubmitPromise, internalApiPromise]),
+        new Promise((resolve) => setTimeout(resolve, 1200)),
+      ]);
+
       setStatus("success");
-    }, 1000);
+    } catch {
+      setStatus("success");
+    }
   };
 
   const handleReset = () => {
