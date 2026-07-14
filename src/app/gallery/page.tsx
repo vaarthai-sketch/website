@@ -19,7 +19,7 @@ async function getFolders() {
     const folders = await fs.readdir(GALLERY_DIR, { withFileTypes: true });
     const result = await Promise.all(
       folders
-        .filter((dirent) => dirent.isDirectory())
+        .filter((dirent) => dirent.isDirectory() && dirent.name !== "Inauguration" && !dirent.name.startsWith("."))
         .map(async (folder) => {
           const folderPath = path.join(GALLERY_DIR, folder.name);
           const files = await fs.readdir(folderPath);
@@ -32,8 +32,18 @@ async function getFolders() {
           };
         })
     );
-    // Sort so folders with images or newer folders might appear first (simplified for now)
-    return result.filter(f => f.images.length > 0);
+
+    const order = ["Inauguration Service", "Sunday Services", "Vaarthai Kids", "Vaarthai Youth"];
+    result.sort((a, b) => {
+      const idxA = order.indexOf(a.name);
+      const idxB = order.indexOf(b.name);
+      if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+      if (idxA !== -1) return -1;
+      if (idxB !== -1) return 1;
+      return a.name.localeCompare(b.name);
+    });
+
+    return result;
   } catch {
     return [];
   }
@@ -53,12 +63,6 @@ export default async function GalleryPage() {
           <p className="text-lg md:text-xl max-w-2xl mx-auto text-stone-200">
             A glimpse into the life and community at {churchConfig.name}.
           </p>
-          
-          <div className="mt-8">
-             <Link href="/admin/gallery" className="text-xs bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-full transition-colors">
-               Manage Photos
-             </Link>
-          </div>
         </div>
       </section>
 
@@ -75,24 +79,30 @@ export default async function GalleryPage() {
               <h2 className="text-2xl font-serif font-bold border-b border-border pb-2 text-stone-800">
                 {folder.name}
               </h2>
-              <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                {folder.images.map((imgSrc, index) => (
-                  <div 
-                    key={index} 
-                    className="break-inside-avoid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white border border-border group cursor-pointer"
-                  >
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={imgSrc}
-                        alt={`${folder.name} photo ${index + 1}`}
-                        className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"></div>
+              {folder.images.length === 0 ? (
+                <div className="bg-white border border-dashed border-stone-300 rounded-xl p-8 text-center text-stone-500">
+                  <p className="text-sm font-medium">புகைப்படங்கள் விரைவில் பதிவேற்றப்படும் (Photos coming soon...)</p>
+                </div>
+              ) : (
+                <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                  {folder.images.map((imgSrc, index) => (
+                    <div 
+                      key={index} 
+                      className="break-inside-avoid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white border border-border group cursor-pointer"
+                    >
+                      <div className="relative overflow-hidden">
+                        <img
+                          src={imgSrc}
+                          alt={`${folder.name} photo ${index + 1}`}
+                          className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"></div>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              )}
             </div>
           ))
         )}
