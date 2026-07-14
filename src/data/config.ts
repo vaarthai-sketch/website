@@ -102,13 +102,11 @@ export const churchConfig: ChurchConfig = {
     entryEmailId: "entry.124012456"
   },
   prayerForm: {
-    actionUrl: "",
-    entryNameId: "",
-    entryEmailId: "",
-    entryPhoneId: "",
-    entryPrayerTextId: "",
-    entryPrivacyLevelId: "",
-    entryIsUrgentId: ""
+    actionUrl: "https://docs.google.com/forms/d/e/1FAIpQLScw_CGGl8jGm6hm41wcctuY0TK_jJx2pAGepw-0GsM1pOdiOg/formResponse",
+    entryNameId: "entry.248116002",
+    entryEmailId: "entry.1222618129",
+    entryPhoneId: "entry.175680748",
+    entryPrayerTextId: "entry.858849767"
   },
   planVisitForm: {
     actionUrl: "",
