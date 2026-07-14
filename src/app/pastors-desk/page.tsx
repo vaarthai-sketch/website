@@ -119,7 +119,7 @@ export default function PastorsDeskPage() {
           <div className="text-center mt-12">
             <h3 className="text-xl font-bold text-primary mb-4">Subscribe to our Weekly Newsletter</h3>
             <p className="text-stone-600 mb-6 max-w-md mx-auto">
-              Get the Pastor's weekly letter delivered straight to your inbox every Friday morning.
+              Get the Pastor's weekly letter delivered straight to your inbox every Wednesday morning.
             </p>
             <div className="max-w-md mx-auto">
               <NewsletterForm />
