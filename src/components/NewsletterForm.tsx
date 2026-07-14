@@ -10,7 +10,7 @@ export const NewsletterForm: React.FC = () => {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) {
       setStatus("error");
@@ -25,25 +25,25 @@ export const NewsletterForm: React.FC = () => {
 
     setStatus("loading");
 
-    const subject = `வார்த்தை திருச்சபை - Newsletter Subscription (${name})`;
-    const body = `வணக்கம்,
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email }),
+      });
 
-கீழ்க்கண்ட நபர் வார்த்தை திருச்சபையின் வாராந்திர மடலை (Weekly Newsletter) பெற சந்தா பதிவு செய்துள்ளார்:
+      if (!res.ok) {
+        throw new Error("Subscription request failed");
+      }
 
-பெயர் (Name): ${name}
-மின்னஞ்சல் (Email): ${email}
-
-தயவுசெய்து இந்த மின்னஞ்சலை உங்களின் Google Sheet (Newsletter Subscribers Database) பட்டியலில் சேர்த்து, வாராந்திர மடலை அனுப்பவும்.
-
-நன்றி!`;
-
-    window.location.href = `mailto:info@vaarthai.org.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    setTimeout(() => {
       setStatus("success");
       setEmail("");
       setName("");
-    }, 1200);
+    } catch (err) {
+      console.error("Subscription error:", err);
+      setStatus("error");
+      setErrorMessage("சந்தா பதிவில் பிழை ஏற்பட்டது. தயவுசெய்து சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.");
+    }
   };
 
   if (status === "success") {
