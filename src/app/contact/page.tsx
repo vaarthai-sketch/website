@@ -86,9 +86,33 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       }).catch((e) => console.warn("Contact API warn:", e));
 
+      // 3. Submit directly to Google Forms if configured (which can auto-email info@vaarthai.org.au!)
+      let googleFormPromise: Promise<any> = Promise.resolve();
+      const actionUrl = process.env.NEXT_PUBLIC_CONTACT_GOOGLE_FORM_URL || churchConfig.contactForm?.actionUrl;
+      if (actionUrl) {
+        const gData = new URLSearchParams();
+        const eName = process.env.NEXT_PUBLIC_CONTACT_ENTRY_NAME || churchConfig.contactForm?.entryNameId;
+        const eEmail = process.env.NEXT_PUBLIC_CONTACT_ENTRY_EMAIL || churchConfig.contactForm?.entryEmailId;
+        const eDept = process.env.NEXT_PUBLIC_CONTACT_ENTRY_DEPT || churchConfig.contactForm?.entryDepartmentId;
+        const eSubj = process.env.NEXT_PUBLIC_CONTACT_ENTRY_SUBJECT || churchConfig.contactForm?.entrySubjectId;
+        const eMsg = process.env.NEXT_PUBLIC_CONTACT_ENTRY_MESSAGE || churchConfig.contactForm?.entryMessageId;
+        if (eName) gData.append(eName, formData.name);
+        if (eEmail) gData.append(eEmail, formData.email);
+        if (eDept) gData.append(eDept, formData.department);
+        if (eSubj) gData.append(eSubj, formData.subject);
+        if (eMsg) gData.append(eMsg, formData.message);
+
+        googleFormPromise = fetch(actionUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: gData.toString(),
+        }).catch((e) => console.warn("Contact Google Form warn:", e));
+      }
+
       // Execute in parallel with a 1.2 second race timeout so the button never freezes
       await Promise.race([
-        Promise.allSettled([formSubmitPromise, internalApiPromise]),
+        Promise.allSettled([formSubmitPromise, internalApiPromise, googleFormPromise]),
         new Promise((resolve) => setTimeout(resolve, 1200)),
       ]);
 

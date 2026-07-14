@@ -53,6 +53,14 @@ export interface ChurchConfig {
     entryPhoneId?: string;
     entryDateId?: string;
   };
+  contactForm?: {
+    actionUrl?: string;
+    entryNameId?: string;
+    entryEmailId?: string;
+    entryDepartmentId?: string;
+    entrySubjectId?: string;
+    entryMessageId?: string;
+  };
   theme: {
     primary: string; // e.g. navy blue
     accent: string;  // e.g. gold
@@ -114,6 +122,14 @@ export const churchConfig: ChurchConfig = {
     entryEmailId: "",
     entryPhoneId: "",
     entryDateId: ""
+  },
+  contactForm: {
+    actionUrl: "",
+    entryNameId: "",
+    entryEmailId: "",
+    entryDepartmentId: "",
+    entrySubjectId: "",
+    entryMessageId: ""
   },
   theme: {
     primary: "#0F172A", // Dignified Deep Navy Blue
