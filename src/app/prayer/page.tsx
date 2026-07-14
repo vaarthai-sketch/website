@@ -32,7 +32,7 @@ export default function PrayerRequestPage() {
     if (status === "error") setStatus("idle");
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.prayerText.trim()) {
@@ -55,29 +55,49 @@ export default function PrayerRequestPage() {
 
     setStatus("loading");
 
-    const recipient = formData.privacyLevel === "prayer-team" ? "info@vaarthai.org.au" : "pastor@vaarthai.org.au";
-    const subject = `ஜெப விண்ணப்பம் (Prayer Request) - ${formData.name || "விசுவாசி"}`;
-    const body = `வணக்கம்,
+    try {
+      const recipient = formData.privacyLevel === "prayer-team" ? "info@vaarthai.org.au" : "pastor@vaarthai.org.au";
 
-வார்த்தை சபைக்கு கீழ்க்கண்ட ஜெப விண்ணப்பம் அனுப்பப்பட்டுள்ளது:
+      // 1. Send client-side AJAX request directly to FormSubmit
+      const formSubmitPromise = fetch(`https://formsubmit.co/ajax/${recipient}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `[${formData.isUrgent ? "URGENT " : ""}Prayer Request] ஜெப விண்ணப்பம் - ${formData.name || "விசுவாசி"}`,
+          Name: formData.name || "Anonymous",
+          Email: formData.email || "N/A",
+          Phone: formData.phone,
+          PrivacyLevel: formData.privacyLevel === "prayer-team" ? "Prayer Team" : "Pastor Only (Confidential)",
+          Urgent: formData.isUrgent ? "Yes" : "No",
+          AllowContact: formData.allowContact ? "Yes" : "No",
+          PrayerText: formData.prayerText,
+          SubmittedAt: new Date().toLocaleString("en-AU", { timeZone: "Australia/Sydney" }),
+          _template: "table",
+        }),
+      }).catch((e) => console.warn("Prayer FormSubmit warn:", e));
 
-பெயர்: ${formData.name || "குறிப்பிடப்படவில்லை"}
-மின்னஞ்சல்: ${formData.email || "குறிப்பிடப்படவில்லை"}
-தொலைபேசி எண்: ${formData.phone}
-ஜெபப் பாதுகாப்பு விருப்பம்: ${formData.privacyLevel === "prayer-team" ? "போதகர் மற்றும் சபையின் ஜெபக் குழுவினரோடு பகிர்ந்து கொள்ள" : "போதகரோடு மட்டும் பகிர்ந்து கொள்ள (ரகசியமாக)"}
-அவசர ஜெபத் தேவை: ${formData.isUrgent ? "ஆம் (அவசரம்)" : "இல்லை"}
-தொடர்பு கொள்ள அனுமதி: ${formData.allowContact ? "ஆம்" : "இல்லை"}
+      // 2. Also send to our internal server API endpoint
+      const internalApiPromise = fetch("/api/prayer", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      }).catch((e) => console.warn("Prayer API warn:", e));
 
-ஜெப விண்ணப்பம்:
-${formData.prayerText}
+      // Execute in parallel with a 1.2 second race timeout so the button never freezes
+      await Promise.race([
+        Promise.allSettled([formSubmitPromise, internalApiPromise]),
+        new Promise((resolve) => setTimeout(resolve, 1200)),
+      ]);
 
-நன்றி!`;
-
-    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    setTimeout(() => {
       setStatus("success");
-    }, 600);
+    } catch (err) {
+      console.error("Prayer form error:", err);
+      setStatus("error");
+      setErrorMessage("ஜெப விண்ணப்பம் அனுப்புவதில் பிழை ஏற்பட்டது. தயவுசெய்து சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.");
+    }
   };
 
   const handleReset = () => {

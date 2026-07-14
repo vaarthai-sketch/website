@@ -42,7 +42,7 @@ export default function PlanYourVisitPage() {
     if (formStatus === "error") setFormStatus("idle");
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Field validations
@@ -69,25 +69,65 @@ export default function PlanYourVisitPage() {
 
     setFormStatus("loading");
 
-    const subject = `புதிய வருகை பதிவு (Plan Your Visit) - ${formData.name}`;
-    const body = `வணக்கம்,
+    try {
+      // 1. Send client-side AJAX request directly to FormSubmit
+      const formSubmitPromise = fetch("https://formsubmit.co/ajax/info@vaarthai.org.au", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `[Plan Your Visit] புதிய வருகை பதிவு - ${formData.name} (${formData.plannedDate})`,
+          Name: formData.name,
+          Email: formData.email,
+          Phone: formData.phone,
+          PlannedDate: formData.plannedDate,
+          Adults: formData.adultsCount,
+          Kids: formData.kidsCount,
+          KidsAges: formData.kidsAges || "N/A",
+          SpecialNeeds: formData.specialNeeds || "N/A",
+          SubmittedAt: new Date().toLocaleString("en-AU", { timeZone: "Australia/Sydney" }),
+          _template: "table",
+        }),
+      }).catch((e) => console.warn("Visit FormSubmit warn:", e));
 
-வார்த்தை சபையின் ஆராதனைக்கு வர கீழ்க்கண்ட வருகை பதிவு செய்யப்பட்டுள்ளது:
+      // 2. Also send to our internal server API endpoint
+      const internalApiPromise = fetch("/api/plan-visit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      }).catch((e) => console.warn("Visit API warn:", e));
 
-பெயர்: ${formData.name}
-மின்னஞ்சல்: ${formData.email}
-தொலைபேசி எண்: ${formData.phone}
-வருகை தரும் தேதி: ${formData.plannedDate}
-பெரியவர்கள் எண்ணிக்கை: ${formData.adultsCount}
-சிறுவர்கள் எண்ணிக்கை: ${formData.kidsCount}${formData.kidsCount !== "0" && formData.kidsAges ? `\nசிறுவர்களின் வயது: ${formData.kidsAges}` : ""}${formData.specialNeeds ? `\nசிறப்புத் தேவைகள் / கேள்விகள்: ${formData.specialNeeds}` : ""}
+      // 3. If Google Form URL is configured via environment variables
+      let googleFormPromise: Promise<any> = Promise.resolve();
+      if (process.env.NEXT_PUBLIC_VISIT_GOOGLE_FORM_URL) {
+        const url = process.env.NEXT_PUBLIC_VISIT_GOOGLE_FORM_URL;
+        const gData = new URLSearchParams();
+        if (process.env.NEXT_PUBLIC_VISIT_ENTRY_NAME) gData.append(process.env.NEXT_PUBLIC_VISIT_ENTRY_NAME, formData.name);
+        if (process.env.NEXT_PUBLIC_VISIT_ENTRY_EMAIL) gData.append(process.env.NEXT_PUBLIC_VISIT_ENTRY_EMAIL, formData.email);
+        if (process.env.NEXT_PUBLIC_VISIT_ENTRY_PHONE) gData.append(process.env.NEXT_PUBLIC_VISIT_ENTRY_PHONE, formData.phone);
+        if (process.env.NEXT_PUBLIC_VISIT_ENTRY_DATE) gData.append(process.env.NEXT_PUBLIC_VISIT_ENTRY_DATE, formData.plannedDate);
+        googleFormPromise = fetch(url, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: gData.toString(),
+        }).catch(() => {});
+      }
 
-நன்றி!`;
+      // Execute in parallel with a 1.2 second race timeout so the button never freezes
+      await Promise.race([
+        Promise.allSettled([formSubmitPromise, internalApiPromise, googleFormPromise]),
+        new Promise((resolve) => setTimeout(resolve, 1200)),
+      ]);
 
-    window.location.href = `mailto:info@vaarthai.org.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    setTimeout(() => {
       setFormStatus("success");
-    }, 600);
+    } catch (err) {
+      console.error("Visit form error:", err);
+      setFormStatus("error");
+      setErrorMessage("பதிவு செய்வதில் பிழை ஏற்பட்டது. தயவுசெய்து சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.");
+    }
   };
 
   const resetForm = () => {
