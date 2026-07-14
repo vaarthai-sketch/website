@@ -4,6 +4,7 @@ import { churchConfig } from "@/data/config";
 import fs from 'fs/promises';
 import path from 'path';
 import Link from 'next/link';
+import GalleryGrid from "@/components/GalleryGrid";
 
 export const metadata = {
   title: "Photos - " + churchConfig.name,
@@ -66,46 +67,9 @@ export default async function GalleryPage() {
         </div>
       </section>
 
-      {/* Gallery Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-16">
-        {folders.length === 0 ? (
-          <div className="text-center py-20 text-stone-500">
-            <p className="text-xl font-serif">No photos available yet.</p>
-            <p className="mt-2">Check back soon for updates from our latest events.</p>
-          </div>
-        ) : (
-          folders.map((folder, idx) => (
-            <div key={idx} className="space-y-6">
-              <h2 className="text-2xl font-serif font-bold border-b border-border pb-2 text-stone-800">
-                {folder.name}
-              </h2>
-              {folder.images.length === 0 ? (
-                <div className="bg-white border border-dashed border-stone-300 rounded-xl p-8 text-center text-stone-500">
-                  <p className="text-sm font-medium">புகைப்படங்கள் விரைவில் பதிவேற்றப்படும் (Photos coming soon...)</p>
-                </div>
-              ) : (
-                <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                  {folder.images.map((imgSrc, index) => (
-                    <div 
-                      key={index} 
-                      className="break-inside-avoid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white border border-border group cursor-pointer"
-                    >
-                      <div className="relative overflow-hidden">
-                        <img
-                          src={imgSrc}
-                          alt={`${folder.name} photo ${index + 1}`}
-                          className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))
-        )}
+      {/* Gallery Grid with Interactive Likes & Lightbox */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <GalleryGrid folders={folders} />
       </section>
     </main>
   );
