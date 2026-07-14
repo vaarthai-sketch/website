@@ -27,7 +27,6 @@ export const NewsletterForm: React.FC = () => {
     setStatus("loading");
 
     try {
-      // 1. Submit directly to Google Forms right from the browser (100% background, no-cors)
       const actionUrl = process.env.NEXT_PUBLIC_GOOGLE_FORM_URL || churchConfig.newsletterForm.actionUrl;
       const entryName = process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_NAME || churchConfig.newsletterForm.entryNameId;
       const entryEmail = process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_EMAIL || churchConfig.newsletterForm.entryEmailId;
@@ -36,12 +35,13 @@ export const NewsletterForm: React.FC = () => {
       formData.append(entryName, name);
       formData.append(entryEmail, email);
 
+      // 1. Submit directly to Google Forms right from the browser (100% background, no-cors)
       const googleFormPromise = fetch(actionUrl, {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formData.toString(),
-      }).then(() => {});
+      }).catch((e) => console.warn("Google Form submit warn:", e));
 
       // 2. Also send client-side AJAX request to FormSubmit as backup
       const formSubmitPromise = fetch("https://formsubmit.co/ajax/info@vaarthai.org.au", {
@@ -57,17 +57,20 @@ export const NewsletterForm: React.FC = () => {
           SubscribedAt: new Date().toLocaleString("en-AU", { timeZone: "Australia/Sydney" }),
           _template: "table",
         }),
-      }).catch(() => {});
+      }).catch((e) => console.warn("FormSubmit warn:", e));
 
       // 3. Also send to our internal server API
       const internalApiPromise = fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email }),
-      }).catch(() => {});
+      }).catch((e) => console.warn("Internal API warn:", e));
 
-      // Execute Google Forms, FormSubmit, and internal server API in parallel
-      await Promise.all([googleFormPromise, formSubmitPromise, internalApiPromise]);
+      // Execute all 3 in parallel with a 1.2 second max timeout race so the button NEVER gets stuck on loading
+      await Promise.race([
+        Promise.allSettled([googleFormPromise, formSubmitPromise, internalApiPromise]),
+        new Promise((resolve) => setTimeout(resolve, 1200)),
+      ]);
 
       setStatus("success");
       setEmail("");
