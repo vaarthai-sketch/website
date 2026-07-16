@@ -69,6 +69,7 @@ export default async function MinistryDetailPage({ params }: PageProps) {
                     src={ministry.image} 
                     alt={ministry.name} 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    style={{ objectPosition: (ministry as any).imagePosition || "center" }}
                   />
                 </div>
 
@@ -89,7 +90,7 @@ export default async function MinistryDetailPage({ params }: PageProps) {
               </div>
             ) : ministry.image && ministry.image.startsWith("/") ? (
               <div className="aspect-[21/9] w-full rounded-xl overflow-hidden relative shadow-sm border border-border">
-                <img src={ministry.image} alt={ministry.name} className="w-full h-full object-cover" />
+                <img src={ministry.image} alt={ministry.name} className="w-full h-full object-cover" style={{ objectPosition: (ministry as any).imagePosition || "center" }} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <span className="text-xs uppercase font-bold tracking-widest text-accent mb-1 block">{ministry.englishName}</span>
