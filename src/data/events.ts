@@ -61,7 +61,7 @@ export const eventsData: ChurchEvent[] = [
     organizer: "Ps Weslyn",
     englishOrganizer: "Ps Weslyn",
     organizerEmail: "info@vaarthai.org.au",
-    image: "event-outreach",
+    image: "/event-after-church-lunch.jpg",
     isFeatured: false
   }
 ];

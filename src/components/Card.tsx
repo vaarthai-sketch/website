@@ -127,6 +127,12 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list"; b
           <span className="text-xs font-extrabold text-accent-light tracking-wider md:mt-1 ml-2 md:ml-0">{monthStr}</span>
         </div>
 
+        {event.image && event.image.startsWith("/") && (
+          <div className="w-28 h-20 rounded-md overflow-hidden shrink-0 hidden sm:block bg-neutral-light">
+            <img src={event.image} alt={displayTitle} className="w-full h-full object-cover" />
+          </div>
+        )}
+
         {/* Content */}
         <div className="flex-grow">
           <div className="flex flex-wrap gap-2 items-center mb-1.5">
@@ -171,7 +177,15 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list"; b
   return (
     <div className="group bg-white rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
       <div className="h-48 w-full relative overflow-hidden bg-neutral-light">
-        <ImagePlaceholder type="event" title={displayTitle} />
+        {event.image && event.image.startsWith("/") ? (
+          <img 
+            src={event.image} 
+            alt={displayTitle} 
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+          />
+        ) : (
+          <ImagePlaceholder type="event" title={displayTitle} />
+        )}
         
         {/* Absolute Date Badge */}
         <div className="absolute top-3 left-3 bg-[#0F172A] text-center px-3 py-1.5 rounded shadow-sm border border-primary-light flex flex-col justify-center min-w-[50px]">
