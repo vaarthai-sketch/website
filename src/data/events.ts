@@ -1,12 +1,20 @@
 export interface ChurchEvent {
   id: string;
   title: string;
+  englishTitle: string;
   date: string;
   time: string;
+  englishTime: string;
   location: string;
+  englishLocation: string;
   category: "Community" | "Youth" | "Children" | "Worship" | "All-Church" | "Groups";
+  englishCategory: string;
   description: string;
+  englishDescription: string;
+  scripture?: string;
+  englishScripture?: string;
   organizer: string;
+  englishOrganizer: string;
   organizerEmail: string;
   image: string;
   registrationUrl?: string;
@@ -15,81 +23,45 @@ export interface ChurchEvent {
 
 export const eventsData: ChurchEvent[] = [
   {
-    id: "summer-worship-night",
-    title: "ஆராதனை மற்றும் ஜெப மாலை",
-    date: "2026-06-28",
-    time: "மாலை 6:30 - இரவு 8:00 மணி",
-    location: "பிரதான ஆராதனை அரங்கு",
-    category: "Worship",
-    description: "சபையாக இணைந்து பாடல்கள் பாடி, தேவனைத் துதித்து, ஜெபத்திலும் திருவிருந்திலும் பங்கேற்கும் ஒரு விசேஷித்த மாலை நேரம். குழந்தைகளுக்கான பாதுகாப்பு கவனிப்பு வசதி உண்டு. அனுமதி இலவசம்.",
-    organizer: "ஆராதனை இயக்குனர் ஹன்னா வான்ஸ்",
-    organizerEmail: "hannah@vaarthaichurch.org",
+    id: "mid-week-online-prayer",
+    title: "வாராந்திர ஆன்லைன் ஜெபம் (Mid-Week Online Prayer)",
+    englishTitle: "Mid-Week Online Prayer",
+    date: "2026-07-22",
+    time: "புதன்கிழமை இரவுகள்",
+    englishTime: "Wednesday Nights",
+    location: "ஆன்லைன் (Zoom வழியாக - இணைப்பிற்கு எங்களைத் தொடர்பு கொள்ளவும்)",
+    englishLocation: "Online via Zoom (Contact us for the meeting link)",
+    category: "Groups",
+    englishCategory: "Prayer & Fellowship",
+    scripture: "\"தம்மை நோக்கிக் கூப்பிடுகிற யாவருக்கும், உண்மையாய்த் தம்மை நோக்கிக் கூப்பிடுகிற யாவருக்கும், கர்த்தர் சமீபமாயிருக்கிறார்.\" – சங்கீதம் 145:18",
+    englishScripture: "\"The Lord is near to all who call on Him, to all who call on Him in truth.\" – Psalm 145:18",
+    description: "\"தம்மை நோக்கிக் கூப்பிடுகிற யாவருக்கும், உண்மையாய்த் தம்மை நோக்கிக் கூப்பிடுகிற யாவருக்கும், கர்த்தர் சமீபமாயிருக்கிறார்.\" – சங்கீதம் 145:18\n\nஒவ்வொரு புதன்கிழமை இரவும் எங்கள் வாராந்திர ஆன்லைன் ஜெபக் கூட்டத்தில் கலந்து கொள்ள உங்களை அன்புடன் அழைக்கிறோம். தற்போது, நாங்கள் சங்கீதப் புத்தகத்தின் வழியாகப் பயணம் செய்து கொண்டிருக்கிறோம்—தேவனுடைய வார்த்தையை ஆழமாகத் தியானிக்கவும், சங்கீதங்களின் வழியாக இணைந்து ஜெபிக்கவும் நேரம் ஒதுக்குகிறோம். உங்களுக்கு ஒரு குறிப்பிட்ட ஜெப விண்ணப்பம் இருந்தாலும், வார நடுவில் ஆன்மீகப் புத்துணர்ச்சி தேவைப்பட்டாலும், அல்லது சபையாரோடு இணைந்து தேவனைத் தேட விரும்பினாலும், எங்களோடு ஜெபத்தில் இணைய உங்களை அன்புடன் வரவேற்கிறோம்.\n\nநிகழ்வு விவரங்கள்:\n* எப்பொழுது: புதன்கிழமை இரவுகள்\n* எங்கே: ஆன்லைன் (Zoom வழியாக - இணைப்பிற்கு எங்களைத் தொடர்பு கொள்ளவும்)\n* நோக்கம்: சங்கீதங்களைத் தியானித்தல் மற்றும் ஜெபித்தல்.",
+    englishDescription: "\"The Lord is near to all who call on Him, to all who call on Him in truth.\" – Psalm 145:18\n\nJoin us every Wednesday night for our Mid-Week Online Prayer meeting. Currently, we are journeying through the book of Psalms—taking time to meditate deeply on God's Word and to pray through the Psalms together. Whether you have a specific prayer request, need a mid-week spiritual refresh, or simply want to seek the Lord in community, we warmly invite you to join us in prayer.\n\nEvent Details:\n* When: Wednesday Nights\n* Where: Online via Zoom (Contact us for the meeting link)\n* Focus: Meditating on and praying through the Psalms.",
+    organizer: "Ps Weslyn",
+    englishOrganizer: "Ps Weslyn",
+    organizerEmail: "info@vaarthai.org.au",
     image: "event-worship-night",
     isFeatured: true
   },
   {
-    id: "community-food-drive",
-    title: "நகர ஏழைகளுக்கான உணவு விநியோகம்",
-    date: "2026-07-04",
-    time: "காலை 8:30 - மதியம் 12:30 மணி",
-    location: "ஆஸ்டின் ஹோப் மையம் (வெளிவிநியோகம்)",
+    id: "monthly-after-church-lunch",
+    title: "மாதாந்திர ஆராதனைக்குப் பிந்தைய மதிய உணவு (Monthly After-Church Lunch)",
+    englishTitle: "Monthly After-Church Lunch",
+    date: "2026-07-26",
+    time: "ஒவ்வொரு மாதமும் 4-வது வாரம் (ஞாயிறு ஆராதனை முடிந்த உடனே)",
+    englishTime: "The 4th week of each month (Immediately following the Sunday Service)",
+    location: "லயன்ஸ் பார்க் (Lions Park), ஸ்பிரிங்ஃபீல்ட் லேக்ஸ்",
+    englishLocation: "Lions Park, Springfield Lakes",
     category: "Community",
-    description: "நமது நகர மக்களுக்கு உலர் உணவுப் பொருட்களைச் சேகரித்து பேக் செய்து விநியோகிக்கும் சமூக சேவை. காலை 8:00 மணிக்கு திருச்சபை வாகன நிறுத்துமிடத்தில் கூடி காரில் செல்வோம். அனைவரும் பங்கேற்கலாம்.",
-    organizer: "சாரா ஜென்கின்ஸ்",
-    organizerEmail: "sarah@vaarthaichurch.org",
+    englishCategory: "Community & Fellowship",
+    scripture: "\"வீடுகள்தோறும் அப்பம்பிட்டு, மகிழ்ச்சியோடும் கபடமற்ற இருதயத்தோடும் போஜனம் பண்ணி...\" – அப்போஸ்தலர் 2:46",
+    englishScripture: "\"They broke bread in their homes and ate together with glad and sincere hearts.\" – Acts 2:46",
+    description: "\"வீடுகள்தோறும் அப்பம்பிட்டு, மகிழ்ச்சியோடும் கபடமற்ற இருதயத்தோடும் போஜனம் பண்ணி...\" – அப்போஸ்தலர் 2:46\n\nஞாயிறு ஆராதனை முடிந்தவுடன் நமது ஐக்கியம் முடிந்துவிடுவதில்லை! ஒவ்வொரு மாதத்தின் நான்காவது ஞாயிற்றுக்கிழமையிலும், எங்கள் மாதாந்திர ஆராதனைக்குப் பிந்தைய மதிய உணவு ஒன்றுகூடலுடன் அந்த மகிழ்ச்சியைத் தொடர்கிறோம். ஸ்பிரிங்ஃபீல்ட் லேக்ஸில் உள்ள லயன்ஸ் பார்க்கிற்குச் சென்று, உணவைப் பகிர்ந்து கொண்டு, அழகான இயற்கைச் சூழலை ரசித்து, நமது திருச்சபைக் குடும்பத்திற்குள் நிலையான நட்பை உருவாக்குகிறோம். பழைய நண்பர்களோடு இணையவும் புதியவர்களை வரவேற்கவும் இது ஒரு அற்புதமான, நிதானமான நேரம்.\n\nநிகழ்வு விவரங்கள்:\n* எப்பொழுது: ஒவ்வொரு மாதமும் 4-வது வாரம் (ஞாயிறு ஆராதனை முடிந்த உடனே)\n* எங்கே: லயன்ஸ் பார்க் (Lions Park), ஸ்பிரிங்ஃபீல்ட் லேக்ஸ்\n* கொண்டு வர வேண்டியவை: மகிழ்ச்சியான இருதயம் மற்றும் பகிர்ந்து கொள்ள உங்களுக்குப் பிடித்த உணவு அல்லது தின்பண்டங்கள்!",
+    englishDescription: "\"They broke bread in their homes and ate together with glad and sincere hearts.\" – Acts 2:46\n\nFellowship doesn't have to end when the Sunday service is over! On the fourth Sunday of every month, we keep the joy going with our Monthly After-Church Lunch get-together. We head over to Lions Park in Springfield Lakes to share a meal, enjoy the beautiful outdoors, and build lasting friendships within our church family. It is a wonderful, relaxed time to connect with old friends and welcome new ones.\n\nEvent Details:\n* When: The 4th week of each month (Immediately following the Sunday Service)\n* Where: Lions Park, Springfield Lakes\n* What to Bring: A joyful heart and your favourite dish or snacks to share!",
+    organizer: "Ps Weslyn",
+    englishOrganizer: "Ps Weslyn",
+    organizerEmail: "info@vaarthai.org.au",
     image: "event-outreach",
-    registrationUrl: "#register-food-drive"
-  },
-  {
-    id: "youth-summer-camp",
-    title: "இளைஞர் கோடைகால முகாம் 2026",
-    date: "2026-07-15",
-    time: "காலை 8:00 மணி முதல் - ஜூலை 19, மாலை 5:00 மணி வரை",
-    location: "கேம்ப் ஈகிள் (ஹில் கன்ட்ரி, டெக்சாஸ்)",
-    category: "Youth",
-    description: "7 முதல் 12-ம் வகுப்பு மாணவர்களுக்கான 5 நாட்கள் சாகசங்கள், விவிலியக் கலந்துரையாடல்கள் மற்றும் ஆராதனை நிறைந்த தங்குமிட முகாம். கட்டணம் போக்குவரத்து, தங்குமிடம் மற்றும் உணவு அனைத்தையும் உள்ளடக்கியது.",
-    organizer: "இளைஞர் இயக்குனர் கேலப் வான்ஸ்",
-    organizerEmail: "caleb@vaarthaichurch.org",
-    image: "event-youth-camp",
-    registrationUrl: "#register-youth-camp"
-  },
-  {
-    id: "grace-kids-fun-day",
-    title: "சிறுவர் விளையாட்டு தினம் மற்றும் சுற்றுலா",
-    date: "2026-07-22",
-    time: "காலை 10:00 - மதியம் 1:00 மணி",
-    location: "ஆலய புல்வெளி மைதானம்",
-    category: "Children",
-    description: "சிறுவர்களுக்கான நீர் விளையாட்டு சறுக்கல்கள், விளையாட்டுகள் மற்றும் மதிய உணவுப் பகிர்வு. துண்டு மற்றும் கூடுதல் உடைகளைக் கொண்டு வரவும். மதிய உணவைத் திட்டமிட முன்பதிவு செய்யக் கேட்டுக் கொள்ளப்படுகிறது.",
-    organizer: "சிறுவர் ஊழிய இயக்குனர் மேகன் மில்லர்",
-    organizerEmail: "megan@vaarthaichurch.org",
-    image: "event-kids-day",
-    registrationUrl: "#register-kids-fun"
-  },
-  {
-    id: "new-members-luncheon",
-    title: "புதிய உறுப்பினர்கள் அறிமுக மதிய உணவு",
-    date: "2026-07-12",
-    time: "மதியம் 12:30 - மதியம் 2:00 மணி",
-    location: "ஐக்கிய அரங்கு",
-    category: "All-Church",
-    description: "நமது வார்த்தை சபை நற்செய்தி குடும்பத்திற்குப் புதியவரா? எங்களது போதகர்களைச் சந்திக்கவும், சபையின் வரலாறு மற்றும் விசுவாச அறிக்கை குறித்து அறிந்து கொள்ளவும் இந்த அன்பின் விருந்தில் பங்கெடுக்கவும்.",
-    organizer: "வரவேற்பு பொறுப்பாளர் மார்கஸ் கோல்",
-    organizerEmail: "marcus@vaarthaichurch.org",
-    image: "event-new-members",
-    registrationUrl: "#register-luncheon"
-  },
-  {
-    id: "mens-breakfast-study",
-    title: "ஆண்கள் வேத ஆராய்ச்சி மற்றும் காலை உணவு",
-    date: "2026-07-25",
-    time: "காலை 7:30 - காலை 9:00 மணி",
-    location: "ஐக்கிய அரங்கு",
-    category: "Groups",
-    description: "சூடான காபி, காலை உணவு மற்றும் கிறிஸ்தவ சகோதரத்துவ ஐக்கியத்துடன் உங்கள் வார இறுதியைத் தொடங்குங்கள். குடும்பத் தலைமை மற்றும் விவிலியப் பொறுப்புகள் குறித்த வேதப் படிப்பைத் தொடங்குகிறோம்.",
-    organizer: "போதகர் டேவிட் வான்ஸ்",
-    organizerEmail: "david@vaarthaichurch.org",
-    image: "event-mens-breakfast",
-    registrationUrl: "#register-mens-breakfast"
+    isFeatured: false
   }
 ];

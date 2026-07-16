@@ -93,7 +93,16 @@ export const SermonCard: React.FC<{ sermon: Sermon }> = ({ sermon }) => {
   );
 };
 
-export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list" }> = ({ event, view = "grid" }) => {
+export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list"; basePrefix?: string }> = ({ event, view = "grid", basePrefix = "" }) => {
+  const isEn = basePrefix === "/en";
+  const displayTitle = isEn ? (event.englishTitle || event.title) : event.title;
+  const displayTime = isEn ? (event.englishTime || event.time) : event.time;
+  const displayLocation = isEn ? (event.englishLocation || event.location) : event.location;
+  const displayCategory = isEn ? (event.englishCategory || event.category) : event.category;
+  const displayDescription = isEn ? (event.englishDescription || event.description) : event.description;
+  const displayOrganizer = isEn ? (event.englishOrganizer || event.organizer) : event.organizer;
+  const linkHref = `${basePrefix}/events/${event.id}`;
+
   const dateObj = new Date(event.date);
   const day = dateObj.toLocaleDateString("en-US", { day: "numeric" });
   const monthStr = dateObj.toLocaleDateString("en-US", { month: "short" }).toUpperCase();
@@ -122,38 +131,37 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list" }>
         <div className="flex-grow">
           <div className="flex flex-wrap gap-2 items-center mb-1.5">
             <span className={`text-[10px] px-2 py-0.5 font-bold uppercase tracking-wider rounded-full border ${currentCategoryClass}`}>
-              {event.category}
+              {displayCategory}
             </span>
             <span className="text-xs text-stone-500 font-mono flex items-center gap-1">
-              <Clock className="w-3.5 h-3.5" /> {event.time}
+              <Clock className="w-3.5 h-3.5" /> {displayTime}
             </span>
           </div>
 
           <h3 className="font-serif text-lg font-bold text-primary mb-1 hover:text-accent">
-            <Link href={`/events/${event.id}`}>
-              {event.title}
+            <Link href={linkHref}>
+              {displayTitle}
             </Link>
           </h3>
           <p className="text-sm text-neutral-muted line-clamp-1">
-            {event.description}
+            {displayDescription}
           </p>
-
           <div className="flex flex-wrap items-center gap-4 text-xs text-stone-500 mt-2">
             <span className="flex items-center gap-1">
-              <MapPin className="w-3.5 h-3.5 text-accent" /> {event.location}
+              <MapPin className="w-3.5 h-3.5 text-accent" /> {displayLocation}
             </span>
             <span className="text-stone-400">|</span>
-            <span>Organized by: {event.organizer}</span>
+            <span>{isEn ? "Organized by:" : "பராமரிப்பாளர்:"} {displayOrganizer}</span>
           </div>
         </div>
 
         {/* Button */}
         <div className="w-full md:w-auto shrink-0 mt-3 md:mt-0">
           <Link 
-            href={`/events/${event.id}`}
+            href={linkHref}
             className="w-full md:w-auto text-center px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-md text-sm font-semibold transition-all duration-200 inline-block"
           >
-            Details
+            {isEn ? "Details" : "விவரங்கள்"}
           </Link>
         </div>
       </div>
@@ -163,7 +171,7 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list" }>
   return (
     <div className="group bg-white rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
       <div className="h-48 w-full relative overflow-hidden bg-neutral-light">
-        <ImagePlaceholder type="event" title={event.title} />
+        <ImagePlaceholder type="event" title={displayTitle} />
         
         {/* Absolute Date Badge */}
         <div className="absolute top-3 left-3 bg-[#0F172A] text-center px-3 py-1.5 rounded shadow-sm border border-primary-light flex flex-col justify-center min-w-[50px]">
@@ -172,35 +180,35 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list" }>
         </div>
 
         <span className={`absolute bottom-3 left-3 text-[9px] px-2 py-0.5 font-bold uppercase tracking-wider rounded-full border shadow-sm ${currentCategoryClass} bg-white/95`}>
-          {event.category}
+          {displayCategory}
         </span>
       </div>
 
       <div className="p-5 flex flex-col flex-grow">
         <h3 className="font-serif text-lg font-bold text-primary group-hover:text-primary-light transition-colors line-clamp-1 mb-2">
-          <Link href={`/events/${event.id}`}>
-            {event.title}
+          <Link href={linkHref}>
+            {displayTitle}
           </Link>
         </h3>
         <p className="text-sm text-neutral-muted line-clamp-3 mb-4 flex-grow">
-          {event.description}
+          {displayDescription}
         </p>
 
         <div className="border-t border-border pt-4 mt-auto space-y-2 text-xs text-stone-600">
           <div className="flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5 text-accent shrink-0" />
-            <span className="truncate">{event.time}</span>
+            <span className="truncate">{displayTime}</span>
           </div>
           <div className="flex items-center gap-1.5">
             <MapPin className="w-3.5 h-3.5 text-accent shrink-0" />
-            <span className="truncate">{event.location}</span>
+            <span className="truncate">{displayLocation}</span>
           </div>
           <div className="flex justify-end pt-2">
             <Link 
-              href={`/events/${event.id}`}
+              href={linkHref}
               className="text-primary hover:text-accent font-semibold inline-flex items-center gap-1 transition-colors text-xs"
             >
-              Details & RSVP <ArrowRight className="w-3 h-3" />
+              {isEn ? "Details & RSVP" : "விவரங்கள் & பதிவு"} <ArrowRight className="w-3 h-3" />
             </Link>
           </div>
         </div>

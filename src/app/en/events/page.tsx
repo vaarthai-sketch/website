@@ -3,5 +3,5 @@
 import EventsPage from "@/app/events/page";
 
 export default function EnglishEventsPage() {
-  return <EventsPage />;
+  return <EventsPage basePrefix="/en" />;
 }

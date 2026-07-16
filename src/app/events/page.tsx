@@ -4,21 +4,28 @@ import React, { useState, useMemo } from "react";
 import { Grid, List, Calendar, MapPin, Clock, Search, RefreshCw, AlertCircle } from "lucide-react";
 import { eventsData } from "@/data/events";
 import { EventCard } from "@/components/Card";
-import { Select } from "@/components/Input";
 import { Button } from "@/components/Button";
 
-export default function EventsPage() {
+export default function EventsPage({ basePrefix = "" }: { basePrefix?: string }) {
+  const isEn = basePrefix === "/en";
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const categories = [
+  const categories = isEn ? [
     { id: "all", label: "All Events" },
-    { id: "Worship", label: "Worship" },
-    { id: "Community", label: "Community & Outreach" },
+    { id: "Worship", label: "Prayer & Worship" },
+    { id: "Community", label: "Community & Fellowship" },
     { id: "Youth", label: "Youth" },
     { id: "Children", label: "Children" },
     { id: "Groups", label: "Groups" }
+  ] : [
+    { id: "all", label: "அனைத்து நிகழ்வுகளும்" },
+    { id: "Worship", label: "ஜெபம் & ஆராதனை" },
+    { id: "Community", label: "சமூக & ஐக்கிய நிகழ்வுகள்" },
+    { id: "Youth", label: "இளைஞர்" },
+    { id: "Children", label: "சிறுவர்" },
+    { id: "Groups", label: "குழுக்கள்" }
   ];
 
   // Get featured event
@@ -35,9 +42,12 @@ export default function EventsPage() {
       const query = searchQuery.toLowerCase();
       list = list.filter(
         e => 
-          e.title.toLowerCase().includes(query) || 
-          e.description.toLowerCase().includes(query) || 
-          e.location.toLowerCase().includes(query)
+          (e.title && e.title.toLowerCase().includes(query)) || 
+          (e.englishTitle && e.englishTitle.toLowerCase().includes(query)) ||
+          (e.description && e.description.toLowerCase().includes(query)) || 
+          (e.englishDescription && e.englishDescription.toLowerCase().includes(query)) ||
+          (e.location && e.location.toLowerCase().includes(query)) ||
+          (e.englishLocation && e.englishLocation.toLowerCase().includes(query))
       );
     }
 
@@ -57,6 +67,12 @@ export default function EventsPage() {
     setActiveCategory("all");
   };
 
+  const displayFeaturedTitle = isEn && featuredEvent ? (featuredEvent.englishTitle || featuredEvent.title) : (featuredEvent?.title || "");
+  const displayFeaturedDesc = isEn && featuredEvent ? (featuredEvent.englishDescription || featuredEvent.description) : (featuredEvent?.description || "");
+  const displayFeaturedTime = isEn && featuredEvent ? (featuredEvent.englishTime || featuredEvent.time) : (featuredEvent?.time || "");
+  const displayFeaturedLoc = isEn && featuredEvent ? (featuredEvent.englishLocation || featuredEvent.location) : (featuredEvent?.location || "");
+  const displayFeaturedCat = isEn && featuredEvent ? (featuredEvent.englishCategory || featuredEvent.category) : (featuredEvent?.category || "");
+
   return (
     <div className="pb-20 space-y-16">
       
@@ -69,9 +85,13 @@ export default function EventsPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-[#0F172A]/50"></div>
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] mix-blend-overlay"></div>
         <div className="max-w-4xl mx-auto px-4 relative z-10 space-y-3">
-          <h1 className="font-serif text-4xl md:text-5xl font-black">Upcoming Events</h1>
+          <h1 className="font-serif text-4xl md:text-5xl font-black">
+            {isEn ? "Upcoming Events" : "எதிர்வரும் நிகழ்வுகள்"}
+          </h1>
           <p className="text-stone-300 text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed">
-            Discover upcoming gatherings, service projects, and special services at Vaarthai Evangelical Church.
+            {isEn 
+              ? "Discover upcoming gatherings, prayer sessions, fellowship lunches, and community projects at Vaarthai Evangelical Church."
+              : "வார்த்தை திருச்சபையின் எதிர்வரும் ஜெபக் கூட்டங்கள், ஐக்கிய விருந்துகள் மற்றும் சமூக சேவை நிகழ்வுகளை அறிந்துகொள்ளுங்கள்."}
           </p>
         </div>
       </section>
@@ -85,13 +105,13 @@ export default function EventsPage() {
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
               
               <span className="relative z-10 self-start text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded">
-                Featured Event
+                {isEn ? "Featured Event" : "முக்கிய நிகழ்வு"}
               </span>
               
               <div className="relative z-10 mt-auto">
                 <span className="text-xs uppercase tracking-widest text-stone-300 font-semibold">Vaarthai Evangelical Church</span>
                 <h3 className="font-serif text-2xl md:text-3xl font-bold mt-1 line-clamp-2">
-                  {featuredEvent.title}
+                  {displayFeaturedTitle}
                 </h3>
               </div>
             </div>
@@ -99,27 +119,27 @@ export default function EventsPage() {
             {/* Description Info */}
             <div className="lg:w-1/2 p-8 sm:p-10 flex flex-col justify-center space-y-4">
               <span className={`self-start text-[10px] px-2 py-0.5 font-bold uppercase tracking-wider rounded border bg-neutral-light border-border text-stone-700`}>
-                {featuredEvent.category}
+                {displayFeaturedCat}
               </span>
               
-              <p className="text-stone-600 text-sm leading-relaxed">
-                {featuredEvent.description}
+              <p className="text-stone-600 text-sm leading-relaxed whitespace-pre-line line-clamp-4">
+                {displayFeaturedDesc}
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-stone-600 border-t border-border pt-4">
                 <div className="flex items-center gap-1.5">
                   <Clock className="w-4 h-4 text-accent shrink-0" />
-                  <span>{new Date(featuredEvent.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })} <br /><strong>{featuredEvent.time}</strong></span>
+                  <span>{new Date(featuredEvent.date).toLocaleDateString(isEn ? "en-US" : "ta-IN", { month: "long", day: "numeric", year: "numeric" })} <br /><strong>{displayFeaturedTime}</strong></span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <MapPin className="w-4 h-4 text-accent shrink-0" />
-                  <span>{featuredEvent.location}</span>
+                  <span>{displayFeaturedLoc}</span>
                 </div>
               </div>
 
               <div className="pt-4 flex items-center gap-3">
-                <Button href={`/events/${featuredEvent.id}`} variant="primary" size="sm" className="font-bold">
-                  Details & RSVP
+                <Button href={`${basePrefix}/events/${featuredEvent.id}`} variant="primary" size="sm" className="font-bold">
+                  {isEn ? "Details & RSVP" : "விவரங்கள் & பதிவு"}
                 </Button>
               </div>
             </div>
@@ -152,11 +172,11 @@ export default function EventsPage() {
           <div className="flex items-center gap-3 w-full md:w-auto">
             {/* Search Input */}
             <div className="relative flex-grow md:w-64">
-              <label htmlFor="search-events" className="sr-only">Search events</label>
+              <label htmlFor="search-events" className="sr-only">{isEn ? "Search events" : "நிகழ்வுகளைத் தேட..."}</label>
               <input
                 id="search-events"
                 type="text"
-                placeholder="Search events..."
+                placeholder={isEn ? "Search events..." : "நிகழ்வுகளைத் தேட..."}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-3 py-1.5 pl-8 bg-white border border-border rounded-md text-stone-900 focus:border-accent focus:ring-1 focus:ring-accent outline-none text-sm"
@@ -191,19 +211,21 @@ export default function EventsPage() {
         {filteredEvents.length > 0 ? (
           <div className="space-y-6">
             <div className="text-xs text-stone-500 font-semibold font-mono">
-              Showing {filteredEvents.length} upcoming {filteredEvents.length === 1 ? "event" : "events"}
+              {isEn
+                ? `Showing ${filteredEvents.length} upcoming ${filteredEvents.length === 1 ? "event" : "events"}`
+                : `${filteredEvents.length} எதிர்வரும் ${filteredEvents.length === 1 ? "நிகழ்வு" : "நிகழ்வுகள்"} காட்டப்படுகின்றன`}
             </div>
             
             {viewMode === "grid" ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredEvents.map((event) => (
-                  <EventCard key={event.id} event={event} view="grid" />
+                  <EventCard key={event.id} event={event} view="grid" basePrefix={basePrefix} />
                 ))}
               </div>
             ) : (
               <div className="space-y-4">
                 {filteredEvents.map((event) => (
-                  <EventCard key={event.id} event={event} view="list" />
+                  <EventCard key={event.id} event={event} view="list" basePrefix={basePrefix} />
                 ))}
               </div>
             )}
@@ -211,13 +233,15 @@ export default function EventsPage() {
         ) : (
           <div className="text-center py-16 bg-white border border-border rounded-xl space-y-3">
             <AlertCircle className="w-10 h-10 text-stone-400 mx-auto" />
-            <h3 className="font-serif text-xl font-bold text-primary">No Events Found</h3>
+            <h3 className="font-serif text-xl font-bold text-primary">{isEn ? "No Events Found" : "நிகழ்வுகள் எதுவும் காணப்படவில்லை"}</h3>
             <p className="text-sm text-stone-500 max-w-sm mx-auto">
-              We couldn't find any upcoming events matching your selection. Try adjusting your filters.
+              {isEn
+                ? "We couldn't find any upcoming events matching your selection. Try adjusting your filters."
+                : "உங்கள் தேர்வுக்குரிய நிகழ்வுகள் எதுவும் இல்லை. தேடல் தேர்வுகளை மாற்றியமைக்கவும்."}
             </p>
             <div className="pt-2">
               <Button onClick={handleResetFilters} variant="primary" size="sm">
-                Reset Filters
+                {isEn ? "Reset Filters" : "வடிகட்டிகளை மீட்டமைக்க"}
               </Button>
             </div>
           </div>
