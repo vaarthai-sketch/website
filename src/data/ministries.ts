@@ -248,8 +248,8 @@ export const ministriesData: Ministry[] = [
   },
   {
     id: "worship",
-    englishName: "Vaarthai Worship & Production",
-    name: "வார்த்தை ஆராதனை மற்றும் தயாரிப்பு ஊழியம்",
+    englishName: "Vaarthai Worship & Music Ministry",
+    name: "வார்த்தை ஆராதனை மற்றும் இசை ஊழியம்",
     purpose: "ஒவ்வொரு ஞாயிறும் ஆராதனை, இசை மற்றும் ஊடகத் தொழில்நுட்பம் மூலம் சபை மக்களை தேவ சமூகத்திற்குள் வழிநடத்துதல்.",
     englishPurpose: "Leading the congregation into God's presence every Sunday through collaborative worship, live production, and media arts.",
     audience: "பாடகர்கள், வாசிப்பாளர்கள் மற்றும் ஊடகத் தொழில்நுட்ப வல்லுநர்கள்",
@@ -268,18 +268,17 @@ export const ministriesData: Ministry[] = [
     scriptureReference: "சங்கீதம் 33:3",
     englishScripture: "\"Sing to Him a new song; play skillfully with a shout of joy.\"",
     englishScriptureReference: "Psalm 33:3",
-    description: "ஒவ்வொரு ஞாயிற்றுக்கிழமையும், எங்கள் ஆராதனைக் குழு மனமார்ந்த துதியின் மூலம் சபை மக்களை தேவ சமூகத்திற்குள் வழிநடத்தும் பாக்கியத்தைப் பெற்றுள்ளது. இந்த ஊழியம் பாடகர்கள், இசைக்கலைஞர்கள், ஒலிப் பொறியாளர்கள், ஒளி வடிவமைப்பாளர்கள், நேரலை இயக்குனர்கள் மற்றும் காட்சி விளக்க உருவாக்குனர்கள் அடங்கிய ஒரு கூட்டு முயற்சியான குடும்பமாகும்—ஒவ்வொருவரும் தங்கள் தனித்துவமான வரங்களைப் பயன்படுத்தி திருச்சபைக்குச் சேவை செய்து தேவனை மகிமைப்படுத்துகிறார்கள்.",
-    englishDescription: "Every Sunday, our worship team has the privilege of leading the congregation into God's presence through heartfelt praise. This ministry is a collaborative family of singers, musicians, audio engineers, lighting designers, live stream operators, and visual presentation creators—each using their unique gifts to serve the church and glorify God.",
+    description: "வார்த்தை ஆராதனை மற்றும் தயாரிப்பு ஊழியம்: ஒவ்வொரு ஞாயிற்றுக்கிழமையும், எங்கள் ஆராதனைக் குழு மனமார்ந்த துதியின் மூலம் சபை மக்களை தேவ சமூகத்திற்குள் வழிநடத்தும் பாக்கியத்தைப் பெற்றுள்ளது. இந்த ஊழியம் பாடகர்கள், இசைக்கலைஞர்கள், ஒலிப் பொறியாளர்கள், ஒளி வடிவமைப்பாளர்கள், நேரலை இயக்குனர்கள் மற்றும் காட்சி விளக்க உருவாக்குனர்கள் அடங்கிய ஒரு கூட்டு முயற்சியான குடும்பமாகும்—ஒவ்வொருவரும் தங்கள் தனித்துவமான வரங்களைப் பயன்படுத்தி திருச்சபைக்குச் சேவை செய்து தேவனை மகிமைப்படுத்துகிறார்கள்.",
+    englishDescription: "Vaarthai Worship & Production Every Sunday, our worship team has the privilege of leading the congregation into God's presence through heartfelt praise. This ministry is a collaborative family of singers, musicians, audio engineers, lighting designers, live stream operators, and visual presentation creators—each using their unique gifts to serve the church and glorify God.",
     features: [
-      "ஆராதனை மற்றும் ஆக்கப்பூர்வமான கலைகள்: எங்கள் ஆராதனை இசைக்குழு அல்லது பாடகர் குழுவுடன் மேடையில் உங்கள் இசை வரங்களைப் பயன்படுத்தி சேவை செய்தல்",
-      "தயாரிப்பு மற்றும் ஊடகத் தொழில்நுட்பம்: நேரலை ஒலி அமைப்பு, மேடை ஒளி அமைப்பு மற்றும் கேமரா இயக்கத்தில் நேரடிப் பயிற்சி பெற்று திரைக்குப் பின்னால் சேவை செய்தல்",
-      "பவர்பாயிண்ட் மற்றும் காட்சி விளக்க சேவை: ஆராதனைப் பாடல்கள் மற்றும் பிரசங்கங்களுக்கான பவர்பாயிண்ட் ஸ்லைடுகளை உருவாக்குதல் மற்றும் இயக்குதல்",
-      "அடுத்த தலைமுறை வழிகாட்டல்: இளைஞர் ஆராதனை இசைக்குழு வழிகாட்டல் மற்றும் வாத்தியப் பயிற்சிகள் மூலம் அடுத்த தலைமுறையை உருவாக்குதல்"
+      "ஆராதனை மற்றும் ஆக்கப்பூர்வமான கலைகள்: எங்கள் ஆராதனை இசைக்குழு அல்லது பாடகர் குழுவுடன் மேடையில் உங்கள் இசை வரங்களைப் பயன்படுத்தி சேவை செய்தல்.",
+      "தயாரிப்பு மற்றும் ஊடகத் தொழில்நுட்பம்: நேரலை ஒலி அமைப்பு, மேடை ஒளி அமைப்பு மற்றும் கேமரா இயக்கத்தில் விரிவான, நேரடிப் பயிற்சி பெற்று திரைக்குப் பின்னால் சேவை செய்தல். ஆராதனைப் பாடல்கள் மற்றும் பிரசங்கங்களுக்கான பவர்பாயிண்ட் ஸ்லைடுகளை உருவாக்குதல் மற்றும் இயக்குதலும் இந்தக் குழுவில் அடங்கும்.",
+      "அடுத்த தலைமுறை வழிகாட்டல்: இளைஞர் ஆராதனை இசைக்குழு வழிகாட்டல் மற்றும் வாத்தியப் பயிற்சிகள் மூலம் அடுத்த தலைமுறையை உருவாக்குதல்."
     ],
     englishFeatures: [
-      "Worship & Creative Arts: Use your musical gifts by serving on stage with our worship band or choir",
-      "Production & Visual Media: Step behind the scenes with training in live audio, lighting, and camera operation, including PowerPoint slide creation and operation",
-      "Next-Gen Mentoring: Help raise up the next generation through youth worship band mentoring and instrumental coaching"
+      "Worship & Creative Arts: Use your musical gifts by serving on stage with our worship band or choir.",
+      "Production & Visual Media: Step behind the scenes with comprehensive, hands-on training in live audio, lighting, and camera operation. This team also includes serving as a PowerPoint slides creator and operator for worship songs and sermons.",
+      "Next-Gen Mentoring: Help raise up the next generation through youth worship band mentoring and instrumental coaching."
     ]
   },
   {
