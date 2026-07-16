@@ -1,31 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { 
   Heart, ShieldCheck, Mail, Smartphone, ArrowRight, DollarSign, Check, Info, FileText
 } from "lucide-react";
 import { churchConfig } from "@/data/config";
-import { Button } from "@/components/Button";
-import { Input, Select } from "@/components/Input";
 
 export default function GivePage() {
-  const [givingType, setGivingType] = useState<"one-time" | "recurring">("one-time");
-  const [presetAmount, setPresetAmount] = useState<string>("50");
-  const [customAmount, setCustomAmount] = useState<string>("");
-  const [selectedFund, setSelectedFund] = useState("general");
-  const [demoSuccess, setDemoSuccess] = useState(false);
-
-  const presetAmounts = ["20", "50", "100", "250", "500"];
-
-  const handleGiveSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setDemoSuccess(true);
-  };
-
-  const getFinalAmount = () => {
-    if (customAmount) return parseFloat(customAmount).toFixed(2);
-    return parseFloat(presetAmount).toFixed(2);
-  };
 
   return (
     <div className="pb-20 space-y-16">
@@ -76,148 +57,41 @@ export default function GivePage() {
             </div>
           </div>
 
-          {/* Secure Giving Portal Mock */}
-          <div className="lg:col-span-5 bg-white border border-border rounded-xl p-6 sm:p-8 shadow-sm space-y-6">
-            <div className="space-y-1">
-              <div className="flex items-center justify-between">
-                <h3 className="font-serif text-lg font-bold text-primary">காணிக்கை தளம்</h3>
-                <span className="text-[9px] font-bold uppercase tracking-widest text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded">
-                  மாதிரி தளம் (Demo)
-                </span>
+          {/* Secure Live Giving Portal Embed */}
+          <div className="lg:col-span-5 bg-white border border-border rounded-xl p-4 sm:p-6 shadow-sm space-y-4">
+            <div className="flex items-center justify-between border-b border-border pb-3">
+              <div>
+                <h3 className="font-serif text-lg font-bold text-primary flex items-center gap-2">
+                  <span>காணிக்கை தளம் (Online Giving)</span>
+                </h3>
+                <p className="text-[11px] text-stone-500">
+                  பாதுகாப்பான மற்றும் நேரடி ஆன்லைன் காணிக்கை தளம்.
+                </p>
               </div>
-              <p className="text-[11px] text-stone-500">
-                இது ஒரு மாதிரி தளம் மட்டுமே. இதில் பணப் பரிமாற்றம் செய்யப்பட மாட்டாது.
-              </p>
+              <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span> நேரலை (Live)
+              </span>
             </div>
 
-            {demoSuccess ? (
-              <div className="bg-emerald-50 border border-accent/20 rounded-lg p-6 text-center space-y-4 animate-fade-in-up">
-                <Check className="w-12 h-12 text-accent mx-auto border-2 border-accent rounded-full p-2" />
-                <div className="space-y-1">
-                  <h4 className="font-serif text-lg font-bold text-primary">மாதிரி காணிக்கை பதிவு செய்யப்பட்டது</h4>
-                  <p className="text-xs text-stone-600 leading-relaxed">
-                    நீங்கள் <strong>${getFinalAmount()}</strong> காணிக்கையை <strong>{selectedFund === "general" ? "பொது நிதி" : selectedFund === "outreach" ? "நற்பணி நிதி" : "மிஷனரி நிதி"}</strong>-க்கு {givingType === "recurring" ? "மாதாந்திர தவணையாக" : "ஒருமுறை காணிக்கையாக"} செலுத்தத் தேர்வு செய்துள்ளீர்கள்.
-                  </p>
-                </div>
-                <div className="text-[10px] text-stone-400 italic">
-                  இதனை உண்மையான காணிக்கை தளத்துடன் இணைக்க சபை நிர்வாகி உரிய வங்கிக் கணக்கு அல்லது payment gateway-ஐ இணைக்க வேண்டும்.
-                </div>
-                <button
-                  onClick={() => setDemoSuccess(false)}
-                  className="text-xs font-bold text-primary hover:text-accent underline"
-                >
-                  மீண்டும் மாதிரிப் பதிவு செய்ய
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleGiveSubmit} className="space-y-5">
-                
-                {/* One time vs Recurring toggle tabs */}
-                <div className="flex border border-border rounded-md overflow-hidden bg-stone-50 text-sm">
-                  <button
-                    type="button"
-                    onClick={() => setGivingType("one-time")}
-                    className={`flex-1 py-2 font-bold text-center transition-colors ${
-                      givingType === "one-time" ? "bg-primary text-white" : "text-stone-600 hover:bg-stone-100"
-                    }`}
-                  >
-                    ஒருமுறை காணிக்கை
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setGivingType("recurring")}
-                    className={`flex-1 py-2 font-bold text-center transition-colors ${
-                      givingType === "recurring" ? "bg-primary text-white" : "text-stone-600 hover:bg-stone-100"
-                    }`}
-                  >
-                    மாதாந்திரக் காணிக்கை
-                  </button>
-                </div>
+            <div className="w-full bg-stone-50 rounded-lg overflow-hidden border border-border aspect-[4/5] min-h-[650px] relative">
+              <iframe
+                src="https://vaarthai.churchcenter.com/giving?embed=true"
+                title="Vaarthai Church Online Giving Portal"
+                className="w-full h-full border-0 absolute inset-0"
+                allow="payment"
+              />
+            </div>
 
-                {/* Fund selector */}
-                <Select
-                  label="காணிக்கை நிதியைத் தேர்ந்தெடுக்கவும்"
-                  value={selectedFund}
-                  onChange={(e) => setSelectedFund(e.target.value)}
-                  options={[
-                    { value: "general", label: "சபை பராமரிப்பு மற்றும் பொது நிதி" },
-                    { value: "outreach", label: "உள்ளூர் நற்பணி ஊழியம்" },
-                    { value: "missions", label: "உலகளாவிய மிஷனரி ஊழியம்" },
-                    { value: "building", label: "ஆலயக் கட்டிட நிதி" }
-                  ]}
-                />
-
-                {/* Preset Amounts Grid */}
-                <div className="space-y-1.5">
-                  <span className="block text-sm font-semibold text-stone-700">காணிக்கை தொகையைத் தேர்ந்தெடுக்கவும்</span>
-                  <div className="grid grid-cols-5 gap-2">
-                    {presetAmounts.map((amt) => {
-                      const isActive = presetAmount === amt && !customAmount;
-                      return (
-                        <button
-                          key={amt}
-                          type="button"
-                          onClick={() => {
-                            setPresetAmount(amt);
-                            setCustomAmount("");
-                          }}
-                          className={`py-2 text-center text-sm font-mono font-bold border rounded-md transition-colors ${
-                            isActive
-                              ? "bg-accent text-white border-accent"
-                              : "bg-white text-stone-800 border-border hover:bg-stone-50"
-                          }`}
-                        >
-                          ${amt}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Custom Amount input */}
-                <div className="relative">
-                  <Input
-                    label="அல்லது வேறு தொகையை உள்ளிடவும்"
-                    name="customAmount"
-                    type="number"
-                    min="1"
-                    placeholder="மற்ற தொகை"
-                    value={customAmount}
-                    onChange={(e) => {
-                      setCustomAmount(e.target.value);
-                      setPresetAmount("");
-                    }}
-                    className="pl-8 font-mono"
-                  />
-                  <span className="absolute left-3 bottom-3 text-stone-500 font-mono text-sm">
-                    $
-                  </span>
-                </div>
-
-                <div className="space-y-4 pt-2">
-                  <Button
-                    type="submit"
-                    variant="accent"
-                    fullWidth
-                    className="font-bold py-3 text-center shadow"
-                  >
-                    {givingType === "recurring" ? "மாதாந்திரக் காணிக்கையைச் செலுத்த" : `Give $${getFinalAmount()}`}
-                  </Button>
-
-                  {/* Redirect external button if they want to give via config URL */}
-                  <a
-                    href={churchConfig.links.give}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full text-center py-2.5 border border-primary text-primary hover:bg-primary hover:text-white rounded-md text-xs font-bold transition-colors flex items-center justify-center gap-1.5"
-                  >
-                    வெளியிடத் தளம் மூலம் காணிக்கை செலுத்த <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-
-              </form>
-            )}
-
+            <div className="pt-2 text-center">
+              <a
+                href={churchConfig.links.give}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-primary hover:text-accent underline transition-colors"
+              >
+                காணிக்கை செலுத்துவதில் சிரமம் உள்ளதா? தனிப் பக்கத்தில் காணிக்கை தளத்தைத் திறக்க <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
           </div>
 
         </div>
