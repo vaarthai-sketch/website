@@ -210,39 +210,47 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list" }>
 };
 
 export const MinistryCard: React.FC<{ ministry: Ministry; basePrefix?: string }> = ({ ministry, basePrefix = "" }) => {
+  const isEn = basePrefix === "/en";
+  const displayTitle = isEn ? (ministry.englishName || ministry.name) : ministry.name;
+  const displayAudience = isEn 
+    ? ((ministry as any).englishAudience || ministry.audience.replace(/\s*\([^)]*[\u0B80-\u0BFF][^)]*\)/g, "").trim())
+    : ministry.audience;
+  const displayPurpose = isEn ? ((ministry as any).englishPurpose || ministry.purpose) : ministry.purpose;
+
   return (
     <div className="group bg-white rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
       <div className="h-40 w-full relative overflow-hidden bg-neutral-light">
         {ministry.image && ministry.image.startsWith("/") ? (
           <img 
             src={ministry.image} 
-            alt={ministry.name} 
+            alt={displayTitle} 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+            style={{ objectPosition: ministry.id === "children" ? "center 15%" : ((ministry as any).imagePosition || "center") }}
           />
         ) : (
-          <ImagePlaceholder type="ministry" title={ministry.name} subtitle={ministry.englishName} />
+          <ImagePlaceholder type="ministry" title={displayTitle} subtitle={!isEn ? ministry.englishName : undefined} />
         )}
       </div>
 
       <div className="p-5 flex flex-col flex-grow">
-        {ministry.englishName && (
+        {ministry.englishName && !isEn && (
           <div className="text-xs font-bold uppercase tracking-wider text-accent mb-1">
             {ministry.englishName}
           </div>
         )}
         <h3 className="font-serif text-lg font-bold text-primary group-hover:text-accent transition-colors mb-2">
           <Link href={`${basePrefix}/ministries/${ministry.id}`}>
-            {ministry.name}
+            {displayTitle}
           </Link>
         </h3>
         <p className="text-sm text-neutral-muted line-clamp-3 mb-4 flex-grow">
-          {ministry.purpose}
+          {displayPurpose}
         </p>
 
         <div className="border-t border-border pt-4 mt-auto space-y-1.5 text-xs text-stone-600">
           <div className="flex items-center gap-2">
             <Users className="w-3.5 h-3.5 text-accent" />
-            <span className="font-medium truncate">{ministry.audience}</span>
+            <span className="font-medium truncate">{displayAudience}</span>
           </div>
           {ministry.schedule && (
             <div className="flex items-center gap-2">

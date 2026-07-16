@@ -53,7 +53,7 @@ export default async function EnglishMinistryDetailPage({ params }: PageProps) {
                 {ministry.englishName || ministry.name}
               </h1>
               <p className="text-stone-700 leading-relaxed text-base md:text-lg font-light">
-                {ministry.purpose}
+                {ministry.englishPurpose || ministry.purpose}
               </p>
             </div>
 
@@ -66,8 +66,9 @@ export default async function EnglishMinistryDetailPage({ params }: PageProps) {
                 <div className="w-full sm:w-56 md:w-64 aspect-[4/3] rounded-xl overflow-hidden shadow-xl border-2 border-accent/40 shrink-0 relative z-10 bg-white">
                   <img 
                     src={ministry.image} 
-                    alt={ministry.name} 
+                    alt={ministry.englishName || ministry.name} 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    style={{ objectPosition: ministry.id === "children" ? "center 15%" : ((ministry as any).imagePosition || "center") }}
                   />
                 </div>
 
@@ -88,7 +89,7 @@ export default async function EnglishMinistryDetailPage({ params }: PageProps) {
               </div>
             ) : ministry.image && ministry.image.startsWith("/") ? (
               <div className="aspect-[21/9] w-full rounded-xl overflow-hidden relative shadow-sm border border-border">
-                <img src={ministry.image} alt={ministry.name} className="w-full h-full object-cover" />
+                <img src={ministry.image} alt={ministry.englishName || ministry.name} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <span className="text-xs uppercase font-bold tracking-widest text-accent mb-1 block">{ministry.englishName}</span>
@@ -106,16 +107,16 @@ export default async function EnglishMinistryDetailPage({ params }: PageProps) {
             <div className="space-y-4">
               <h3 className="font-serif text-xl font-bold text-primary">About Our Ministry</h3>
               <p className="text-stone-600 leading-relaxed text-sm">
-                {ministry.description}
+                {ministry.englishDescription || ministry.description}
               </p>
             </div>
 
             {/* Checklist of Ministry Highlights */}
-            {ministry.features && ministry.features.length > 0 && (
+            {(ministry.englishFeatures || ministry.features) && (ministry.englishFeatures || ministry.features).length > 0 && (
               <div className="space-y-4 border-t border-border pt-6">
                 <h3 className="font-serif text-lg font-bold text-primary">What You Can Expect</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {ministry.features.map((feature, idx) => (
+                  {(ministry.englishFeatures || ministry.features).map((feature, idx) => (
                     <div key={idx} className="flex gap-2.5 items-start text-stone-700 text-sm">
                       <CheckCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                       <span>{feature}</span>
@@ -141,16 +142,16 @@ export default async function EnglishMinistryDetailPage({ params }: PageProps) {
                   <Users className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">Intended Audience</span>
-                    <span className="text-stone-900 font-medium">{ministry.audience}</span>
+                    <span className="text-stone-900 font-medium">{ministry.englishAudience || ministry.audience.replace(/\s*\([^)]*[\u0B80-\u0BFF][^)]*\)/g, "").trim()}</span>
                   </div>
                 </div>
 
-                {ministry.schedule && (
+                {(ministry.englishSchedule || ministry.schedule) && (
                   <div className="flex gap-3">
                     <Clock className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                     <div>
                       <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">Meeting Schedule</span>
-                      <span className="text-stone-900 font-medium">{ministry.schedule}</span>
+                      <span className="text-stone-900 font-medium">{ministry.englishSchedule || ministry.schedule}</span>
                     </div>
                   </div>
                 )}
@@ -159,7 +160,7 @@ export default async function EnglishMinistryDetailPage({ params }: PageProps) {
                   <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">Location</span>
-                    <span className="text-stone-900 font-medium">{ministry.location}</span>
+                    <span className="text-stone-900 font-medium">{ministry.englishLocation || ministry.location.replace(/\s*\([^)]*[\u0B80-\u0BFF][^)]*\)/g, "").trim()}</span>
                   </div>
                 </div>
               </div>
@@ -171,14 +172,14 @@ export default async function EnglishMinistryDetailPage({ params }: PageProps) {
                     <User className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-stone-900 block">{ministry.leaderName}</span>
-                    <span className="text-[11px] text-stone-500 block">{ministry.leaderTitle}</span>
+                    <span className="text-xs font-bold text-stone-900 block">{ministry.englishLeaderName || ministry.leaderName}</span>
+                    <span className="text-[11px] text-stone-500 block">{ministry.englishLeaderTitle || ministry.leaderTitle}</span>
                   </div>
                 </div>
                 <a 
                   href={`mailto:${ministry.leaderEmail}`}
                   className="p-2 text-primary hover:text-accent transition-colors"
-                  title={`Email ${ministry.leaderName}`}
+                  title={`Email ${ministry.englishLeaderName || ministry.leaderName}`}
                 >
                   <Mail className="w-4 h-4" />
                 </a>
