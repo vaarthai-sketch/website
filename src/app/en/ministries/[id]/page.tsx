@@ -78,11 +78,11 @@ export default async function EnglishMinistryDetailPage({ params }: PageProps) {
                     <span>{ministry.englishName || "Biblical Foundation"}</span>
                   </div>
                   <blockquote className="font-serif text-lg sm:text-xl italic font-medium leading-relaxed text-stone-100">
-                    {ministry.scripture}
+                    {ministry.englishScripture || ministry.scripture}
                   </blockquote>
-                  {ministry.scriptureReference && (
+                  {(ministry.englishScriptureReference || ministry.scriptureReference) && (
                     <cite className="block text-xs font-bold text-accent uppercase tracking-widest not-italic">
-                      — {ministry.scriptureReference}
+                      — {ministry.englishScriptureReference || ministry.scriptureReference}
                     </cite>
                   )}
                 </div>
@@ -125,6 +125,16 @@ export default async function EnglishMinistryDetailPage({ params }: PageProps) {
                 </div>
               </div>
             )}
+
+            {/* Bottom Back to Ministries Link */}
+            <div className="pt-6 border-t border-border flex items-center justify-between">
+              <Link 
+                href="/en/ministries" 
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-primary font-bold text-sm transition-colors border border-border shadow-sm"
+              >
+                <ArrowLeft className="w-4 h-4 text-accent" /> Back to All Ministries
+              </Link>
+            </div>
 
           </div>
 

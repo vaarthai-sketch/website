@@ -127,6 +127,16 @@ export default async function MinistryDetailPage({ params }: PageProps) {
               </div>
             )}
 
+            {/* Bottom Back to Ministries Link */}
+            <div className="pt-6 border-t border-border flex items-center justify-between">
+              <Link 
+                href="/ministries" 
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-primary font-bold text-sm transition-colors border border-border shadow-sm"
+              >
+                <ArrowLeft className="w-4 h-4 text-accent" /> ஊழியங்கள் பக்கத்திற்குத் திரும்பு (Back to Ministries)
+              </Link>
+            </div>
+
           </div>
 
           {/* Sidebar: Logistics details & RSVP form */}
