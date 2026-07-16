@@ -263,7 +263,7 @@ export const ministriesData: Ministry[] = [
     leaderTitle: "ஆராதனை இயக்குனர்",
     englishLeaderTitle: "Worship Director",
     leaderEmail: "info@vaarthai.org.au",
-    image: "ministry-worship",
+    image: "/ministry-worship-detail.jpg",
     scripture: "\"அவருக்குப் புதுப்பாட்டைப் பாடுங்கள்; கெம்பீர சத்தத்தோடே நேர்த்தியாய் வாசியுங்கள்.\"",
     scriptureReference: "சங்கீதம் 33:3",
     englishScripture: "\"Sing to Him a new song; play skillfully with a shout of joy.\"",
