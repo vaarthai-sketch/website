@@ -226,7 +226,7 @@ export const ministriesData: Ministry[] = [
     leaderTitle: "பெண்கள் ஊழிய ஒருங்கிணைப்பாளர்",
     englishLeaderTitle: "Women's Ministry Coordinator",
     leaderEmail: "info@vaarthai.org.au",
-    image: "ministry-women",
+    image: "/ministry-women-detail.jpg",
     scripture: "\"தேவன் அவளின் நடுவில் இருக்கிறார், அவள் அசையமாட்டாள்; அதிகாலையிலே தேவன் அவளுக்குச் சகாயம்பண்ணுவார்.\"",
     scriptureReference: "சங்கீதம் 46:5",
     englishScripture: "\"God is within her, she will not fall; God will help her at break of day.\"",
