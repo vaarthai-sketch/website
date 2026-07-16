@@ -252,7 +252,7 @@ export const ministriesData: Ministry[] = [
     name: "வார்த்தை ஆராதனை மற்றும் இசை ஊழியம்",
     purpose: "ஒவ்வொரு ஞாயிறும் ஆராதனை, இசை மற்றும் ஊடகத் தொழில்நுட்பம் மூலம் சபை மக்களை தேவ சமூகத்திற்குள் வழிநடத்துதல்.",
     englishPurpose: "Leading the congregation into God's presence every Sunday through collaborative worship, live production, and media arts.",
-    audience: "பாடகர்கள், வாசிப்பாளர்கள் மற்றும் ஊடகத் தொழில்நுட்ப வல்லுநர்கள்",
+    audience: "பாடகர்கள், இசைக் கலைஞர்கள், மற்றும் ஊடகத் தொழில்நுட்ப வல்லுநர்கள்",
     englishAudience: "Vocalists, Instrumentalists & Media Tech Specialists",
     location: "முக்கிய ஆராதனை அரங்கு",
     englishLocation: "Main Sanctuary Auditorium",
