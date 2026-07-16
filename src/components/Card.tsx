@@ -209,11 +209,19 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list" }>
   );
 };
 
-export const MinistryCard: React.FC<{ ministry: Ministry }> = ({ ministry }) => {
+export const MinistryCard: React.FC<{ ministry: Ministry; basePrefix?: string }> = ({ ministry, basePrefix = "" }) => {
   return (
     <div className="group bg-white rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
       <div className="h-40 w-full relative overflow-hidden bg-neutral-light">
-        <ImagePlaceholder type="ministry" title={ministry.name} subtitle={ministry.englishName} />
+        {ministry.image && ministry.image.startsWith("/") ? (
+          <img 
+            src={ministry.image} 
+            alt={ministry.name} 
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+          />
+        ) : (
+          <ImagePlaceholder type="ministry" title={ministry.name} subtitle={ministry.englishName} />
+        )}
       </div>
 
       <div className="p-5 flex flex-col flex-grow">
@@ -223,7 +231,7 @@ export const MinistryCard: React.FC<{ ministry: Ministry }> = ({ ministry }) => 
           </div>
         )}
         <h3 className="font-serif text-lg font-bold text-primary group-hover:text-accent transition-colors mb-2">
-          <Link href={`/ministries/${ministry.id}`}>
+          <Link href={`${basePrefix}/ministries/${ministry.id}`}>
             {ministry.name}
           </Link>
         </h3>
@@ -244,7 +252,7 @@ export const MinistryCard: React.FC<{ ministry: Ministry }> = ({ ministry }) => 
           )}
           <div className="flex justify-end pt-2">
             <Link 
-              href={`/ministries/${ministry.id}`}
+              href={`${basePrefix}/ministries/${ministry.id}`}
               className="text-primary hover:text-accent font-semibold inline-flex items-center gap-1 transition-colors text-xs"
             >
               Learn More <ArrowRight className="w-3 h-3" />

@@ -2,6 +2,7 @@ export interface ChurchConfig {
   name: string;
   shortName: string;
   tagline: string;
+  englishTagline?: string;
   denomination: string;
   bibleTranslation: string;
   foundedYear: number;
@@ -72,6 +73,7 @@ export const churchConfig: ChurchConfig = {
   name: "Vaarthai Evangelical Church",
   shortName: "Vaarthai Church",
   tagline: "வார்த்தையை கேட்போம் வார்த்தையின்படி நடப்போம் வார்த்தையை சுமந்து செல்வோம்",
+  englishTagline: "Hearing the Word. Living the Word. Sharing the Word across generations.",
   denomination: "Evangelical Christian",
   bibleTranslation: "ESV (English Standard Version)",
   foundedYear: 2005,

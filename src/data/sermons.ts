@@ -1,13 +1,20 @@
 export interface Sermon {
   id: string;
   title: string;
+  englishTitle?: string;
   speaker: string;
+  englishSpeaker?: string;
   date: string;
   scriptureReference: string;
+  englishScriptureReference?: string;
   series: string;
+  englishSeries?: string;
   topic: string;
+  englishTopic?: string;
   description: string;
+  englishDescription?: string;
   videoPlaceholder: string;
+  englishVideoPlaceholder?: string;
   youtubeId?: string;
   audioUrl: string;
   notesUrl: string;

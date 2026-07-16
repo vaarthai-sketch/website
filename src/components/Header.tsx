@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Calendar, Cross } from "lucide-react";
 import { churchConfig } from "@/data/config";
 import { Button } from "./Button";
+import { LanguageToggle } from "./LanguageToggle";
 
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,14 +31,17 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isEnglish = pathname === "/en" || pathname.startsWith("/en/");
+  const basePrefix = isEnglish ? "/en" : "";
+
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Ministries", href: "/ministries" },
-    { name: "Events", href: "/events" },
-    { name: "Photos", href: "/gallery" },
-    { name: "Give", href: "/give" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: isEnglish ? "/en" : "/" },
+    { name: "About", href: `${basePrefix}/about` },
+    { name: "Ministries", href: `${basePrefix}/ministries` },
+    { name: "Events", href: `${basePrefix}/events` },
+    { name: "Photos", href: `${basePrefix}/gallery` },
+    { name: "Give", href: `${basePrefix}/give` },
+    { name: "Contact", href: `${basePrefix}/contact` },
   ];
 
   return (
@@ -94,10 +98,11 @@ export const Header: React.FC = () => {
             })}
           </nav>
 
-          {/* Join Us Sunday Button */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Join Us Sunday Button & Language Switcher */}
+          <div className="hidden lg:flex items-center gap-3">
+            <LanguageToggle />
             <Button 
-              href="/plan-your-visit" 
+              href={`${basePrefix}/plan-your-visit`} 
               variant="primary" 
               size="sm"
               className="font-bold flex items-center gap-1.5"
@@ -107,8 +112,9 @@ export const Header: React.FC = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex lg:hidden">
+          {/* Mobile Language Toggle & Menu Button */}
+          <div className="flex lg:hidden items-center gap-2">
+            <LanguageToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -150,7 +156,7 @@ export const Header: React.FC = () => {
             })}
             <div className="pt-4 border-t border-border px-3">
               <Button 
-                href="/plan-your-visit" 
+                href={`${basePrefix}/plan-your-visit`} 
                 variant="primary" 
                 fullWidth 
                 className="py-3 font-bold flex items-center justify-center gap-2"

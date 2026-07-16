@@ -10,6 +10,8 @@ export interface Ministry {
   leaderTitle: string;
   leaderEmail: string;
   image: string;
+  scripture?: string;
+  scriptureReference?: string;
   description: string;
   features: string[];
 }
@@ -19,20 +21,22 @@ export const ministriesData: Ministry[] = [
     id: "children",
     englishName: "Vaarthai Kids Ministry",
     name: "வார்த்தை சிறுவர் ஊழியம்",
-    purpose: "பெற்றோருடன் இணைந்து, குழந்தைகளின் இருதயங்களில் விசுவாசத்தின் வலுவான அடித்தளத்தை உருவாக்குதல்.",
-    audience: "குழந்தைகள் மற்றும் 6-ம் வகுப்பு வரையிலான சிறுவர்கள்",
-    schedule: "ஞாயிறு காலை 10:00 மணி",
-    location: "ஆலய சிறுவர் பிரிவு",
-    leaderName: "மேகன் மில்லர்",
-    leaderTitle: "சிறுவர் ஊழிய இயக்குனர்",
-    leaderEmail: "megan@vaarthaichurch.org",
-    image: "ministry-kids",
-    description: "சிறுவர்கள் தேவனுடைய அன்பை அனுபவிக்கும் பாதுகாப்பான, வேடிக்கையான மற்றும் ஈர்க்கக்கூடிய சூழலை நாங்கள் உருவாக்குகிறோம். ஒவ்வொரு வகுப்பிலும் வேதாகமப் பாடங்கள், கதைகள், பாடல்கள் மற்றும் விளையாட்டுகள் மூலம் குழந்தைகளுக்குத் தேவனுடைய அன்பைக் கற்றுக்கொடுக்கிறோம்.",
+    purpose: "At Varthai Church, we provide a safe, welcoming, and joyful environment for children aged 4 to 12 years.",
+    audience: "Children aged 4 to 12 years (4 முதல் 12 வயது சிறுவர்கள்)",
+    schedule: "Every Sunday at 10:00 AM",
+    location: "Kids Ministry Area (ஆலய சிறுவர் பிரிவு)",
+    leaderName: "Megan Miller",
+    leaderTitle: "Kids Ministry Coordinator",
+    leaderEmail: "info@vaarthai.org.au",
+    image: "/ministry-children-detail.jpg",
+    scripture: "\"But Jesus said, 'Let the little children come to Me, and do not forbid them; for of such is the kingdom of heaven.'\"",
+    scriptureReference: "Matthew 19:14",
+    description: "At Varthai Church, we provide a safe, welcoming, and joyful environment for children aged 4 to 12 years. Our Kids Ministry is dedicated to helping children grow in their faith in Christ and develop a personal love for Jesus by enjoying the Word through age-appropriate Bible teaching, creative arts and crafts, worship, engaging games, and fun-filled activities.",
     features: [
-      "பாதுகாப்பான டிஜிட்டல் வருகைப்பதிவு முறை",
-      "பயிற்சி பெற்ற மற்றும் சரிபார்க்கப்பட்ட தன்னார்வலர்கள்",
-      "விளையாட்டு வழிக் கற்றல் மற்றும் எளிய விவிலியப் பாடங்கள்",
-      "சிறப்புக் கவனத் தேவைகளுடைய குழந்தைகளுக்கான உதவி"
+      "Age-appropriate Bible teaching & storytelling",
+      "Creative arts, crafts, and worship songs",
+      "Engaging games and fun-filled group activities",
+      "Safe, welcoming, and joyful environment (ages 4–12)"
     ]
   },
   {

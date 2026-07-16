@@ -1,10 +1,16 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { FacebookIcon, InstagramIcon, YoutubeIcon, TwitterIcon } from "@/components/SocialIcons";
 import { churchConfig } from "@/data/config";
 
 export const Footer: React.FC = () => {
+  const pathname = usePathname();
+  const isEnglish = pathname === "/en" || pathname?.startsWith("/en/");
+  const basePrefix = isEnglish ? "/en" : "";
   const currentYear = new Date().getFullYear();
 
   const socialIcons = {
@@ -134,15 +140,15 @@ export const Footer: React.FC = () => {
               Quick Links
             </h3>
             <nav className="grid grid-cols-2 gap-2 text-sm" aria-label="Footer Navigation">
-              <Link href="/" className="text-stone-300 hover:text-white transition-colors">Home</Link>
-              <Link href="/about" className="text-stone-300 hover:text-white transition-colors">About</Link>
-              <Link href="/ministries" className="text-stone-300 hover:text-white transition-colors">Ministries</Link>
-              <Link href="/sermons" className="text-stone-300 hover:text-white transition-colors">Sermons</Link>
-              <Link href="/events" className="text-stone-300 hover:text-white transition-colors">Events</Link>
-              <Link href="/gallery" className="text-stone-300 hover:text-white transition-colors">Photos</Link>
-              <Link href="/give" className="text-stone-300 hover:text-white transition-colors">Give</Link>
-              <Link href="/plan-your-visit" className="text-stone-300 hover:text-white transition-colors text-accent hover:text-accent-light font-bold">Visit</Link>
-              <Link href="/contact" className="text-stone-300 hover:text-white transition-colors">Contact</Link>
+              <Link href={isEnglish ? "/en" : "/"} className="text-stone-300 hover:text-white transition-colors">Home</Link>
+              <Link href={`${basePrefix}/about`} className="text-stone-300 hover:text-white transition-colors">About</Link>
+              <Link href={`${basePrefix}/ministries`} className="text-stone-300 hover:text-white transition-colors">Ministries</Link>
+              <Link href={`${basePrefix}/sermons`} className="text-stone-300 hover:text-white transition-colors">Sermons</Link>
+              <Link href={`${basePrefix}/events`} className="text-stone-300 hover:text-white transition-colors">Events</Link>
+              <Link href={`${basePrefix}/gallery`} className="text-stone-300 hover:text-white transition-colors">Photos</Link>
+              <Link href={`${basePrefix}/give`} className="text-stone-300 hover:text-white transition-colors">Give</Link>
+              <Link href={`${basePrefix}/plan-your-visit`} className="text-stone-300 hover:text-white transition-colors text-accent hover:text-accent-light font-bold">Visit</Link>
+              <Link href={`${basePrefix}/contact`} className="text-stone-300 hover:text-white transition-colors">Contact</Link>
             </nav>
           </div>
 
@@ -152,9 +158,9 @@ export const Footer: React.FC = () => {
         <div className="border-t border-[#1E293B] mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
           <p>© {currentYear} {churchConfig.name}. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
-            <Link href="/accessibility" className="hover:text-white transition-colors">Accessibility Statement</Link>
+            <Link href={`${basePrefix}/privacy`} className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href={`${basePrefix}/terms`} className="hover:text-white transition-colors">Terms of Use</Link>
+            <Link href={`${basePrefix}/accessibility`} className="hover:text-white transition-colors">Accessibility Statement</Link>
           </div>
         </div>
 
