@@ -58,8 +58,8 @@ export const eventsData: ChurchEvent[] = [
     englishScripture: "\"They broke bread in their homes and ate together with glad and sincere hearts.\" – Acts 2:46",
     description: "\"வீடுகள்தோறும் அப்பம்பிட்டு, மகிழ்ச்சியோடும் கபடமற்ற இருதயத்தோடும் போஜனம் பண்ணி...\" – அப்போஸ்தலர் 2:46\n\nஞாயிறு ஆராதனை முடிந்தவுடன் நமது ஐக்கியம் முடிந்துவிடுவதில்லை! ஒவ்வொரு மாதத்தின் நான்காவது ஞாயிற்றுக்கிழமையிலும், எங்கள் மாதாந்திர ஆராதனைக்குப் பிந்தைய மதிய உணவு ஒன்றுகூடலுடன் அந்த மகிழ்ச்சியைத் தொடர்கிறோம். ஸ்பிரிங்ஃபீல்ட் லேக்ஸில் உள்ள லயன்ஸ் பார்க்கிற்குச் சென்று, உணவைப் பகிர்ந்து கொண்டு, அழகான இயற்கைச் சூழலை ரசித்து, நமது திருச்சபைக் குடும்பத்திற்குள் நிலையான நட்பை உருவாக்குகிறோம். பழைய நண்பர்களோடு இணையவும் புதியவர்களை வரவேற்கவும் இது ஒரு அற்புதமான, நிதானமான நேரம்.\n\nநிகழ்வு விவரங்கள்:\n* எப்பொழுது: ஒவ்வொரு மாதமும் 4-வது வாரம் (ஞாயிறு ஆராதனை முடிந்த உடனே)\n* எங்கே: லயன்ஸ் பார்க் (Lions Park), ஸ்பிரிங்ஃபீல்ட் லேக்ஸ்\n* கொண்டு வர வேண்டியவை: மகிழ்ச்சியான இருதயம் மற்றும் பகிர்ந்து கொள்ள உங்களுக்குப் பிடித்த உணவு அல்லது தின்பண்டங்கள்!",
     englishDescription: "\"They broke bread in their homes and ate together with glad and sincere hearts.\" – Acts 2:46\n\nFellowship doesn't have to end when the Sunday service is over! On the fourth Sunday of every month, we keep the joy going with our Monthly After-Church Lunch get-together. We head over to Lions Park in Springfield Lakes to share a meal, enjoy the beautiful outdoors, and build lasting friendships within our church family. It is a wonderful, relaxed time to connect with old friends and welcome new ones.\n\nEvent Details:\n* When: The 4th week of each month (Immediately following the Sunday Service)\n* Where: Lions Park, Springfield Lakes\n* What to Bring: A joyful heart and your favourite dish or snacks to share!",
-    organizer: "Ps Weslyn",
-    englishOrganizer: "Ps Weslyn",
+    organizer: "Mr Devairakkam Paul",
+    englishOrganizer: "Mr Devairakkam Paul",
     organizerEmail: "info@vaarthai.org.au",
     image: "/event-after-church-lunch.jpg",
     isFeatured: false
