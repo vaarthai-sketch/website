@@ -156,7 +156,7 @@ export const ministriesData: Ministry[] = [
     leaderTitle: "இல்லக் கூட்டங்களின் ஒருங்கிணைப்பாளர்",
     englishLeaderTitle: "Life Groups Coordinator",
     leaderEmail: "info@vaarthai.org.au",
-    image: "ministry-groups",
+    image: "/ministry-life-groups-detail.jpg",
     description: "ஞாயிறு ஆராதனைகள் நாம் அனைவரும் கூடி ஆராதிப்பதற்கானவை; ஆனால் இல்லக் கூட்டங்கள் நம் வாழ்க்கையை உண்மையிலேயே பகிர்ந்துகொள்வதற்கானவை. இந்தக் கூட்டங்கள் நம் திருச்சபையின் ஜெப வாழ்க்கையின் இதயத்துடிப்பாக விளங்குகின்றன. தற்பொழுது, நாம் ஜூம் (Zoom) வழியாக ஆன்லைனில் கூடிவந்து, தேவனுடைய வார்த்தையைத் தியானித்து, சங்கீதப் புஸ்தகத்தின் வழியாக இணைந்து ஜெபிக்கிறோம்—விசுவாசத்திலும் ஐக்கியத்திலும் ஒருவரையொருவர் தாங்கிக்கொள்கிறோம்.",
     englishDescription: "While our Sunday services are a time for corporate worship, Life Groups are where life is truly shared. These groups serve as the heartbeat of our church's prayer life. Currently, we gather online via Zoom to meditate on God's Word and pray through the book of Psalms together—supporting one another in faith and fellowship.",
     features: [
