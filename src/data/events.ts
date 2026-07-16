@@ -40,7 +40,7 @@ export const eventsData: ChurchEvent[] = [
     organizer: "Ps Weslyn",
     englishOrganizer: "Ps Weslyn",
     organizerEmail: "info@vaarthai.org.au",
-    image: "event-worship-night",
+    image: "/event-mid-week-prayer.jpg",
     isFeatured: true
   },
   {
