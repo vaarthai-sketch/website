@@ -1,11 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Mail, CheckCircle2 } from "lucide-react";
 import { Button } from "./Button";
 import { churchConfig } from "@/data/config";
 
 export const NewsletterForm: React.FC = () => {
+  const pathname = usePathname();
+  const isEn = pathname?.startsWith("/en") || pathname === "/en";
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -15,12 +19,12 @@ export const NewsletterForm: React.FC = () => {
     e.preventDefault();
     if (!name.trim()) {
       setStatus("error");
-      setErrorMessage("தயவுசெய்து உங்கள் பெயரை உள்ளிடவும் (Please enter your name).");
+      setErrorMessage(isEn ? "Please enter your name." : "தயவுசெய்து உங்கள் பெயரை உள்ளிடவும் (Please enter your name).");
       return;
     }
     if (!email.trim() || !/^\S+@\S+\.\S+$/.test(email)) {
       setStatus("error");
-      setErrorMessage("தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.");
+      setErrorMessage(isEn ? "Please enter a valid email address." : "தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.");
       return;
     }
 
@@ -51,7 +55,7 @@ export const NewsletterForm: React.FC = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          _subject: `[New Subscriber] வார்த்தை திருச்சபை - Weekly Newsletter (${name})`,
+          _subject: isEn ? `[New Subscriber] Vaarthai Church - Weekly Newsletter (${name})` : `[New Subscriber] வார்த்தை திருச்சபை - Weekly Newsletter (${name})`,
           Name: name,
           Email: email,
           SubscribedAt: new Date().toLocaleString("en-AU", { timeZone: "Australia/Sydney" }),
@@ -78,7 +82,7 @@ export const NewsletterForm: React.FC = () => {
     } catch (err) {
       console.error("Subscription error:", err);
       setStatus("error");
-      setErrorMessage("சந்தா பதிவில் பிழை ஏற்பட்டது. தயவுசெய்து சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.");
+      setErrorMessage(isEn ? "An error occurred while subscribing. Please try again shortly." : "சந்தா பதிவில் பிழை ஏற்பட்டது. தயவுசெய்து சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.");
     }
   };
 
@@ -90,16 +94,18 @@ export const NewsletterForm: React.FC = () => {
       >
         <CheckCircle2 className="w-12 h-12 text-accent mx-auto mb-3" />
         <h3 className="font-serif text-xl font-bold text-primary mb-1">
-          மிக்க நன்றி! (Thank you for subscribing!)
+          {isEn ? "Thank you for subscribing!" : "மிக்க நன்றி! (Thank you for subscribing!)"}
         </h3>
         <p className="text-sm text-stone-600 max-w-sm mx-auto leading-relaxed">
-          உங்களின் சந்தா விருப்பம் அனுப்பப்பட்டது. வார்த்தை திருச்சபையின் வாராந்திர மடல்கள் இனி உங்கள் மின்னஞ்சலுக்கு வந்தடையும்.
+          {isEn
+            ? "Your subscription request has been submitted successfully. You will now receive weekly newsletters and spiritual updates from Vaarthai Church directly to your inbox."
+            : "உங்களின் சந்தா விருப்பம் அனுப்பப்பட்டது. வார்த்தை திருச்சபையின் வாராந்திர மடல்கள் இனி உங்கள் மின்னஞ்சலுக்கு வந்தடையும்."}
         </p>
         <button 
           onClick={() => setStatus("idle")}
           className="mt-4 text-xs font-semibold text-primary hover:text-accent underline"
         >
-          மற்றொரு மின்னஞ்சலை பதிவு செய்ய (Subscribe another email)
+          {isEn ? "Subscribe another email" : "மற்றொரு மின்னஞ்சலை பதிவு செய்ய (Subscribe another email)"}
         </button>
       </div>
     );
@@ -109,11 +115,11 @@ export const NewsletterForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="news-name" className="sr-only">Your Name</label>
+          <label htmlFor="news-name" className="sr-only">{isEn ? "Your Name" : "Your Name"}</label>
           <input
             type="text"
             id="news-name"
-            placeholder="Your Name"
+            placeholder={isEn ? "Your Name" : "Your Name"}
             value={name}
             onChange={(e) => {
               setName(e.target.value);
@@ -124,12 +130,12 @@ export const NewsletterForm: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="news-email" className="sr-only">Email Address</label>
+          <label htmlFor="news-email" className="sr-only">{isEn ? "Email Address" : "Email Address"}</label>
           <div className="relative">
             <input
               type="email"
               id="news-email"
-              placeholder="Email Address"
+              placeholder={isEn ? "Email Address" : "Email Address"}
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -145,7 +151,9 @@ export const NewsletterForm: React.FC = () => {
 
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-1">
         <p className="text-[11px] text-stone-500 leading-normal max-w-md text-center sm:text-left">
-          By subscribing, you consent to receive weekly newsletters, event announcements, and spiritual updates from Vaarthai Evangelical Church. You can unsubscribe at any time.
+          {isEn
+            ? "By subscribing, you consent to receive weekly newsletters, event announcements, and spiritual updates from Vaarthai Evangelical Church. You can unsubscribe at any time."
+            : "By subscribing, you consent to receive weekly newsletters, event announcements, and spiritual updates from Vaarthai Evangelical Church. You can unsubscribe at any time."}
         </p>
         <Button 
           type="submit" 
@@ -154,7 +162,7 @@ export const NewsletterForm: React.FC = () => {
           className="w-full sm:w-auto px-6 py-3 font-semibold shrink-0"
           disabled={status === "loading"}
         >
-          {status === "loading" ? "Subscribing..." : "Subscribe (பதிவு செய்க)"}
+          {status === "loading" ? "Subscribing..." : (isEn ? "Subscribe" : "Subscribe (பதிவு செய்க)")}
         </Button>
       </div>
 
