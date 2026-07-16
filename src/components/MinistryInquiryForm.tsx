@@ -24,32 +24,57 @@ export const MinistryInquiryForm: React.FC<MinistryInquiryFormProps> = ({ minist
     if (status === "error") setStatus("idle");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
+    setErrorMessage("");
 
-    const subject = encodeURIComponent(`Get Involved: ${ministryName}`);
-    let bodyText = `Hello,\n\nI would like to get involved in the ${ministryName}.\n`;
-    if (formData.name.trim()) bodyText += `\nName: ${formData.name.trim()}`;
-    if (formData.email.trim()) bodyText += `\nEmail: ${formData.email.trim()}`;
-    if (formData.message.trim()) bodyText += `\n\nMessage:\n${formData.message.trim()}`;
-    else bodyText += `\n\nPlease let me know how I can participate or attend!`;
+    try {
+      // 1. Send automatically to info@vaarthai.org.au without opening email client
+      await fetch("https://formsubmit.co/ajax/info@vaarthai.org.au", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `Get Involved: ${ministryName}`,
+          _template: "table",
+          Ministry: ministryName,
+          Name: formData.name.trim() || "Not provided",
+          Email: formData.email.trim() || "Not provided",
+          Message: formData.message.trim() || `I would like to get involved in the ${ministryName}. Please let me know how I can participate or attend!`,
+        }),
+      }).catch((err) => console.warn("Formsubmit warn:", err));
 
-    const body = encodeURIComponent(bodyText);
-    window.location.href = `mailto:info@vaarthai.org.au?subject=${subject}&body=${body}`;
+      // 2. Also record in internal server API endpoint
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name.trim() || "Anonymous",
+          email: formData.email.trim() || "Not provided",
+          department: ministryName,
+          subject: `Get Involved: ${ministryName}`,
+          message: formData.message.trim() || `I would like to get involved in the ${ministryName}.`
+        }),
+      }).catch((err) => console.warn("Contact API warn:", err));
 
-    setTimeout(() => {
       setStatus("success");
-    }, 600);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus("error");
+      setErrorMessage("Something went wrong while sending your inquiry. Please try again or email us directly at info@vaarthai.org.au.");
+    }
   };
 
   if (status === "success") {
     return (
       <div className="bg-emerald-50 border border-accent/20 rounded-lg p-6 text-center space-y-3 animate-fade-in-up">
         <CheckCircle2 className="w-12 h-12 text-accent mx-auto" />
-        <h3 className="font-serif text-lg font-bold text-primary">Email Client Opened!</h3>
+        <h3 className="font-serif text-lg font-bold text-primary">Inquiry Sent Successfully!</h3>
         <p className="text-xs text-stone-600 leading-relaxed">
-          Your inquiry for <strong>{ministryName}</strong> has been prepared and addressed to <strong>info@vaarthai.org.au</strong>. Please click <strong>Send</strong> in your email application to complete your submission.
+          Thank you for reaching out! Your inquiry regarding <strong>{ministryName}</strong> has been sent automatically to <strong>info@vaarthai.org.au</strong>. Our team will get back to you shortly.
         </p>
       </div>
     );
