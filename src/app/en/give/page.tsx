@@ -85,7 +85,7 @@ export default function EnglishGivePage() {
                   {["$50", "$100", "$250", "Custom"].map((amt, idx) => (
                     <a
                       key={idx}
-                      href={churchConfig.links.give}
+                      href={amt === "Custom" ? churchConfig.links.give : `${churchConfig.links.give}&amount=${amt.replace("$", "")}`}
                       data-open-in-church-center-modal="true"
                       className="text-center py-2.5 px-2 rounded-lg bg-white/10 hover:bg-accent hover:text-white border border-white/15 text-sm font-bold text-white transition-all duration-200 cursor-pointer"
                     >
