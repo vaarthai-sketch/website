@@ -2,7 +2,7 @@
 
 import React from "react";
 import { 
-  Heart, ShieldCheck, Mail, Smartphone, ArrowRight, DollarSign, Check, Info, FileText
+  Heart, ShieldCheck, Mail, Smartphone, ArrowRight, DollarSign, Check, Info, FileText, ExternalLink
 } from "lucide-react";
 import { churchConfig } from "@/data/config";
 
@@ -57,40 +57,70 @@ export default function EnglishGivePage() {
             </div>
           </div>
 
-          {/* Secure Live Giving Portal Embed */}
-          <div className="lg:col-span-5 bg-white border border-border rounded-xl p-4 sm:p-6 shadow-sm space-y-4">
-            <div className="flex items-center justify-between border-b border-border pb-3">
-              <div>
-                <h3 className="font-serif text-lg font-bold text-primary flex items-center gap-2">
-                  <span>Planning Center Giving</span>
-                </h3>
-                <p className="text-[11px] text-stone-500">
-                  Safe, encrypted, and direct online giving portal.
+          {/* Secure Live Giving Portal Card */}
+          <div className="lg:col-span-5 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#020617] text-white border border-emerald-500/30 rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden space-y-6">
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+            
+            <div className="relative z-10 space-y-4">
+              <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                <div>
+                  <span className="text-xs font-bold text-accent uppercase tracking-widest block">PLANNING CENTER</span>
+                  <h3 className="font-serif text-xl sm:text-2xl font-black text-white flex items-center gap-2 mt-0.5">
+                    <span>Planning Center Giving</span>
+                  </h3>
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 100% Secure
+                </span>
+              </div>
+
+              <p className="text-sm sm:text-base text-stone-200 leading-relaxed font-light">
+                All online tithes and offerings for Vaarthai Church are securely processed directly through <strong className="text-white font-semibold">Planning Center Secure Giving</strong>. Easily give with any Credit/Debit Card, Apple Pay, or Google Pay.
+              </p>
+
+              {/* Quick Select Amount Buttons */}
+              <div className="space-y-2 pt-2">
+                <span className="text-xs font-bold text-stone-300 block">Quick Select Amount:</span>
+                <div className="grid grid-cols-4 gap-2">
+                  {["$50", "$100", "$250", "Custom"].map((amt, idx) => (
+                    <a
+                      key={idx}
+                      href={churchConfig.links.give}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-center py-2.5 px-2 rounded-lg bg-white/10 hover:bg-accent hover:text-white border border-white/15 text-sm font-bold text-white transition-all duration-200"
+                    >
+                      {amt}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4 space-y-2 text-xs text-stone-300">
+                <div className="flex items-center gap-2 text-accent font-bold">
+                  <Check className="w-4 h-4 shrink-0" />
+                  <span>Automated Recurring Giving & Receipts</span>
+                </div>
+                <p className="text-stone-300 leading-relaxed">
+                  Through your Planning Center profile, you can easily set up automated recurring giving (weekly, bi-weekly, or monthly) and download your annual tax-deductible giving statements at any time.
                 </p>
               </div>
-              <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span> Live
-              </span>
             </div>
 
-            <div className="w-full bg-stone-50 rounded-lg overflow-hidden border border-border aspect-[4/5] min-h-[650px] relative">
-              <iframe
-                src="https://vaarthai.churchcenter.com/giving?embed=true"
-                title="Vaarthai Church Online Giving Portal"
-                className="w-full h-full border-0 absolute inset-0"
-                allow="payment"
-              />
-            </div>
-
-            <div className="pt-2 text-center">
+            {/* Launch CTA Button */}
+            <div className="relative z-10 pt-4 space-y-3">
               <a
                 href={churchConfig.links.give}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-primary hover:text-accent underline transition-colors"
+                className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base sm:text-lg shadow-lg shadow-emerald-950/50 hover:scale-[1.01] transition-all duration-200 text-center"
               >
-                Having trouble with the embed? Open full Giving Portal in a new tab <ArrowRight className="w-3.5 h-3.5" />
+                <span>Launch Planning Center Giving</span>
+                <ExternalLink className="w-5 h-5 shrink-0" />
               </a>
+              <p className="text-[11px] text-stone-400 text-center italic">
+                * Clicking this button safely launches our Planning Center Giving portal in a secure new tab.
+              </p>
             </div>
           </div>
 
