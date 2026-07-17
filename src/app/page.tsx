@@ -215,21 +215,23 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {/* New Visitor Callout */}
-          <div className="lg:col-span-7 bg-gradient-to-br from-[#1B3B6F] via-[#214F91] to-[#1A365D] border border-[#3B82F6]/30 text-white p-8 sm:p-12 rounded-xl flex flex-col justify-between shadow-md relative overflow-hidden">
+          <div className="lg:col-span-7 bg-gradient-to-br from-[#1B3B6F] via-[#214F91] to-[#1A365D] border border-[#3B82F6]/30 text-white p-8 sm:p-12 lg:p-14 rounded-xl flex flex-col justify-between shadow-md relative overflow-hidden">
             <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
             
-            <div className="space-y-4 max-w-xl relative z-10">
-              <span className="text-xs font-bold text-accent uppercase tracking-widest">புதியவரா?</span>
-              <h2 className="font-serif text-3xl font-black tracking-tight leading-tight">
+            <div className="space-y-6 relative z-10 my-auto">
+              <span className="inline-block text-xs sm:text-sm font-extrabold text-accent uppercase tracking-wider bg-accent/20 px-4 py-1.5 rounded-full border border-accent/40 shadow-sm">
+                புதியவரா?
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.25] text-white">
                 உங்களது முதல் ஞாயிறு ஆராதனை வருகை
               </h2>
-              <p className="text-sm text-blue-100/90 leading-relaxed font-light">
+              <p className="text-base sm:text-lg lg:text-xl text-blue-50 font-normal sm:font-medium leading-relaxed sm:leading-loose">
                 புதிய ஒரு சபைக்கு வருவது சிலருக்குத் தயக்கத்தைத் தரலாம். ஆனால் எங்களது வார்த்தை சபையில் நீங்கள் அன்பான வரவேற்பையும், வேதப்பூர்வமான ஆராதனையையும் அனுபவிப்பீர்கள். குழந்தைகள் பாதுகாப்பு வருகைப்பதிவு முறை மற்றும் கார் பார்க்கிங் விவரங்கள் போன்ற உங்களது சந்தேகங்களுக்குப் பதிலளிக்க எங்களது வழிகாட்டியைப் படியுங்கள்.
               </p>
             </div>
             
-            <div className="pt-8 relative z-10">
-              <Button href="/plan-your-visit" variant="accent" size="md" className="font-bold">
+            <div className="pt-8 sm:pt-10 relative z-10">
+              <Button href="/plan-your-visit" variant="accent" size="lg" className="font-bold text-base sm:text-lg px-8 py-3.5 shadow-md">
                 வருகையைத் திட்டமிட (Plan Your Visit)
               </Button>
             </div>

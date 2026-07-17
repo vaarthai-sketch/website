@@ -220,21 +220,23 @@ export default function EnglishHomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {/* New Visitor Callout */}
-          <div className="lg:col-span-7 bg-gradient-to-br from-[#1B3B6F] via-[#214F91] to-[#1A365D] border border-[#3B82F6]/30 text-white p-8 sm:p-12 rounded-xl flex flex-col justify-between shadow-md relative overflow-hidden">
+          <div className="lg:col-span-7 bg-gradient-to-br from-[#1B3B6F] via-[#214F91] to-[#1A365D] border border-[#3B82F6]/30 text-white p-8 sm:p-12 lg:p-14 rounded-xl flex flex-col justify-between shadow-md relative overflow-hidden">
             <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
             
-            <div className="space-y-4 max-w-xl relative z-10">
-              <span className="text-xs font-bold text-accent uppercase tracking-widest">NEW HERE?</span>
-              <h2 className="font-serif text-3xl font-black tracking-tight leading-tight">
+            <div className="space-y-6 relative z-10 my-auto">
+              <span className="inline-block text-xs sm:text-sm font-extrabold text-accent uppercase tracking-wider bg-accent/20 px-4 py-1.5 rounded-full border border-accent/40 shadow-sm">
+                NEW HERE?
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.25] text-white">
                 Your First Sunday Visit
               </h2>
-              <p className="text-sm text-blue-100/90 leading-relaxed font-light">
+              <p className="text-base sm:text-lg lg:text-xl text-blue-50 font-normal sm:font-medium leading-relaxed sm:leading-loose">
                 Visiting a new church for the first time can feel intimidating. But at Vaarthai Church, you will experience a warm, genuine welcome and gospel-centered worship. Read our visitor guide to get answers on our children&apos;s check-in process, dress code, parking logistics, and what to expect during our service.
               </p>
             </div>
             
-            <div className="pt-8 relative z-10">
-              <Button href="/en/plan-your-visit" variant="accent" size="md" className="font-bold">
+            <div className="pt-8 sm:pt-10 relative z-10">
+              <Button href="/en/plan-your-visit" variant="accent" size="lg" className="font-bold text-base sm:text-lg px-8 py-3.5 shadow-md">
                 Plan Your Visit Guide
               </Button>
             </div>
