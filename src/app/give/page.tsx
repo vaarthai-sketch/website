@@ -12,11 +12,16 @@ export default function GivePage() {
     <div className="pb-20 space-y-16">
       
       {/* 1. Header Banner */}
-      <section className="bg-primary text-white py-16 text-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      <section 
+        className="relative text-white py-16 md:py-24 text-center overflow-hidden bg-cover bg-[center_35%] bg-no-repeat shadow-md"
+        style={{ backgroundImage: "url('/giving-hero.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-[#0F172A]/75 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-[#0F172A]/50"></div>
+        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] mix-blend-overlay"></div>
         <div className="max-w-4xl mx-auto px-4 relative z-10 space-y-3">
-          <h1 className="font-serif text-4xl md:text-5xl font-black">ஆன்லைன் காணிக்கை (Giving)</h1>
-          <p className="text-stone-300 text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed">
+          <h1 className="font-serif text-4xl md:text-5xl font-black tracking-tight drop-shadow-sm">ஆன்லைன் காணிக்கை (Giving)</h1>
+          <p className="text-stone-200 text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed drop-shadow-sm">
             நமது சபையின் ஊழியங்கள், நற்பணிகள் மற்றும் மிஷனரி திட்டங்களை உங்கள் காணிக்கைகள் மூலம் தாங்குங்கள்.
           </p>
         </div>

@@ -12,11 +12,16 @@ export default function EnglishGivePage() {
     <div className="pb-20 space-y-16">
       
       {/* 1. Header Banner */}
-      <section className="bg-primary text-white py-16 text-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      <section 
+        className="relative text-white py-16 md:py-24 text-center overflow-hidden bg-cover bg-[center_35%] bg-no-repeat shadow-md"
+        style={{ backgroundImage: "url('/giving-hero.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-[#0F172A]/75 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-[#0F172A]/50"></div>
+        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] mix-blend-overlay"></div>
         <div className="max-w-4xl mx-auto px-4 relative z-10 space-y-3">
-          <h1 className="font-serif text-4xl md:text-5 me-1 md:text-5xl font-black">Online Giving</h1>
-          <p className="text-stone-300 text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed">
+          <h1 className="font-serif text-4xl md:text-5xl font-black tracking-tight drop-shadow-sm">Online Giving</h1>
+          <p className="text-stone-200 text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed drop-shadow-sm">
             Support our church ministries, missions, and community outreach through your faithful and generous giving.
           </p>
         </div>
