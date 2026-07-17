@@ -119,7 +119,7 @@ export const churchConfig: ChurchConfig = {
     twitter: "https://twitter.com/vaarthaichurch"
   },
   links: {
-    give: "https://vaarthai.churchcenter.com/giving",
+    give: "https://vaarthai.churchcenter.com/giving?open-in-church-center-modal=true",
     livestream: "https://youtube.com/c/vaarthaichurch/live"
   },
   newsletterForm: {

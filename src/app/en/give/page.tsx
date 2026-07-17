@@ -86,9 +86,8 @@ export default function EnglishGivePage() {
                     <a
                       key={idx}
                       href={churchConfig.links.give}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-center py-2.5 px-2 rounded-lg bg-white/10 hover:bg-accent hover:text-white border border-white/15 text-sm font-bold text-white transition-all duration-200"
+                      data-open-in-church-center-modal="true"
+                      className="text-center py-2.5 px-2 rounded-lg bg-white/10 hover:bg-accent hover:text-white border border-white/15 text-sm font-bold text-white transition-all duration-200 cursor-pointer"
                     >
                       {amt}
                     </a>
@@ -111,15 +110,14 @@ export default function EnglishGivePage() {
             <div className="relative z-10 pt-4 space-y-3">
               <a
                 href={churchConfig.links.give}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base sm:text-lg shadow-lg shadow-emerald-950/50 hover:scale-[1.01] transition-all duration-200 text-center"
+                data-open-in-church-center-modal="true"
+                className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base sm:text-lg shadow-lg shadow-emerald-950/50 hover:scale-[1.01] transition-all duration-200 text-center cursor-pointer"
               >
                 <span>Give Tithes & Offerings</span>
                 <ExternalLink className="w-5 h-5 shrink-0" />
               </a>
               <p className="text-[11px] text-stone-400 text-center italic">
-                * Clicking this button safely launches our secure giving portal in a new tab.
+                * Clicking this button instantly opens our secure giving portal modal overlay right on this page.
               </p>
             </div>
           </div>

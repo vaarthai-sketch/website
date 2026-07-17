@@ -78,6 +78,9 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${playfair.variable} ${kavivanar.variable} ${anekTamil.variable} h-full antialiased`}
     >
+      <head>
+        <script src="https://js.churchcenter.com/modal/v1" async></script>
+      </head>
       <body className="min-h-full bg-background text-foreground flex flex-col font-sans">
         {/* Skip to Content for screenreaders accessibility */}
         <a href="#main-content" className="skip-link font-bold">
