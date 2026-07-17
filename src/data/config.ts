@@ -16,6 +16,7 @@ export interface ChurchConfig {
       state: string;
       zip: string;
       mapUrl: string; // Google Maps embed or direction link placeholder
+      mapLink: string;
     };
   };
   services: {
@@ -86,7 +87,8 @@ export const churchConfig: ChurchConfig = {
       city: "Springfield",
       state: "QLD",
       zip: "4300",
-      mapUrl: "https://www.google.com/maps?q=389+Old+Logan+Rd,+Springfield+QLD+4300&output=embed"
+      mapUrl: "https://www.google.com/maps?q=389+Old+Logan+Rd,+Springfield+QLD+4300&output=embed",
+      mapLink: "https://maps.app.goo.gl/mJdthzcaxG2hsBpL6"
     }
   },
   services: [

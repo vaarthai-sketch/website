@@ -103,9 +103,7 @@ export const Footer: React.FC = () => {
             </h3>
             <div className="space-y-3 text-sm text-stone-300">
               <a 
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                  `${churchConfig.contact.address.street}, ${churchConfig.contact.address.city}, ${churchConfig.contact.address.state} ${churchConfig.contact.address.zip}`
-                )}`}
+                href={churchConfig.contact.address.mapLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-2 group hover:text-white"

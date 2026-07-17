@@ -167,7 +167,7 @@ export default function EnglishContactPage() {
                     {churchConfig.contact.address.city}, {churchConfig.contact.address.state} {churchConfig.contact.address.zip}
                   </p>
                   <a 
-                    href="https://maps.google.com" 
+                    href={churchConfig.contact.address.mapLink} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs text-primary font-bold hover:text-accent mt-1 transition-colors"

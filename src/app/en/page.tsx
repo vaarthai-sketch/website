@@ -188,7 +188,7 @@ export default function EnglishHomePage() {
                   {churchConfig.contact.address.city}, {churchConfig.contact.address.state} {churchConfig.contact.address.zip}
                 </p>
                 <a 
-                  href="https://www.google.com/maps?q=389+Old+Logan+Rd,+Springfield+QLD+4300" 
+                  href={churchConfig.contact.address.mapLink} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-xs font-bold text-primary hover:text-accent inline-flex items-center gap-1 mt-1 transition-colors"
