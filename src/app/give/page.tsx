@@ -162,29 +162,6 @@ export default function GivePage() {
         </div>
       </section>
 
-      {/* 4. Giving FAQs */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <div className="text-center space-y-1">
-          <h2 className="font-serif text-2xl md:text-3xl font-black text-primary">காணிக்கை பற்றிய சந்தேகங்கள் (FAQ)</h2>
-          <p className="text-xs text-stone-500">காணிக்கை மற்றும் வரிவிலக்கு சான்றிதழ் தொடர்பான கேள்விகள்.</p>
-        </div>
-
-        <div className="space-y-4">
-          <div className="border border-border p-5 rounded-lg bg-white space-y-2">
-            <h3 className="font-serif font-bold text-stone-900">எனது காணிக்கைகளுக்கு வரிவிலக்கு சான்றிதழ் கிடைக்குமா?</h3>
-            <p className="text-xs text-stone-600 leading-relaxed">
-              ஆம். எங்களது சபை ஒரு பதிவு செய்யப்பட்ட அறக்கட்டளை ஆகும். வருடாந்திரக் காணிக்கை விவரங்களின் அடிப்படையில் ஒவ்வொரு ஆண்டும் ஜனவரி மாதத்தில் வரிவிலக்கு சான்றிதழ்கள் வழங்கப்படும்.
-            </p>
-          </div>
-          <div className="border border-border p-5 rounded-lg bg-white space-y-2">
-            <h3 className="font-serif font-bold text-stone-900">ஆன்லைன் காணிக்கைச் செலுத்தும்போது கூடுதல் கட்டணம் பிடிக்கப்படுமா?</h3>
-            <p className="text-xs text-stone-600 leading-relaxed">
-              ஆன்லைன் கார்டு பரிவர்த்தனைகளுக்கு 2% முதல் 3% வரை கார்டு நிறுவனங்களால் கட்டணம் வசூலிக்கப்படலாம். அத்தகைய கட்டணங்களைத் தவிர்க்க நீங்கள் நெட் பேங்கிங் அல்லது நேரடியாக ஆலயத்தில் காணிக்கைச் செலுத்தலாம்.
-            </p>
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }

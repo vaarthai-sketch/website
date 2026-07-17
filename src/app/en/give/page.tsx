@@ -162,29 +162,6 @@ export default function EnglishGivePage() {
         </div>
       </section>
 
-      {/* 4. Giving FAQs */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <div className="text-center space-y-1">
-          <h2 className="font-serif text-2xl md:text-3xl font-black text-primary">Frequently Asked Questions</h2>
-          <p className="text-xs text-stone-500">Common questions regarding tithes, offerings, and tax receipts.</p>
-        </div>
-
-        <div className="space-y-4">
-          <div className="border border-border p-5 rounded-lg bg-white space-y-2">
-            <h3 className="font-serif font-bold text-stone-900">Will I receive an annual tax receipt for my contributions?</h3>
-            <p className="text-xs text-stone-600 leading-relaxed">
-              Yes! Our church is a registered not-for-profit charitable entity. Consolidated annual tax receipts are issued to all contributors every year in late January.
-            </p>
-          </div>
-          <div className="border border-border p-5 rounded-lg bg-white space-y-2">
-            <h3 className="font-serif font-bold text-stone-900">Are there any transaction fees when giving online?</h3>
-            <p className="text-xs text-stone-600 leading-relaxed">
-              Standard card processing fees (approximately 2-3%) may apply to credit and debit card gifts. To ensure 100% of your gift goes directly to ministry, you may opt for direct bank transfer or give in person on Sundays.
-            </p>
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }
