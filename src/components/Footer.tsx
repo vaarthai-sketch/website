@@ -141,7 +141,7 @@ export const Footer: React.FC = () => {
               <Link href={isEnglish ? "/en" : "/"} className="text-stone-300 hover:text-white transition-colors">Home</Link>
               <Link href={`${basePrefix}/about`} className="text-stone-300 hover:text-white transition-colors">About</Link>
               <Link href={`${basePrefix}/ministries`} className="text-stone-300 hover:text-white transition-colors">Ministries</Link>
-              <Link href={`${basePrefix}/sermons`} className="text-stone-300 hover:text-white transition-colors">Sermons</Link>
+              {/* <Link href={`${basePrefix}/sermons`} className="text-stone-300 hover:text-white transition-colors">Sermons</Link> */}
               <Link href={`${basePrefix}/events`} className="text-stone-300 hover:text-white transition-colors">Events</Link>
               <Link href={`${basePrefix}/gallery`} className="text-stone-300 hover:text-white transition-colors">Photos</Link>
               <Link href={`${basePrefix}/give`} className="text-stone-300 hover:text-white transition-colors">Give</Link>
