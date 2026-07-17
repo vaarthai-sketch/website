@@ -78,23 +78,6 @@ export default function EnglishGivePage() {
                 Your generous tithes and offerings help support the ongoing ministries and mission of Vaarthai Evangelical Church. All online donations are 100% securely processed to ensure your peace of mind. Easily give with any Credit/Debit Card, Apple Pay, or Google Pay.
               </p>
 
-              {/* Quick Select Amount Buttons */}
-              <div className="space-y-2 pt-2">
-                <span className="text-xs font-bold text-stone-300 block">Quick Select Amount:</span>
-                <div className="grid grid-cols-4 gap-2">
-                  {["$50", "$100", "$250", "Custom"].map((amt, idx) => (
-                    <a
-                      key={idx}
-                      href={amt === "Custom" ? churchConfig.links.give : `${churchConfig.links.give}&amount=${amt.replace("$", "")}`}
-                      data-open-in-church-center-modal="true"
-                      className="text-center py-2.5 px-2 rounded-lg bg-white/10 hover:bg-accent hover:text-white border border-white/15 text-sm font-bold text-white transition-all duration-200 cursor-pointer"
-                    >
-                      {amt}
-                    </a>
-                  ))}
-                </div>
-              </div>
-
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 space-y-2 text-xs text-stone-300">
                 <div className="flex items-center gap-2 text-accent font-bold">
                   <Check className="w-4 h-4 shrink-0" />

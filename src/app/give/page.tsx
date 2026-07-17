@@ -78,23 +78,6 @@ export default function GivePage() {
                 உங்கள் தாராளமான தசமபாகமும் காணிக்கைகளும் வார்த்தை சுவிசேஷ திருச்சபையின் தொடர் ஊழியங்களுக்கும் மிஷனரி பணிகளுக்கும் பேருதவியாக உள்ளன. உங்கள் மன அமைதிக்காக அனைத்து ஆன்லைன் காணிக்கைகளும் 100% முழு பாதுகாப்போடு நிர்வகிக்கப்படுகின்றன. உங்கள் Credit/Debit Card, Apple Pay அல்லது Google Pay மூலம் மிக எளிதாகக் காணிக்கை செலுத்தலாம்.
               </p>
 
-              {/* Quick Select Amount Buttons */}
-              <div className="space-y-2 pt-2">
-                <span className="text-xs font-bold text-stone-300 block">விரைவு காணிக்கை தேர்வு (Quick Select Amount):</span>
-                <div className="grid grid-cols-4 gap-2">
-                  {["$50", "$100", "$250", "Custom"].map((amt, idx) => (
-                    <a
-                      key={idx}
-                      href={amt === "Custom" ? churchConfig.links.give : `${churchConfig.links.give}&amount=${amt.replace("$", "")}`}
-                      data-open-in-church-center-modal="true"
-                      className="text-center py-2.5 px-2 rounded-lg bg-white/10 hover:bg-accent hover:text-white border border-white/15 text-sm font-bold text-white transition-all duration-200 cursor-pointer"
-                    >
-                      {amt}
-                    </a>
-                  ))}
-                </div>
-              </div>
-
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 space-y-2 text-xs text-stone-300">
                 <div className="flex items-center gap-2 text-accent font-bold">
                   <Check className="w-4 h-4 shrink-0" />
