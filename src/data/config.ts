@@ -94,8 +94,8 @@ export const churchConfig: ChurchConfig = {
       city: "Springfield",
       state: "QLD",
       zip: "4300",
-      mapUrl: "https://www.google.com/maps?q=389+Old+Logan+Rd,+Springfield+QLD+4300&output=embed",
-      mapLink: "https://maps.app.goo.gl/mJdthzcaxG2hsBpL6"
+      mapUrl: "https://www.google.com/maps?q=Vaarthai+Evangelical+Church,+389+Old+Logan+Rd,+Springfield+QLD+4300&output=embed",
+      mapLink: "https://www.google.com/maps/place/Vaarthai+Evangelical+Church/@-27.6412781,152.9142987,17z/data=!3m1!4b1!4m6!3m5!1s0x6b914b487106e599:0x5f93452fbc170a0c!8m2!3d-27.6412829!4d152.916879!16s%2Fg%2F11nr1198zy?entry=tts&g_ep=EgoyMDI2MDcxNC4wIPu8ASoASAFQAw%3D%3D&skid=fcae049e-72be-4ad1-b0e9-11c40af96171"
     },
     officeAddress: {
       poBox: "PO Box 246",
