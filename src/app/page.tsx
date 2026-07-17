@@ -215,15 +215,15 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {/* New Visitor Callout */}
-          <div className="lg:col-span-7 bg-gradient-to-br from-[#1E293B] to-[#020617] text-white p-8 sm:p-12 rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+          <div className="lg:col-span-7 bg-gradient-to-br from-[#1B3B6F] via-[#214F91] to-[#1A365D] border border-[#3B82F6]/30 text-white p-8 sm:p-12 rounded-xl flex flex-col justify-between shadow-md relative overflow-hidden">
+            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
             
             <div className="space-y-4 max-w-xl relative z-10">
               <span className="text-xs font-bold text-accent uppercase tracking-widest">புதியவரா?</span>
               <h2 className="font-serif text-3xl font-black tracking-tight leading-tight">
                 உங்களது முதல் ஞாயிறு ஆராதனை வருகை
               </h2>
-              <p className="text-sm text-stone-300 leading-relaxed font-light">
+              <p className="text-sm text-blue-100/90 leading-relaxed font-light">
                 புதிய ஒரு சபைக்கு வருவது சிலருக்குத் தயக்கத்தைத் தரலாம். ஆனால் எங்களது வார்த்தை சபையில் நீங்கள் அன்பான வரவேற்பையும், வேதப்பூர்வமான ஆராதனையையும் அனுபவிப்பீர்கள். குழந்தைகள் பாதுகாப்பு வருகைப்பதிவு முறை மற்றும் கார் பார்க்கிங் விவரங்கள் போன்ற உங்களது சந்தேகங்களுக்குப் பதிலளிக்க எங்களது வழிகாட்டியைப் படியுங்கள்.
               </p>
             </div>
