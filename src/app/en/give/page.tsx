@@ -64,9 +64,9 @@ export default function EnglishGivePage() {
             <div className="relative z-10 space-y-4">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div>
-                  <span className="text-xs font-bold text-accent uppercase tracking-widest block">PLANNING CENTER</span>
+                  <span className="text-xs font-bold text-accent uppercase tracking-widest block">SECURE ONLINE GIVING</span>
                   <h3 className="font-serif text-xl sm:text-2xl font-black text-white flex items-center gap-2 mt-0.5">
-                    <span>Planning Center Giving</span>
+                    <span>Vaarthai Tithes & Offerings</span>
                   </h3>
                 </div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 shadow-sm">
@@ -75,7 +75,7 @@ export default function EnglishGivePage() {
               </div>
 
               <p className="text-sm sm:text-base text-stone-200 leading-relaxed font-light">
-                All online tithes and offerings for Vaarthai Church are securely processed directly through <strong className="text-white font-semibold">Planning Center Secure Giving</strong>. Easily give with any Credit/Debit Card, Apple Pay, or Google Pay.
+                Your generous tithes and offerings help support the ongoing ministries and mission of Vaarthai Evangelical Church. All online donations are 100% securely processed to ensure your peace of mind. Easily give with any Credit/Debit Card, Apple Pay, or Google Pay.
               </p>
 
               {/* Quick Select Amount Buttons */}
@@ -102,7 +102,7 @@ export default function EnglishGivePage() {
                   <span>Automated Recurring Giving & Receipts</span>
                 </div>
                 <p className="text-stone-300 leading-relaxed">
-                  Through your Planning Center profile, you can easily set up automated recurring giving (weekly, bi-weekly, or monthly) and download your annual tax-deductible giving statements at any time.
+                  Through your secure online profile, you can easily set up automated recurring giving (weekly, bi-weekly, or monthly) and download your annual tax-deductible giving statements at any time.
                 </p>
               </div>
             </div>
@@ -115,11 +115,11 @@ export default function EnglishGivePage() {
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base sm:text-lg shadow-lg shadow-emerald-950/50 hover:scale-[1.01] transition-all duration-200 text-center"
               >
-                <span>Launch Planning Center Giving</span>
+                <span>Give Tithes & Offerings</span>
                 <ExternalLink className="w-5 h-5 shrink-0" />
               </a>
               <p className="text-[11px] text-stone-400 text-center italic">
-                * Clicking this button safely launches our Planning Center Giving portal in a secure new tab.
+                * Clicking this button safely launches our secure giving portal in a new tab.
               </p>
             </div>
           </div>
