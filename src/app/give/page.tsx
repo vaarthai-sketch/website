@@ -64,9 +64,9 @@ export default function GivePage() {
             <div className="relative z-10 space-y-4">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div>
-                  <span className="text-xs font-bold text-accent uppercase tracking-widest block">PLANNING CENTER</span>
+                  <span className="text-xs font-bold text-accent uppercase tracking-widest block">SECURE ONLINE GIVING</span>
                   <h3 className="font-serif text-xl sm:text-2xl font-black text-white flex items-center gap-2 mt-0.5">
-                    <span>காணிக்கை தளம் (Online Giving)</span>
+                    <span>வார்த்தை தசமபாகம் & காணிக்கைகள்</span>
                   </h3>
                 </div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 shadow-sm">
@@ -75,7 +75,7 @@ export default function GivePage() {
               </div>
 
               <p className="text-sm sm:text-base text-stone-200 leading-relaxed font-light">
-                வார்த்தை திருச்சபையின் ஆன்லைன் காணிக்கைகள் <strong className="text-white font-semibold">Planning Center Secure Giving</strong> மூலம் முழு பாதுகாப்போடு நிர்வகிக்கப்படுகின்றன. உங்கள் Credit/Debit Card அல்லது Apple Pay / Google Pay மூலம் மிக எளிதாகக் காணிக்கை செலுத்தலாம்.
+                உங்கள் தாராளமான தசமபாகமும் காணிக்கைகளும் வார்த்தை சுவிசேஷ திருச்சபையின் தொடர் ஊழியங்களுக்கும் மிஷனரி பணிகளுக்கும் பேருதவியாக உள்ளன. உங்கள் மன அமைதிக்காக அனைத்து ஆன்லைன் காணிக்கைகளும் 100% முழு பாதுகாப்போடு நிர்வகிக்கப்படுகின்றன. உங்கள் Credit/Debit Card, Apple Pay அல்லது Google Pay மூலம் மிக எளிதாகக் காணிக்கை செலுத்தலாம்.
               </p>
 
               {/* Quick Select Amount Buttons */}
@@ -99,10 +99,10 @@ export default function GivePage() {
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 space-y-2 text-xs text-stone-300">
                 <div className="flex items-center gap-2 text-accent font-bold">
                   <Check className="w-4 h-4 shrink-0" />
-                  <span>மாதாந்திர தசமபாகம் (Recurring Giving) அமைப்பு</span>
+                  <span>மாதாந்திர தசமபாகம் (Automated Recurring Giving)</span>
                 </div>
                 <p className="text-stone-300 leading-relaxed">
-                  Planning Center கணக்கு மூலமாக மாதாந்திர காணிக்கையை (Recurring Giving) தானாகச் செலுத்தும்படி அமைத்துக் கொள்ளவும், வருடாந்திர காணிக்கை ரசீதுகளை (Annual Tax Receipts) பதிவிறக்கம் செய்யவும் முடியும்.
+                  உங்கள் பாதுகாப்பான ஆன்லைன் கணக்கு மூலமாக மாதாந்திர அல்லது வாராந்திர காணிக்கையை (Recurring Giving) தானாகச் செலுத்தும்படி எளிதாக அமைத்துக் கொள்ளவும், உங்கள் வருடாந்திர காணிக்கை ரசீதுகளை (Annual Tax Receipts) எந்த நேரத்திலும் பதிவிறக்கம் செய்யவும் முடியும்.
                 </p>
               </div>
             </div>
@@ -115,11 +115,11 @@ export default function GivePage() {
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base sm:text-lg shadow-lg shadow-emerald-950/50 hover:scale-[1.01] transition-all duration-200 text-center"
               >
-                <span>ஆன்லைன் காணிக்கை தளத்தைத் திறக்க (Launch Portal)</span>
+                <span>தசமபாகம் & காணிக்கை செலுத்த (Give Tithes & Offerings)</span>
                 <ExternalLink className="w-5 h-5 shrink-0" />
               </a>
               <p className="text-[11px] text-stone-400 text-center italic">
-                * பொத்தானை அழுத்தியதும் பாதுகாப்பான Planning Center பக்கம் புதிய விண்டோவில் திறக்கும்.
+                * இந்தப் பொத்தானை அழுத்தியதும் பாதுகாப்பான காணிக்கை தளம் புதிய விண்டோவில் திறக்கும்.
               </p>
             </div>
           </div>
