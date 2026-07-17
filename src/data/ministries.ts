@@ -190,7 +190,7 @@ export const ministriesData: Ministry[] = [
     englishLeaderTitle: "Men's Ministry Leader",
     leaderEmail: "info@vaarthai.org.au",
     image: "/ministry-men-detail.jpg",
-    scripture: "\"இரும்பு இரும்பைக் கருமையாக்கும்; அதுபோல ஒருவன் தன் சிநேகிதனுடைய முகத்தைக் கருமையாக்குகிறான்.\"",
+    scripture: "\"இரும்பை இரும்பு கூர்மையாக்கிடும்; அப்படியே மனிதனும் தன்னுடைய நண்பனைக் கூர்மையாக்குகிறான்.\"",
     scriptureReference: "நீதிமொழிகள் 27:17",
     englishScripture: "\"As iron sharpens iron, so one man sharpens another.\"",
     englishScriptureReference: "Proverbs 27:17",
