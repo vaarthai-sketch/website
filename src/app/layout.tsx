@@ -31,6 +31,14 @@ const anekTamil = Anek_Tamil({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "https://vaarthaichurch.org";
+
 export const metadata: Metadata = {
   title: {
     default: `${churchConfig.name} | ${churchConfig.tagline}`,
@@ -39,11 +47,11 @@ export const metadata: Metadata = {
   description: `Welcome to ${churchConfig.name} in ${churchConfig.contact.address.city}, ${churchConfig.contact.address.state}. Join us for worship services on Sundays at ${churchConfig.services[0].times.join(" & ")}.`,
   keywords: ["church", "Vaarthai Evangelical Church", "Brisbane", "QLD", "Australia", "Camira", "worship", "Christian", "Jesus", "community"],
   authors: [{ name: churchConfig.name }],
-  metadataBase: new URL("https://vaarthaichurch.org"), // Mock URL
+  metadataBase: new URL(siteUrl),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://vaarthaichurch.org",
+    url: siteUrl,
     title: `${churchConfig.name} | Brisbane, QLD, Australia`,
     description: churchConfig.tagline,
     siteName: churchConfig.name,
