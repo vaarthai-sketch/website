@@ -204,7 +204,7 @@ export default function EnglishPlanYourVisitPage() {
                   <h3>Service Duration</h3>
                 </div>
                 <p className="text-xs text-stone-600 leading-relaxed">
-                  Our Sunday worship service lasts approximately <strong>65 to 75 minutes</strong>. We recommend arriving 10-15 minutes early to park and grab a coffee.
+                  Our Sunday worship service lasts approximately <strong>90 minutes</strong>. We recommend arriving 10-15 minutes early to park and grab a coffee.
                 </p>
               </div>
 

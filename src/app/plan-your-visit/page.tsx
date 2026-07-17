@@ -183,7 +183,7 @@ export default function PlanYourVisitPage() {
                   <h3>ஆராதனை நேரம்</h3>
                 </div>
                 <p className="text-xs text-stone-600 leading-relaxed">
-                  ஆராதனை சுமார் <strong>65 நிமிடங்கள்</strong> நடைபெறும். ஆராதனை தொடங்குவதற்கு 10-15 நிமிடங்களுக்கு முன்பாக வருவது நல்லது.
+                  ஆராதனை சுமார் <strong>90 நிமிடங்கள்</strong> நடைபெறும். ஆராதனை தொடங்குவதற்கு 10-15 நிமிடங்களுக்கு முன்பாக வருவது நல்லது.
                 </p>
               </div>
 
