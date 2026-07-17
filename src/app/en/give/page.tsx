@@ -71,32 +71,32 @@ export default function EnglishGivePage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
           {/* Box 1: Secure Online Giving Card */}
-          <div className="bg-gradient-to-br from-[#162C21] via-[#213B2C] to-[#12231B] border border-[#C5A059]/35 text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden h-full space-y-6">
-            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+          <div className="bg-[#F4F1E8] border border-[#E0DBCB] text-stone-900 rounded-2xl p-6 sm:p-8 shadow-md flex flex-col justify-between relative overflow-hidden h-full space-y-6">
+            <div className="absolute inset-0 opacity-25 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
             
             <div className="relative z-10 space-y-4">
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <div className="flex items-center justify-between border-b border-stone-300/80 pb-4">
                 <div>
-                  <span className="text-xs font-bold text-accent uppercase tracking-widest block">SECURE ONLINE GIVING</span>
-                  <h3 className="font-serif text-xl sm:text-2xl font-black text-white flex items-center gap-2 mt-0.5">
+                  <span className="text-xs font-bold text-accent-dark uppercase tracking-widest block">SECURE ONLINE GIVING</span>
+                  <h3 className="font-serif text-xl sm:text-2xl font-black text-primary flex items-center gap-2 mt-0.5">
                     <span>Vaarthai Tithes & Offerings</span>
                   </h3>
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-300 bg-emerald-950/80 border border-emerald-500/40 px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 shadow-sm">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 100% Secure
+                <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 border border-emerald-300 px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 shadow-2xs">
+                  <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span> 100% Secure
                 </span>
               </div>
 
-              <p className="text-sm sm:text-base text-stone-200 leading-relaxed font-light">
+              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-normal">
                 Your generous tithes and offerings help support the ongoing ministries and mission of Vaarthai Evangelical Church. All online donations are 100% securely processed to ensure your peace of mind. Easily give with any Credit/Debit Card, Apple Pay, or Google Pay.
               </p>
 
-              <div className="bg-white/10 border border-white/15 rounded-xl p-4 space-y-2 text-xs text-stone-200 backdrop-blur-sm">
-                <div className="flex items-center gap-2 text-accent font-bold">
-                  <Check className="w-4 h-4 shrink-0" />
+              <div className="bg-white/80 border border-[#E0DBCB] rounded-xl p-4 space-y-2 text-xs text-stone-700 shadow-2xs">
+                <div className="flex items-center gap-2 text-primary font-bold">
+                  <Check className="w-4 h-4 shrink-0 text-accent-dark" />
                   <span>Automated Recurring Giving & Receipts</span>
                 </div>
-                <p className="text-stone-300 leading-relaxed">
+                <p className="text-stone-600 leading-relaxed">
                   Through your secure online profile, you can easily set up automated recurring giving (weekly, bi-weekly, or monthly) and download your annual tax-deductible giving statements at any time.
                 </p>
               </div>
@@ -107,82 +107,82 @@ export default function EnglishGivePage() {
               <a
                 href={churchConfig.links.give}
                 data-open-in-church-center-modal="true"
-                className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base sm:text-lg shadow-lg shadow-emerald-950/50 hover:scale-[1.01] transition-all duration-200 text-center cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base sm:text-lg shadow-md hover:scale-[1.01] transition-all duration-200 text-center cursor-pointer"
               >
                 <span>Give Tithes & Offerings</span>
                 <ExternalLink className="w-5 h-5 shrink-0" />
               </a>
-              <p className="text-[11px] text-stone-300 text-center italic">
+              <p className="text-[11px] text-stone-500 text-center italic">
                 * Clicking this button instantly opens our secure giving portal modal overlay right on this page.
               </p>
             </div>
           </div>
 
           {/* Box 2: Other Ways to Give Card */}
-          <div className="bg-gradient-to-br from-[#162C21] via-[#213B2C] to-[#12231B] border border-[#C5A059]/35 text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden h-full space-y-6">
-            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+          <div className="bg-[#F4F1E8] border border-[#E0DBCB] text-stone-900 rounded-2xl p-6 sm:p-8 shadow-md flex flex-col justify-between relative overflow-hidden h-full space-y-6">
+            <div className="absolute inset-0 opacity-25 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
 
             <div className="relative z-10 space-y-4 flex-grow flex flex-col">
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <div className="flex items-center justify-between border-b border-stone-300/80 pb-4">
                 <div>
-                  <span className="text-xs font-bold text-accent uppercase tracking-widest block">OFFLINE & DIRECT GIVING</span>
-                  <h3 className="font-serif text-xl sm:text-2xl font-black text-white flex items-center gap-2 mt-0.5">
+                  <span className="text-xs font-bold text-accent-dark uppercase tracking-widest block">OFFLINE & DIRECT GIVING</span>
+                  <h3 className="font-serif text-xl sm:text-2xl font-black text-primary flex items-center gap-2 mt-0.5">
                     <span>Other Ways to Give</span>
                   </h3>
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-accent bg-accent/20 border border-accent/40 px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 shadow-sm">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-primary bg-stone-200/80 border border-stone-300 px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 shadow-2xs">
                   In-Person / EFT
                 </span>
               </div>
 
               <div className="space-y-4 my-auto py-2">
                 {/* Cash & Checks */}
-                <div className="bg-white/10 border border-white/15 p-4 rounded-xl flex gap-3.5 items-start backdrop-blur-sm">
-                  <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                <div className="bg-white/80 border border-[#E0DBCB] p-4 rounded-xl flex gap-3.5 items-start shadow-2xs">
+                  <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center text-accent-dark shrink-0 mt-0.5">
                     <FileText className="w-4 h-4" />
                   </div>
                   <div className="space-y-0.5">
-                    <h4 className="font-serif font-bold text-white text-sm sm:text-base">During Sunday Services</h4>
-                    <p className="text-xs text-stone-200 leading-relaxed">
+                    <h4 className="font-serif font-bold text-primary text-sm sm:text-base">During Sunday Services</h4>
+                    <p className="text-xs text-stone-600 leading-relaxed">
                       You may place cash or checks into the offering boxes situated at the rear of the sanctuary during any of our Sunday services.
                     </p>
                   </div>
                 </div>
 
                 {/* Bank Transfers with Account Details */}
-                <div className="bg-white/10 border border-white/15 p-4 sm:p-5 rounded-xl space-y-3 backdrop-blur-sm">
+                <div className="bg-white/80 border border-[#E0DBCB] p-4 sm:p-5 rounded-xl space-y-3 shadow-2xs">
                   <div className="flex gap-3.5 items-start">
-                    <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                    <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center text-accent-dark shrink-0 mt-0.5">
                       <Smartphone className="w-4 h-4" />
                     </div>
                     <div className="space-y-0.5">
-                      <h4 className="font-serif font-bold text-white text-sm sm:text-base">Direct Bank Transfer (EFT)</h4>
-                      <p className="text-xs text-stone-200 leading-relaxed">
+                      <h4 className="font-serif font-bold text-primary text-sm sm:text-base">Direct Bank Transfer (EFT)</h4>
+                      <p className="text-xs text-stone-600 leading-relaxed">
                         To set up a direct electronic funds transfer via your online banking, please use the exact account details below:
                       </p>
                     </div>
                   </div>
 
-                  <div className="bg-black/25 border border-white/10 rounded-lg p-3.5 space-y-2 text-xs text-stone-100 font-mono">
-                    <div className="flex justify-between items-center border-b border-white/10 pb-1.5">
-                      <span className="text-stone-300 font-sans font-medium">Account Name:</span>
-                      <span className="font-bold text-white tracking-wide">Vaarthai Evangelical Church</span>
+                  <div className="bg-[#ECE8DF] border border-[#DDD6C8] rounded-lg p-3.5 space-y-2 text-xs text-stone-900 font-mono">
+                    <div className="flex justify-between items-center border-b border-stone-300/80 pb-1.5">
+                      <span className="text-stone-600 font-sans font-medium">Account Name:</span>
+                      <span className="font-bold text-primary tracking-wide">Vaarthai Evangelical Church</span>
                     </div>
-                    <div className="flex justify-between items-center border-b border-white/10 pb-1.5">
-                      <span className="text-stone-300 font-sans font-medium">BSB:</span>
-                      <span className="font-bold text-accent tracking-wider text-sm">064-173</span>
+                    <div className="flex justify-between items-center border-b border-stone-300/80 pb-1.5">
+                      <span className="text-stone-600 font-sans font-medium">BSB:</span>
+                      <span className="font-bold text-accent-dark tracking-wider text-sm">064-173</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-stone-300 font-sans font-medium">Account Number:</span>
-                      <span className="font-bold text-amber-300 font-sans italic">Will update soon</span>
+                      <span className="text-stone-600 font-sans font-medium">Account Number:</span>
+                      <span className="font-bold text-primary tracking-wider text-sm font-mono">10857732</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative z-10 pt-4 border-t border-white/10 mt-auto">
-              <p className="text-[11px] text-stone-300 text-center italic">
+            <div className="relative z-10 pt-4 border-t border-stone-300/80 mt-auto">
+              <p className="text-[11px] text-stone-500 text-center italic">
                 * Please contact our church finance office if you need assistance or bank transfer details.
               </p>
             </div>
