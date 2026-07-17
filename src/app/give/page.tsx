@@ -71,8 +71,8 @@ export default function GivePage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
           {/* Box 1: Secure Online Giving Card */}
-          <div className="bg-gradient-to-br from-[#1B3B6F] via-[#214F91] to-[#1A365D] border border-[#3B82F6]/30 text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden h-full space-y-6">
-            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+          <div className="bg-gradient-to-br from-[#162C21] via-[#213B2C] to-[#12231B] border border-[#C5A059]/35 text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden h-full space-y-6">
+            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
             
             <div className="relative z-10 space-y-4">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
@@ -87,16 +87,16 @@ export default function GivePage() {
                 </span>
               </div>
 
-              <p className="text-sm sm:text-base text-blue-50 leading-relaxed font-light">
+              <p className="text-sm sm:text-base text-stone-200 leading-relaxed font-light">
                 உங்கள் தாராளமான தசமபாகமும் காணிக்கைகளும் வார்த்தை சுவிசேஷ திருச்சபையின் தொடர் ஊழியங்களுக்கும் மிஷனரி பணிகளுக்கும் பேருதவியாக உள்ளன. உங்கள் மன அமைதிக்காக அனைத்து ஆன்லைன் காணிக்கைகளும் 100% முழு பாதுகாப்போடு நிர்வகிக்கப்படுகின்றன. உங்கள் Credit/Debit Card, Apple Pay அல்லது Google Pay மூலம் மிக எளிதாகக் காணிக்கை செலுத்தலாம்.
               </p>
 
-              <div className="bg-white/10 border border-white/15 rounded-xl p-4 space-y-2 text-xs text-blue-100 backdrop-blur-sm">
+              <div className="bg-white/10 border border-white/15 rounded-xl p-4 space-y-2 text-xs text-stone-200 backdrop-blur-sm">
                 <div className="flex items-center gap-2 text-accent font-bold">
                   <Check className="w-4 h-4 shrink-0" />
                   <span>மாதாந்திர தசமபாகம் (Automated Recurring Giving)</span>
                 </div>
-                <p className="text-blue-100 leading-relaxed">
+                <p className="text-stone-300 leading-relaxed">
                   உங்கள் பாதுகாப்பான ஆன்லைன் கணக்கு மூலமாக மாதாந்திர அல்லது வாராந்திர காணிக்கையை (Recurring Giving) தானாகச் செலுத்தும்படி எளிதாக அமைத்துக் கொள்ளவும், உங்கள் வருடாந்திர காணிக்கை ரசீதுகளை (Annual Tax Receipts) எந்த நேரத்திலும் பதிவிறக்கம் செய்யவும் முடியும்.
                 </p>
               </div>
@@ -112,15 +112,15 @@ export default function GivePage() {
                 <span>தசமபாகம் & காணிக்கை செலுத்த</span>
                 <ExternalLink className="w-5 h-5 shrink-0" />
               </a>
-              <p className="text-[11px] text-blue-200/80 text-center italic">
+              <p className="text-[11px] text-stone-300 text-center italic">
                 * இந்தப் பொத்தானை அழுத்தியதும் பாதுகாப்பான காணிக்கை தளம் (Church Center Modal) உடனுக்குடன் திறக்கும்.
               </p>
             </div>
           </div>
 
           {/* Box 2: Other Ways to Give Card */}
-          <div className="bg-gradient-to-br from-[#1B3B6F] via-[#214F91] to-[#1A365D] border border-[#3B82F6]/30 text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden h-full space-y-6">
-            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+          <div className="bg-gradient-to-br from-[#162C21] via-[#213B2C] to-[#12231B] border border-[#C5A059]/35 text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden h-full space-y-6">
+            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
 
             <div className="relative z-10 space-y-4 flex-grow flex flex-col">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
@@ -131,54 +131,58 @@ export default function GivePage() {
                   </h3>
                 </div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-accent bg-accent/20 border border-accent/40 px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 shadow-sm">
-                  In-Person / Mail
+                  In-Person / EFT
                 </span>
               </div>
 
-              <div className="space-y-3.5 my-auto py-2">
+              <div className="space-y-4 my-auto py-2">
                 {/* Cash & Checks */}
-                <div className="bg-white/10 border border-white/15 p-3.5 rounded-xl flex gap-3.5 items-start backdrop-blur-sm">
+                <div className="bg-white/10 border border-white/15 p-4 rounded-xl flex gap-3.5 items-start backdrop-blur-sm">
                   <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center text-accent shrink-0 mt-0.5">
                     <FileText className="w-4 h-4" />
                   </div>
                   <div className="space-y-0.5">
-                    <h4 className="font-serif font-bold text-white text-sm">ஞாயிறு ஆராதனைகளில்</h4>
-                    <p className="text-xs text-blue-100 leading-relaxed">
+                    <h4 className="font-serif font-bold text-white text-sm sm:text-base">ஞாயிறு ஆராதனைகளில்</h4>
+                    <p className="text-xs text-stone-200 leading-relaxed">
                       ஞாயிறு ஆராதனைகளில் ஆலயப் பின்புறம் உள்ள காணிக்கைப் பெட்டிகளில் செக் அல்லது ரொக்கமாகக் காணிக்கை செலுத்தலாம்.
                     </p>
                   </div>
                 </div>
 
-                {/* Mailing checks */}
-                <div className="bg-white/10 border border-white/15 p-3.5 rounded-xl flex gap-3.5 items-start backdrop-blur-sm">
-                  <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center text-accent shrink-0 mt-0.5">
-                    <Mail className="w-4 h-4" />
+                {/* Bank Transfers with Account Details */}
+                <div className="bg-white/10 border border-white/15 p-4 sm:p-5 rounded-xl space-y-3 backdrop-blur-sm">
+                  <div className="flex gap-3.5 items-start">
+                    <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                      <Smartphone className="w-4 h-4" />
+                    </div>
+                    <div className="space-y-0.5">
+                      <h4 className="font-serif font-bold text-white text-sm sm:text-base">வங்கி நேரடிப் பரிமாற்றம் (Direct Bank Transfer)</h4>
+                      <p className="text-xs text-stone-200 leading-relaxed">
+                        வங்கி நெட் பேங்கிங் மூலம் நேரடியாகக் காணிக்கை செலுத்த கீழ்க்கண்ட வங்கி விவரங்களைப் பயன்படுத்தவும்:
+                      </p>
+                    </div>
                   </div>
-                  <div className="space-y-0.5">
-                    <h4 className="font-serif font-bold text-white text-sm">அஞ்சல் மூலம் செக் அனுப்ப</h4>
-                    <p className="text-xs text-blue-100 leading-relaxed">
-                      <strong>Vaarthai Evangelical Church, Attn: Finance, {churchConfig.contact.address.street}, {churchConfig.contact.address.city}, {churchConfig.contact.address.state} {churchConfig.contact.address.zip}</strong>
-                    </p>
-                  </div>
-                </div>
 
-                {/* Bank Transfers */}
-                <div className="bg-white/10 border border-white/15 p-3.5 rounded-xl flex gap-3.5 items-start backdrop-blur-sm">
-                  <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center text-accent shrink-0 mt-0.5">
-                    <Smartphone className="w-4 h-4" />
-                  </div>
-                  <div className="space-y-0.5">
-                    <h4 className="font-serif font-bold text-white text-sm">வங்கி நேரடிப் பரிமாற்றம்</h4>
-                    <p className="text-xs text-blue-100 leading-relaxed">
-                      வங்கி நெட் பேங்கிங் மூலம் நேரடியாகக் காணிக்கை செலுத்த எங்களது நிதி அலுவலகத்தைத் தொடர்பு கொண்டு விவரங்களைப் பெறவும்.
-                    </p>
+                  <div className="bg-black/25 border border-white/10 rounded-lg p-3.5 space-y-2 text-xs text-stone-100 font-mono">
+                    <div className="flex justify-between items-center border-b border-white/10 pb-1.5">
+                      <span className="text-stone-300 font-sans font-medium">Account Name:</span>
+                      <span className="font-bold text-white tracking-wide">Vaarthai Evangelical Church</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-white/10 pb-1.5">
+                      <span className="text-stone-300 font-sans font-medium">BSB:</span>
+                      <span className="font-bold text-accent tracking-wider text-sm">064-173</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-stone-300 font-sans font-medium">Account Number:</span>
+                      <span className="font-bold text-amber-300 font-sans italic">Will update soon</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="relative z-10 pt-4 border-t border-white/10 mt-auto">
-              <p className="text-[11px] text-blue-200/80 text-center italic">
+              <p className="text-[11px] text-stone-300 text-center italic">
                 * ஏதேனும் உதவி அல்லது வங்கி விவரங்கள் தேவைப்பட்டால் எங்கள் நிதி அலுவலகத்தைத் தொடர்பு கொள்ளவும்.
               </p>
             </div>

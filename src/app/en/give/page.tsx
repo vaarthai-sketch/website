@@ -71,8 +71,8 @@ export default function EnglishGivePage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
           {/* Box 1: Secure Online Giving Card */}
-          <div className="bg-gradient-to-br from-[#1B3B6F] via-[#214F91] to-[#1A365D] border border-[#3B82F6]/30 text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden h-full space-y-6">
-            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+          <div className="bg-gradient-to-br from-[#162C21] via-[#213B2C] to-[#12231B] border border-[#C5A059]/35 text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden h-full space-y-6">
+            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
             
             <div className="relative z-10 space-y-4">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
@@ -87,16 +87,16 @@ export default function EnglishGivePage() {
                 </span>
               </div>
 
-              <p className="text-sm sm:text-base text-blue-50 leading-relaxed font-light">
+              <p className="text-sm sm:text-base text-stone-200 leading-relaxed font-light">
                 Your generous tithes and offerings help support the ongoing ministries and mission of Vaarthai Evangelical Church. All online donations are 100% securely processed to ensure your peace of mind. Easily give with any Credit/Debit Card, Apple Pay, or Google Pay.
               </p>
 
-              <div className="bg-white/10 border border-white/15 rounded-xl p-4 space-y-2 text-xs text-blue-100 backdrop-blur-sm">
+              <div className="bg-white/10 border border-white/15 rounded-xl p-4 space-y-2 text-xs text-stone-200 backdrop-blur-sm">
                 <div className="flex items-center gap-2 text-accent font-bold">
                   <Check className="w-4 h-4 shrink-0" />
                   <span>Automated Recurring Giving & Receipts</span>
                 </div>
-                <p className="text-blue-100 leading-relaxed">
+                <p className="text-stone-300 leading-relaxed">
                   Through your secure online profile, you can easily set up automated recurring giving (weekly, bi-weekly, or monthly) and download your annual tax-deductible giving statements at any time.
                 </p>
               </div>
@@ -112,15 +112,15 @@ export default function EnglishGivePage() {
                 <span>Give Tithes & Offerings</span>
                 <ExternalLink className="w-5 h-5 shrink-0" />
               </a>
-              <p className="text-[11px] text-blue-200/80 text-center italic">
+              <p className="text-[11px] text-stone-300 text-center italic">
                 * Clicking this button instantly opens our secure giving portal modal overlay right on this page.
               </p>
             </div>
           </div>
 
           {/* Box 2: Other Ways to Give Card */}
-          <div className="bg-gradient-to-br from-[#1B3B6F] via-[#214F91] to-[#1A365D] border border-[#3B82F6]/30 text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden h-full space-y-6">
-            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+          <div className="bg-gradient-to-br from-[#162C21] via-[#213B2C] to-[#12231B] border border-[#C5A059]/35 text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden h-full space-y-6">
+            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
 
             <div className="relative z-10 space-y-4 flex-grow flex flex-col">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
@@ -131,54 +131,58 @@ export default function EnglishGivePage() {
                   </h3>
                 </div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-accent bg-accent/20 border border-accent/40 px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 shadow-sm">
-                  In-Person / Mail
+                  In-Person / EFT
                 </span>
               </div>
 
-              <div className="space-y-3.5 my-auto py-2">
+              <div className="space-y-4 my-auto py-2">
                 {/* Cash & Checks */}
-                <div className="bg-white/10 border border-white/15 p-3.5 rounded-xl flex gap-3.5 items-start backdrop-blur-sm">
+                <div className="bg-white/10 border border-white/15 p-4 rounded-xl flex gap-3.5 items-start backdrop-blur-sm">
                   <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center text-accent shrink-0 mt-0.5">
                     <FileText className="w-4 h-4" />
                   </div>
                   <div className="space-y-0.5">
-                    <h4 className="font-serif font-bold text-white text-sm">During Sunday Services</h4>
-                    <p className="text-xs text-blue-100 leading-relaxed">
+                    <h4 className="font-serif font-bold text-white text-sm sm:text-base">During Sunday Services</h4>
+                    <p className="text-xs text-stone-200 leading-relaxed">
                       You may place cash or checks into the offering boxes situated at the rear of the sanctuary during any of our Sunday services.
                     </p>
                   </div>
                 </div>
 
-                {/* Mailing checks */}
-                <div className="bg-white/10 border border-white/15 p-3.5 rounded-xl flex gap-3.5 items-start backdrop-blur-sm">
-                  <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center text-accent shrink-0 mt-0.5">
-                    <Mail className="w-4 h-4" />
+                {/* Bank Transfers with Account Details */}
+                <div className="bg-white/10 border border-white/15 p-4 sm:p-5 rounded-xl space-y-3 backdrop-blur-sm">
+                  <div className="flex gap-3.5 items-start">
+                    <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                      <Smartphone className="w-4 h-4" />
+                    </div>
+                    <div className="space-y-0.5">
+                      <h4 className="font-serif font-bold text-white text-sm sm:text-base">Direct Bank Transfer (EFT)</h4>
+                      <p className="text-xs text-stone-200 leading-relaxed">
+                        To set up a direct electronic funds transfer via your online banking, please use the exact account details below:
+                      </p>
+                    </div>
                   </div>
-                  <div className="space-y-0.5">
-                    <h4 className="font-serif font-bold text-white text-sm">By Mail</h4>
-                    <p className="text-xs text-blue-100 leading-relaxed">
-                      <strong>Vaarthai Evangelical Church, Attn: Finance, {churchConfig.contact.address.street}, {churchConfig.contact.address.city}, {churchConfig.contact.address.state} {churchConfig.contact.address.zip}</strong>
-                    </p>
-                  </div>
-                </div>
 
-                {/* Bank Transfers */}
-                <div className="bg-white/10 border border-white/15 p-3.5 rounded-xl flex gap-3.5 items-start backdrop-blur-sm">
-                  <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center text-accent shrink-0 mt-0.5">
-                    <Smartphone className="w-4 h-4" />
-                  </div>
-                  <div className="space-y-0.5">
-                    <h4 className="font-serif font-bold text-white text-sm">Direct Bank Transfer</h4>
-                    <p className="text-xs text-blue-100 leading-relaxed">
-                      To set up a direct bank electronic funds transfer (EFT) from your account, please contact our church finance team for exact account details.
-                    </p>
+                  <div className="bg-black/25 border border-white/10 rounded-lg p-3.5 space-y-2 text-xs text-stone-100 font-mono">
+                    <div className="flex justify-between items-center border-b border-white/10 pb-1.5">
+                      <span className="text-stone-300 font-sans font-medium">Account Name:</span>
+                      <span className="font-bold text-white tracking-wide">Vaarthai Evangelical Church</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-white/10 pb-1.5">
+                      <span className="text-stone-300 font-sans font-medium">BSB:</span>
+                      <span className="font-bold text-accent tracking-wider text-sm">064-173</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-stone-300 font-sans font-medium">Account Number:</span>
+                      <span className="font-bold text-amber-300 font-sans italic">Will update soon</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="relative z-10 pt-4 border-t border-white/10 mt-auto">
-              <p className="text-[11px] text-blue-200/80 text-center italic">
+              <p className="text-[11px] text-stone-300 text-center italic">
                 * Please contact our church finance office if you need assistance or bank transfer details.
               </p>
             </div>
