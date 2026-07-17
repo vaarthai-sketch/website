@@ -85,11 +85,12 @@ export default function EnglishPastorsDeskPage() {
                   </svg>
                 </div>
                 <div className="flex-1 text-center sm:text-left">
-                  <h4 className="font-bold text-primary text-base sm:text-lg m-0">Kalai Thorum Yesuve (Every Morning with Jesus)</h4>
+                  <h4 className="font-bold text-primary text-base sm:text-lg m-0">Kaalai Thorum Yesuve (Every Morning with Jesus)</h4>
                   <p className="text-xs sm:text-sm text-stone-600 m-0 mt-1">Lyrics & Composition: Ps. Jeyakaran Weslyn (Morning Meditation Song)</p>
                 </div>
                 <div className="w-full sm:w-auto mt-2 sm:mt-0">
                   <audio controls preload="metadata" className="w-full sm:w-64 h-10 rounded-lg">
+                    <source src="/kaalai-thorum-yesuve.mp3" type="audio/mpeg" />
                     <source src="/kalai-thorum-yesuve.mp3" type="audio/mpeg" />
                     <source src="/meditation-song.mp3" type="audio/mpeg" />
                     Your browser does not support the audio element.
