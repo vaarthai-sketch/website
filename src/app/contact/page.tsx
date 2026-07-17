@@ -162,7 +162,7 @@ export default function ContactPage() {
               <div className="flex gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">Office Address</span>
+                  <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">ஆலய முகவரி (Church Address)</span>
                   <p className="text-stone-900 font-medium">
                     {churchConfig.contact.address.street}<br />
                     {churchConfig.contact.address.city}, {churchConfig.contact.address.state} {churchConfig.contact.address.zip}
@@ -175,6 +175,20 @@ export default function ContactPage() {
                   >
                     <Navigation className="w-3.5 h-3.5" /> வரைபடத்தில் வழி அறிய
                   </a>
+                </div>
+              </div>
+
+              <div className="flex gap-3">
+                <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">Office Address</span>
+                  <p className="text-stone-900 font-medium">
+                    {churchConfig.contact.officeAddress.poBox}<br />
+                    {churchConfig.contact.officeAddress.city} {churchConfig.contact.officeAddress.state} {churchConfig.contact.officeAddress.zip}
+                  </p>
+                  <p className="text-xs text-stone-500 mt-1 italic leading-relaxed font-light">
+                    {churchConfig.contact.officeAddress.note}
+                  </p>
                 </div>
               </div>
 

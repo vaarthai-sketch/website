@@ -102,19 +102,19 @@ export const Footer: React.FC = () => {
               Contact Info
             </h3>
             <div className="space-y-3 text-sm text-stone-300">
-              <a 
-                href={churchConfig.contact.address.mapLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-2 group hover:text-white"
-              >
+              <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <span>
+                <div>
                   <strong className="text-white">Office Address</strong><br />
-                  {churchConfig.contact.address.street}<br />
-                  {churchConfig.contact.address.city}, {churchConfig.contact.address.state} {churchConfig.contact.address.zip}
-                </span>
-              </a>
+                  <span className="text-stone-300">
+                    {churchConfig.contact.officeAddress.poBox}<br />
+                    {churchConfig.contact.officeAddress.city} {churchConfig.contact.officeAddress.state} {churchConfig.contact.officeAddress.zip}
+                  </span>
+                  <p className="text-xs text-stone-400 mt-1.5 leading-relaxed font-light">
+                    {churchConfig.contact.officeAddress.note}
+                  </p>
+                </div>
+              </div>
               <a 
                 href={`tel:${churchConfig.contact.phone.replace(/[^0-9]/g, "")}`}
                 className="flex items-center gap-2 group hover:text-white"
