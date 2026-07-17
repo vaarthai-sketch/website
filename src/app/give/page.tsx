@@ -96,7 +96,7 @@ export default function GivePage() {
                 data-open-in-church-center-modal="true"
                 className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base sm:text-lg shadow-lg shadow-emerald-950/50 hover:scale-[1.01] transition-all duration-200 text-center cursor-pointer"
               >
-                <span>தசமபாகம் & காணிக்கை செலுத்த (Give Tithes & Offerings)</span>
+                <span>தசமபாகம் & காணிக்கை செலுத்த</span>
                 <ExternalLink className="w-5 h-5 shrink-0" />
               </a>
               <p className="text-[11px] text-stone-400 text-center italic">
