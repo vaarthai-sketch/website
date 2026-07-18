@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
-import { FacebookIcon, InstagramIcon, YoutubeIcon, TwitterIcon } from "@/components/SocialIcons";
+import { FacebookIcon, YoutubeIcon } from "@/components/SocialIcons";
 import { churchConfig } from "@/data/config";
 
 export const Footer: React.FC = () => {
@@ -15,9 +15,7 @@ export const Footer: React.FC = () => {
 
   const socialIcons = {
     facebook: <FacebookIcon className="w-5 h-5" />,
-    instagram: <InstagramIcon className="w-5 h-5" />,
     youtube: <YoutubeIcon className="w-5 h-5" />,
-    twitter: <TwitterIcon className="w-5 h-5" />,
   };
 
   return (

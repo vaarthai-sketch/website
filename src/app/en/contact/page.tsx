@@ -7,7 +7,7 @@ import {
 import { churchConfig } from "@/data/config";
 import { Button } from "@/components/Button";
 import { Input, TextArea, Select } from "@/components/Input";
-import { FacebookIcon, InstagramIcon, YoutubeIcon, TwitterIcon } from "@/components/SocialIcons";
+import { FacebookIcon, YoutubeIcon } from "@/components/SocialIcons";
 
 export default function EnglishContactPage() {
   const [formData, setFormData] = useState({
@@ -23,9 +23,7 @@ export default function EnglishContactPage() {
 
   const socialIcons = {
     facebook: <FacebookIcon className="w-5 h-5" />,
-    instagram: <InstagramIcon className="w-5 h-5" />,
     youtube: <YoutubeIcon className="w-5 h-5" />,
-    twitter: <TwitterIcon className="w-5 h-5" />,
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
