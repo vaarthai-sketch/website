@@ -171,7 +171,7 @@ export default function EnglishGivePage() {
                   <div className="bg-[#ECE8DF] border border-[#DDD6C8] rounded-lg p-3.5 space-y-2 text-xs text-stone-900 font-mono">
                     <div className="flex justify-between items-center border-b border-stone-300/80 pb-1.5">
                       <span className="text-stone-600 font-sans font-medium">Account Name:</span>
-                      <span className="font-bold text-primary tracking-wide">Vaarthai Evangelical Church</span>
+                      <span className="font-bold text-primary tracking-wide">Vaarthai Evangelical Church Inc</span>
                     </div>
                     <div className="flex justify-between items-center border-b border-stone-300/80 pb-1.5">
                       <span className="text-stone-600 font-sans font-medium">BSB:</span>
