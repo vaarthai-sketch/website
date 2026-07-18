@@ -38,13 +38,13 @@ export default function EnglishHomePage() {
                 <svg className="w-4 h-4 text-accent fill-current shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M11 2h2v7h6v2h-6v11h-2v-11h-6v-2h6V2z" />
                 </svg>
-                A Warm Welcome to Vaarthai Evangelical Church
+                A Warm Welcome to Vaarthai Evangelical Church | Tamil Church in Brisbane
               </span>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide leading-[1.3] text-white">
                 Hearing the Word. <span className="text-accent">Living the Word.</span> Sharing the Word.
               </h1>
               <p className="text-base text-stone-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-                Wherever you are on your spiritual journey, our church welcomes you with open arms. Join us to worship God, grow in community, and walk closely with Christ.
+                Wherever you are on your spiritual journey, our Brisbane Tamil Church welcomes you with open arms. Join our Srilankan Tamil Church Family to worship God, grow in our Tamil Christian community, and walk closely with Christ.
               </p>
               
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">

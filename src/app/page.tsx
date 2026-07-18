@@ -33,13 +33,13 @@ export default function HomePage() {
                 <svg className="w-4 h-4 text-accent fill-current shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M11 2h2v7h6v2h-6v11h-2v-11h-6v-2h6V2z" />
                 </svg>
-                வார்த்தை சுவிசேஷ திருச்சபைக்கு உங்களை அன்போடு வரவேற்கிறோம்
+                வார்த்தை சுவிசேஷ திருச்சபைக்கு உங்களை அன்போடு வரவேற்கிறோம் | Tamil Church in Brisbane
               </span>
               <h1 className="font-kavivanar text-2xl sm:text-3xl md:text-4xl font-normal tracking-wide leading-[1.3] text-white">
                 வார்த்தையைக் கேட்போம் <span className="text-accent">வார்த்தையின்படி நடப்போம்</span> வார்த்தையைப் பகிர்வோம்
               </h1>
               <p className="text-base text-stone-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-                விசுவாசப் பயணத்தின் எந்த நிலையில் நீங்கள் இருந்தாலும், எங்கள் திருச்சபை உங்களை வரவேற்கிறது. தேவனை ஆராதிக்கவும், அவரோடு நெருங்கி ஜீவிக்கவும் எங்களுடன் இணையுங்கள்.
+                பிரிஸ்பேன் நகரில் அமைந்துள்ள எங்கள் தமிழ் சபை (Brisbane Tamil Church), உங்களை அன்புடன் அழைக்கிறது. நீங்கள் எந்த நிலையில் இருந்தாலும், எங்கள் Srilankan Tamil Church Family-யோடு இணைந்து தேவனை ஆராதிக்க (Tamil Worship) வாருங்கள்.
               </p>
               
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
