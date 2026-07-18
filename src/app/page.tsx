@@ -39,7 +39,7 @@ export default function HomePage() {
                 வார்த்தையைக் கேட்போம் <span className="text-accent">வார்த்தையின்படி நடப்போம்</span> வார்த்தையைப் பகிர்வோம்
               </h1>
               <p className="text-base text-stone-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-                பிரிஸ்பேன் நகரில் அமைந்துள்ள எங்கள் தமிழ் சபை (Brisbane Tamil Church), உங்களை அன்புடன் அழைக்கிறது. நீங்கள் எந்த நிலையில் இருந்தாலும், எங்கள் Srilankan Tamil Church Family-யோடு இணைந்து தேவனை ஆராதிக்க (Tamil Worship) வாருங்கள்.
+                பிரிஸ்பேன் நகரில் அமைந்துள்ள எங்கள் தமிழ் சபை (Brisbane Tamil Church), உங்களை அன்புடன் அழைக்கிறது. நீங்கள் எந்த நிலையில் இருந்தாலும், எங்கள் Tamil Church Family-யோடு இணைந்து தேவனை ஆராதிக்க (Tamil Worship) வாருங்கள்.
               </p>
               
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">

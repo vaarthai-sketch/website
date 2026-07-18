@@ -44,7 +44,7 @@ export default function EnglishHomePage() {
                 Hearing the Word. <span className="text-accent">Living the Word.</span> Sharing the Word.
               </h1>
               <p className="text-base text-stone-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-                Wherever you are on your spiritual journey, our Brisbane Tamil Church welcomes you with open arms. Join our Srilankan Tamil Church Family to worship God, grow in our Tamil Christian community, and walk closely with Christ.
+                Wherever you are on your spiritual journey, our Brisbane Tamil Church welcomes you with open arms. Join our Tamil Church Family to worship God, grow in our Tamil Christian community, and walk closely with Christ.
               </p>
               
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">

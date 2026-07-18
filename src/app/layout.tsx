@@ -44,10 +44,10 @@ export const metadata: Metadata = {
     default: `Vaarthai Evangelical Church | Tamil Church in Brisbane`,
     template: `%s | Tamil Church in Brisbane | Vaarthai`
   },
-  description: `Welcome to Vaarthai Evangelical Church (Tamil Church in Brisbane) in ${churchConfig.contact.address.city}, ${churchConfig.contact.address.state}. Join our Srilankan Tamil Church Family for worship services on Sundays at ${churchConfig.services[0].times.join(" & ")}.`,
+  description: `Welcome to Vaarthai Evangelical Church (Tamil Church in Brisbane) in ${churchConfig.contact.address.city}, ${churchConfig.contact.address.state}. Join our Tamil Church Family for worship services on Sundays at ${churchConfig.services[0].times.join(" & ")}.`,
   keywords: [
     "Tamil Church", "Tamil Church in Brisbane", "Tamil Worship", "Vaarthai Church", "Vaarthai",
-    "Srilankan Tamil", "Srilankan Tamil Church", "Tamil Family Church", "Tamil Gospel",
+    "Tamil Family Church", "Tamil Gospel",
     "Tamil Christian", "Tamil Believer", "Tamil fellowship", "Tamil friends", "Tamil Family",
     "Tamil Church Family", "Family Tamil Church", "Tamil Word Church", "தமிழ் சபை",
     "தமிழ் திருச்சபை", "தமிழ் கிறிஸ்தவ ஐக்கியம்", "ஐக்கிய கிறிஸ்துவ சபை", "வேதாகம சபை",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     title: `Vaarthai Evangelical Church | Tamil Church in Brisbane`,
-    description: `Welcome to Vaarthai Evangelical Church (Tamil Church in Brisbane). Join our Srilankan Tamil Church Family for worship services on Sundays!`,
+    description: `Welcome to Vaarthai Evangelical Church (Tamil Church in Brisbane). Join our Tamil Church Family for worship services on Sundays!`,
     siteName: "Vaarthai Tamil Church in Brisbane",
     images: [
       {
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `Vaarthai Evangelical Church | Tamil Church in Brisbane`,
-    description: `Welcome to Vaarthai Evangelical Church (Tamil Church in Brisbane). Join our Srilankan Tamil Church Family for worship services on Sundays!`,
+    description: `Welcome to Vaarthai Evangelical Church (Tamil Church in Brisbane). Join our Tamil Church Family for worship services on Sundays!`,
     images: ["/og-image.jpg"],
   },
   robots: {
