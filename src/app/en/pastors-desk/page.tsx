@@ -163,7 +163,7 @@ export default function EnglishPastorsDeskPage() {
                     <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #001</p>
-                      <p className="text-xs text-stone-500">Aug 2026</p>
+                      <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
                 </div>

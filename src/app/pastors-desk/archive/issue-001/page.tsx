@@ -5,8 +5,8 @@ import { churchConfig } from "@/data/config";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
 export const metadata = {
-  title: "VEC-NL 2026-08 Issue 001 - From the Pastor's Desk",
-  description: `Weekly newsletter and updates from the Pastor at ${churchConfig.name}.`,
+  title: "VEC-NL 2026-07 Issue 001 - From the Pastor's Desk | Vaarthai Evangelical Church",
+  description: `Weekly letter, reflections, and updates from Senior Pastor Jeyakaran Weslyn at ${churchConfig.name}.`,
 };
 
 export default function PastorsDeskArchive1Page() {
@@ -40,7 +40,7 @@ export default function PastorsDeskArchive1Page() {
               <div className="bg-white rounded-lg shadow-sm border border-border p-6 md:p-10 mb-8">
                 <div className="flex items-center gap-2 text-sm text-accent-dark font-bold mb-4">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-08 · Issue #001</span>
+                  <span>VEC-NL 2026-07 · Issue #001</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary mb-6">
@@ -140,7 +140,7 @@ export default function PastorsDeskArchive1Page() {
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                     <div>
                       <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Issue #001</p>
-                      <p className="text-xs text-stone-500">Aug 2026</p>
+                      <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
                 </div>
