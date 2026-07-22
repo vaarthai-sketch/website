@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { kv } from "@vercel/kv";
 
 export const dynamic = "force-dynamic";
 
@@ -18,14 +17,18 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: "Missing issueId" }, { status: 400 });
     }
 
-    // Try to get the like count from KV
+    // Use counterapi.dev which requires no setup or keys
     let likes = 0;
     try {
-      const kvLikes = await kv.get<number>(`likes:${issueId}`);
-      likes = kvLikes || 0;
-    } catch (kvError) {
-      // KV might not be set up yet, fallback to 0 gracefully
-      console.warn("Vercel KV not configured or error fetching:", kvError);
+      const response = await fetch(`https://api.counterapi.dev/v1/vaarthai-church/likes_${issueId.replace(/-/g, '_')}/`, {
+        cache: 'no-store'
+      });
+      if (response.ok) {
+        const data = await response.json();
+        likes = data.count || 0;
+      }
+    } catch (apiError) {
+      console.warn("Counter API error fetching:", apiError);
     }
 
     return NextResponse.json({ likes } as LikeData);
@@ -52,22 +55,28 @@ export async function POST(request: NextRequest) {
     let currentLikes = 0;
     
     try {
-      // Fetch current likes
-      const kvLikes = await kv.get<number>(`likes:${issueId}`);
-      currentLikes = kvLikes || 0;
+      const safeId = issueId.replace(/-/g, '_');
+      const actionPath = action === "like" ? "up" : "down";
+      
+      const response = await fetch(`https://api.counterapi.dev/v1/vaarthai-church/likes_${safeId}/${actionPath}`, {
+        method: "GET", // counterapi uses GET for /up and /down
+        cache: 'no-store'
+      });
 
-      // Update likes
-      if (action === "like") {
-        currentLikes += 1;
+      if (response.ok) {
+        const data = await response.json();
+        currentLikes = data.count || 0;
       } else if (action === "unlike") {
-        currentLikes = Math.max(0, currentLikes - 1);
+        // If down fails, just get current
+        const fallback = await fetch(`https://api.counterapi.dev/v1/vaarthai-church/likes_${safeId}/`);
+        if (fallback.ok) {
+          const fbData = await fallback.json();
+          currentLikes = fbData.count || 0;
+        }
       }
-
-      // Save back to KV
-      await kv.set(`likes:${issueId}`, currentLikes);
-    } catch (kvError) {
-      console.warn("Vercel KV not configured or error setting:", kvError);
-      // Simulate success if KV isn't ready
+    } catch (apiError) {
+      console.warn("Counter API error setting:", apiError);
+      // Simulate success if API fails locally
       if (action === "like") currentLikes = 1;
       else currentLikes = 0;
     }
