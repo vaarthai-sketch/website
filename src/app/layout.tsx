@@ -112,6 +112,12 @@ export default function RootLayout({
         </main>
         
         <Footer />
+        
+        {/* External Tracking Script */}
+        <script 
+          src="https://link.msgsndr.com/js/external-tracking.js"
+          data-tracking-id="tk_b903a2a30b40429aacd86f244ab74dec"
+        ></script>
       </body>
     </html>
   );
