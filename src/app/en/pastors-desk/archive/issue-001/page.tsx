@@ -3,7 +3,6 @@ import { Calendar as CalendarIcon, FileText, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { churchConfig } from "@/data/config";
 import { NewsletterForm } from "@/components/NewsletterForm";
-import { LikeButton } from "@/components/LikeButton";
 
 export const metadata = {
   title: "VEC-NL 2026-07 Issue 001 - From the Pastor's Desk | Vaarthai Evangelical Church",
@@ -101,8 +100,6 @@ export default function EnglishPastorsDeskArchive1Page() {
                       </audio>
                     </div>
                   </div>
-
-                  <LikeButton issueId="issue-001" isEn={true} />
 
                   <p className="font-medium text-stone-900">
                     You are truly blessed!
