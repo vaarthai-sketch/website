@@ -13,28 +13,44 @@ interface Review {
 const reviews: Review[] = [
   {
     id: "1",
-    author_name: "John Doe",
-    author_initial: "J",
+    author_name: "Ravi Koil Sam",
+    author_initial: "R",
     rating: 5,
-    text: "This church has been a wonderful blessing to our family. The Tamil worship is truly uplifting and Pastor Weslyn's messages are deeply rooted in the Word of God.",
-    time: "2 months ago",
+    text: "I attended Vaarthai Church at inauguration day recently it was blessed experience great people powerful worship Encouraging words Pastor Weslyn is a humble man of God filled with Holy Spirit I pray and wish this Church be blessing to many nations in spreading the Gospel",
+    time: "5 days ago",
   },
   {
     id: "2",
-    author_name: "Sarah M.",
-    author_initial: "S",
+    author_name: "Gracy angelin John paul",
+    author_initial: "G",
     rating: 5,
-    text: "A beautiful, welcoming community! We felt at home from the very first Sunday. Great place for fellowship and spiritual growth in Brisbane.",
-    time: "4 months ago",
+    text: "Behold, how good and how pleasant it is for brethren to dwell together in unity! We, as a family, are truly blessed to be part of the Vaarthai family. This church continually nourishes us through God's Word, helping us grow in our walk with Christ. It also makes us feel that we are one family in Christ, united in love, fellowship, and faith.",
+    time: "6 days ago",
   },
   {
     id: "3",
-    author_name: "David Raj",
-    author_initial: "D",
+    author_name: "Hepsi Priyadharsini",
+    author_initial: "H",
     rating: 5,
-    text: "Very authentic and loving church family. The Sunday school for kids is excellent and the sermons always challenge me to grow closer to Christ.",
-    time: "1 month ago",
+    text: "A wonderful church filled with the presence of God. The preaching is Bible-based and encourages you to apply scripture in daily life. The warm fellowship here is beautiful — you’re never treated as a stranger. I especially appreciate that the congregation worships in both Tamil and English, which makes it easy for the whole family, from grandparents to kids, to feel included and grow together in Christ-centered faith 💒🙏",
+    time: "2 weeks ago",
   },
+  {
+    id: "4",
+    author_name: "Ravikumar Jayaraman",
+    author_initial: "R",
+    rating: 5,
+    text: "Dear Pastor Weslyn,\n\nThe way you preached touched the hearts of so many people. May God continue to bless you, your ministry, and the wonderful work He is doing through you. We pray that the Lord will strengthen and use you even more for His glory.\n\nGod bless you abundantly!",
+    time: "3 weeks ago",
+  },
+  {
+    id: "5",
+    author_name: "Akila Gnanaraj",
+    author_initial: "A",
+    rating: 5,
+    text: "Truly blessed to be part of Vaarthai Evangelical Church. It's a loving Tamil church where God's Word is faithfully preached, lived, and shared. The warm fellowship, genuine care, and wonderful kids' ministry make it a place where the whole Tamil community can grow in faith and feel at home.🩷",
+    time: "2 weeks ago",
+  }
 ];
 
 export const GoogleReviews: React.FC<{ isEn?: boolean }> = ({ isEn = false }) => {
@@ -69,11 +85,11 @@ export const GoogleReviews: React.FC<{ isEn?: boolean }> = ({ isEn = false }) =>
           <p className="text-sm text-stone-500 mt-2 font-medium">5.0 / 5.0 Rating</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 lg:gap-8 space-y-6 lg:space-y-8">
           {reviews.map((review) => (
             <div 
               key={review.id} 
-              className="bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col"
+              className="bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col break-inside-avoid inline-block w-full"
             >
               <div className="flex items-center gap-4 mb-5">
                 <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center font-bold text-xl shrink-0">
@@ -96,7 +112,7 @@ export const GoogleReviews: React.FC<{ isEn?: boolean }> = ({ isEn = false }) =>
                 ))}
               </div>
               
-              <p className="text-stone-600 text-sm leading-relaxed flex-grow">
+              <p className="text-stone-600 text-sm leading-relaxed whitespace-pre-wrap flex-grow">
                 "{review.text}"
               </p>
             </div>
