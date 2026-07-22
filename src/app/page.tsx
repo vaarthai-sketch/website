@@ -4,6 +4,7 @@ import { Calendar, MapPin, Clock, ArrowRight, Compass, Heart, MessageSquare } fr
 import { churchConfig } from "@/data/config";
 import { Button } from "@/components/Button";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { GoogleReviews } from "@/components/GoogleReviews";
 
 export default function HomePage() {
 
@@ -280,6 +281,9 @@ export default function HomePage() {
 
         </div>
       </section>
+
+      {/* 5. GOOGLE REVIEWS */}
+      <GoogleReviews isEn={false} />
 
       {/* 8. NEWSLETTER SIGNUP */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

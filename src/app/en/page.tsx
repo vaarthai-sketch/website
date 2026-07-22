@@ -4,6 +4,7 @@ import { Calendar, MapPin, Clock, ArrowRight, Compass, Heart, MessageSquare } fr
 import { churchConfig } from "@/data/config";
 import { Button } from "@/components/Button";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { GoogleReviews } from "@/components/GoogleReviews";
 
 export const metadata = {
   title: `Welcome | ${churchConfig.name} - Evangelical Church in Brisbane`,
@@ -286,7 +287,10 @@ export default function EnglishHomePage() {
         </div>
       </section>
 
-      {/* 5. NEWSLETTER SIGNUP */}
+      {/* 5. GOOGLE REVIEWS */}
+      <GoogleReviews isEn={true} />
+
+      {/* 6. NEWSLETTER SIGNUP */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-neutral-light border border-border rounded-xl p-8 sm:p-12 text-center">
           <h2 className="font-serif text-2xl sm:text-3xl font-black text-primary mb-3">
