@@ -3,6 +3,7 @@ import { Calendar as CalendarIcon, FileText, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { churchConfig } from "@/data/config";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { LikeButton } from "@/components/LikeButton";
 
 export const metadata = {
   title: "From the Pastor's Desk | Vaarthai Evangelical Church",
@@ -123,6 +124,8 @@ export default function EnglishPastorsDeskPage() {
                       className="w-full h-full min-h-[350px] md:min-h-[450px]"
                     ></iframe>
                   </div>
+
+                  <LikeButton issueId="issue-002" isEn={true} />
 
                   <p className="font-medium text-stone-900 mt-6">
                     May God bless you,
