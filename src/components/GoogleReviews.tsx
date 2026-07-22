@@ -50,6 +50,14 @@ const reviews: Review[] = [
     rating: 5,
     text: "Truly blessed to be part of Vaarthai Evangelical Church. It's a loving Tamil church where God's Word is faithfully preached, lived, and shared. The warm fellowship, genuine care, and wonderful kids' ministry make it a place where the whole Tamil community can grow in faith and feel at home.🩷",
     time: "2 weeks ago",
+  },
+  {
+    id: "6",
+    author_name: "Kathi Buvana Jeyandran",
+    author_initial: "K",
+    rating: 5,
+    text: "We are so blessed for God has directed to Vaarthai Evangelical Church at Springfield. Lovely people caring like own family. Very happy to participate at joyful celebration on Sunday.",
+    time: "2 weeks ago",
   }
 ];
 
