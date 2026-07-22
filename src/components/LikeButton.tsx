@@ -25,7 +25,7 @@ export const LikeButton: React.FC<LikeButtonProps> = ({ issueId, isEn = false })
     // Fetch total likes from the server
     const fetchLikes = async () => {
       try {
-        const response = await fetch(`/api/likes?issueId=${issueId}`);
+        const response = await fetch(`/api/likes?issueId=${issueId}&t=${Date.now()}`);
         if (response.ok) {
           const data = await response.json();
           setLikes(data.likes);
