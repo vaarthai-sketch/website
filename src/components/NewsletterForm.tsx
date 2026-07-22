@@ -113,7 +113,7 @@ export const NewsletterForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="flex flex-col gap-4">
         <div>
           <label htmlFor="news-name" className="sr-only">{isEn ? "Your Name" : "Your Name"}</label>
           <input
@@ -149,21 +149,21 @@ export const NewsletterForm: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-1">
-        <p className="text-[11px] text-stone-500 leading-normal max-w-md text-center sm:text-left">
-          {isEn
-            ? "By subscribing, you consent to receive weekly newsletters, event announcements, and spiritual updates from Vaarthai Evangelical Church. You can unsubscribe at any time."
-            : "By subscribing, you consent to receive weekly newsletters, event announcements, and spiritual updates from Vaarthai Evangelical Church. You can unsubscribe at any time."}
-        </p>
+      <div className="flex flex-col gap-4 pt-1">
         <Button 
           type="submit" 
           variant="primary" 
           size="sm"
-          className="w-full sm:w-auto px-6 py-3 font-semibold shrink-0"
+          className="w-full px-6 py-3 font-semibold text-center"
           disabled={status === "loading"}
         >
           {status === "loading" ? "Subscribing..." : (isEn ? "Subscribe" : "Subscribe (பதிவு செய்க)")}
         </Button>
+        <p className="text-[11px] text-stone-500 leading-normal text-left">
+          {isEn
+            ? "By subscribing, you consent to receive weekly newsletters, event announcements, and spiritual updates from Vaarthai Evangelical Church. You can unsubscribe at any time."
+            : "By subscribing, you consent to receive weekly newsletters, event announcements, and spiritual updates from Vaarthai Evangelical Church. You can unsubscribe at any time."}
+        </p>
       </div>
 
       {status === "error" && (
