@@ -42,7 +42,9 @@ export default function EnglishHomePage() {
                 A Warm Welcome to Vaarthai Evangelical Church | Tamil Church in Brisbane
               </span>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide leading-[1.3] text-white">
-                Hearing the Word. <span className="text-accent">Living the Word.</span> Sharing the Word.
+                <span className="block mb-1 sm:mb-2">Hearing the Word.</span>
+                <span className="block text-accent mb-1 sm:mb-2">Living the Word.</span>
+                <span className="block">Sharing the Word.</span>
               </h1>
               <p className="text-base text-stone-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
                 Wherever you are on your spiritual journey, our Brisbane Tamil Church welcomes you with open arms. Join our Tamil Church Family to worship God, grow in our Tamil Christian community, and walk closely with Christ.
