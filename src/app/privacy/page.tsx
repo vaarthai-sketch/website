@@ -45,7 +45,6 @@ export default function PrivacyPage() {
           <li>Process and coordinate your guest RSVPs, class registrations, and department inquiries.</li>
           <li>Distribute weekly newsletters, prayer notices, and ministry announcements (only if you have opt-in to subscriptions).</li>
           <li>Pray over your submitted requests according to your restricted privacy configurations.</li>
-          <li>Issue tax-deductible contribution receipts and annual statements.</li>
         </ul>
 
         <h2 className="font-serif text-xl font-bold text-primary pt-4">3. Data Security & Confidentiality</h2>
