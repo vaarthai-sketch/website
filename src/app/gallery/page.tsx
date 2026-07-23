@@ -6,10 +6,14 @@ import path from 'path';
 import Link from 'next/link';
 import GalleryGrid from "@/components/GalleryGrid";
 
-export const metadata = {
-  title: "Photos - " + churchConfig.name,
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  locale: 'ta',
+  path: '/gallery',
+  title: "Photos - ",
   description: "View photos from our recent church events and gatherings.",
-};
+});
 
 // Force dynamic so it picks up new uploads
 export const dynamic = 'force-dynamic';

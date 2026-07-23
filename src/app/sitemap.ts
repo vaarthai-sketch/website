@@ -1,44 +1,40 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from 'next';
+import { churchConfig } from '@/data/config';
+
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.vaarthai.org.au';
+const locales = ['ta', 'en'] as const;
+
+const routes = [
+  { path: '', priority: 1.0, changeFrequency: 'weekly' as const },
+  { path: '/about', priority: 0.8, changeFrequency: 'monthly' as const },
+  { path: '/plan-your-visit', priority: 0.9, changeFrequency: 'monthly' as const },
+  { path: '/ministries', priority: 0.7, changeFrequency: 'monthly' as const },
+  { path: '/events', priority: 0.8, changeFrequency: 'weekly' as const },
+  { path: '/sermons', priority: 0.9, changeFrequency: 'weekly' as const },
+  { path: '/pastors-desk', priority: 0.6, changeFrequency: 'weekly' as const },
+  { path: '/gallery', priority: 0.5, changeFrequency: 'monthly' as const },
+  { path: '/give', priority: 0.6, changeFrequency: 'yearly' as const },
+  { path: '/contact', priority: 0.7, changeFrequency: 'yearly' as const },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
-    ? process.env.NEXT_PUBLIC_SITE_URL
-    : process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "https://vaarthaichurch.org";
-
-  const routes = [
-    "",
-    "/about",
-    "/plan-your-visit",
-    "/sermons",
-    "/events",
-    "/ministries",
-    "/gallery",
-    "/give",
-    "/contact",
-    "/prayer",
-    "/pastors-desk",
-    // English equivalents
-    "/en",
-    "/en/about",
-    "/en/plan-your-visit",
-    "/en/sermons",
-    "/en/events",
-    "/en/ministries",
-    "/en/gallery",
-    "/en/give",
-    "/en/contact",
-    "/en/prayer",
-    "/en/pastors-desk",
-  ];
-
-  return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === "" || route === "/en" || route === "/sermons" || route === "/events" ? "weekly" : "monthly",
-    priority: route === "" || route === "/en" ? 1 : 0.8,
-  }));
+  return routes.flatMap((route) =>
+    locales.map((locale) => {
+      const isEn = locale === 'en';
+      const prefix = isEn ? '/en' : '';
+      return {
+        url: `${SITE}${prefix}${route.path}`,
+        lastModified: new Date(),
+        changeFrequency: route.changeFrequency,
+        priority: route.priority,
+        alternates: {
+          languages: {
+            'ta': `${SITE}${route.path}`,
+            'en-AU': `${SITE}/en${route.path}`,
+            'x-default': `${SITE}/en${route.path}`,
+          },
+        },
+      };
+    })
+  );
 }

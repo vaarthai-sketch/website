@@ -1,10 +1,14 @@
 import React from "react";
 import { churchConfig } from "@/data/config";
 
-export const metadata = {
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  locale: 'ta',
+  path: '/terms',
   title: "Terms of Use",
   description: `Terms of Use for ${churchConfig.name}. Guidelines for using our site content.`,
-};
+});
 
 export default function TermsPage() {
   return (

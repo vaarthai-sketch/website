@@ -1,10 +1,14 @@
 import React from "react";
 import { churchConfig } from "@/data/config";
 
-export const metadata = {
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  locale: 'ta',
+  path: '/privacy',
   title: "Privacy Policy",
   description: `Privacy Policy for ${churchConfig.name}. Learn how we protect your personal information.`,
-};
+});
 
 export default function PrivacyPage() {
   return (

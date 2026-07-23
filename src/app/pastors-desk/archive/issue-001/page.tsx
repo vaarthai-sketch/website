@@ -4,10 +4,14 @@ import Link from "next/link";
 import { churchConfig } from "@/data/config";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
-export const metadata = {
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  locale: 'ta',
+  path: '/pastors-desk/archive/issue-001',
   title: "VEC-NL 2026-07 Issue 001 - From the Pastor's Desk | Vaarthai Evangelical Church",
   description: `Weekly letter, reflections, and updates from Senior Pastor Jeyakaran Weslyn at ${churchConfig.name}.`,
-};
+});
 
 export default function PastorsDeskArchive1Page() {
   return (

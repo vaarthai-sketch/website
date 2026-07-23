@@ -83,6 +83,8 @@ export const metadata: Metadata = {
   }
 };
 
+import { ChurchSchema } from "@/components/StructuredData";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -90,13 +92,14 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="ta"
       className={`${inter.variable} ${playfair.variable} ${kavivanar.variable} ${anekTamil.variable} h-full antialiased`}
     >
       <head>
         <script src="https://js.churchcenter.com/modal/v1" async></script>
       </head>
       <body className="min-h-full bg-background text-foreground flex flex-col font-sans">
+        <ChurchSchema locale="ta" />
         {/* Skip to Content for screenreaders accessibility */}
         <a href="#main-content" className="skip-link font-bold">
           Skip to main content

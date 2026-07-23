@@ -4,10 +4,14 @@ import Link from "next/link";
 import { churchConfig } from "@/data/config";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
-export const metadata = {
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  locale: 'ta',
+  path: '/pastors-desk',
   title: "From the Pastor's Desk",
   description: `Weekly newsletter and updates from the Pastor at ${churchConfig.name}.`,
-};
+});
 
 export default function PastorsDeskPage() {
   return (

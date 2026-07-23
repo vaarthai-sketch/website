@@ -4,10 +4,14 @@ import { churchConfig } from "@/data/config";
 import { StaffCard } from "@/components/Card";
 import { staffData } from "@/data/staff";
 
-export const metadata = {
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  locale: 'ta',
+  path: '/about',
   title: "About Our Church",
   description: `Learn about the story, core beliefs, mission, vision, values, and leadership team of ${churchConfig.name} in Brisbane, QLD, Australia.`,
-};
+});
 
 export default function AboutPage() {
   const coreValues = [

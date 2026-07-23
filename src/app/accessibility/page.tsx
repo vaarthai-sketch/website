@@ -2,10 +2,14 @@ import React from "react";
 import { Accessibility, ShieldAlert, Award } from "lucide-react";
 import { churchConfig } from "@/data/config";
 
-export const metadata = {
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  locale: 'ta',
+  path: '/accessibility',
   title: "Accessibility Statement",
   description: `Web accessibility details for ${churchConfig.name}. Our commitment to serving all users.`,
-};
+});
 
 export default function AccessibilityPage() {
   return (

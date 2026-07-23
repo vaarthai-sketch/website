@@ -6,10 +6,14 @@ import { Button } from "@/components/Button";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { GoogleReviews } from "@/components/GoogleReviews";
 
-export const metadata = {
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  locale: 'en',
+  path: '',
   title: `Welcome | ${churchConfig.name} - Evangelical Church in Brisbane`,
   description: `Welcome to ${churchConfig.name}. We are a Gospel-centered Tamil and multi-generational church community in Brisbane, loving God and making disciples.`,
-};
+});
 
 export default function EnglishHomePage() {
 
