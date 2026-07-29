@@ -51,9 +51,9 @@ export default function PastorsDeskPage() {
                   <span>VEC-NL 2026-07 · Issue #003</span>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-red-800 mb-6 relative z-10 flex items-center gap-2">
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-emerald-800 mb-6 relative z-10 flex items-center gap-2">
                   <Gift className="w-8 h-8 text-emerald-600" />
-                  ஜூலையில் கிறிஸ்மஸ் (Christmas in July)
+                  வார்த்தை மாம்சமானார்
                 </h2>
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
