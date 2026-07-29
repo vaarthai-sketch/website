@@ -38,6 +38,7 @@ export const Header: React.FC = () => {
     { name: "Home", href: isEnglish ? "/en" : "/" },
     { name: "About", href: `${basePrefix}/about` },
     { name: "Ministries", href: `${basePrefix}/ministries` },
+    { name: "Sermons", href: `${basePrefix}/sermons` },
     { name: "Events", href: `${basePrefix}/events` },
     { name: "Photos", href: `${basePrefix}/gallery` },
     { name: "Give", href: `${basePrefix}/give` },
