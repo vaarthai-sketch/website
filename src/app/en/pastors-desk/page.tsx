@@ -52,7 +52,7 @@ export default function EnglishPastorsDeskPage() {
                 
                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-emerald-800 mb-6 relative z-10 flex items-center gap-2">
                   <Gift className="w-8 h-8 text-emerald-600" />
-                  Christmas in July
+                  The Word became flesh.
                 </h2>
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
