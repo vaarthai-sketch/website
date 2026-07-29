@@ -11,6 +11,7 @@ export const metadata = buildMetadata({
   path: '/pastors-desk/archive/issue-002',
   title: "VEC-NL 2026-07 Issue 002 - From the Pastor's Desk | Vaarthai Evangelical Church",
   description: `Weekly letter, reflections, and updates from Senior Pastor Jeyakaran Weslyn at ${churchConfig.name}.`,
+  image: '/pastor-desk-hero.jpg',
 });
 
 export default function PastorsDeskArchive2Page() {
