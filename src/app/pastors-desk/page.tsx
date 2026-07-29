@@ -117,87 +117,19 @@ export default function PastorsDeskPage() {
                     ></iframe>
                   </div>
 
-                  <hr className="border-red-200 my-8" />
-
-                  <h3 className="text-xl md:text-2xl font-serif font-bold text-red-800 mb-6">
-                    English Translation
-                  </h3>
-                  
-                  <p className="font-medium text-stone-900">
-                    Beloved in Christ,
-                  </p>
-                  <p>
-                    Greetings to each of you! We&apos;re in the last week of July — about to close out seven months of 2026.
-                  </p>
-                  <p>
-                    Here in Australia, in Brisbane where we live, June and July are our winter months, while December is summer. When I arrived in this country twenty years ago, celebrating Christmas in the middle of summer felt strange. Tamil Nadu doesn&apos;t really have a winter, but by December the sun is at least bearable there. Here, we sing carols under a scorching sun. To capture something of the Christmas atmosphere, people here celebrate &quot;Christmas in July&quot; on July 25 — largely, it has to be said, something retailers set up for their own business. So then — is celebrating on December 25 correct? Some argue that&apos;s wrong too, and that Christmas shouldn&apos;t be celebrated at all.
-                  </p>
-                  <p>
-                    First: Scripture nowhere says Christmas should or shouldn&apos;t be celebrated. So why do we celebrate it? Scripture tells us to observe festival days (e.g., Exodus 23:14) — so I don&apos;t see anything wrong in setting apart a specific day as Christ&apos;s birth day, to help us remember Jesus all the more.
-                  </p>
-                  <p>
-                    Let me share two scenes from Scripture that support this.
-                  </p>
-                  <p>
-                    <strong>Scene one — the Persian palace.</strong> A young Jewish woman, unafraid of the death sentence hanging over her, stands before the king though not summoned — because an order to destroy her entire people has already been signed and sealed. &quot;Who knows whether you have come to the kingdom for such a time as this?&quot; her cousin Mordecai tells her (Esther 4:14). Through God&apos;s remarkable intervention, that day became a day of deliverance. A man named Haman had cast lots to fix a day of destruction; God turned that same day into a day of triumph. Mordecai and Esther then established it as a festival for every generation to keep (Esther 9:20-28) — a new festival, never previously commanded in Scripture.
-                  </p>
-                  <p>
-                    <strong>Scene two — centuries later, the same Jerusalem temple.</strong> Consider the history of the Maccabee family, who lived in Judea in the 2nd century BC and freed the Jewish people by revolting against the foreign Greek-Syrian regime. According to the history recorded in the books of the Maccabees (ancient historical documents; not part of our Old Testament canon), the foreign king Antiochus defiled the temple; through the Maccabees&apos; sacrifice it was purified and rededicated. To commemorate this, Israel instituted an eight-day festival — later Jewish tradition came to call it the &quot;Festival of Lights,&quot; marking light overcoming darkness. This too is a festival absent from the Law of Moses. Its canonical support is found in John 10:22-23: &quot;At that time the Feast of Dedication took place at Jerusalem... Jesus was walking in the temple, in the colonnade of Solomon.&quot; Jesus didn&apos;t avoid this man-instituted feast — He showed up in the middle of it.
-                  </p>
-                  <p>
-                    In the book of Esther, deliverance came in the midst of darkness. At the Feast of Dedication, light came in the midst of darkness. Both are days God&apos;s people instituted themselves — yet both reflect God&apos;s grace.
-                  </p>
-                  <p>
-                    Isn&apos;t Christmas the same, then? In the depths of winter darkness, the church chose a day to mark the rising of the &quot;Sun of Righteousness&quot; (Malachi 4:2). Some object to December 25, saying it coincides with a Roman festival honoring the sun god. History offers two explanations: some say early Christians calculated Christ&apos;s conception at March 25 and simply added nine months, arriving at this date; others say the church deliberately chose it to proclaim light in the darkest season. Either way, the day chosen to celebrate this is a human decision — not God&apos;s explicit command. Which is exactly why it can&apos;t rightly be called &quot;wrong,&quot; nor insisted on as &quot;the only correct way.&quot;
-                  </p>
-                  <p>
-                    Beloved, Christmas isn&apos;t found in a date — it&apos;s found in the heart. Whether we sing carols under a scorching December sun or in the July cold, our purpose is one: to proclaim that &quot;the Word became flesh and dwelt among us&quot; (John 1:14). In these final days of July — whether we celebrate &quot;Christmas in July&quot; or not — let every day become a day we remember Jesus.
-                  </p>
-                  <p>
-                    This picture of light breaking into darkness is beautifully captured in an old hymn the church has sung for centuries (Original: Latin &quot;O Antiphons,&quot; 8th–9th century; versified c. 12th century; English translation by John Mason Neale, 1851):
-                  </p>
-                  
-                  <blockquote className="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg italic font-serif">
-                    <p className="whitespace-pre-line leading-relaxed text-stone-700">
-                      O come, Thou Day-Spring, come and cheer<br/>
-                      Our spirits by Thine advent here<br/>
-                      Disperse the gloomy clouds of night<br/>
-                      And death&apos;s dark shadows put to flight<br/>
-                      Rejoice, rejoice, Emmanuel<br/>
-                      Shall come to thee, O Israel.
-                    </p>
-                  </blockquote>
-
-                  <p>
-                    I&apos;ve included the Tamil video of this hymn below — listen and be blessed.
-                  </p>
-
-                  {/* YouTube Embed English */}
-                  <div className="my-8 aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md not-prose border-2 border-red-200 bg-white">
-                    <iframe 
-                      src="https://www.youtube.com/embed/UH7asSGxAxA" 
-                      title="O Come, O Come, Emmanuel (English)" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      allowFullScreen
-                      className="w-full h-full min-h-[350px] md:min-h-[450px]"
-                    ></iframe>
-                  </div>
-
                   <p className="font-medium text-stone-900 mt-6">
-                    God bless you!<br/>
                     தேவன் உங்களை ஆசீர்வதிப்பாராக!
                   </p>
                   <p className="pt-2 font-medium text-stone-800">
-                    Pastor Weslyn<br/>
                     போதகர் வெஸ்லின்
                   </p>
                   
-                  <div className="mt-6 pt-6 border-t border-red-200 flex items-center gap-4 not-prose relative z-10">
+                  <div className="mt-6 pt-6 border-t border-emerald-300 flex items-center gap-4 not-prose relative z-10">
                     <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-emerald-500 shrink-0 shadow-sm bg-white">
                       <img src="/staff-pastor.png" alt="Ps. ஜெயகரன் வெஸ்லின்" className="w-full h-full object-cover object-top" />
                     </div>
                     <div>
-                      <p className="font-bold text-red-800 m-0 text-lg">Ps. ஜெயகரன் வெஸ்லின் (Jeyakaran Weslyn)</p>
+                      <p className="font-bold text-emerald-800 m-0 text-lg">Ps. ஜெயகரன் வெஸ்லின் (Jeyakaran Weslyn)</p>
                       <p className="text-sm text-stone-600 m-0">Senior Pastor, {churchConfig.name}</p>
                     </div>
                   </div>

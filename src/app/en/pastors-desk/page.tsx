@@ -1,16 +1,15 @@
 import React from "react";
-import { Calendar as CalendarIcon, FileText, ChevronRight } from "lucide-react";
+import { Calendar as CalendarIcon, FileText, ChevronRight, Gift, Snowflake } from "lucide-react";
 import Link from "next/link";
 import { churchConfig } from "@/data/config";
 import { NewsletterForm } from "@/components/NewsletterForm";
-
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   locale: 'en',
-  path: '/pastors-desk',
-  title: "From the Pastor's Desk | Vaarthai Evangelical Church",
-  description: `Weekly letter, reflections, and updates from Senior Pastor Jeyakaran Weslyn at ${churchConfig.name}.`,
+  path: '/en/pastors-desk',
+  title: "VEC-NL 2026-07 Issue 003 - From the Pastor's Desk | Vaarthai Evangelical Church",
+  description: `Weekly newsletter and updates from the Pastor at ${churchConfig.name}.`,
 });
 
 export default function EnglishPastorsDeskPage() {
@@ -26,10 +25,10 @@ export default function EnglishPastorsDeskPage() {
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="text-3xl md:text-5xl font-serif font-bold mb-4">
-            From the Pastor's Desk
+            From the Pastor&apos;s Desk
           </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto text-stone-200">
-            Weekly letters, biblical reflections, and pastoral encouragement.
+            Weekly newsletter, reflections, and updates from our pastoral team.
           </p>
         </div>
       </section>
@@ -41,87 +40,76 @@ export default function EnglishPastorsDeskPage() {
             
             {/* Newsletter Content */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-lg shadow-sm border border-border p-6 md:p-10 mb-8">
-                <div className="flex items-center gap-2 text-sm text-accent-dark font-bold mb-4">
+              <div className="bg-gradient-to-br from-emerald-50 via-white to-green-100 rounded-lg shadow-sm border border-emerald-300 p-6 md:p-10 mb-8 relative overflow-hidden">
+                {/* Decorative Elements */}
+                <Snowflake className="absolute top-4 right-4 text-emerald-200 w-16 h-16 opacity-30" />
+                <Snowflake className="absolute bottom-10 left-4 text-emerald-200 w-24 h-24 opacity-30" />
+                
+                <div className="flex items-center gap-2 text-sm text-emerald-700 font-bold mb-4 relative z-10">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-07 · Issue #002</span>
+                  <span>VEC-NL 2026-07 · Issue #003</span>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary mb-6">
-                  The Church's One Foundation is Jesus Christ
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-emerald-800 mb-6 relative z-10 flex items-center gap-2">
+                  <Gift className="w-8 h-8 text-emerald-600" />
+                  Christmas in July
                 </h2>
                 
-                <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg">
+                <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
                   <p className="font-medium text-stone-900">
-                    Dear Vaarthai Family,
+                    Beloved in Christ,
                   </p>
                   <p>
-                    I greet you in the incomparable name of Jesus Christ!
+                    Greetings to each of you! We&apos;re in the last week of July — about to close out seven months of 2026.
                   </p>
                   <p>
-                    Last night, the Lord brought to my mind an old hymn. Here are its words...
+                    Here in Australia, in Brisbane where we live, June and July are our winter months, while December is summer. When I arrived in this country twenty years ago, celebrating Christmas in the middle of summer felt strange. Tamil Nadu doesn&apos;t really have a winter, but by December the sun is at least bearable there. Here, we sing carols under a scorching sun. To capture something of the Christmas atmosphere, people here celebrate &quot;Christmas in July&quot; on July 25 — largely, it has to be said, something retailers set up for their own business. So then — is celebrating on December 25 correct? Some argue that&apos;s wrong too, and that Christmas shouldn&apos;t be celebrated at all.
                   </p>
-                  <blockquote className="bg-stone-50 border-l-4 border-stone-300 p-4 rounded-r-lg italic font-serif">
-                    <p className="whitespace-pre-line leading-relaxed text-stone-600">
-                      The Church's one foundation<br/>
-                      Is Jesus Christ her Lord;<br/>
-                      She is His new creation<br/>
-                      By water and the Word:<br/>
-                      From heaven He came and sought her<br/>
-                      To be His holy bride;<br/>
-                      With His own blood He bought her,<br/>
-                      And for her life He died.
+                  <p>
+                    First: Scripture nowhere says Christmas should or shouldn&apos;t be celebrated. So why do we celebrate it? Scripture tells us to observe festival days (e.g., Exodus 23:14) — so I don&apos;t see anything wrong in setting apart a specific day as Christ&apos;s birth day, to help us remember Jesus all the more.
+                  </p>
+                  <p>
+                    Let me share two scenes from Scripture that support this.
+                  </p>
+                  <p>
+                    <strong>Scene one — the Persian palace.</strong> A young Jewish woman, unafraid of the death sentence hanging over her, stands before the king though not summoned — because an order to destroy her entire people has already been signed and sealed. &quot;Who knows whether you have come to the kingdom for such a time as this?&quot; her cousin Mordecai tells her (Esther 4:14). Through God&apos;s remarkable intervention, that day became a day of deliverance. A man named Haman had cast lots to fix a day of destruction; God turned that same day into a day of triumph. Mordecai and Esther then established it as a festival for every generation to keep (Esther 9:20-28) — a new festival, never previously commanded in Scripture.
+                  </p>
+                  <p>
+                    <strong>Scene two — centuries later, the same Jerusalem temple.</strong> Consider the history of the Maccabee family, who lived in Judea in the 2nd century BC and freed the Jewish people by revolting against the foreign Greek-Syrian regime. According to the history recorded in the books of the Maccabees (ancient historical documents; not part of our Old Testament canon), the foreign king Antiochus defiled the temple; through the Maccabees&apos; sacrifice it was purified and rededicated. To commemorate this, Israel instituted an eight-day festival — later Jewish tradition came to call it the &quot;Festival of Lights,&quot; marking light overcoming darkness. This too is a festival absent from the Law of Moses. Its canonical support is found in John 10:22-23: &quot;At that time the Feast of Dedication took place at Jerusalem... Jesus was walking in the temple, in the colonnade of Solomon.&quot; Jesus didn&apos;t avoid this man-instituted feast — He showed up in the middle of it.
+                  </p>
+                  <p>
+                    In the book of Esther, deliverance came in the midst of darkness. At the Feast of Dedication, light came in the midst of darkness. Both are days God&apos;s people instituted themselves — yet both reflect God&apos;s grace.
+                  </p>
+                  <p>
+                    Isn&apos;t Christmas the same, then? In the depths of winter darkness, the church chose a day to mark the rising of the &quot;Sun of Righteousness&quot; (Malachi 4:2). Some object to December 25, saying it coincides with a Roman festival honoring the sun god. History offers two explanations: some say early Christians calculated Christ&apos;s conception at March 25 and simply added nine months, arriving at this date; others say the church deliberately chose it to proclaim light in the darkest season. Either way, the day chosen to celebrate this is a human decision — not God&apos;s explicit command. Which is exactly why it can&apos;t rightly be called &quot;wrong,&quot; nor insisted on as &quot;the only correct way.&quot;
+                  </p>
+                  <p>
+                    Beloved, Christmas isn&apos;t found in a date — it&apos;s found in the heart. Whether we sing carols under a scorching December sun or in the July cold, our purpose is one: to proclaim that &quot;the Word became flesh and dwelt among us&quot; (John 1:14). In these final days of July — whether we celebrate &quot;Christmas in July&quot; or not — let every day become a day we remember Jesus.
+                  </p>
+                  <p>
+                    This picture of light breaking into darkness is beautifully captured in an old hymn the church has sung for centuries (Original: Latin &quot;O Antiphons,&quot; 8th–9th century; versified c. 12th century; English translation by John Mason Neale, 1851):
+                  </p>
+                  
+                  <blockquote className="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg italic font-serif">
+                    <p className="whitespace-pre-line leading-relaxed text-stone-700">
+                      O come, Thou Day-Spring, come and cheer<br/>
+                      Our spirits by Thine advent here<br/>
+                      Disperse the gloomy clouds of night<br/>
+                      And death&apos;s dark shadows put to flight<br/>
+                      Rejoice, rejoice, Emmanuel<br/>
+                      Shall come to thee, O Israel.
                     </p>
                   </blockquote>
 
                   <p>
-                    In 1866, a pastor named Samuel John Stone wrote a hymn — "The Church's one foundation is Jesus Christ her Lord." But it was not written in the joy of triumph. In those days the church was being shaken by divisions and by disputes over the authority of Scripture. This hymn is a confession of faith written in the very midst of that struggle.
+                    I&apos;ve included the video of this hymn below — listen and be blessed.
                   </p>
-                  <p>
-                    Its central message is simple, yet profound: the church does not stand on human strength, nor on the agreement of people — but on Jesus Christ alone.
-                  </p>
-                  <p className="font-medium text-stone-900">
-                    The hymn reminds us of four truths:
-                  </p>
-                  <ul className="list-disc pl-5 space-y-2">
-                    <li>
-                      <strong>One Foundation</strong> — "no other foundation can anyone lay" (1 Corinthians 3:11). By His Word He formed the church, His bride.
-                    </li>
-                    <li>
-                      <strong>One Fellowship</strong> — many nations, many languages, yet one Lord, one faith, one baptism (Ephesians 4).
-                    </li>
-                    <li>
-                      <strong>Struggle will come, but He will not forsake</strong> — the church may face affliction; the saints may cry, "How long will this night of weeping last?" Yet the Lord watches over and keeps His church.
-                    </li>
-                    <li>
-                      <strong>A sure hope</strong> — the night of weeping will end, and the morning of glory will dawn. Rest will come.
-                    </li>
-                  </ul>
-                  <p>
-                    Beloved, this message is deeply fitting for our Vaarthai Church (VEC). We too have begun a new journey. Our future rests not on our own strength — but on the unshakable foundation that is Christ. That is our assurance.
-                  </p>
-                  
-                  <blockquote className="bg-accent/5 border-l-4 border-accent p-5 rounded-r-lg text-primary italic font-serif my-6">
-                    <p className="mb-2 text-lg md:text-xl font-medium">
-                      "For no one can lay any foundation other than the one already laid, which is Jesus Christ."
-                    </p>
-                    <cite className="block text-right font-sans font-bold text-sm text-accent-dark not-italic mt-2">
-                      — 1 Corinthians 3:11
-                    </cite>
-                  </blockquote>
 
-                  <p>
-                    This week, take a moment to consider: on what foundation is your life built? Christ is our steadfast Rock.
-                  </p>
-                  <p>
-                    A church from Singapore has sung this hymn, "The Church's One Foundation," beautifully together in Tamil, English, and Chinese. Do listen and be blessed by it here.
-                  </p>
-                  
-                  {/* YouTube Embed */}
-                  <div className="my-8 aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md not-prose border border-stone-200">
+                  {/* YouTube Embed English */}
+                  <div className="my-8 aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md not-prose border-2 border-emerald-300 bg-white">
                     <iframe 
-                      src="https://www.youtube.com/embed/DcCYWzrhmJM" 
-                      title="The Church's One Foundation" 
+                      src="https://www.youtube.com/embed/UH7asSGxAxA" 
+                      title="O Come, O Come, Emmanuel" 
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                       allowFullScreen
                       className="w-full h-full min-h-[350px] md:min-h-[450px]"
@@ -129,19 +117,19 @@ export default function EnglishPastorsDeskPage() {
                   </div>
 
                   <p className="font-medium text-stone-900 mt-6">
-                    May God bless you,
+                    God bless you!
                   </p>
                   <p className="pt-2 font-medium text-stone-800">
                     Pastor Weslyn
                   </p>
                   
-                  <div className="mt-6 pt-6 border-t border-stone-200 flex items-center gap-4 not-prose">
-                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-accent shrink-0 shadow-sm">
+                  <div className="mt-6 pt-6 border-t border-emerald-300 flex items-center gap-4 not-prose relative z-10">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-emerald-500 shrink-0 shadow-sm bg-white">
                       <img src="/staff-pastor.png" alt="Ps. Jeyakaran Weslyn" className="w-full h-full object-cover object-top" />
                     </div>
                     <div>
-                      <p className="font-bold text-primary m-0 text-lg">Ps. Jeyakaran Weslyn</p>
-                      <p className="text-sm text-stone-500 m-0">Senior Pastor, {churchConfig.name}</p>
+                      <p className="font-bold text-emerald-800 m-0 text-lg">Ps. Jeyakaran Weslyn</p>
+                      <p className="text-sm text-stone-600 m-0">Senior Pastor, {churchConfig.name}</p>
                     </div>
                   </div>
                 </div>
@@ -159,7 +147,14 @@ export default function EnglishPastorsDeskPage() {
                   <Link href="/en/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Issue #002</p>
+                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Issue #003</p>
+                      <p className="text-xs text-stone-500">Jul 2026</p>
+                    </div>
+                  </Link>
+                  <Link href="/en/pastors-desk/archive/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #002</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
