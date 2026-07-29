@@ -41,7 +41,7 @@ export default function PastorsDeskPage() {
             
             {/* Newsletter Content */}
             <div className="lg:col-span-3">
-              <div className="bg-gradient-to-br from-red-50 via-white to-emerald-50 rounded-lg shadow-sm border border-red-200 p-6 md:p-10 mb-8 relative overflow-hidden">
+              <div className="bg-gradient-to-br from-emerald-50 via-white to-green-100 rounded-lg shadow-sm border border-emerald-300 p-6 md:p-10 mb-8 relative overflow-hidden">
                 {/* Decorative Elements */}
                 <Snowflake className="absolute top-4 right-4 text-red-200 w-16 h-16 opacity-30" />
                 <Snowflake className="absolute bottom-10 left-4 text-emerald-200 w-24 h-24 opacity-30" />
