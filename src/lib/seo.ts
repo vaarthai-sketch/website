@@ -21,7 +21,7 @@ export function buildMetadata({
   path,
   title,
   description,
-  image = '/opengraph-image.jpg',
+  image,
 }: {
   locale: Locale;
   path: string;
@@ -57,13 +57,13 @@ export function buildMetadata({
       description,
       locale: localeMeta[locale].ogLocale,
       alternateLocale: [localeMeta[isEn ? 'ta' : 'en'].ogLocale],
-      images: [{ url: image, width: 1200, height: 630 }],
+      ...(image ? { images: [{ url: image, width: 1200, height: 630 }] } : {}),
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [image],
+      ...(image ? { images: [image] } : {}),
     },
     robots: { index: true, follow: true },
   };
