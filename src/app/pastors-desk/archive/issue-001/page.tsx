@@ -26,7 +26,7 @@ export default function PastorsDeskArchive1Page() {
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="text-3xl md:text-5xl font-serif font-bold mb-4">
-            From the Pastor's Desk
+            From the Pastor&apos;s Desk
           </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto text-stone-200">
             Weekly newsletter, reflections, and updates from our pastoral team.
@@ -134,6 +134,13 @@ export default function PastorsDeskArchive1Page() {
                 </h3>
                 <div className="space-y-3">
                   <Link href="/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #003</p>
+                      <p className="text-xs text-stone-500">Jul 2026</p>
+                    </div>
+                  </Link>
+                  <Link href="/pastors-desk/archive/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #002</p>

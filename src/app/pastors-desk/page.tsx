@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar as CalendarIcon, FileText, ChevronRight } from "lucide-react";
+import { Calendar as CalendarIcon, FileText, ChevronRight, Gift, Snowflake } from "lucide-react";
 import Link from "next/link";
 import { churchConfig } from "@/data/config";
 import { NewsletterForm } from "@/components/NewsletterForm";
@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'ta',
   path: '/pastors-desk',
-  title: "From the Pastor's Desk",
+  title: "VEC-NL 2026-07 Issue 003 - From the Pastor's Desk | Vaarthai Evangelical Church",
   description: `Weekly newsletter and updates from the Pastor at ${churchConfig.name}.`,
 });
 
@@ -26,7 +26,7 @@ export default function PastorsDeskPage() {
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="text-3xl md:text-5xl font-serif font-bold mb-4">
-            From the Pastor's Desk
+            From the Pastor&apos;s Desk
           </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto text-stone-200">
             Weekly newsletter, reflections, and updates from our pastoral team.
@@ -41,87 +41,142 @@ export default function PastorsDeskPage() {
             
             {/* Newsletter Content */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-lg shadow-sm border border-border p-6 md:p-10 mb-8">
-                <div className="flex items-center gap-2 text-sm text-accent-dark font-bold mb-4">
+              <div className="bg-gradient-to-br from-red-50 via-white to-emerald-50 rounded-lg shadow-sm border border-red-200 p-6 md:p-10 mb-8 relative overflow-hidden">
+                {/* Decorative Elements */}
+                <Snowflake className="absolute top-4 right-4 text-red-200 w-16 h-16 opacity-30" />
+                <Snowflake className="absolute bottom-10 left-4 text-emerald-200 w-24 h-24 opacity-30" />
+                
+                <div className="flex items-center gap-2 text-sm text-red-700 font-bold mb-4 relative z-10">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-07 · Issue #002</span>
+                  <span>VEC-NL 2026-07 · Issue #003</span>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary mb-6">
-                  திருச்சபையின் ஒரே அஸ்திபாரம் இயேசு கிறிஸ்துவே
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-red-800 mb-6 relative z-10 flex items-center gap-2">
+                  <Gift className="w-8 h-8 text-emerald-600" />
+                  ஜூலையில் கிறிஸ்மஸ் (Christmas in July)
                 </h2>
                 
-                <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg">
+                <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
                   <p className="font-medium text-stone-900">
-                    அன்பான வார்த்தை குடும்பமே,
+                    கிறிஸ்துவுக்குள் பிரியமானவர்களே,
                   </p>
                   <p>
-                    இயேசு கிறிஸ்த்துவின் இணையற்ற பெயராலே உங்களை வாழ்த்துகிறேன்!
+                    உங்கள் ஒவ்வொருவரையும் வாழ்த்துகிறேன்! ஜூலை மாதத்தின் கடைசி வாரத்தில் இருக்கிறோம்! 2026ம் ஆண்டின், 7 மாதங்களை முடிக்கப் போகிறோம்.
                   </p>
                   <p>
-                    நேற்று இரவு, தேவன் எனக்கு ஒரு பழைய ஞானப்பாடலை நினைவு படுத்தினார்! அதனுடைய வரிகள் இதோ...
+                    ஆஸ்திரேலிய தேசத்திலே, நாம் வசிக்கும் பிரிஸ்பன் நகரிலே, ஜூன் மற்றும் ஜூலை மாதங்கள்தான் குளிர் காலங்கள். டிசம்பர் மாதமோ கோடை காலம். இந்த தேசத்திற்கு 20 ஆண்டுகளுக்கு முன்பு வந்தபோது, கிறிஸ்மஸ் காலங்களை கோடை காலத்தில் கொண்டாடுவது விசித்திரமாக இருந்தது. தமிழகத்திலே குளிர் காலம் என்பது இல்லையென்றாலும், டிசம்பர் மாதத்தில் வெயில் தாங்கக் கூடிய அளவிலே இருக்கும். ஆனால் இங்கு தகிக்கிற வெயிலிலே கேரல்ஸ் பாடவேண்டும். கிறிஸ்மஸ் சூழ்நிலையை அனுபவிப்பதற்காக, இங்கு ஜூலை மாதத்தில் கிறிஸ்மஸ் (Christmas in July) என்று ஜூலை 25ம் தேதியிலே கொண்டாடுவார்கள். பொதுவாக இது வணிகர்கள் தங்களது வியாபாரத்திற்காக ஏற்படுத்தியது என்று சொல்லலாம். சரி அப்படியென்றால், டிசம்பர் மாதம் 25ம் தேதியைக் கொண்டாடுவது சரியானதா? ஒரு சிலர்கள் அதையும் தவறு, அதனால் கிறிஸ்மஸ் கொண்டாடக் கூடாது என்று வாதாடுவார்கள்.
                   </p>
-                  <blockquote className="bg-stone-50 border-l-4 border-stone-300 p-4 rounded-r-lg italic font-serif">
-                    <p className="whitespace-pre-line leading-relaxed text-stone-600">
-                      சபையின் அஸ்திபாரம்<br/>
-                      நல் மீட்பர் கிறிஸ்துவே<br/>
-                      சபையின் ஜன்மாதாரம்<br/>
-                      அவரின் வார்த்தையே<br/>
-                      தம் மணவாட்டியாக<br/>
-                      வந்ததைத் தேடினார்<br/>
-                      தமக்குச் சொந்தமாக<br/>
-                      மரித்ததைக் கொண்டார்
+                  <p>
+                    முதலாவதாக, வேதத்திலே கிறிஸ்மஸ் கொண்டாட வேண்டும், அல்லது கூடாது என்று எதுவுமே சொல்லப் படவில்லை. பின்பு ஏன் கொண்டாடுகிறோம்? வேதம் பண்டிகை நாட்களை அனுசரிக்கச் சொல்லுகிறது (எ.கா யாத்திராகமம் 23:14). ஆகவே நாம் ஒரு குறிப்பிட்ட நாளை கிறிஸ்து பிறப்பின் நாளாக நியமித்துக் கொண்டு, இயேசுவை இன்னும் அதிகமாக நினைவுகூருவதில் தவறேதும் இருப்பதாக எனக்குத் தெரியவில்லை.
+                  </p>
+                  <p>
+                    இதை உறுதிப்படுத்த வேதத்திலிருந்து இரண்டு காட்சிகளை உங்களோடு பகிர்ந்துகொள்ள விரும்புகிறேன்.
+                  </p>
+                  <p>
+                    <strong>முதல் காட்சி — பெர்சிய அரண்மனை.</strong> ஒரு இளம் யூதப் பெண், மரண தண்டனையை குறித்துப் பயப்படாமல், அழைக்கப்படாமலேயே அரசனுக்கு முன் நிற்கிறாள். ஏனெனில் அவளுடைய இனத்தை அழிக்கத் தீட்டிய உத்தரவு ஏற்கனவே கையெழுத்தாகிவிட்டது. &quot;இப்படிப்பட்ட காலத்திற்கேதானே நீ ராஜரிக பட்டத்திற்கு வந்தாயோ, யாருக்குத் தெரியும்?&quot; என்று சகோதரனாகிய (Cousin) மொர்தெகாய் அவளிடம் சொன்னான் (எஸ்தர் 4:14). அந்த நாள் தேவனுடைய அற்புத தலையீட்டால் மீட்பின் நாளாக மாறியது. ஆமான் என்பவன் சீட்டுப் போட்டு அழிவின் நாளைத் தீர்மானித்திருந்தான்; தேவன் அதையே ஜெயத்தின் நாளாக மாற்றினார். மொர்தெகாயும் எஸ்தரும் அந்த நாளை தலைமுறை தலைமுறையாக அனுசரிக்கப்பட வேண்டிய பண்டிகையாக நியமித்தார்கள் (எஸ்தர் 9:20-28) — வேதத்தில் முன்பே கட்டளையிடப்படாத ஒரு புதிய பண்டிகை.
+                  </p>
+                  <p>
+                    <strong>இரண்டாம் காட்சி — நூற்றுக்கணக்கான ஆண்டுகளுக்குப் பின், அதே எருசலேம் தேவாலயம்.</strong> கி.மு. 2ம் நூற்றாண்டில் யூத தேசத்தில் வாழ்ந்த ஒரு குடும்பம் மக்காபேயர் குடும்பம். அவர்கள் அந்நிய கிரேக்க-சிரிய ஆட்சிக்கு எதிராகக் கிளர்ச்சி செய்து யூதர்களை விடுவித்தவர்கள். மக்காபேயர் புத்தகங்களில் பதிவுசெய்யப்பட்டுள்ள வரலாற்றின்படி, அந்நிய அரசன் அந்தியோகு தேவாலயத்தைத் தீட்டுப்படுத்தினான்; மக்காபேயரின் தியாகத்தால் அது மீண்டும் சுத்திகரிக்கப்பட்டு பிரதிஷ்டை செய்யப்பட்டது. அதை நினைவுகூர இஸ்ரவேலர் எட்டு நாள் பண்டிகையை உண்டாக்கினார்கள்— யூத பாரம்பரியத்தில் இது &quot;விளக்குகளின் பண்டிகை&quot; என்றும் அழைக்கப்படுகிறது, இருளை வெளிச்சம் வென்றெடுத்த நினைவாக. இதுவும் மோசேயின் நியாயப்பிரமாணத்தில் இல்லாத பண்டிகையே. இதன் ஆதாரம் யோவான் 10:22-23-ல் இருக்கிறது: &quot;எருசலேமிலே பிரதிஷ்டைப் பண்டிகை நடந்தது... இயேசு தேவாலயத்திலே சாலொமோன் மண்டபத்திலே உலாவிக்கொண்டிருந்தார்.&quot; இயேசு அந்த மனிதனால் நியமிக்கப்பட்ட பண்டிகையைத் தவிர்க்கவில்லை; அதிலே தம்மைக் காண்பித்தார்.
+                  </p>
+                  <p>
+                    எஸ்தர் சரித்திரத்தில் இருள் நடுவே மீட்பு வந்தது. பிரதிஷ்டைப் பண்டிகையில் இருள் நடுவே வெளிச்சம் வந்தது. இரண்டுமே, தேவனுடைய மக்கள் தாங்களே நியமித்த நாட்கள் — ஆனாலும் தேவனுடைய கிருபையை பிரதிபலிக்கும் நாட்கள்.
+                  </p>
+                  <p>
+                    அப்படியானால், கிறிஸ்மஸும் அப்படித்தானே? இருள் நடுவே, &quot;நீதியின் சூரியன்&quot; (மல்கியா 4:2) உதித்த நாளாக, சபை ஒரு நாளைத் தெரிந்தெடுத்தது. டிசம்பர் 25 குறித்து சிலர், &quot;இது ரோம சூரிய தேவனை வழிபடும் பண்டிகையின் நாளுடன் ஒத்துப்போகிறதே&quot; என்று ஆட்சேபிக்கிறார்கள். வரலாற்றில் இரு விளக்கங்கள் உண்டு: ஆரம்பகால கிறிஸ்தவர்கள் இயேசுவின் கர்ப்பந்தரிப்பை மார்ச் 25 எனக் கணக்கிட்டு ஒன்பது மாதம் கூட்டியதன் விளைவே இந்த தேதி எனச் சிலர் சொல்கிறார்கள்; இருண்ட காலத்தின் நடுவே ஒளியைப் பறைசாற்ற சபை இதைத் தெரிந்தெடுத்தது என்று மற்றவர்கள் சொல்கிறார்கள். எது எப்படி இருந்தாலும், இதைக் கொண்டாட தெரிந்தெடுத்த நாள் மனிதத் தீர்மானமே — தேவனுடைய திட்டவட்டமான கட்டளை அல்ல. அதனால்தான் அதை &quot;தவறு&quot; என்றும் சொல்லமுடியாது, &quot;ஒரே சரியான வழி&quot; என்றும் வலியுறுத்தமுடியாது.
+                  </p>
+                  <p>
+                    பிரியமானவர்களே, கிறிஸ்மஸ் தேதியில் இல்லை — இருதயத்தில் இருக்கிறது. நாம் தகிக்கிற டிசம்பர் வெயிலில் கேரல்ஸ் பாடினாலும், ஜூலை மாத குளிரிலே பாடினாலும் — நம் நோக்கம் ஒன்றே: &quot;வார்த்தை மாம்சமாகி, நமக்குள்ளே வாசம்பண்ணினார்&quot; (யோவான் 1:14) என்பதைப் பிரகடனப்படுத்துவதே. இந்த ஜூலை மாத கடைசி நாட்களில், &quot;ஜூலையில் கிறிஸ்மஸ்&quot; கொண்டாடினாலும் இல்லையென்றாலும், ஒவ்வொரு நாளும் இயேசுவை நினைவுகூரும் நாளாக மாறட்டும்.
+                  </p>
+                  <p>
+                    இந்த இருள்-ஒளிச் சித்திரத்தை, பல நூற்றாண்டுகளாகச் சபை பாடிவரும் ஒரு பழைய கீதம் அழகாக வெளிப்படுத்துகிறது (மூலப் பாடல்: 8-9ம் நூற்றாண்டு லத்தீன் &quot;O Antiphons&quot;; இசைப்பாடலாக்கம் 12ம் நூற்றாண்டு; ஆங்கில மொழிபெயர்ப்பு — John Mason Neale, 1851):
+                  </p>
+                  
+                  <blockquote className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg italic font-serif">
+                    <p className="whitespace-pre-line leading-relaxed text-stone-700">
+                      அருணோதயமே, ஆ, வாருமே,<br/>
+                      வந்தெங்கள் நெஞ்சை ஆற்றித் தேற்றுமே;<br/>
+                      மந்தார ராவின் மேகம் நீக்கிடும்,<br/>
+                      இருண்ட சாவின் நிழல் ஓட்டிடும்.<br/>
+                      மகிழ்! மகிழ்! சீயோனின் சபையே,<br/>
+                      இம்மானுவேலின் நாள் சமீபமே.
                     </p>
                   </blockquote>
 
                   <p>
-                    1866-ஆம் ஆண்டு Samuel John Stone என்ற போதகர் ஒரு பாடலை எழுதினார் — "திருச்சபையின் ஒரே அஸ்திபாரம் இயேசு கிறிஸ்து நம் ஆண்டவரே." ஆனால் அது வெற்றியின் மகிழ்ச்சியில் எழுதப்பட்ட பாடல் அல்ல. அந்நாளில் திருச்சபை பிளவுகளாலும், வேதத்தின் அதிகாரத்தைக் குறித்த விவாதங்களாலும் உலுக்கப்பட்டிருந்தது. அந்தப் போராட்டத்தின் மத்தியில் எழுதப்பட்ட ஒரு விசுவாச அறிக்கையே இப்பாடல்.
-                  </p>
-                  <p>
-                    இதன் மைய செய்தி எளிமையானது, ஆனால் ஆழமானது: சபை நிற்பது மனிதனின் பலத்தின்மேல் அல்ல, மனிதர்களின் இணக்கத்தின்மேலும் அல்ல — இயேசு கிறிஸ்துவின்மேல் மட்டுமே.
-                  </p>
-                  <p className="font-medium text-stone-900">
-                    பாடல் நமக்கு நான்கு உண்மைகளை நினைவூட்டுகிறது:
-                  </p>
-                  <ul className="list-disc pl-5 space-y-2">
-                    <li>
-                      <strong>அஸ்திபாரம் ஒன்றே</strong> — "வேறே அஸ்திபாரத்தை ஒருவனும் போடக்கூடாது" (1 கொரிந்தியர் 3:11). வார்த்தையினால் அவர் தமது மணவாட்டியாகிய சபையை உருவாக்கினார்.
-                    </li>
-                    <li>
-                      <strong>ஐக்கியம் ஒன்றே</strong> — பல தேசங்கள், பல மொழிகள், ஆனால் ஒரே கர்த்தர், ஒரே விசுவாசம், ஒரே ஞானஸ்நானம் (எபேசியர் 4).
-                    </li>
-                    <li>
-                      <strong>போராட்டம் உண்டு, ஆனால் அவர் கைவிடார்</strong> — சபை உபத்திரவப்படலாம்; பரிசுத்தவான்கள் "இந்த அழுகையின் இரவு எப்போது முடியும்?" என்று கேட்கலாம். ஆனாலும் கர்த்தர் தமது சபையைப் பாதுகாக்கிறார்.
-                    </li>
-                    <li>
-                      <strong>நம்பிக்கை நிச்சயம்</strong> — அழுகையின் இரவு முடிந்து, மகிமையின் காலை உதிக்கும். இளைப்பாறுதல் வரும்.
-                    </li>
-                  </ul>
-                  <p>
-                    அன்பானவர்களே, இச்செய்தி நமது வார்த்தை சபைக்கு (VEC) மிகவும் பொருத்தமானது. நாமும் ஒரு புதிய பயணத்தைத் தொடங்கியிருக்கிறோம். நமது எதிர்காலம் நம் சொந்த பலத்தின்மேல் அல்ல — கிறிஸ்து என்னும் அசையாத அஸ்திபாரத்தின்மேல் கட்டப்பட்டிருக்கிறது. அதுவே நமது நிச்சயம்.
+                    இப்பாடலின் வீடியோவை இங்கு கொடுத்துள்ளேன், கேட்டு மகிழுங்கள்.
                   </p>
                   
-                  <blockquote className="bg-accent/5 border-l-4 border-accent p-5 rounded-r-lg text-primary italic font-serif my-6">
-                    <p className="mb-2 text-lg md:text-xl font-medium">
-                      "நான் போடும் அஸ்திபாரம் இயேசுகிறிஸ்துவே; அதை அல்லாமல் வேறே அஸ்திபாரத்தை ஒருவனும் போடக்கூடாது."
-                    </p>
-                    <cite className="block text-right font-sans font-bold text-sm text-accent-dark not-italic mt-2">
-                      — 1 கொரிந்தியர் 3:11
-                    </cite>
-                  </blockquote>
-
-                  <p>
-                    இந்த வாரம், உங்கள் வாழ்க்கை எந்த அஸ்திபாரத்தின்மேல் கட்டப்பட்டிருக்கிறது என்று சிந்தித்துப் பாருங்கள். கிறிஸ்துவே நமது நிலையான கன்மலை.
-                  </p>
-                  <p>
-                    சிங்கப்பூரைச் சேர்ந்த சபை ஒன்று, தமிழ், ஆங்கிலம் மற்றும் சீன மொழிகளிலே இணைந்து சபையின் அஸ்திபாரம் என்கிற இந்தப் பாடலை, மிக அழகாக பாடியிருக்கிறார்கள். அதைக் இங்கு கேட்டு மகிழுங்கள்.
-                  </p>
-                  
-                  {/* YouTube Embed */}
-                  <div className="my-8 aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md not-prose border border-stone-200">
+                  {/* YouTube Embed Tamil */}
+                  <div className="my-8 aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md not-prose border-2 border-emerald-200 bg-white">
                     <iframe 
-                      src="https://www.youtube.com/embed/DcCYWzrhmJM" 
-                      title="The Church's One Foundation" 
+                      src="https://www.youtube.com/embed/nTmEXLWGw3Y" 
+                      title="O Come, O Come, Emmanuel (Tamil)" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowFullScreen
+                      className="w-full h-full min-h-[350px] md:min-h-[450px]"
+                    ></iframe>
+                  </div>
+
+                  <hr className="border-red-200 my-8" />
+
+                  <h3 className="text-xl md:text-2xl font-serif font-bold text-red-800 mb-6">
+                    English Translation
+                  </h3>
+                  
+                  <p className="font-medium text-stone-900">
+                    Beloved in Christ,
+                  </p>
+                  <p>
+                    Greetings to each of you! We&apos;re in the last week of July — about to close out seven months of 2026.
+                  </p>
+                  <p>
+                    Here in Australia, in Brisbane where we live, June and July are our winter months, while December is summer. When I arrived in this country twenty years ago, celebrating Christmas in the middle of summer felt strange. Tamil Nadu doesn&apos;t really have a winter, but by December the sun is at least bearable there. Here, we sing carols under a scorching sun. To capture something of the Christmas atmosphere, people here celebrate &quot;Christmas in July&quot; on July 25 — largely, it has to be said, something retailers set up for their own business. So then — is celebrating on December 25 correct? Some argue that&apos;s wrong too, and that Christmas shouldn&apos;t be celebrated at all.
+                  </p>
+                  <p>
+                    First: Scripture nowhere says Christmas should or shouldn&apos;t be celebrated. So why do we celebrate it? Scripture tells us to observe festival days (e.g., Exodus 23:14) — so I don&apos;t see anything wrong in setting apart a specific day as Christ&apos;s birth day, to help us remember Jesus all the more.
+                  </p>
+                  <p>
+                    Let me share two scenes from Scripture that support this.
+                  </p>
+                  <p>
+                    <strong>Scene one — the Persian palace.</strong> A young Jewish woman, unafraid of the death sentence hanging over her, stands before the king though not summoned — because an order to destroy her entire people has already been signed and sealed. &quot;Who knows whether you have come to the kingdom for such a time as this?&quot; her cousin Mordecai tells her (Esther 4:14). Through God&apos;s remarkable intervention, that day became a day of deliverance. A man named Haman had cast lots to fix a day of destruction; God turned that same day into a day of triumph. Mordecai and Esther then established it as a festival for every generation to keep (Esther 9:20-28) — a new festival, never previously commanded in Scripture.
+                  </p>
+                  <p>
+                    <strong>Scene two — centuries later, the same Jerusalem temple.</strong> Consider the history of the Maccabee family, who lived in Judea in the 2nd century BC and freed the Jewish people by revolting against the foreign Greek-Syrian regime. According to the history recorded in the books of the Maccabees (ancient historical documents; not part of our Old Testament canon), the foreign king Antiochus defiled the temple; through the Maccabees&apos; sacrifice it was purified and rededicated. To commemorate this, Israel instituted an eight-day festival — later Jewish tradition came to call it the &quot;Festival of Lights,&quot; marking light overcoming darkness. This too is a festival absent from the Law of Moses. Its canonical support is found in John 10:22-23: &quot;At that time the Feast of Dedication took place at Jerusalem... Jesus was walking in the temple, in the colonnade of Solomon.&quot; Jesus didn&apos;t avoid this man-instituted feast — He showed up in the middle of it.
+                  </p>
+                  <p>
+                    In the book of Esther, deliverance came in the midst of darkness. At the Feast of Dedication, light came in the midst of darkness. Both are days God&apos;s people instituted themselves — yet both reflect God&apos;s grace.
+                  </p>
+                  <p>
+                    Isn&apos;t Christmas the same, then? In the depths of winter darkness, the church chose a day to mark the rising of the &quot;Sun of Righteousness&quot; (Malachi 4:2). Some object to December 25, saying it coincides with a Roman festival honoring the sun god. History offers two explanations: some say early Christians calculated Christ&apos;s conception at March 25 and simply added nine months, arriving at this date; others say the church deliberately chose it to proclaim light in the darkest season. Either way, the day chosen to celebrate this is a human decision — not God&apos;s explicit command. Which is exactly why it can&apos;t rightly be called &quot;wrong,&quot; nor insisted on as &quot;the only correct way.&quot;
+                  </p>
+                  <p>
+                    Beloved, Christmas isn&apos;t found in a date — it&apos;s found in the heart. Whether we sing carols under a scorching December sun or in the July cold, our purpose is one: to proclaim that &quot;the Word became flesh and dwelt among us&quot; (John 1:14). In these final days of July — whether we celebrate &quot;Christmas in July&quot; or not — let every day become a day we remember Jesus.
+                  </p>
+                  <p>
+                    This picture of light breaking into darkness is beautifully captured in an old hymn the church has sung for centuries (Original: Latin &quot;O Antiphons,&quot; 8th–9th century; versified c. 12th century; English translation by John Mason Neale, 1851):
+                  </p>
+                  
+                  <blockquote className="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg italic font-serif">
+                    <p className="whitespace-pre-line leading-relaxed text-stone-700">
+                      O come, Thou Day-Spring, come and cheer<br/>
+                      Our spirits by Thine advent here<br/>
+                      Disperse the gloomy clouds of night<br/>
+                      And death&apos;s dark shadows put to flight<br/>
+                      Rejoice, rejoice, Emmanuel<br/>
+                      Shall come to thee, O Israel.
+                    </p>
+                  </blockquote>
+
+                  <p>
+                    I&apos;ve included the Tamil video of this hymn below — listen and be blessed.
+                  </p>
+
+                  {/* YouTube Embed English */}
+                  <div className="my-8 aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md not-prose border-2 border-red-200 bg-white">
+                    <iframe 
+                      src="https://www.youtube.com/embed/UH7asSGxAxA" 
+                      title="O Come, O Come, Emmanuel (English)" 
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                       allowFullScreen
                       className="w-full h-full min-h-[350px] md:min-h-[450px]"
@@ -129,19 +184,21 @@ export default function PastorsDeskPage() {
                   </div>
 
                   <p className="font-medium text-stone-900 mt-6">
-                    தேவன் உங்களை ஆசீர்வதிப்பாராக,
+                    God bless you!<br/>
+                    தேவன் உங்களை ஆசீர்வதிப்பாராக!
                   </p>
                   <p className="pt-2 font-medium text-stone-800">
+                    Pastor Weslyn<br/>
                     போதகர் வெஸ்லின்
                   </p>
                   
-                  <div className="mt-6 pt-6 border-t border-stone-200 flex items-center gap-4 not-prose">
-                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-accent shrink-0 shadow-sm">
+                  <div className="mt-6 pt-6 border-t border-red-200 flex items-center gap-4 not-prose relative z-10">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-emerald-500 shrink-0 shadow-sm bg-white">
                       <img src="/staff-pastor.png" alt="Ps. ஜெயகரன் வெஸ்லின்" className="w-full h-full object-cover object-top" />
                     </div>
                     <div>
-                      <p className="font-bold text-primary m-0 text-lg">Ps. ஜெயகரன் வெஸ்லின் (Jeyakaran Weslyn)</p>
-                      <p className="text-sm text-stone-500 m-0">Senior Pastor, {churchConfig.name}</p>
+                      <p className="font-bold text-red-800 m-0 text-lg">Ps. ஜெயகரன் வெஸ்லின் (Jeyakaran Weslyn)</p>
+                      <p className="text-sm text-stone-600 m-0">Senior Pastor, {churchConfig.name}</p>
                     </div>
                   </div>
                 </div>
@@ -159,7 +216,14 @@ export default function PastorsDeskPage() {
                   <Link href="/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Issue #002</p>
+                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Issue #003</p>
+                      <p className="text-xs text-stone-500">Jul 2026</p>
+                    </div>
+                  </Link>
+                  <Link href="/pastors-desk/archive/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #002</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
