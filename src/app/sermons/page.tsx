@@ -17,8 +17,7 @@ export default function SermonsPage() {
 
   // Get unique lists of Speakers, Series, and Topics
   const speakers = useMemo(() => {
-    const list = new Set(sermonsData.map(s => s.speaker));
-    return ["all", ...Array.from(list)];
+    return ["all", "Ps Weslyn", "Bro Varghese Rayar"];
   }, []);
 
   const seriesOptions = useMemo(() => {
@@ -137,22 +136,7 @@ export default function SermonsPage() {
                 options={speakers.map(s => ({ value: s, label: s === "all" ? "All Speakers" : s }))}
               />
             </div>
-            <div>
-              <Select
-                label="Filter by Series"
-                value={selectedSeries}
-                onChange={(e) => setSelectedSeries(e.target.value)}
-                options={seriesOptions.map(s => ({ value: s, label: s === "all" ? "All Series" : s }))}
-              />
-            </div>
-            <div>
-              <Select
-                label="Filter by Topic"
-                value={selectedTopic}
-                onChange={(e) => setSelectedTopic(e.target.value)}
-                options={topics.map(t => ({ value: t, label: t === "all" ? "All Topics" : t }))}
-              />
-            </div>
+            {/* Series and Topic filters are temporarily hidden */}
           </div>
 
           {/* Reset Filters Trigger */}
