@@ -119,7 +119,7 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent opacity-60"></div>
             <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-4 rounded-lg border border-border shadow-md z-10">
               <p className="text-xs font-bold text-accent uppercase tracking-widest">திருச்சபை கதவுகள்</p>
-              <p className="text-sm font-semibold text-primary">விருப்பத்தோடு உங்களை வரவேற்கக் காத்திருக்கிறோம்</p>
+              <p className="text-sm font-semibold text-primary">அன்போடு உங்களை வரவேற்கக் காத்திருக்கிறோம்</p>
             </div>
           </div>
 
