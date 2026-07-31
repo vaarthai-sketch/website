@@ -47,7 +47,21 @@ export const SermonCard: React.FC<{ sermon: Sermon }> = ({ sermon }) => {
   return (
     <div className="group bg-white rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
       <div className="aspect-video w-full relative overflow-hidden bg-neutral-light">
-        <ImagePlaceholder type="sermon" title={sermon.title} />
+        {sermon.thumbnail && sermon.thumbnail.startsWith("/") ? (
+          <img 
+            src={sermon.thumbnail} 
+            alt={sermon.title} 
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+          />
+        ) : sermon.youtubeId ? (
+          <img 
+            src={`https://img.youtube.com/vi/${sermon.youtubeId}/maxresdefault.jpg`} 
+            alt={sermon.title} 
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+          />
+        ) : (
+          <ImagePlaceholder type="sermon" title={sermon.title} />
+        )}
         <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded flex items-center gap-1 font-mono">
           <Clock className="w-3 h-3" />
           {sermon.duration}
