@@ -46,7 +46,7 @@ export const SermonCard: React.FC<{ sermon: Sermon }> = ({ sermon }) => {
 
   return (
     <div className="group bg-white rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
-      <div className="aspect-video w-full relative overflow-hidden bg-neutral-light">
+      <Link href={`/sermons/${sermon.id}`} className="block aspect-video w-full relative overflow-hidden bg-neutral-light">
         {sermon.thumbnail && sermon.thumbnail.startsWith("/") ? (
           <img 
             src={sermon.thumbnail} 
@@ -66,7 +66,7 @@ export const SermonCard: React.FC<{ sermon: Sermon }> = ({ sermon }) => {
           <Clock className="w-3 h-3" />
           {sermon.duration}
         </div>
-      </div>
+      </Link>
       
       <div className="p-5 flex flex-col flex-grow">
         <div className="flex justify-between items-center gap-2 mb-2 text-xs font-bold text-accent-dark uppercase tracking-wider">
