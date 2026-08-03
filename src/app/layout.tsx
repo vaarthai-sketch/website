@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { churchConfig } from "@/data/config";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -96,6 +97,16 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} ${kavivanar.variable} ${anekTamil.variable} h-full antialiased`}
     >
       <head>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-1Z56MXX55Z" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-1Z56MXX55Z');
+          `}
+        </Script>
         <script src="https://js.churchcenter.com/modal/v1" async></script>
       </head>
       <body className="min-h-full bg-background text-foreground flex flex-col font-sans">
