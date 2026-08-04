@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar as CalendarIcon, FileText, ChevronRight, Gift, Snowflake } from "lucide-react";
+import { Calendar as CalendarIcon, FileText, ChevronRight, Gift, Snowflake, Leaf } from "lucide-react";
 import Link from "next/link";
 import { churchConfig } from "@/data/config";
 import { NewsletterForm } from "@/components/NewsletterForm";
@@ -9,9 +9,8 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'ta',
   path: '/pastors-desk',
-  title: "VEC-NL 2026-07 Issue 003 - From the Pastor's Desk | Vaarthai Evangelical Church",
+  title: "VEC-NL 2026-08 Issue 003 - From the Pastor's Desk | Vaarthai Evangelical Church",
   description: `Weekly newsletter and updates from the Pastor at ${churchConfig.name}.`,
-
 });
 
 export default function PastorsDeskPage() {
@@ -42,80 +41,196 @@ export default function PastorsDeskPage() {
             
             {/* Newsletter Content */}
             <div className="lg:col-span-3">
-              <div className="bg-gradient-to-br from-emerald-50 via-white to-green-100 rounded-lg shadow-sm border border-emerald-300 p-6 md:p-10 mb-8 relative overflow-hidden">
+              <div className="bg-gradient-to-br from-yellow-50 via-white to-amber-50 rounded-lg shadow-sm border border-amber-200 p-6 md:p-10 mb-8 relative overflow-hidden">
                 {/* Decorative Elements */}
-                <Snowflake className="absolute top-4 right-4 text-red-200 w-16 h-16 opacity-30" />
-                <Snowflake className="absolute bottom-10 left-4 text-emerald-200 w-24 h-24 opacity-30" />
+                <Leaf className="absolute top-4 right-4 text-amber-200 w-16 h-16 opacity-30" />
+                <Leaf className="absolute bottom-10 left-4 text-amber-200 w-24 h-24 opacity-30" />
                 
-                <div className="flex items-center gap-2 text-sm text-red-700 font-bold mb-4 relative z-10">
+                <div className="flex items-center gap-2 text-sm text-amber-700 font-bold mb-4 relative z-10">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-07 · Issue #003</span>
+                  <span>VEC-NL 2026-08 · Issue #003</span>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-emerald-800 mb-6 relative z-10 flex items-center gap-2">
-                  <Gift className="w-8 h-8 text-emerald-600" />
-                  வார்த்தை மாம்சமானார்
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-amber-900 mb-6 relative z-10 flex items-center gap-2">
+                  <Leaf className="w-8 h-8 text-amber-600" />
+                  மண்ணுக்கு அடியில் விதை உறங்குவதில்லை
                 </h2>
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
-                  <p className="font-medium text-stone-900">
-                    கிறிஸ்துவுக்குள் பிரியமானவர்களே,
-                  </p>
-                  <p>
-                    உங்கள் ஒவ்வொருவரையும் வாழ்த்துகிறேன்! ஜூலை மாதத்தின் கடைசி வாரத்தில் இருக்கிறோம்! 2026ம் ஆண்டின், 7 மாதங்களை முடிக்கப் போகிறோம்.
-                  </p>
-                  <p>
-                    ஆஸ்திரேலிய தேசத்திலே, நாம் வசிக்கும் பிரிஸ்பன் நகரிலே, ஜூன் மற்றும் ஜூலை மாதங்கள்தான் குளிர் காலங்கள். டிசம்பர் மாதமோ கோடை காலம். இந்த தேசத்திற்கு 20 ஆண்டுகளுக்கு முன்பு வந்தபோது, கிறிஸ்மஸ் காலங்களை கோடை காலத்தில் கொண்டாடுவது விசித்திரமாக இருந்தது. தமிழகத்திலே குளிர் காலம் என்பது இல்லையென்றாலும், டிசம்பர் மாதத்தில் வெயில் தாங்கக் கூடிய அளவிலே இருக்கும். ஆனால் இங்கு தகிக்கிற வெயிலிலே கேரல்ஸ் பாடவேண்டும். கிறிஸ்மஸ் சூழ்நிலையை அனுபவிப்பதற்காக, இங்கு ஜூலை மாதத்தில் கிறிஸ்மஸ் (Christmas in July) என்று ஜூலை 25ம் தேதியிலே கொண்டாடுவார்கள். பொதுவாக இது வணிகர்கள் தங்களது வியாபாரத்திற்காக ஏற்படுத்தியது என்று சொல்லலாம். சரி அப்படியென்றால், டிசம்பர் மாதம் 25ம் தேதியைக் கொண்டாடுவது சரியானதா? ஒரு சிலர்கள் அதையும் தவறு, அதனால் கிறிஸ்மஸ் கொண்டாடக் கூடாது என்று வாதாடுவார்கள்.
-                  </p>
-                  <p>
-                    முதலாவதாக, வேதத்திலே கிறிஸ்மஸ் கொண்டாட வேண்டும், அல்லது கூடாது என்று எதுவுமே சொல்லப் படவில்லை. பின்பு ஏன் கொண்டாடுகிறோம்? வேதம் பண்டிகை நாட்களை அனுசரிக்கச் சொல்லுகிறது (எ.கா யாத்திராகமம் 23:14). ஆகவே நாம் ஒரு குறிப்பிட்ட நாளை கிறிஸ்து பிறப்பின் நாளாக நியமித்துக் கொண்டு, இயேசுவை இன்னும் அதிகமாக நினைவுகூருவதில் தவறேதும் இருப்பதாக எனக்குத் தெரியவில்லை.
-                  </p>
-                  <p>
-                    இதை உறுதிப்படுத்த வேதத்திலிருந்து இரண்டு காட்சிகளை உங்களோடு பகிர்ந்துகொள்ள விரும்புகிறேன்.
-                  </p>
-                  <p>
-                    <strong>முதல் காட்சி — பெர்சிய அரண்மனை.</strong> ஒரு இளம் யூதப் பெண், மரண தண்டனையை குறித்துப் பயப்படாமல், அழைக்கப்படாமலேயே அரசனுக்கு முன் நிற்கிறாள். ஏனெனில் அவளுடைய இனத்தை அழிக்கத் தீட்டிய உத்தரவு ஏற்கனவே கையெழுத்தாகிவிட்டது. &quot;இப்படிப்பட்ட காலத்திற்கேதானே நீ ராஜரிக பட்டத்திற்கு வந்தாயோ, யாருக்குத் தெரியும்?&quot; என்று சகோதரனாகிய (Cousin) மொர்தெகாய் அவளிடம் சொன்னான் (எஸ்தர் 4:14). அந்த நாள் தேவனுடைய அற்புத தலையீட்டால் மீட்பின் நாளாக மாறியது. ஆமான் என்பவன் சீட்டுப் போட்டு அழிவின் நாளைத் தீர்மானித்திருந்தான்; தேவன் அதையே ஜெயத்தின் நாளாக மாற்றினார். மொர்தெகாயும் எஸ்தரும் அந்த நாளை தலைமுறை தலைமுறையாக அனுசரிக்கப்பட வேண்டிய பண்டிகையாக நியமித்தார்கள் (எஸ்தர் 9:20-28) — வேதத்தில் முன்பே கட்டளையிடப்படாத ஒரு புதிய பண்டிகை.
-                  </p>
-                  <p>
-                    <strong>இரண்டாம் காட்சி — நூற்றுக்கணக்கான ஆண்டுகளுக்குப் பின், அதே எருசலேம் தேவாலயம்.</strong> கி.மு. 2ம் நூற்றாண்டில் யூத தேசத்தில் வாழ்ந்த ஒரு குடும்பம் மக்காபேயர் குடும்பம். அவர்கள் அந்நிய கிரேக்க-சிரிய ஆட்சிக்கு எதிராகக் கிளர்ச்சி செய்து யூதர்களை விடுவித்தவர்கள். மக்காபேயர் புத்தகங்களில் பதிவுசெய்யப்பட்டுள்ள வரலாற்றின்படி, அந்நிய அரசன் அந்தியோகு தேவாலயத்தைத் தீட்டுப்படுத்தினான்; மக்காபேயரின் தியாகத்தால் அது மீண்டும் சுத்திகரிக்கப்பட்டு பிரதிஷ்டை செய்யப்பட்டது. அதை நினைவுகூர இஸ்ரவேலர் எட்டு நாள் பண்டிகையை உண்டாக்கினார்கள்— யூத பாரம்பரியத்தில் இது &quot;விளக்குகளின் பண்டிகை&quot; என்றும் அழைக்கப்படுகிறது, இருளை வெளிச்சம் வென்றெடுத்த நினைவாக. இதுவும் மோசேயின் நியாயப்பிரமாணத்தில் இல்லாத பண்டிகையே. இதன் ஆதாரம் யோவான் 10:22-23-ல் இருக்கிறது: &quot;எருசலேமிலே பிரதிஷ்டைப் பண்டிகை நடந்தது... இயேசு தேவாலயத்திலே சாலொமோன் மண்டபத்திலே உலாவிக்கொண்டிருந்தார்.&quot; இயேசு அந்த மனிதனால் நியமிக்கப்பட்ட பண்டிகையைத் தவிர்க்கவில்லை; அதிலே தம்மைக் காண்பித்தார்.
-                  </p>
-                  <p>
-                    எஸ்தர் சரித்திரத்தில் இருள் நடுவே மீட்பு வந்தது. பிரதிஷ்டைப் பண்டிகையில் இருள் நடுவே வெளிச்சம் வந்தது. இரண்டுமே, தேவனுடைய மக்கள் தாங்களே நியமித்த நாட்கள் — ஆனாலும் தேவனுடைய கிருபையை பிரதிபலிக்கும் நாட்கள்.
-                  </p>
-                  <p>
-                    அப்படியானால், கிறிஸ்மஸும் அப்படித்தானே? இருள் நடுவே, &quot;நீதியின் சூரியன்&quot; (மல்கியா 4:2) உதித்த நாளாக, சபை ஒரு நாளைத் தெரிந்தெடுத்தது. டிசம்பர் 25 குறித்து சிலர், &quot;இது ரோம சூரிய தேவனை வழிபடும் பண்டிகையின் நாளுடன் ஒத்துப்போகிறதே&quot; என்று ஆட்சேபிக்கிறார்கள். வரலாற்றில் இரு விளக்கங்கள் உண்டு: ஆரம்பகால கிறிஸ்தவர்கள் இயேசுவின் கர்ப்பந்தரிப்பை மார்ச் 25 எனக் கணக்கிட்டு ஒன்பது மாதம் கூட்டியதன் விளைவே இந்த தேதி எனச் சிலர் சொல்கிறார்கள்; இருண்ட காலத்தின் நடுவே ஒளியைப் பறைசாற்ற சபை இதைத் தெரிந்தெடுத்தது என்று மற்றவர்கள் சொல்கிறார்கள். எது எப்படி இருந்தாலும், இதைக் கொண்டாட தெரிந்தெடுத்த நாள் மனிதத் தீர்மானமே — தேவனுடைய திட்டவட்டமான கட்டளை அல்ல. அதனால்தான் அதை &quot;தவறு&quot; என்றும் சொல்லமுடியாது, &quot;ஒரே சரியான வழி&quot; என்றும் வலியுறுத்தமுடியாது.
-                  </p>
-                  <p>
-                    பிரியமானவர்களே, கிறிஸ்மஸ் தேதியில் இல்லை — இருதயத்தில் இருக்கிறது. நாம் தகிக்கிற டிசம்பர் வெயிலில் கேரல்ஸ் பாடினாலும், ஜூலை மாத குளிரிலே பாடினாலும் — நம் நோக்கம் ஒன்றே: &quot;வார்த்தை மாம்சமாகி, நமக்குள்ளே வாசம்பண்ணினார்&quot; (யோவான் 1:14) என்பதைப் பிரகடனப்படுத்துவதே. இந்த ஜூலை மாத கடைசி நாட்களில், &quot;ஜூலையில் கிறிஸ்மஸ்&quot; கொண்டாடினாலும் இல்லையென்றாலும், ஒவ்வொரு நாளும் இயேசுவை நினைவுகூரும் நாளாக மாறட்டும்.
-                  </p>
-                  <p>
-                    இந்த இருள்-ஒளிச் சித்திரத்தை, பல நூற்றாண்டுகளாகச் சபை பாடிவரும் ஒரு பழைய கீதம் அழகாக வெளிப்படுத்துகிறது (மூலப் பாடல்: 8-9ம் நூற்றாண்டு லத்தீன் &quot;O Antiphons&quot;; இசைப்பாடலாக்கம் 12ம் நூற்றாண்டு; ஆங்கில மொழிபெயர்ப்பு — John Mason Neale, 1851):
-                  </p>
                   
-                  <blockquote className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg italic font-serif">
+                  {/* Wattle Trees Image */}
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-amber-100">
+                    <img src="/wattle-trees.jpg" alt="வாட்டில் மரங்கள்" className="w-full h-auto object-cover max-h-[500px]" />
+                  </div>
+
+                  <h3 className="text-xl font-bold text-amber-800">ஆகஸ்ட் மாதத் தோட்டம்</h3>
+                  <p>
+                    பிரிஸ்பேனில் ஆகஸ்ட் மாதக் காலைகள் குளிராக இருக்கின்றன. பெரும்பாலான காலைகள் ஒற்றைப் படை எண்களான 5 அல்லது 6 டிகிரி செல்ஷியசில் காணப்படுகின்றன! வெளியே தோட்டத்தைப் பார்த்தால், எல்லாம் முடிந்துபோனதுபோல் தோன்றும். இலைகள் உதிர்ந்துவிட்டன. கிளைகள் வெறுமையாக நிற்கின்றன. மண் இறுகிக் கிடக்கிறது. &quot;இங்கே ஒன்றும் நடக்கவில்லை&quot; என்று நமது கண் சொல்கிறது.
+                  </p>
+                  <p>
+                    ஆனால் கண் சொல்வது முழு உண்மையல்ல.
+                  </p>
+                  <p>
+                    அதே நேரத்தில், அந்த மண்ணுக்கு அடியில் வேர்கள் அமைதியாக நீண்டுகொண்டிருக்கின்றன. கிழங்குகள் பிரிந்து பெருகுகின்றன. கடந்த இலையுதிர் காலத்தில் உருவான மொட்டுகள் மெல்ல மெல்லப் பருத்துக்கொண்டிருக்கின்றன. வாட்டில் மரங்கள் ஏற்கெனவே மஞ்சளாகப் பூக்கத் தொடங்கிவிட்டன.
+                  </p>
+                  <p>
+                    வேலை நடந்துகொண்டுதான் இருக்கிறது. நமக்குத் தெரியவில்லை — அவ்வளவுதான்.
+                  </p>
+
+                  <h3 className="text-xl font-bold text-amber-800">குளிரைக் கடந்து அல்ல — குளிரின் வழியாக</h3>
+                  <p>
+                    இது வெறும் உவமை அல்ல; இது தாவரவியல் உண்மை.
+                  </p>
+                  <p>
+                    கோதுமை, ஆப்பிள், டூலிப், செர்ரி — இவை போன்ற பல தாவரங்கள், ஒரு குறிப்பிட்ட காலம் குளிரை அனுபவிக்காமல் பூக்கவே பூக்காது. அவற்றை எப்போதும் வெதுவெதுப்பாக வைத்திருந்தால், அவை வளரும், பச்சையாக இருக்கும் — ஆனால் பூக்காது. விஞ்ஞானிகள் இதற்கு vernalisation என்று பெயரிட்டிருக்கிறார்கள்.
+                  </p>
+                  <p>
+                    குளிர் என்பது பூப்பதற்குத் தடை அல்ல; அது பூப்பதற்கான முன்நிபந்தனை.
+                  </p>
+                  <p>
+                    அந்தச் செடி குளிரைத் தாண்டிப் பூக்கவில்லை. குளிரின் வழியாகவே பூக்கிறது.
+                  </p>
+
+                  <h3 className="text-xl font-bold text-amber-800">தானாய் விளையும் பூமி</h3>
+                  <p>
+                    இயேசு சொன்ன உவமைகளில் ஒன்று மாற்கு நற்செய்தியில் மட்டுமே காணப்படுகிறது. அது இதுதான்:
+                  </p>
+                  <blockquote className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg italic font-serif">
                     <p className="whitespace-pre-line leading-relaxed text-stone-700">
-                      அருணோதயமே, ஆ, வாருமே,<br/>
-                      வந்தெங்கள் நெஞ்சை ஆற்றித் தேற்றுமே;<br/>
-                      மந்தார ராவின் மேகம் நீக்கிடும்,<br/>
-                      இருண்ட சாவின் நிழல் ஓட்டிடும்.<br/>
-                      மகிழ்! மகிழ்! சீயோனின் சபையே,<br/>
-                      இம்மானுவேலின் நாள் சமீபமே.
+                      &quot;ஒரு மனுஷன் நிலத்தில் விதையை விதைத்துவிட்டு, இரவும் பகலும் தூங்கியும் விழித்தும் இருக்கிறான்; அந்த விதை, அவனுக்குத் தெரியாத விதமாக முளைத்து வளருகிறது. பூமியானது தானாய்ப் பயிரை முளைப்பிக்கும்.&quot;
+                      <br/>
+                      <span className="font-bold text-sm mt-2 block text-right">— மாற்கு 4:26-28</span>
+                    </p>
+                  </blockquote>
+                  <p>
+                    இந்த வசனத்தில் &quot;தானாய்&quot; என்று மொழிபெயர்க்கப்பட்ட கிரேக்கச் சொல் αὐτομάτη (automatē). ஆங்கிலத்தில் automatic என்னும் சொல் இதிலிருந்தே பிறந்தது.
+                  </p>
+                  <p>
+                    இந்த உவமையில் விவசாயி என்ன செய்கிறார்? விதைக்கிறார். பிறகு தூங்குகிறார். எழுந்திருக்கிறார். மறுபடியும் தூங்குகிறார்.
+                  </p>
+                  <p>
+                    அவர் பார்த்துக்கொண்டிருப்பதால் விதை முளைப்பதில்லை. அவர் கவலைப்படுவதால் அது வேகமாக வளர்வதுமில்லை. அவருடைய பதற்றம் அந்த வளர்ச்சிக்கு ஒன்றையும் சேர்ப்பதில்லை.
+                  </p>
+                  <p>
+                    வளர்ச்சி நடக்கிறது — ஆனால் அது அவருடைய வேலை அல்ல.
+                  </p>
+
+                  <h3 className="text-xl font-bold text-amber-800">மறைவான வேலை — வேதத்தின் சாட்சி</h3>
+                  <p>
+                    வேதம் முழுவதும் இந்த முறை திரும்பத் திரும்ப வருகிறது.
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>
+                      <strong>யோபு 14:7-9</strong> — &quot;ஒரு மரத்தைக்குறித்தாவது நம்பிக்கையுண்டு; அது வெட்டிப்போடப்பட்டாலும் திரும்பத் தழைக்கும், அதின் இளங்கிளைகள் துளிர்க்கும்; அதின் வேர் தரையிலே பழையதாகி, அதின் அடிக்கட்டை மண்ணிலே செத்தாலும், தண்ணீரின் வாசனையினால் அது துளிர்த்து, இளமரம்போலக் கிளைவிடும்.&quot;
+                    </li>
+                    <li>
+                      <strong>கொலோசெயர் 3:3</strong> — &quot;ஏனென்றால், நீங்கள் மரித்தீர்கள், உங்கள் ஜீவன் கிறிஸ்துவுடனே தேவனுக்குள் மறைந்திருக்கிறது.&quot; இங்கே கிரேக்கச் சொல் κέκρυπται — ஒருமுறை மறைக்கப்பட்டு, இப்போதும் மறைந்தே இருக்கிறது என்று பொருள். மறைவு என்பது குறைபாடு அல்ல; அது ஒரு நிலை.
+                    </li>
+                    <li>
+                      <strong>ஏசாயா 43:19</strong> — &quot;இதோ, நான் புதிய காரியத்தைச் செய்கிறேன்; இப்பொழுதே அது தோன்றும்; நீங்கள் அதை அறியீர்களா? நான் வனாந்தரத்திலே வழியையும், அவாந்தரவெளியிலே ஆறுகளையும் உண்டாக்குவேன்.&quot;
+                    </li>
+                    <li>
+                      <strong>லூக்கா 2:52</strong> — &quot;இயேசுவானவர் ஞானத்திலும், வளர்த்தியிலும், தேவகிருபையிலும், மனுஷர் தயவிலும் அதிகமதிகமாய் விருத்தியடைந்தார்.&quot; நசரேத்தில் முப்பது வருடங்கள். மூன்று வருட ஊழியத்திற்கு முன்பு முப்பது வருட மௌனம். கர்த்தருடைய வாழ்க்கையிலேயே மறைவான காலம் பத்து மடங்கு நீளமானது.
+                    </li>
+                  </ul>
+
+                  <h3 className="text-xl font-bold text-amber-800">நடுவிலிருக்கிற பருவம்</h3>
+                  <p>
+                    நம்மில் பலருக்கு இது நன்கு தெரிந்த இடம்.
+                  </p>
+                  <p>
+                    ஆறு மாதங்கள் ஆகிவிட்டன — துக்கம் இன்னும் விலகவில்லை. வருடக்கணக்காக ஜெபித்துவிட்டோம் — பதில் இன்னும் வரவில்லை. திருமணத்தில் குளிர் இன்னும் இருக்கிறது. பிள்ளை இன்னும் தூரமாகவே இருக்கிறது. வேலை இன்னும் கிடைக்கவில்லை. உடல்நலம் இன்னும் திரும்பவில்லை.
+                  </p>
+                  <p>
+                    இந்த இடத்தில் வரும் பெரிய சோதனை இதுதான்: தெரியவில்லை என்பதால் நடக்கவில்லை என்று முடிவு செய்துவிடுவது.
+                  </p>
+                  <p>
+                    கவுன்சலிங் (Counselling) ஊழியத்தில் நான் கண்ட ஒரு அறியப்பட்ட உண்மை உண்டு. மக்கள் பெரும்பாலும் ஆரம்பத்தில் விலகுவதில்லை; முடிவிலும் விலகுவதில்லை. நடுவில்தான் விலகுகிறார்கள் — முதல் நம்பிக்கை தேய்ந்துபோய், வெளியே தெரியும் முன்னேற்றம் நின்றுபோனதுபோல் தோன்றும் அந்தத் தருணத்தில். ஆனால் பெரும்பாலும் அந்தத் தருணம்தான் உள்ளுக்குள் உண்மையான வேலை நடக்கும் தருணம்.
+                  </p>
+                  <p>
+                    தோட்டத்தைப் போலவே.
+                  </p>
+
+                  <h3 className="text-xl font-bold text-amber-800">காத்திருத்தல் வேறு; தவிர்த்தல் வேறு</h3>
+                  <p>
+                    இங்கே ஒரு எச்சரிக்கை அவசியம்.
+                  </p>
+                  <p>
+                    மேலிருந்து பார்க்கும்போது, உறங்கும் விதைக்கும் இறந்த விதைக்கும் வித்தியாசம் தெரியாது. இரண்டும் ஒரேமாதிரிதான் இருக்கும். எனவே நாம் இரண்டையும் பிரித்து அறிய வேண்டும்.
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li><strong>காத்திருத்தல்</strong> — கடவுள் வேலை செய்துகொண்டிருக்கிறார் என்ற நம்பிக்கையில் நிற்பது.</li>
+                    <li><strong>தவிர்த்தல்</strong> — கவனிக்காமல் விட்டுவிட்டால் தானாகச் சரியாகிவிடும் என்று எதிர்பார்ப்பது.</li>
+                  </ul>
+                  <p>
+                    சில நேரங்களில் விசுவாசமான பதில் பொறுமை அல்ல — உதவியைப் பெற்றுக் கொள்வது. போதகரை அனுகலாம். மருத்துவர், அல்லது ஆலோசகரை அனுகலாம். அப்படிப்பட்ட தருணங்களில் உங்களுக்குத் தேவை ஒரு பாதுகாப்பான இடம்.
+                  </p>
+                  <p>
+                    &quot;பொறுத்திருங்கள்&quot; என்பது எப்போதும் ஆவிக்குரிய பதில் அல்ல. சில நேரங்களில் அது தப்பித்தல்.
+                  </p>
+                  <p>
+                    நீங்கள் இருப்பது உறக்கமா, அல்லது ஏதோ ஒன்று உண்மையிலேயே இறந்துகொண்டிருக்கிறதா என்று உங்களுக்குத் தெரியவில்லை என்றால் — தயவுசெய்து பேசுங்கள். எங்களிடம் பேசுங்கள். தனியாக முடிவு செய்யவேண்டாம்.
+                  </p>
+
+                  <h3 className="text-xl font-bold text-amber-800">நமது சபையும் இதே பருவத்தில்தான்</h3>
+                  <p>
+                    வார்த்தை சுவிசேஷ சபை இன்னும் இளமையானது. வெளியிலிருந்து பார்ப்பவர்களுக்கு இது மெதுவாகத் தெரியலாம்.
+                  </p>
+                  <p>
+                    ஆனால் வேர்கள் இறங்கிக்கொண்டிருக்கின்றன — யாரும் எண்ணிப் பார்க்க முடியாத இடத்தில்.
+                  </p>
+                  <p>
+                    நாம் அவசரப்பட வேண்டியதில்லை. விதைத்தவரும் நாம் அல்ல; வளர்ப்பவரும் நாம் அல்ல.
+                  </p>
+
+                  <div className="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg my-8">
+                    <h4 className="font-bold text-amber-800 mb-2">இந்த மாதத்தின் சிந்தனை</h4>
+                    <p className="text-stone-700 m-0">
+                      இப்போது உங்களுக்குள் — யாருக்கும் தெரியாமல் — என்ன வளர்ந்துகொண்டிருக்கிறது?
+                      <br/><br/>
+                      இந்த வாரம் ஒரு நாள், அமைதியாக உட்கார்ந்து இதை எழுதிப் பாருங்கள். வெளியே காட்ட வேண்டியதில்லை. கடவுளுக்கும் உங்களுக்கும் இடையில் மட்டும்.
+                    </p>
+                  </div>
+
+                  <p>
+                    ஆகஸ்ட் நமது குளிர்காலத்தின் கடைசி மாதம். செப்டம்பர் ஒன்றாம் தேதி வசந்தம் தொடங்குகிறது.
+                  </p>
+                  <p>
+                    நாம் இருப்பது முடிவில் அல்ல — திருப்பத்தில்.
+                  </p>
+
+                  <blockquote className="bg-stone-50 border-l-4 border-stone-300 p-4 rounded-r-lg italic font-serif">
+                    <p className="whitespace-pre-line leading-relaxed text-stone-700">
+                      &quot;இதோ, மாரிகாலம் சென்றது, மழைபெய்து ஒழிந்தது. பூமியிலே புஷ்பங்கள் காணப்படுகிறது; குருவிகள் பாடுங்காலம் வந்தது, காட்டுப்புறாவின் சத்தம் நமது தேசத்தில் கேட்கப்படுகிறது.&quot;
+                      <br/>
+                      <span className="font-bold text-sm mt-2 block text-right">— உன்னதப்பாட்டு 2:11-12</span>
                     </p>
                   </blockquote>
 
                   <p>
-                    இப்பாடலின் வீடியோவை இங்கு கொடுத்துள்ளேன், கேட்டு மகிழுங்கள்.
+                    நம்முடைய தோட்டங்கள் இன்னும் அதைக் காட்டவில்லை. ஆனால் அது ஏற்கெனவே உண்மை. நீங்கள் ஆசீர்வதிக்கப் பட்டவர்கள்!
                   </p>
-                  
-                  {/* YouTube Embed Tamil */}
-                  <div className="my-8 aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md not-prose border-2 border-emerald-200 bg-white">
-                    <iframe 
-                      src="https://www.youtube.com/embed/nTmEXLWGw3Y" 
-                      title="O Come, O Come, Emmanuel (Tamil)" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      allowFullScreen
-                      className="w-full h-full min-h-[350px] md:min-h-[450px]"
-                    ></iframe>
+
+                  {/* YouTube Embeds */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
+                    <div className="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md border-2 border-amber-100 bg-white">
+                      <iframe 
+                        src="https://www.youtube.com/embed/sQufX7mW0nM?start=90" 
+                        title="Tamil Song" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen
+                        className="w-full h-full min-h-[250px]"
+                      ></iframe>
+                    </div>
+                    <div className="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md border-2 border-amber-100 bg-white">
+                      <iframe 
+                        src="https://www.youtube.com/embed/Vb1i_FpDRic" 
+                        title="English Version" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen
+                        className="w-full h-full min-h-[250px]"
+                      ></iframe>
+                    </div>
                   </div>
 
                   <p className="font-medium text-stone-900 mt-6">
@@ -125,12 +240,12 @@ export default function PastorsDeskPage() {
                     போதகர் வெஸ்லின்
                   </p>
                   
-                  <div className="mt-6 pt-6 border-t border-emerald-300 flex items-center gap-4 not-prose relative z-10">
-                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-emerald-500 shrink-0 shadow-sm bg-white">
+                  <div className="mt-6 pt-6 border-t border-amber-200 flex items-center gap-4 not-prose relative z-10">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-amber-500 shrink-0 shadow-sm bg-white">
                       <img src="/staff-pastor.png" alt="Ps. ஜெயகரன் வெஸ்லின்" className="w-full h-full object-cover object-top" />
                     </div>
                     <div>
-                      <p className="font-bold text-emerald-800 m-0 text-lg">Ps. ஜெயகரன் வெஸ்லின் (Jeyakaran Weslyn)</p>
+                      <p className="font-bold text-amber-800 m-0 text-lg">Ps. ஜெயகரன் வெஸ்லின் (Jeyakaran Weslyn)</p>
                       <p className="text-sm text-stone-600 m-0">Senior Pastor, {churchConfig.name}</p>
                     </div>
                   </div>
@@ -150,17 +265,24 @@ export default function PastorsDeskPage() {
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                     <div>
                       <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Issue #003</p>
+                      <p className="text-xs text-stone-500">Aug 2026</p>
+                    </div>
+                  </Link>
+                  <Link href="/pastors-desk/archive/jul/issue-003" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #003</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
-                  <Link href="/pastors-desk/archive/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                  <Link href="/pastors-desk/archive/jul/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #002</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
-                  <Link href="/pastors-desk/archive/issue-001" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                  <Link href="/pastors-desk/archive/jul/issue-001" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #001</p>
