@@ -1,16 +1,16 @@
 import React from "react";
-import { Calendar as CalendarIcon, FileText, ChevronRight, Gift, Snowflake } from "lucide-react";
+import { Calendar as CalendarIcon, FileText, ChevronRight, Gift, Snowflake, Leaf } from "lucide-react";
 import Link from "next/link";
 import { churchConfig } from "@/data/config";
 import { NewsletterForm } from "@/components/NewsletterForm";
+
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   locale: 'en',
   path: '/en/pastors-desk',
-  title: "VEC-NL 2026-07 Issue 003 - From the Pastor's Desk | Vaarthai Evangelical Church",
+  title: "VEC-NL 2026-08 Issue 004 - From the Pastor's Desk | Vaarthai Evangelical Church",
   description: `Weekly newsletter and updates from the Pastor at ${churchConfig.name}.`,
-
 });
 
 export default function EnglishPastorsDeskPage() {
@@ -41,80 +41,196 @@ export default function EnglishPastorsDeskPage() {
             
             {/* Newsletter Content */}
             <div className="lg:col-span-3">
-              <div className="bg-gradient-to-br from-emerald-50 via-white to-green-100 rounded-lg shadow-sm border border-emerald-300 p-6 md:p-10 mb-8 relative overflow-hidden">
+              <div className="bg-gradient-to-br from-yellow-50 via-white to-amber-50 rounded-lg shadow-sm border border-amber-200 p-6 md:p-10 mb-8 relative overflow-hidden">
                 {/* Decorative Elements */}
-                <Snowflake className="absolute top-4 right-4 text-emerald-200 w-16 h-16 opacity-30" />
-                <Snowflake className="absolute bottom-10 left-4 text-emerald-200 w-24 h-24 opacity-30" />
+                <Leaf className="absolute top-4 right-4 text-amber-200 w-16 h-16 opacity-30" />
+                <Leaf className="absolute bottom-10 left-4 text-amber-200 w-24 h-24 opacity-30" />
                 
-                <div className="flex items-center gap-2 text-sm text-emerald-700 font-bold mb-4 relative z-10">
+                <div className="flex items-center gap-2 text-sm text-amber-700 font-bold mb-4 relative z-10">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-07 · Issue #003</span>
+                  <span>VEC-NL 2026-08 · Issue #004</span>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-emerald-800 mb-6 relative z-10 flex items-center gap-2">
-                  <Gift className="w-8 h-8 text-emerald-600" />
-                  The Word became flesh.
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-amber-900 mb-6 relative z-10 flex items-center gap-2">
+                  <Leaf className="w-8 h-8 text-amber-600" />
+                  Beneath the Soil: The Seed Is Not Sleeping
                 </h2>
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
-                  <p className="font-medium text-stone-900">
-                    Beloved in Christ,
-                  </p>
-                  <p>
-                    Greetings to each of you! We&apos;re in the last week of July — about to close out seven months of 2026.
-                  </p>
-                  <p>
-                    Here in Australia, in Brisbane where we live, June and July are our winter months, while December is summer. When I arrived in this country twenty years ago, celebrating Christmas in the middle of summer felt strange. Tamil Nadu doesn&apos;t really have a winter, but by December the sun is at least bearable there. Here, we sing carols under a scorching sun. To capture something of the Christmas atmosphere, people here celebrate &quot;Christmas in July&quot; on July 25 — largely, it has to be said, something retailers set up for their own business. So then — is celebrating on December 25 correct? Some argue that&apos;s wrong too, and that Christmas shouldn&apos;t be celebrated at all.
-                  </p>
-                  <p>
-                    First: Scripture nowhere says Christmas should or shouldn&apos;t be celebrated. So why do we celebrate it? Scripture tells us to observe festival days (e.g., Exodus 23:14) — so I don&apos;t see anything wrong in setting apart a specific day as Christ&apos;s birth day, to help us remember Jesus all the more.
-                  </p>
-                  <p>
-                    Let me share two scenes from Scripture that support this.
-                  </p>
-                  <p>
-                    <strong>Scene one — the Persian palace.</strong> A young Jewish woman, unafraid of the death sentence hanging over her, stands before the king though not summoned — because an order to destroy her entire people has already been signed and sealed. &quot;Who knows whether you have come to the kingdom for such a time as this?&quot; her cousin Mordecai tells her (Esther 4:14). Through God&apos;s remarkable intervention, that day became a day of deliverance. A man named Haman had cast lots to fix a day of destruction; God turned that same day into a day of triumph. Mordecai and Esther then established it as a festival for every generation to keep (Esther 9:20-28) — a new festival, never previously commanded in Scripture.
-                  </p>
-                  <p>
-                    <strong>Scene two — centuries later, the same Jerusalem temple.</strong> Consider the history of the Maccabee family, who lived in Judea in the 2nd century BC and freed the Jewish people by revolting against the foreign Greek-Syrian regime. According to the history recorded in the books of the Maccabees, the foreign king Antiochus defiled the temple; through the Maccabees&apos; sacrifice it was purified and rededicated. To commemorate this, Israel instituted an eight-day festival — later Jewish tradition came to call it the &quot;Festival of Lights,&quot; marking light overcoming darkness. This too is a festival absent from the Law of Moses. Its canonical support is found in John 10:22-23: &quot;At that time the Feast of Dedication took place at Jerusalem... Jesus was walking in the temple, in the colonnade of Solomon.&quot; Jesus didn&apos;t avoid this man-instituted feast — He showed up in the middle of it.
-                  </p>
-                  <p>
-                    In the book of Esther, deliverance came in the midst of darkness. At the Feast of Dedication, light came in the midst of darkness. Both are days God&apos;s people instituted themselves — yet both reflect God&apos;s grace.
-                  </p>
-                  <p>
-                    Isn&apos;t Christmas the same, then? In the depths of winter darkness, the church chose a day to mark the rising of the &quot;Sun of Righteousness&quot; (Malachi 4:2). Some object to December 25, saying it coincides with a Roman festival honoring the sun god. History offers two explanations: some say early Christians calculated Christ&apos;s conception at March 25 and simply added nine months, arriving at this date; others say the church deliberately chose it to proclaim light in the darkest season. Either way, the day chosen to celebrate this is a human decision — not God&apos;s explicit command. Which is exactly why it can&apos;t rightly be called &quot;wrong,&quot; nor insisted on as &quot;the only correct way.&quot;
-                  </p>
-                  <p>
-                    Beloved, Christmas isn&apos;t found in a date — it&apos;s found in the heart. Whether we sing carols under a scorching December sun or in the July cold, our purpose is one: to proclaim that &quot;the Word became flesh and dwelt among us&quot; (John 1:14). In these final days of July — whether we celebrate &quot;Christmas in July&quot; or not — let every day become a day we remember Jesus.
-                  </p>
-                  <p>
-                    This picture of light breaking into darkness is beautifully captured in an old hymn the church has sung for centuries (Original: Latin &quot;O Antiphons,&quot; 8th–9th century; versified c. 12th century; English translation by John Mason Neale, 1851):
-                  </p>
                   
-                  <blockquote className="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg italic font-serif">
+                  {/* Wattle Trees Image */}
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-amber-100">
+                    <img src="/wattle-trees.jpg" alt="Wattle Trees" className="w-full h-auto object-cover max-h-[500px]" />
+                  </div>
+
+                  <h3 className="text-xl font-bold text-amber-800">The August Garden</h3>
+                  <p>
+                    Brisbane mornings in August are cold. Most mornings sit in single digits — five or six degrees Celsius! Look out at the garden and everything seems finished. The leaves have fallen. The branches stand bare. The ground lies hard. &quot;Nothing is happening here,&quot; our eyes tell us.
+                  </p>
+                  <p>
+                    But our eyes are not telling us the whole truth.
+                  </p>
+                  <p>
+                    At that very moment, beneath that soil, roots are quietly lengthening. Bulbs are dividing and multiplying. Buds formed last autumn are slowly swelling. The wattles have already begun to break into yellow.
+                  </p>
+                  <p>
+                    The work is going on. We simply cannot see it — that is all.
+                  </p>
+
+                  <h3 className="text-xl font-bold text-amber-800">Not Past the Cold — Through It</h3>
+                  <p>
+                    This is not merely a metaphor. It is botanical fact.
+                  </p>
+                  <p>
+                    Wheat, apples, tulips, cherries — many plants like these will not flower at all unless they have passed through a sustained period of cold. Keep them permanently warm and they will grow, they will stay green — but they will not bloom. Scientists call this vernalisation.
+                  </p>
+                  <p>
+                    The cold is not an obstacle to flowering; it is the precondition for it.
+                  </p>
+                  <p>
+                    The plant does not bloom despite the winter. It blooms through it.
+                  </p>
+
+                  <h3 className="text-xl font-bold text-amber-800">The Earth Bringeth Forth Fruit of Herself</h3>
+                  <p>
+                    One of the parables Jesus told appears in Mark&apos;s Gospel alone. It is this:
+                  </p>
+                  <blockquote className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg italic font-serif">
                     <p className="whitespace-pre-line leading-relaxed text-stone-700">
-                      O come, Thou Day-Spring, come and cheer<br/>
-                      Our spirits by Thine advent here<br/>
-                      Disperse the gloomy clouds of night<br/>
-                      And death&apos;s dark shadows put to flight<br/>
-                      Rejoice, rejoice, Emmanuel<br/>
-                      Shall come to thee, O Israel.
+                      &quot;So is the kingdom of God, as if a man should cast seed into the ground; and should sleep, and rise night and day, and the seed should spring and grow up, he knoweth not how. For the earth bringeth forth fruit of herself.&quot;
+                      <br/>
+                      <span className="font-bold text-sm mt-2 block text-right">— Mark 4:26-28</span>
+                    </p>
+                  </blockquote>
+                  <p>
+                    The Greek word rendered &quot;of herself&quot; is αὐτομάτη (automatē) — the root from which the English word automatic comes.
+                  </p>
+                  <p>
+                    What does the farmer do in this parable? He sows. Then he sleeps. He rises. He sleeps again.
+                  </p>
+                  <p>
+                    The seed does not germinate because he is watching it. It does not grow faster because he is anxious. His worry adds nothing whatever to that growth.
+                  </p>
+                  <p>
+                    Growth is happening — but it is not his work.
+                  </p>
+
+                  <h3 className="text-xl font-bold text-amber-800">Hidden Work — The Witness of Scripture</h3>
+                  <p>
+                    This pattern returns again and again throughout Scripture.
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>
+                      <strong>Job 14:7-9</strong> — &quot;For there is hope of a tree, if it be cut down, that it will sprout again, and that the tender branch thereof will not cease. Though the root thereof wax old in the earth, and the stock thereof die in the ground; Yet through the scent of water it will bud, and bring forth boughs like a plant.&quot;
+                    </li>
+                    <li>
+                      <strong>Colossians 3:3</strong> — &quot;For ye are dead, and your life is hid with Christ in God.&quot; The Greek here is κέκρυπται — a perfect tense, meaning hidden once and hidden still. Hiddenness is not a defect; it is a settled condition.
+                    </li>
+                    <li>
+                      <strong>Isaiah 43:19</strong> — &quot;Behold, I will do a new thing; now it shall spring forth; shall ye not know it? I will even make a way in the wilderness, and rivers in the desert.&quot;
+                    </li>
+                    <li>
+                      <strong>Luke 2:52</strong> — &quot;And Jesus increased in wisdom and stature, and in favour with God and man.&quot; Thirty years at Nazareth. Thirty years of silence before three years of ministry. Even in our Lord&apos;s own life, the hidden season was ten times the longer.
+                    </li>
+                  </ul>
+
+                  <h3 className="text-xl font-bold text-amber-800">The Season In Between</h3>
+                  <p>
+                    Many of us know this place well.
+                  </p>
+                  <p>
+                    Six months have passed — and the grief has still not lifted. We have prayed for years — and the answer still has not come. The marriage is still cold. The child is still distant. The work has still not come. Health has still not returned.
+                  </p>
+                  <p>
+                    The great temptation in this place is this: to conclude that because we cannot see it, nothing is happening.
+                  </p>
+                  <p>
+                    In counselling ministry I have seen a well-documented pattern borne out. People rarely leave at the beginning, and rarely at the end. It is in the middle that they leave — at the point where the first hope has worn thin and visible progress seems to have stopped. Yet very often that is precisely the moment when the real work is going on underneath.
+                  </p>
+                  <p>
+                    Just like the garden.
+                  </p>
+
+                  <h3 className="text-xl font-bold text-amber-800">Waiting Is One Thing; Avoiding Is Another</h3>
+                  <p>
+                    A word of caution is necessary here.
+                  </p>
+                  <p>
+                    Seen from above, a dormant seed and a dead seed look exactly the same. Both appear identical. We must therefore learn to tell them apart.
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li><strong>Waiting</strong> — standing in the confidence that God is at work.</li>
+                    <li><strong>Avoiding</strong> — hoping that if a thing is left unattended it will sort itself out.</li>
+                  </ul>
+                  <p>
+                    Sometimes the faithful response is not patience but to receive help. You may approach your pastor. You may approach a doctor, or a counsellor. In such moments what you need is a safe place.
+                  </p>
+                  <p>
+                    &quot;Be patient&quot; is not always the spiritual answer. Sometimes it is escape.
+                  </p>
+                  <p>
+                    If you do not know whether what you are in is dormancy, or whether something is genuinely dying — please speak. Speak to us. Do not decide alone.
+                  </p>
+
+                  <h3 className="text-xl font-bold text-amber-800">Our Church Is in This Same Season</h3>
+                  <p>
+                    Vaarthai Evangelical Church is still young. To those looking on from outside, this may seem slow.
+                  </p>
+                  <p>
+                    But the roots are going down — in a place where no one can count them.
+                  </p>
+                  <p>
+                    We need not hurry. We are not the ones who sowed; nor are we the ones who make it grow.
+                  </p>
+
+                  <div className="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg my-8">
+                    <h4 className="font-bold text-amber-800 mb-2">THIS MONTH&apos;S REFLECTION</h4>
+                    <p className="text-stone-700 m-0">
+                      What is quietly growing within you right now, even if no one else can see it yet?
+                      <br/><br/>
+                      Sit with this one day this week. It need not be shown to anyone. Between God and you alone.
+                    </p>
+                  </div>
+
+                  <p>
+                    August is the last month of our winter. Spring begins on the first of September.
+                  </p>
+                  <p>
+                    We are not at an ending — we are at a turning.
+                  </p>
+
+                  <blockquote className="bg-stone-50 border-l-4 border-stone-300 p-4 rounded-r-lg italic font-serif">
+                    <p className="whitespace-pre-line leading-relaxed text-stone-700">
+                      &quot;11 For, lo, the winter is past, the rain is over and gone; 12 The flowers appear on the earth; the time of the singing of birds is come, and the voice of the turtle is heard in our land.&quot;
+                      <br/>
+                      <span className="font-bold text-sm mt-2 block text-right">— Song of Solomon 2:11-12</span>
                     </p>
                   </blockquote>
 
                   <p>
-                    I&apos;ve included the video of this hymn below — listen and be blessed.
+                    Our gardens are not showing it yet. But it is already true. You are blessed!
                   </p>
 
-                  {/* YouTube Embed English */}
-                  <div className="my-8 aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md not-prose border-2 border-emerald-300 bg-white">
-                    <iframe 
-                      src="https://www.youtube.com/embed/UH7asSGxAxA" 
-                      title="O Come, O Come, Emmanuel" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      allowFullScreen
-                      className="w-full h-full min-h-[350px] md:min-h-[450px]"
-                    ></iframe>
+                  {/* YouTube Embeds */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
+                    <div className="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md border-2 border-amber-100 bg-white">
+                      <iframe 
+                        src="https://www.youtube.com/embed/sQufX7mW0nM?start=90" 
+                        title="Tamil Song" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen
+                        className="w-full h-full min-h-[250px]"
+                      ></iframe>
+                    </div>
+                    <div className="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md border-2 border-amber-100 bg-white">
+                      <iframe 
+                        src="https://www.youtube.com/embed/Vb1i_FpDRic" 
+                        title="English Version" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen
+                        className="w-full h-full min-h-[250px]"
+                      ></iframe>
+                    </div>
                   </div>
 
                   <p className="font-medium text-stone-900 mt-6">
@@ -124,12 +240,12 @@ export default function EnglishPastorsDeskPage() {
                     Pastor Weslyn
                   </p>
                   
-                  <div className="mt-6 pt-6 border-t border-emerald-300 flex items-center gap-4 not-prose relative z-10">
-                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-emerald-500 shrink-0 shadow-sm bg-white">
+                  <div className="mt-6 pt-6 border-t border-amber-200 flex items-center gap-4 not-prose relative z-10">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-amber-500 shrink-0 shadow-sm bg-white">
                       <img src="/staff-pastor.png" alt="Ps. Jeyakaran Weslyn" className="w-full h-full object-cover object-top" />
                     </div>
                     <div>
-                      <p className="font-bold text-emerald-800 m-0 text-lg">Ps. Jeyakaran Weslyn</p>
+                      <p className="font-bold text-amber-800 m-0 text-lg">Ps. Jeyakaran Weslyn</p>
                       <p className="text-sm text-stone-600 m-0">Senior Pastor, {churchConfig.name}</p>
                     </div>
                   </div>
@@ -148,18 +264,27 @@ export default function EnglishPastorsDeskPage() {
                   <Link href="/en/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Issue #003</p>
+                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Issue #004</p>
+                      <p className="text-xs text-stone-500">Aug 2026</p>
+                    </div>
+                  </Link>
+
+                  <h4 className="font-bold text-xs text-stone-400 uppercase tracking-wider mt-6 mb-2 pl-2 border-t border-stone-100 pt-4">July 2026</h4>
+                  <Link href="/en/pastors-desk/archive/july/issue-003" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #003</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
-                  <Link href="/en/pastors-desk/archive/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                  <Link href="/en/pastors-desk/archive/july/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #002</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
-                  <Link href="/en/pastors-desk/archive/issue-001" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                  <Link href="/en/pastors-desk/archive/july/issue-001" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #001</p>
