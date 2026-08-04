@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   locale: 'ta',
-  path: '/pastors-desk/archive/jul/issue-001',
+  path: '/pastors-desk/archive/july/issue-001',
   title: "VEC-NL 2026-07 Issue 001 - From the Pastor's Desk | Vaarthai Evangelical Church",
   description: `Weekly letter, reflections, and updates from Senior Pastor Jeyakaran Weslyn at ${churchConfig.name}.`,
 
@@ -141,14 +141,14 @@ export default function PastorsDeskArchive1Page() {
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
-                  <Link href="/pastors-desk/archive/jul/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                  <Link href="/pastors-desk/archive/july/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #002</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
-                  <Link href="/pastors-desk/archive/jul/issue-001" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
+                  <Link href="/pastors-desk/archive/july/issue-001" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                     <div>
                       <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Issue #001</p>

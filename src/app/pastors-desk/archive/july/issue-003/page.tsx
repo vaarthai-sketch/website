@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   locale: 'ta',
-  path: '/pastors-desk/archive/jul/issue-003',
+  path: '/pastors-desk/archive/july/issue-003',
   title: "VEC-NL 2026-07 Issue 003 - From the Pastor's Desk | Vaarthai Evangelical Church",
   description: `Weekly newsletter and updates from the Pastor at ${churchConfig.name}.`,
 
@@ -153,14 +153,14 @@ export default function PastorsDeskPage() {
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
-                  <Link href="/pastors-desk/archive/jul/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                  <Link href="/pastors-desk/archive/july/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #002</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
-                  <Link href="/pastors-desk/archive/jul/issue-001" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                  <Link href="/pastors-desk/archive/july/issue-001" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #001</p>

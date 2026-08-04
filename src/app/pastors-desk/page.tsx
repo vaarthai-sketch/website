@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'ta',
   path: '/pastors-desk',
-  title: "VEC-NL 2026-08 Issue 003 - From the Pastor's Desk | Vaarthai Evangelical Church",
+  title: "VEC-NL 2026-08 Issue 004 - From the Pastor's Desk | Vaarthai Evangelical Church",
   description: `Weekly newsletter and updates from the Pastor at ${churchConfig.name}.`,
 });
 
@@ -48,7 +48,7 @@ export default function PastorsDeskPage() {
                 
                 <div className="flex items-center gap-2 text-sm text-amber-700 font-bold mb-4 relative z-10">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-08 · Issue #003</span>
+                  <span>VEC-NL 2026-08 · Issue #004</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-amber-900 mb-6 relative z-10 flex items-center gap-2">
@@ -264,25 +264,27 @@ export default function PastorsDeskPage() {
                   <Link href="/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Issue #003</p>
+                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Issue #004</p>
                       <p className="text-xs text-stone-500">Aug 2026</p>
                     </div>
                   </Link>
-                  <Link href="/pastors-desk/archive/jul/issue-003" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                  
+                  <h4 className="font-bold text-xs text-stone-400 uppercase tracking-wider mt-6 mb-2 pl-2 border-t border-stone-100 pt-4">July 2026</h4>
+                  <Link href="/pastors-desk/archive/july/issue-003" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #003</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
-                  <Link href="/pastors-desk/archive/jul/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                  <Link href="/pastors-desk/archive/july/issue-002" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #002</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
-                  <Link href="/pastors-desk/archive/jul/issue-001" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                  <Link href="/pastors-desk/archive/july/issue-001" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Issue #001</p>
