@@ -184,9 +184,6 @@ export default function ContactPage() {
                     {churchConfig.contact.officeAddress.poBox}<br />
                     {churchConfig.contact.officeAddress.city} {churchConfig.contact.officeAddress.state} {churchConfig.contact.officeAddress.zip}
                   </p>
-                  <p className="text-xs text-stone-500 mt-1 italic leading-relaxed font-light">
-                    {churchConfig.contact.officeAddress.note}
-                  </p>
                 </div>
               </div>
 
@@ -215,6 +212,9 @@ export default function ContactPage() {
                 <div>
                   <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">அலுவலக நேரம்</span>
                   <p className="text-stone-900 font-medium">{churchConfig.contact.officeHours}</p>
+                  <p className="text-xs text-stone-500 mt-1 italic leading-relaxed font-light">
+                    {churchConfig.contact.officeAddress.note}
+                  </p>
                 </div>
               </div>
 
