@@ -90,9 +90,11 @@ export const Footer: React.FC = () => {
               <div className="pt-2 border-t border-[#1E293B] space-y-1">
                 <span className="font-semibold text-white block">Office Hours:</span>
                 <span>{churchConfig.contact.officeHours}</span>
-                <p className="text-xs text-stone-400 mt-1.5 leading-relaxed font-light">
-                  {churchConfig.contact.officeAddress.note}
-                </p>
+                <div className="mt-3 p-2.5 rounded bg-accent/10 border border-accent/20">
+                  <p className="text-xs text-accent-light font-medium leading-relaxed">
+                    {churchConfig.contact.officeAddress.note}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

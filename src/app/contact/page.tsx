@@ -212,9 +212,11 @@ export default function ContactPage() {
                 <div>
                   <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">அலுவலக நேரம்</span>
                   <p className="text-stone-900 font-medium">{churchConfig.contact.officeHours}</p>
-                  <p className="text-xs text-stone-500 mt-1 italic leading-relaxed font-light">
-                    {churchConfig.contact.officeAddress.note}
-                  </p>
+                  <div className="mt-3 p-3 rounded-md bg-amber-50 border border-amber-200 inline-block">
+                    <p className="text-sm text-amber-900 font-medium leading-relaxed">
+                      {churchConfig.contact.officeAddress.note}
+                    </p>
+                  </div>
                 </div>
               </div>
 
