@@ -86,7 +86,7 @@ export const churchConfig: ChurchConfig = {
   bibleTranslation: "ESV (English Standard Version)",
   foundedYear: 2005,
   contact: {
-    email: "info@vaarthaichurch.org",
+    email: "info@vaarthai.org.au",
     phone: "0485 07 77 11",
     officeHours: "Thursday & Friday 9:00 AM - 4:00 PM",
     address: {
