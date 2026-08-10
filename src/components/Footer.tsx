@@ -85,6 +85,13 @@ export const Footer: React.FC = () => {
                     <Clock className="w-4 h-4 text-accent shrink-0" />
                     <span>{service.times.join(" & ")}</span>
                   </div>
+                  <div className="flex items-start gap-2 pt-1.5">
+                    <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                    <span className="text-stone-300">
+                      {churchConfig.contact.address.street}<br />
+                      {churchConfig.contact.address.city}, {churchConfig.contact.address.state} {churchConfig.contact.address.zip}
+                    </span>
+                  </div>
                 </div>
               ))}
               <div className="pt-2 border-t border-[#1E293B] space-y-1">
