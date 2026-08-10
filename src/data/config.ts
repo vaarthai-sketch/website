@@ -102,7 +102,7 @@ export const churchConfig: ChurchConfig = {
       city: "SPRINGWOOD",
       state: "QLD",
       zip: "4127",
-      note: "Would you like to visit us in person? Please call to arrange an appointment."
+      note: "Would you like to visit our office in person? Please call to schedule an appointment."
     }
   },
   services: [
