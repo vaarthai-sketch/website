@@ -178,7 +178,7 @@ export default function EnglishContactPage() {
               <div className="flex gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">Office Address</span>
+                  <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">Mailing Address</span>
                   <p className="text-stone-900 font-medium">
                     {churchConfig.contact.officeAddress.poBox}<br />
                     {churchConfig.contact.officeAddress.city} {churchConfig.contact.officeAddress.state} {churchConfig.contact.officeAddress.zip}

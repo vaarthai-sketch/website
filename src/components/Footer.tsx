@@ -103,7 +103,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white">Office Address</strong><br />
+                  <strong className="text-white">Mailing Address</strong><br />
                   <span className="text-stone-300">
                     {churchConfig.contact.officeAddress.poBox}<br />
                     {churchConfig.contact.officeAddress.city} {churchConfig.contact.officeAddress.state} {churchConfig.contact.officeAddress.zip}
