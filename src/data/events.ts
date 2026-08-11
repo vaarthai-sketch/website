@@ -74,8 +74,8 @@ export const eventsData: ChurchEvent[] = [
   },
   {
     id: "monthly-after-church-lunch",
-    title: "மாதாந்திர ஆராதனைக்குப் பிந்தைய மதிய உணவு - தந்தையர் தின சிறப்பு (Monthly After-Church Lunch - Father's Day Special)",
-    englishTitle: "Monthly After-Church Lunch - Father's Day Special",
+    title: "மாதாந்திர ஆராதனைக்குப் பிந்தைய மதிய உணவு (Monthly After-Church Lunch)",
+    englishTitle: "Monthly After-Church Lunch",
     date: "2026-09-27",
     time: "ஒவ்வொரு மாதமும் 4-வது வாரம் (ஞாயிறு ஆராதனை முடிந்த உடனே)",
     englishTime: "The 4th week of each month (Immediately following the Sunday Service)",
