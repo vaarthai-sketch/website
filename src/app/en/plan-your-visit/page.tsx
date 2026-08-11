@@ -40,7 +40,7 @@ export default function EnglishPlanYourVisitPage() {
     },
     {
       id: "denomination-beliefs",
-      question: "What denomination is Vaarthai Evangelical Church?",
+      question: "What denomination is Vaarthai Evangelical Church Inc?",
       answer: "We are an independent, Gospel-centered Evangelical and Pentecostal church community. We firmly believe in the Triune God, the absolute authority of Scripture, salvation by grace through faith alone, and the active ministry of the Holy Spirit."
     },
     {
@@ -255,7 +255,7 @@ export default function EnglishPlanYourVisitPage() {
               </p>
               <div className="aspect-[21/9] w-full rounded-lg overflow-hidden border border-border bg-stone-100 shadow-inner relative flex items-center justify-center">
                 <iframe
-                  title="Vaarthai Evangelical Church Location Map"
+                  title="Vaarthai Evangelical Church Inc Location Map"
                   src={churchConfig.contact.address.mapUrl}
                   width="100%"
                   height="100%"

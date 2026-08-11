@@ -28,7 +28,7 @@ const ImagePlaceholder: React.FC<{ type: string; title: string; subtitle?: strin
       </div>
 
       <div className={isStaff ? "mt-auto text-primary" : "mt-auto text-white"}>
-        {!isStaff && <div className="text-xs uppercase tracking-wider opacity-70 mb-1">{subtitle || "Vaarthai Evangelical Church"}</div>}
+        {!isStaff && <div className="text-xs uppercase tracking-wider opacity-70 mb-1">{subtitle || "Vaarthai Evangelical Church Inc"}</div>}
         <h4 className="font-serif text-lg font-bold line-clamp-2 leading-snug">
           {title}
         </h4>

@@ -15,9 +15,9 @@ export const JsonLd: React.FC<JsonLdProps> = ({ type, data }) => {
     schema = {
       "@context": "https://schema.org",
       "@type": "Church",
-      "name": "Vaarthai Evangelical Church",
+      "name": "Vaarthai Evangelical Church Inc",
       "alternateName": ["Tamil Church in Brisbane", "Vaarthai Tamil Church", "தமிழ் சபை", "Brisbane Tamil Church", "Tamil Church Family"],
-      "description": "Vaarthai Evangelical Church is a Tamil Church in Brisbane. We are a Tamil Church Family dedicated to Tamil Worship, Tamil Gospel, and Tamil Christian fellowship.",
+      "description": "Vaarthai Evangelical Church Inc is a Tamil Church in Brisbane. We are a Tamil Church Family dedicated to Tamil Worship, Tamil Gospel, and Tamil Christian fellowship.",
       "url": "https://vaarthaichurch.org", // Mock production URL
       "logo": "https://vaarthaichurch.org/logo.png",
       "image": "https://vaarthaichurch.org/og-image.jpg",

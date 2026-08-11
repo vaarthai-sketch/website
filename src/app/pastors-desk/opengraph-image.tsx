@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = "From the Pastor's Desk - Vaarthai Evangelical Church";
+export const alt = "From the Pastor's Desk - Vaarthai Evangelical Church Inc";
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/jpeg';
 

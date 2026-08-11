@@ -90,7 +90,7 @@ export default function EventsPage({ basePrefix = "" }: { basePrefix?: string })
           </h1>
           <p className="text-stone-300 text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed">
             {isEn 
-              ? "Discover upcoming gatherings, prayer sessions, fellowship lunches, and community projects at Vaarthai Evangelical Church."
+              ? "Discover upcoming gatherings, prayer sessions, fellowship lunches, and community projects at Vaarthai Evangelical Church Inc."
               : "வார்த்தை திருச்சபையின் எதிர்வரும் ஜெபக் கூட்டங்கள், ஐக்கிய விருந்துகள் மற்றும் சமூக சேவை நிகழ்வுகளை அறிந்துகொள்ளுங்கள்."}
           </p>
         </div>
@@ -116,7 +116,7 @@ export default function EventsPage({ basePrefix = "" }: { basePrefix?: string })
               </span>
               
               <div className="relative z-10 mt-auto">
-                <span className="text-xs uppercase tracking-widest text-stone-300 font-semibold">Vaarthai Evangelical Church</span>
+                <span className="text-xs uppercase tracking-widest text-stone-300 font-semibold">Vaarthai Evangelical Church Inc</span>
                 <h3 className="font-serif text-2xl md:text-3xl font-bold mt-1 line-clamp-2">
                   {displayFeaturedTitle}
                 </h3>

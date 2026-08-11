@@ -4,7 +4,7 @@ import { churchConfig } from '@/data/config';
 /**
  * components/StructuredData.tsx
  *
- * JSON-LD structured data for Vaarthai Evangelical Church.
+ * JSON-LD structured data for Vaarthai Evangelical Church Inc.
  */
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.vaarthai.org.au';

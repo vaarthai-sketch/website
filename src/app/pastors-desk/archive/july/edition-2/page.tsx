@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'ta',
   path: '/pastors-desk/archive/july/edition-2',
-  title: "VEC-NL 2026-07 Edition 2 - From the Pastor's Desk | Vaarthai Evangelical Church",
+  title: "VEC-NL 2026-07 Edition 2 - From the Pastor's Desk | Vaarthai Evangelical Church Inc",
   description: `Weekly letter, reflections, and updates from Senior Pastor Jeyakaran Weslyn at ${churchConfig.name}.`,
 
 });

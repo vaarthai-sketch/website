@@ -84,7 +84,7 @@ export default async function EnglishEventDetailPage({ params }: PageProps) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/85 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
                   <span className="text-xs uppercase font-bold tracking-widest text-accent-light mb-1">
-                    Vaarthai Evangelical Church Event
+                    Vaarthai Evangelical Church Inc Event
                   </span>
                   <h2 className="font-serif text-2xl font-bold">{displayTitle}</h2>
                 </div>
@@ -92,7 +92,7 @@ export default async function EnglishEventDetailPage({ params }: PageProps) {
             ) : (
               <div className="aspect-[21/9] w-full rounded-xl overflow-hidden bg-gradient-to-tr from-[#0F172A] to-[#020617] relative p-8 flex flex-col justify-end text-white shadow-sm">
                 <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                <span className="text-xs uppercase font-bold tracking-widest text-accent-light mb-1">Vaarthai Evangelical Church Event</span>
+                <span className="text-xs uppercase font-bold tracking-widest text-accent-light mb-1">Vaarthai Evangelical Church Inc Event</span>
                 <h2 className="font-serif text-xl font-bold">{displayTitle}</h2>
               </div>
             )}

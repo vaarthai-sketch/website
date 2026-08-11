@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'en',
   path: '/about',
-  title: "About Us | Vaarthai Evangelical Church - Brisbane",
+  title: "About Us | Vaarthai Evangelical Church Inc - Brisbane",
   description: `Learn about the story, core beliefs, mission, vision, values, and leadership team of ${churchConfig.name} in Brisbane, QLD, Australia.`,
 });
 
@@ -148,13 +148,13 @@ export default function EnglishAboutPage() {
 
               <div className="space-y-4 text-stone-700 leading-relaxed text-sm md:text-base">
                 <p>
-                  When Pastor Weslyn first arrived in Australia in 2007, God gave him a clear and compelling burden to serve the Tamil community in Brisbane. Over the course of 20 years, he faithfully ministered within Rhema Brisbane Fellowship and Citipointe Tamil Church before stepping into God&apos;s calling to plant Vaarthai Evangelical Church.
+                  When Pastor Weslyn first arrived in Australia in 2007, God gave him a clear and compelling burden to serve the Tamil community in Brisbane. Over the course of 20 years, he faithfully ministered within Rhema Brisbane Fellowship and Citipointe Tamil Church before stepping into God&apos;s calling to plant Vaarthai Evangelical Church Inc.
                 </p>
                 <p>
                   In addition to pastoral ministry, he serves as a dedicated Clinical Counsellor supporting individuals and families across the community. His wife, Dr. Arivu Weslyn, serves with excellence as a General Practitioner (GP). Together, God has blessed them with twin boys, Jeremy and Timmy, who are currently completing their senior high school studies!
                 </p>
                 <p>
-                  Known widely across the Brisbane Tamil community for his warmth and pastoral care, Pastor Weslyn carries a deep vision to see families experience true freedom in Christ. As like-minded families joined together in this shared burden, Vaarthai Evangelical Church was born.
+                  Known widely across the Brisbane Tamil community for his warmth and pastoral care, Pastor Weslyn carries a deep vision to see families experience true freedom in Christ. As like-minded families joined together in this shared burden, Vaarthai Evangelical Church Inc was born.
                 </p>
               </div>
             </div>

@@ -93,7 +93,7 @@ export default function EnglishGivePage() {
               </div>
 
               <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-normal">
-                Your generous tithes and offerings help support the ongoing ministries and mission of Vaarthai Evangelical Church. All online donations are 100% securely processed to ensure your peace of mind. Easily give with any Credit/Debit Card, Apple Pay, or Google Pay.
+                Your generous tithes and offerings help support the ongoing ministries and mission of Vaarthai Evangelical Church Inc. All online donations are 100% securely processed to ensure your peace of mind. Easily give with any Credit/Debit Card, Apple Pay, or Google Pay.
               </p>
 
               <div className="bg-white/80 border border-[#E0DBCB] rounded-xl p-4 space-y-2 text-xs text-stone-700 shadow-2xs">

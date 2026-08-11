@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'ta',
   path: '/pastors-desk',
-  title: "VEC-NL 2026-08 Edition 5 - போதகர் மேசையிலிருந்து | Vaarthai Evangelical Church",
+  title: "VEC-NL 2026-08 Edition 5 - போதகர் மேசையிலிருந்து | Vaarthai Evangelical Church Inc",
   description: `Weekly newsletter and updates from the Pastor at ${churchConfig.name}.`,
   image: "/colombia-earthquake.jpg",
 });

@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'en',
   path: '/en/pastors-desk',
-  title: "VEC-NL 2026-08 Edition 4 - From the Pastor's Desk | Vaarthai Evangelical Church",
+  title: "VEC-NL 2026-08 Edition 4 - From the Pastor's Desk | Vaarthai Evangelical Church Inc",
   description: `Weekly newsletter and updates from the Pastor at ${churchConfig.name}.`,
 });
 
@@ -174,7 +174,7 @@ export default function EnglishPastorsDeskPage() {
 
                   <h3 className="text-xl font-bold text-amber-800">Our Church Is in This Same Season</h3>
                   <p>
-                    Vaarthai Evangelical Church is still young. To those looking on from outside, this may seem slow.
+                    Vaarthai Evangelical Church Inc is still young. To those looking on from outside, this may seem slow.
                   </p>
                   <p>
                     But the roots are going down — in a place where no one can count them.

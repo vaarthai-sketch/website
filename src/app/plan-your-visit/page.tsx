@@ -234,7 +234,7 @@ export default function PlanYourVisitPage() {
               </p>
               <div className="aspect-[21/9] w-full rounded-lg overflow-hidden border border-border bg-stone-100 shadow-inner relative flex items-center justify-center">
                 <iframe
-                  title="Vaarthai Evangelical Church Location Map"
+                  title="Vaarthai Evangelical Church Inc Location Map"
                   src={churchConfig.contact.address.mapUrl}
                   width="100%"
                   height="100%"

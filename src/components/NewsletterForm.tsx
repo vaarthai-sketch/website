@@ -161,8 +161,8 @@ export const NewsletterForm: React.FC = () => {
         </Button>
         <p className="text-[11px] text-stone-500 leading-normal text-left">
           {isEn
-            ? "By subscribing, you consent to receive weekly newsletters, event announcements, and spiritual updates from Vaarthai Evangelical Church. You can unsubscribe at any time."
-            : "By subscribing, you consent to receive weekly newsletters, event announcements, and spiritual updates from Vaarthai Evangelical Church. You can unsubscribe at any time."}
+            ? "By subscribing, you consent to receive weekly newsletters, event announcements, and spiritual updates from Vaarthai Evangelical Church Inc. You can unsubscribe at any time."
+            : "By subscribing, you consent to receive weekly newsletters, event announcements, and spiritual updates from Vaarthai Evangelical Church Inc. You can unsubscribe at any time."}
         </p>
       </div>
 

@@ -78,7 +78,7 @@ export interface ChurchConfig {
 }
 
 export const churchConfig: ChurchConfig = {
-  name: "Vaarthai Evangelical Church",
+  name: "Vaarthai Evangelical Church Inc",
   shortName: "Vaarthai Church",
   tagline: "வார்த்தையை கேட்போம் வார்த்தையின்படி நடப்போம் வார்த்தையை சுமந்து செல்வோம்",
   englishTagline: "Hearing the Word. Living the Word. Sharing the Word across generations.",

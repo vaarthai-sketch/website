@@ -43,7 +43,7 @@ export default function EnglishHomePage() {
                 <svg className="w-4 h-4 text-accent fill-current shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M11 2h2v7h6v2h-6v11h-2v-11h-6v-2h6V2z" />
                 </svg>
-                A Warm Welcome to Vaarthai Evangelical Church | Tamil Church in Brisbane
+                A Warm Welcome to Vaarthai Evangelical Church Inc | Tamil Church in Brisbane
               </span>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide leading-[1.3] text-white">
                 <span className="block mb-1 sm:mb-2">Hearing the Word.</span>
@@ -139,7 +139,7 @@ export default function EnglishHomePage() {
               We Are Called to Love God, Grow in Faith, and Serve Our Community
             </h2>
             <p className="text-stone-700 leading-relaxed text-sm">
-              At Vaarthai Evangelical Church, our mission is simple: we want people to encounter the love of Jesus Christ, grow in the truth of the Gospel, and care for one another with genuine love and practical support.
+              At Vaarthai Evangelical Church Inc, our mission is simple: we want people to encounter the love of Jesus Christ, grow in the truth of the Gospel, and care for one another with genuine love and practical support.
             </p>
             <p className="text-stone-700 leading-relaxed text-sm">
               Whether you are seeking biblical answers to life&apos;s deepest questions or looking for a church family where you and your children can take deep roots in faith, we invite you to join us this Sunday.

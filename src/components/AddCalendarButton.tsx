@@ -20,7 +20,7 @@ export const AddCalendarButton: React.FC<AddCalendarButtonProps> = ({ event }) =
     const icsContent = [
       "BEGIN:VCALENDAR",
       "VERSION:2.0",
-      "PRODID:-//Vaarthai Evangelical Church//Events Calendar//EN",
+      "PRODID:-//Vaarthai Evangelical Church Inc//Events Calendar//EN",
       "BEGIN:VEVENT",
       `UID:${event.id}@vaarthaichurch.org`,
       `DTSTAMP:${dateFormatted}T000000Z`,
