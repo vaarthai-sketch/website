@@ -76,7 +76,7 @@ export const eventsData: ChurchEvent[] = [
     id: "monthly-after-church-lunch",
     title: "மாதாந்திர ஆராதனைக்குப் பிந்தைய மதிய உணவு (Monthly After-Church Lunch)",
     englishTitle: "Monthly After-Church Lunch",
-    date: "2026-09-27",
+    date: "2026-08-30",
     time: "ஒவ்வொரு மாதமும் 4-வது வாரம் (ஞாயிறு ஆராதனை முடிந்த உடனே)",
     englishTime: "The 4th week of each month (Immediately following the Sunday Service)",
     location: "லயன்ஸ் பார்க் (Lions Park), ஸ்பிரிங்ஃபீல்ட் லேக்ஸ்",
