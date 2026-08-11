@@ -57,6 +57,10 @@ export default function PastorsDeskPage() {
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
                   
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                    <img src="/colombia-earthquake.jpg" alt="Colombia Earthquake" className="w-full h-auto object-cover max-h-[500px]" />
+                  </div>
+
                   <h3 className="text-xl font-bold text-stone-800">கொலம்பியா நிலநடுக்கம்!</h3>
                   <p>
                     செய்தியை வாசித்தபோது என் உடல் நடுங்கியது. ஆகஸ்ட் 10, திங்கட்கிழமை காலை, மேற்கு கொலம்பியாவை 7.4 அளவுள்ள நிலநடுக்கம் உலுக்கியது. செவ்வாய்க்கிழமை காலை நிலவரப்படி 111 உயிர்களை இழந்ததாக அரசாங்கக் குறிப்புகள் தெரிவிக்கின்றன; ஆயிரத்து அறுநூறுக்கும் மேற்பட்ட கட்டடங்கள் சேதமடைந்துள்ளன. கடந்த பத்து வருடங்களில் அந்நாட்டில் பதிவான மிகப் பெரிய நிலநடுக்கம் இதுவே.
@@ -90,7 +94,7 @@ export default function PastorsDeskPage() {
                     </p>
                   </blockquote>
                   <p>
-                    இங்கே கவனியுங்கள். கர்த்தர் இந்தச் செய்திகளை மறைக்கவில்லை; முன்கூட்டியே சொல்லிவிட்டார். ஏன்? நாம் கலங்காதிருக்கும்படி. பூமியதிர்ச்சி நடந்தது என்பதற்காக தேவன் தன் சிங்காசனத்தை விட்டு இறங்கிவிடவில்லை; அவர் ஏற்கெனவே சொன்னது நடக்கிறது.
+                    இங்கே கவனியுங்கள். கர்த்தர் இந்தச் செய்திகளை மறைக்கவில்லை; முன்கூட்டியே சொல்லிவிட்டார். ஏன்? நாம் கலங்காதிருக்கும்படி. தேவன் ஏற்கெனவே சொன்னது நடக்கிறது.
                   </p>
                   <p>
                     இன்னும் ஒரு வார்த்தை — &quot;வேதனைகளுக்கு ஆரம்பம்&quot; (v.8). இது பிரசவ வேதனையைக் குறிக்கும் சொல். பிரசவ வேதனை மரணத்தின் அடையாளம் அல்ல; பிறப்பின் அடையாளம். உலகம் அசைகிறது, ஆனால் அது முடிவை நோக்கி அல்ல — புதிய சிருஷ்டியை நோக்கி.
@@ -147,6 +151,17 @@ export default function PastorsDeskPage() {
                     <p className="text-stone-700 m-0">
                       கர்த்தாவே, கொலம்பியாவின் மக்கள்மேல் இரக்கமாயிரும். இழந்தவர்களுக்கு ஆறுதலையும், சிக்கியிருக்கிறவர்களுக்கு விடுதலையையும், பயந்திருக்கிறவர்களுக்குச் சமாதானத்தையும் தாரும். எங்கள் இருதயங்களை உதாசீனத்திலிருந்து காத்து, இரக்கத்தால் நிரப்பும். அசைகிற இந்த உலகத்தில், அசைவில்லாத உம்முடைய ராஜ்யத்தில் எங்கள் நம்பிக்கையை உறுதியாய் வையும். இயேசுவின் நாமத்தில் ஜெபிக்கிறோம், ஆமென்.
                     </p>
+                  </div>
+
+                  {/* YouTube Embed */}
+                  <div className="my-8 aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md not-prose border-2 border-stone-200 bg-white">
+                    <iframe 
+                      src="https://www.youtube.com/embed/mxZHqx5XLOE?start=8" 
+                      title="Colombia Earthquake Video" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowFullScreen
+                      className="w-full h-full min-h-[350px] md:min-h-[450px]"
+                    ></iframe>
                   </div>
 
                   <p className="font-medium text-stone-900 mt-6">

@@ -57,6 +57,10 @@ export default function EnglishPastorsDeskPage() {
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
 
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                    <img src="/colombia-earthquake.jpg" alt="Colombia Earthquake" className="w-full h-auto object-cover max-h-[500px]" />
+                  </div>
+
                   <h3 className="text-xl font-bold text-stone-800">An earthquake in Colombia.</h3>
                   <p>
                     My body trembled as I read the news. On Monday morning, 10 August, a magnitude 7.4 earthquake struck western Colombia. As of Tuesday morning, government reports place the death toll at 111, with more than 1,600 buildings damaged. It is the strongest earthquake recorded in that country in a decade.
@@ -90,7 +94,7 @@ export default function EnglishPastorsDeskPage() {
                     </p>
                   </blockquote>
                   <p>
-                    Notice what the Lord does here. He does not hide these headlines from us; He tells us about them ahead of time. Why? So that we would not be troubled. An earthquake does not unseat God from His throne. What He said would happen is happening.
+                    Notice what the Lord does here. He does not hide these headlines from us; He tells us about them ahead of time. Why? So that we would not be troubled. What God said would happen is happening.
                   </p>
                   <p>
                     And notice verse 8 — &quot;the beginning of sorrows.&quot; The word is the word for birth pangs. Labour pains are not the sign of death; they are the sign of birth. The world is shaking, but not towards its end — towards a new creation.
@@ -147,6 +151,17 @@ export default function EnglishPastorsDeskPage() {
                     <p className="text-stone-700 m-0">
                       Lord, have mercy on the people of Colombia. Give comfort to the bereaved, rescue to the trapped, and peace to the fearful. Guard our hearts from indifference and fill them with compassion. In this shaking world, fix our hope firmly on Your unshakeable kingdom. In Jesus&apos; name, Amen.
                     </p>
+                  </div>
+
+                  {/* YouTube Embed */}
+                  <div className="my-8 aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md not-prose border-2 border-stone-200 bg-white">
+                    <iframe 
+                      src="https://www.youtube.com/embed/mxZHqx5XLOE?start=8" 
+                      title="Colombia Earthquake Video" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowFullScreen
+                      className="w-full h-full min-h-[350px] md:min-h-[450px]"
+                    ></iframe>
                   </div>
 
                   <p className="font-medium text-stone-900 mt-6">
