@@ -78,7 +78,7 @@ export default function EnglishPastorsDeskPage() {
                     Most of the time, that is exactly how we move past it. When such things happen closer to home, we feel it differently — relief that we were spared, or a fear that takes hold of us and will not let go.
                   </p>
                   <p>
-                    Neither response — indifference or fear — belongs to a disciple of Christ. In this month&apos;s letter I want to strengthen you: we do not need to be afraid. I can hear you asking whether I know what I am saying. Let the Word answer.
+                    Neither response — indifference or fear — belongs to a disciple of Christ. In this week&apos;s letter I want to strengthen you: we do not need to be afraid. I can hear you asking whether I know what I am saying. Let the Word answer.
                   </p>
 
                   <h3 className="text-xl font-bold text-stone-800">The Lord told us in advance</h3>
