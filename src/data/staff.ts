@@ -28,7 +28,7 @@ export const staffData: StaffMember[] = [
     englishRole: "Secretary",
     bio: "திருச்சபையின் நிர்வாக மற்றும் அலுவலகப் பணிகளைப் பொறுப்புடன் கவனித்து, சபையின் செயல்பாடுகளுக்கு உதவுகிறார்.",
     englishBio: "Faithfully overseeing church administration and day-to-day office operations, providing dedicated guidance and reliable support across all church ministries and activities.",
-    email: "ariehdeva@gmail.com",
+    email: "secretary@vaarthai.org.au",
     image: "/staff-secretary.png"
   },
   {
@@ -38,7 +38,7 @@ export const staffData: StaffMember[] = [
     englishRole: "Treasurer",
     bio: "திருச்சபையின் நிதி நிர்வாகப் பணிகளை நேர்மையுடனும் பொறுப்புடனும் கவனித்து, ஆலயத்தின் நற்பணிகளுக்குத் துணைபுரிகிறார்.",
     englishBio: "Managing our church financial stewardship and operations with utmost integrity, care, and biblical transparency to support all ministries, missions, and community outreach efforts.",
-    email: "jeykath@yahoo.com",
+    email: "treasurer@vaarthai.org.au",
     image: "/staff-treasurer.png",
     imageStyle: { objectPosition: "center top", transform: "scale(1.08) translateY(10px)" }
   }
