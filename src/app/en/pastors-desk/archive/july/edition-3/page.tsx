@@ -148,7 +148,23 @@ export default function EnglishPastorsDeskPage() {
                   <Link href="/en/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Edition 4</p>
+                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Edition 5</p>
+                      <p className="text-xs text-stone-500">Aug 2026</p>
+                    </div>
+                  </Link>
+                  <Link href="/en/pastors-desk/archive/august/edition-4" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 4</p>
+                      <p className="text-xs text-stone-500">Aug 2026</p>
+                    </div>
+                  </Link>
+
+                  <h4 className="font-bold text-xs text-stone-400 uppercase tracking-wider mt-6 mb-2 pl-2 border-t border-stone-100 pt-4">July 2026</h4>
+                  <Link href="/en/pastors-desk/archive/july/edition-3" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 3</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>

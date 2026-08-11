@@ -1,15 +1,14 @@
 import React from "react";
-import { Calendar as CalendarIcon, FileText, ChevronRight, Gift, Snowflake, Leaf } from "lucide-react";
+import { Calendar as CalendarIcon, FileText, ChevronRight, Globe, Leaf } from "lucide-react";
 import Link from "next/link";
 import { churchConfig } from "@/data/config";
 import { NewsletterForm } from "@/components/NewsletterForm";
-
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   locale: 'en',
   path: '/en/pastors-desk',
-  title: "VEC-NL 2026-08 Edition 4 - From the Pastor's Desk | Vaarthai Evangelical Church",
+  title: "VEC-NL 2026-08 Edition 5 - From the Pastor's Desk | Vaarthai Evangelical Church",
   description: `Weekly newsletter and updates from the Pastor at ${churchConfig.name}.`,
 });
 
@@ -41,211 +40,128 @@ export default function EnglishPastorsDeskPage() {
             
             {/* Newsletter Content */}
             <div className="lg:col-span-3">
-              <div className="bg-gradient-to-br from-yellow-50 via-white to-amber-50 rounded-lg shadow-sm border border-amber-200 p-6 md:p-10 mb-8 relative overflow-hidden">
+              <div className="bg-gradient-to-br from-stone-50 via-white to-stone-100 rounded-lg shadow-sm border border-stone-200 p-6 md:p-10 mb-8 relative overflow-hidden">
                 {/* Decorative Elements */}
-                <Leaf className="absolute top-4 right-4 text-amber-200 w-16 h-16 opacity-30" />
-                <Leaf className="absolute bottom-10 left-4 text-amber-200 w-24 h-24 opacity-30" />
+                <Globe className="absolute top-4 right-4 text-stone-200 w-16 h-16 opacity-30" />
+                <Globe className="absolute bottom-10 left-4 text-stone-200 w-24 h-24 opacity-30" />
                 
-                <div className="flex items-center gap-2 text-sm text-amber-700 font-bold mb-4 relative z-10">
+                <div className="flex items-center gap-2 text-sm text-stone-600 font-bold mb-4 relative z-10">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-08 · Edition 4</span>
+                  <span>VEC-NL 2026-08 · Edition 5</span>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-amber-900 mb-6 relative z-10 flex items-center gap-2">
-                  <Leaf className="w-8 h-8 text-amber-600" />
-                  Beneath the Soil: The Seed Is Not Sleeping
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-6 relative z-10 flex items-center gap-2">
+                  <Globe className="w-8 h-8 text-stone-700" />
+                  What If the Ground Beneath You Moves?
                 </h2>
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
-                  
-                  {/* Wattle Trees Image */}
-                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-amber-100">
-                    <img src="/wattle-trees.jpg" alt="Wattle Trees" className="w-full h-auto object-cover max-h-[500px]" />
-                  </div>
 
-                  <h3 className="text-xl font-bold text-amber-800">The August Garden</h3>
+                  <h3 className="text-xl font-bold text-stone-800">An earthquake in Colombia.</h3>
                   <p>
-                    Brisbane mornings in August are cold. Most mornings sit in single digits — five or six degrees Celsius! Look out at the garden and everything seems finished. The leaves have fallen. The branches stand bare. The ground lies hard. &quot;Nothing is happening here,&quot; our eyes tell us.
+                    My body trembled as I read the news. On Monday morning, 10 August, a magnitude 7.4 earthquake struck western Colombia. As of Tuesday morning, government reports place the death toll at 111, with more than 1,600 buildings damaged. It is the strongest earthquake recorded in that country in a decade.
                   </p>
                   <p>
-                    But our eyes are not telling us the whole truth.
-                  </p>
-                  <p>
-                    At that very moment, beneath that soil, roots are quietly lengthening. Bulbs are dividing and multiplying. Buds formed last autumn are slowly swelling. The wattles have already begun to break into yellow.
-                  </p>
-                  <p>
-                    The work is going on. We simply cannot see it — that is all.
+                    One survivor describes stepping out of a lift just as he felt the building begin to move. After that, everything he saw was falling, and all he could hear was the sound of the earth splitting open. The whole thing lasted around fifty seconds — but he says it felt like eternity.
                   </p>
 
-                  <h3 className="text-xl font-bold text-amber-800">Not Past the Cold — Through It</h3>
+                  <h3 className="text-xl font-bold text-stone-800">What did you feel?</h3>
                   <p>
-                    This is not merely a metaphor. It is botanical fact.
+                    Dear friends, when you saw the Colombia earthquake on the news, or read about it — what stirred in you? Did your feelings unsettle you? Or were you able to move past it as something that happened in some far corner of the world?
                   </p>
                   <p>
-                    Wheat, apples, tulips, cherries — many plants like these will not flower at all unless they have passed through a sustained period of cold. Keep them permanently warm and they will grow, they will stay green — but they will not bloom. Scientists call this vernalisation.
+                    Most of the time, that is exactly how we move past it. When such things happen closer to home, we feel it differently — relief that we were spared, or a fear that takes hold of us and will not let go.
                   </p>
                   <p>
-                    The cold is not an obstacle to flowering; it is the precondition for it.
-                  </p>
-                  <p>
-                    The plant does not bloom despite the winter. It blooms through it.
+                    Neither response — indifference or fear — belongs to a disciple of Christ. In this month&apos;s letter I want to strengthen you: we do not need to be afraid. I can hear you asking whether I know what I am saying. Let the Word answer.
                   </p>
 
-                  <h3 className="text-xl font-bold text-amber-800">The Earth Bringeth Forth Fruit of Herself</h3>
-                  <p>
-                    One of the parables Jesus told appears in Mark&apos;s Gospel alone. It is this:
-                  </p>
-                  <blockquote className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg italic font-serif">
-                    <p className="whitespace-pre-line leading-relaxed text-stone-700">
-                      &quot;So is the kingdom of God, as if a man should cast seed into the ground; and should sleep, and rise night and day, and the seed should spring and grow up, he knoweth not how. For the earth bringeth forth fruit of herself.&quot;
-                      <br/>
-                      <span className="font-bold text-sm mt-2 block text-right">— Mark 4:26-28</span>
+                  <h3 className="text-xl font-bold text-stone-800">The Lord told us in advance</h3>
+                  <p className="font-bold text-stone-800">Matthew 24:6–8 (KJV)</p>
+                  <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
+                    <p>
+                      ⁶ And ye shall hear of wars and rumours of wars: see that ye be not troubled: for all these things must come to pass, but the end is not yet.
+                    </p>
+                    <p>
+                      ⁷ For nation shall rise against nation, and kingdom against kingdom: and there shall be famines, and pestilences, and earthquakes, in divers places.
+                    </p>
+                    <p>
+                      ⁸ All these are the beginning of sorrows.
                     </p>
                   </blockquote>
                   <p>
-                    The Greek word rendered &quot;of herself&quot; is αὐτομάτη (automatē) — the root from which the English word automatic comes.
+                    Notice what the Lord does here. He does not hide these headlines from us; He tells us about them ahead of time. Why? So that we would not be troubled. An earthquake does not unseat God from His throne. What He said would happen is happening.
                   </p>
                   <p>
-                    What does the farmer do in this parable? He sows. Then he sleeps. He rises. He sleeps again.
-                  </p>
-                  <p>
-                    The seed does not germinate because he is watching it. It does not grow faster because he is anxious. His worry adds nothing whatever to that growth.
-                  </p>
-                  <p>
-                    Growth is happening — but it is not his work.
+                    And notice verse 8 — &quot;the beginning of sorrows.&quot; The word is the word for birth pangs. Labour pains are not the sign of death; they are the sign of birth. The world is shaking, but not towards its end — towards a new creation.
                   </p>
 
-                  <h3 className="text-xl font-bold text-amber-800">Hidden Work — The Witness of Scripture</h3>
+                  <h3 className="text-xl font-bold text-stone-800">Is this God&apos;s judgement on them?</h3>
                   <p>
-                    This pattern returns again and again throughout Scripture.
+                    No. Jesus faced this exact question. When a tower in Siloam fell and killed eighteen people, He asked, &quot;think ye that they were sinners above all men that dwelt in Jerusalem? I tell you, Nay&quot; (Luke 13:4–5).
                   </p>
-                  <ul className="list-disc pl-5 space-y-2">
+                  <p>
+                    So we have no right to point a finger at Colombia. Instead, that finger turns back towards us: &quot;except ye repent, ye shall all likewise perish.&quot; Every report of disaster is not a verdict on someone else; it is a summons to us.
+                  </p>
+
+                  <h3 className="text-xl font-bold text-stone-800">A shaking earth, an unshakeable God</h3>
+                  <p className="font-bold text-stone-800">Psalm 46:1–2 (KJV)</p>
+                  <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
+                    <p>
+                      ¹ God is our refuge and strength, a very present help in trouble.
+                    </p>
+                    <p>
+                      ² Therefore will not we fear, though the earth be removed, and though the mountains be carried into the midst of the sea.
+                    </p>
+                  </blockquote>
+                  <p>
+                    The psalmist never claims the earth will not be removed. He grants that it will. And still he says, &quot;we will not fear.&quot; Why? Because he is not standing on the shaking earth. He is standing on the unshakeable God.
+                  </p>
+                  <p>
+                    Hebrews makes it plainer still: &quot;Yet once more I shake not the earth only, but also heaven&quot; (12:26). Everything that can be shaken will one day be shaken — buildings, economies, governments, our own plans. And the purpose? &quot;That those things which cannot be shaken may remain&quot; (v.27).
+                  </p>
+                  <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
+                    <p>
+                      &quot;Wherefore we receiving a kingdom which cannot be moved, let us have grace...&quot; (Hebrews 12:28)
+                    </p>
+                  </blockquote>
+                  <p>
+                    Beloved, the kingdom given to us cannot be moved. No earthquake can bring it down. That is why we need not be afraid.
+                  </p>
+
+                  <h3 className="text-xl font-bold text-stone-800">So what shall we do?</h3>
+                  <ul className="list-decimal pl-5 space-y-3">
                     <li>
-                      <strong>Job 14:7-9</strong> — &quot;For there is hope of a tree, if it be cut down, that it will sprout again, and that the tender branch thereof will not cease. Though the root thereof wax old in the earth, and the stock thereof die in the ground; Yet through the scent of water it will bud, and bring forth boughs like a plant.&quot;
+                      <strong>Take courage instead of fear.</strong> &quot;Fear thou not; for I am with thee&quot; (Isaiah 41:10). Fear shrinks us; faith straightens us up.
                     </li>
                     <li>
-                      <strong>Colossians 3:3</strong> — &quot;For ye are dead, and your life is hid with Christ in God.&quot; The Greek here is κέκρυπται — a perfect tense, meaning hidden once and hidden still. Hiddenness is not a defect; it is a settled condition.
+                      <strong>Show mercy instead of indifference.</strong> &quot;Weep with them that weep&quot; (Romans 12:15). Pray for the families of Colombia — for the rescue crews searching the rubble, for mothers who have lost children, for the churches of that nation. Give them a place in your family prayers this week.
                     </li>
                     <li>
-                      <strong>Isaiah 43:19</strong> — &quot;Behold, I will do a new thing; now it shall spring forth; shall ye not know it? I will even make a way in the wilderness, and rivers in the desert.&quot;
-                    </li>
-                    <li>
-                      <strong>Luke 2:52</strong> — &quot;And Jesus increased in wisdom and stature, and in favour with God and man.&quot; Thirty years at Nazareth. Thirty years of silence before three years of ministry. Even in our Lord&apos;s own life, the hidden season was ten times the longer.
+                      <strong>Be ready.</strong> Fifty seconds felt like eternity to that man. In truth, all our lives are that brief (James 4:14). The Lord did not tell us these things to frighten us — He told us so that we would stay awake.
                     </li>
                   </ul>
 
-                  <h3 className="text-xl font-bold text-amber-800">The Season In Between</h3>
-                  <p>
-                    Many of us know this place well.
-                  </p>
-                  <p>
-                    Six months have passed — and the grief has still not lifted. We have prayed for years — and the answer still has not come. The marriage is still cold. The child is still distant. The work has still not come. Health has still not returned.
-                  </p>
-                  <p>
-                    The great temptation in this place is this: to conclude that because we cannot see it, nothing is happening.
-                  </p>
-                  <p>
-                    In counselling ministry I have seen a well-documented pattern borne out. People rarely leave at the beginning, and rarely at the end. It is in the middle that they leave — at the point where the first hope has worn thin and visible progress seems to have stopped. Yet very often that is precisely the moment when the real work is going on underneath.
-                  </p>
-                  <p>
-                    Just like the garden.
-                  </p>
-
-                  <h3 className="text-xl font-bold text-amber-800">Waiting Is One Thing; Avoiding Is Another</h3>
-                  <p>
-                    A word of caution is necessary here.
-                  </p>
-                  <p>
-                    Seen from above, a dormant seed and a dead seed look exactly the same. Both appear identical. We must therefore learn to tell them apart.
-                  </p>
-                  <ul className="list-disc pl-5 space-y-2">
-                    <li><strong>Waiting</strong> — standing in the confidence that God is at work.</li>
-                    <li><strong>Avoiding</strong> — hoping that if a thing is left unattended it will sort itself out.</li>
-                  </ul>
-                  <p>
-                    Sometimes the faithful response is not patience but to receive help. You may approach your pastor. You may approach a doctor, or a counsellor. In such moments what you need is a safe place.
-                  </p>
-                  <p>
-                    &quot;Be patient&quot; is not always the spiritual answer. Sometimes it is escape.
-                  </p>
-                  <p>
-                    If you do not know whether what you are in is dormancy, or whether something is genuinely dying — please speak. Speak to us. Do not decide alone.
-                  </p>
-
-                  <h3 className="text-xl font-bold text-amber-800">Our Church Is in This Same Season</h3>
-                  <p>
-                    Vaarthai Evangelical Church is still young. To those looking on from outside, this may seem slow.
-                  </p>
-                  <p>
-                    But the roots are going down — in a place where no one can count them.
-                  </p>
-                  <p>
-                    We need not hurry. We are not the ones who sowed; nor are we the ones who make it grow.
-                  </p>
-
-                  <div className="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg my-8">
-                    <h4 className="font-bold text-amber-800 mb-2">THIS MONTH&apos;S REFLECTION</h4>
+                  <div className="bg-stone-100 border-l-4 border-stone-500 p-6 rounded-r-lg my-8">
+                    <h4 className="font-bold text-stone-800 mb-2 text-xl">Prayer</h4>
                     <p className="text-stone-700 m-0">
-                      What is quietly growing within you right now, even if no one else can see it yet?
-                      <br/><br/>
-                      Sit with this one day this week. It need not be shown to anyone. Between God and you alone.
+                      Lord, have mercy on the people of Colombia. Give comfort to the bereaved, rescue to the trapped, and peace to the fearful. Guard our hearts from indifference and fill them with compassion. In this shaking world, fix our hope firmly on Your unshakeable kingdom. In Jesus&apos; name, Amen.
                     </p>
-                  </div>
-
-                  <p>
-                    August is the last month of our winter. Spring begins on the first of September.
-                  </p>
-                  <p>
-                    We are not at an ending — we are at a turning.
-                  </p>
-
-                  <blockquote className="bg-stone-50 border-l-4 border-stone-300 p-4 rounded-r-lg italic font-serif">
-                    <p className="whitespace-pre-line leading-relaxed text-stone-700">
-                      &quot;11 For, lo, the winter is past, the rain is over and gone; 12 The flowers appear on the earth; the time of the singing of birds is come, and the voice of the turtle is heard in our land.&quot;
-                      <br/>
-                      <span className="font-bold text-sm mt-2 block text-right">— Song of Solomon 2:11-12</span>
-                    </p>
-                  </blockquote>
-
-                  <p>
-                    Our gardens are not showing it yet. But it is already true. You are blessed!
-                  </p>
-
-                  {/* YouTube Embeds */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
-                    <div className="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md border-2 border-amber-100 bg-white">
-                      <iframe 
-                        src="https://www.youtube.com/embed/sQufX7mW0nM?start=90" 
-                        title="Tamil Song" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowFullScreen
-                        className="w-full h-full min-h-[250px]"
-                      ></iframe>
-                    </div>
-                    <div className="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md border-2 border-amber-100 bg-white">
-                      <iframe 
-                        src="https://www.youtube.com/embed/Vb1i_FpDRic" 
-                        title="English Version" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowFullScreen
-                        className="w-full h-full min-h-[250px]"
-                      ></iframe>
-                    </div>
                   </div>
 
                   <p className="font-medium text-stone-900 mt-6">
-                    God bless you!
+                    Yours in Christ,
                   </p>
                   <p className="pt-2 font-medium text-stone-800">
                     Pastor Weslyn
                   </p>
                   
-                  <div className="mt-6 pt-6 border-t border-amber-200 flex items-center gap-4 not-prose relative z-10">
-                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-amber-500 shrink-0 shadow-sm bg-white">
+                  <div className="mt-6 pt-6 border-t border-stone-200 flex items-center gap-4 not-prose relative z-10">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-stone-300 shrink-0 shadow-sm bg-white">
                       <img src="/staff-pastor.png" alt="Ps. Jeyakaran Weslyn" className="w-full h-full object-cover object-top" />
                     </div>
                     <div>
-                      <p className="font-bold text-amber-800 m-0 text-lg">Ps. Jeyakaran Weslyn</p>
+                      <p className="font-bold text-stone-800 m-0 text-lg">Ps. Jeyakaran Weslyn</p>
                       <p className="text-sm text-stone-600 m-0">Senior Pastor, {churchConfig.name}</p>
                     </div>
                   </div>
@@ -255,7 +171,7 @@ export default function EnglishPastorsDeskPage() {
 
             {/* Sidebar Archive Menu */}
             <div className="lg:col-span-1">
-              <div className="bg-white rounded-lg shadow-sm border border-border p-6 sticky top-24">
+              <div className="bg-white rounded-lg shadow-sm border border-border p-6 sticky top-24 sidebar-placeholder-en">
                 <h3 className="text-lg font-bold text-primary mb-4 flex items-center gap-2">
                   <FileText className="w-5 h-5 text-accent-dark" />
                   Past Editions
@@ -264,7 +180,14 @@ export default function EnglishPastorsDeskPage() {
                   <Link href="/en/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Edition 4</p>
+                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Edition 5</p>
+                      <p className="text-xs text-stone-500">Aug 2026</p>
+                    </div>
+                  </Link>
+                  <Link href="/en/pastors-desk/archive/august/edition-4" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 4</p>
                       <p className="text-xs text-stone-500">Aug 2026</p>
                     </div>
                   </Link>
@@ -292,7 +215,6 @@ export default function EnglishPastorsDeskPage() {
                     </div>
                   </Link>
                 </div>
-
                 <div className="mt-8 pt-8 border-t border-stone-200">
                   <h4 className="font-bold text-sm text-primary mb-3">Subscribe</h4>
                   <NewsletterForm />
