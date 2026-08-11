@@ -163,8 +163,18 @@ export const Footer: React.FC = () => {
 
         </div>
 
+        {/* Registration Details */}
+        <div className="border-t border-[#1E293B] mt-12 pt-8 text-center text-xs text-stone-400">
+          <p className="max-w-4xl mx-auto leading-relaxed">
+            {isEnglish 
+              ? "Vaarthai Tamil Church operates under Vaarthai Ministries Inc., an incorporated association registered in Queensland (IA58572). We are a registered charity with the Australian Charities and Not-for-profits Commission (ACNC). ABN: 86 636 931 539."
+              : "வார்த்தை தமிழ் திருச்சபையானது, குயின்ஸ்லாந்தில் பதிவுசெய்யப்பட்ட (IA58572) வார்த்தை மினிஸ்ட்ரிஸ் இன்க். கீழ் செயல்படுகிறது. நாங்கள் ஆஸ்திரேலிய அறக்கட்டளைகள் மற்றும் இலாப நோக்கமற்ற ஆணையத்தில் (ACNC) பதிவுசெய்யப்பட்ட ஒரு தொண்டு நிறுவனமாகும். ABN: 86 636 931 539."
+            }
+          </p>
+        </div>
+
         {/* Divider & Copyright */}
-        <div className="border-t border-[#1E293B] mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
+        <div className="border-t border-[#1E293B] mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
           <p>© {currentYear} {churchConfig.name}. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href={`${basePrefix}/privacy`} className="hover:text-white transition-colors">Privacy Policy</Link>

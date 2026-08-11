@@ -264,6 +264,24 @@ export default function EnglishAboutPage() {
         </div>
       </section>
 
+      {/* 8. Church Governance */}
+      <section className="bg-neutral-light/50 border-t border-border py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary mb-2">
+            <ShieldAlert className="w-6 h-6" />
+          </div>
+          <h2 className="font-serif text-3xl font-black text-primary">Church Governance</h2>
+          <div className="text-stone-700 leading-relaxed text-sm md:text-base space-y-4 max-w-3xl mx-auto">
+            <p>
+              Vaarthai Tamil Church operates under Vaarthai Ministries Inc., an incorporated association registered in Queensland (IA58572). We are governed by a Management Committee (Board) elected by our members in accordance with the Associations Incorporation Act 1981 (Qld).
+            </p>
+            <p>
+              We are a registered charity with the Australian Charities and Not-for-profits Commission (ACNC). Our finances are independently audited annually, and we hold comprehensive Public Liability and Professional Indemnity insurance.
+            </p>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

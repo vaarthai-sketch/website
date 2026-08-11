@@ -63,7 +63,7 @@ export default function EnglishGivePage() {
             </div>
             <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mt-auto">
               <p className="text-xs text-emerald-800 leading-relaxed font-medium">
-                ✓ All financial contributions and transactions are handled with 100% integrity and godly stewardship.
+                ✓ Vaarthai Tamil Church operates under Vaarthai Ministries Inc., an incorporated association registered in Queensland (IA58572). We are a registered charity with the Australian Charities and Not-for-profits Commission (ACNC). Our finances are independently audited annually.
               </p>
             </div>
           </div>

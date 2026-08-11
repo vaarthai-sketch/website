@@ -21,12 +21,41 @@ export interface ChurchEvent {
   isFeatured?: boolean;
 }
 
+function getNextWednesday(): string {
+  const today = new Date();
+  const d = new Date(today);
+  d.setDate(today.getDate() + ((7 + 3 - today.getDay()) % 7));
+  if (today.getDay() === 3) d.setDate(d.getDate() + 7);
+  return d.toISOString().split('T')[0];
+}
+
+function getNextFourthSunday(): string {
+  const today = new Date();
+  let y = today.getFullYear();
+  let m = today.getMonth();
+  
+  const getFourth = (year: number, month: number) => {
+    const d = new Date(year, month, 1);
+    const offset = (7 - d.getDay()) % 7;
+    d.setDate(1 + offset + 21);
+    return d;
+  };
+  
+  let fs = getFourth(y, m);
+  if (today > fs) {
+    if (m === 11) { m = 0; y++; }
+    else m++;
+    fs = getFourth(y, m);
+  }
+  return fs.toISOString().split('T')[0];
+}
+
 export const eventsData: ChurchEvent[] = [
   {
     id: "mid-week-online-prayer",
     title: "வாராந்திர ஆன்லைன் ஜெபம் (Mid-Week Online Prayer)",
     englishTitle: "Mid-Week Online Prayer",
-    date: "2026-07-22",
+    date: getNextWednesday(),
     time: "புதன்கிழமை இரவுகள்",
     englishTime: "Wednesday Nights",
     location: "ஆன்லைன் (Zoom வழியாக - இணைப்பிற்கு எங்களைத் தொடர்பு கொள்ளவும்)",
@@ -47,7 +76,7 @@ export const eventsData: ChurchEvent[] = [
     id: "monthly-after-church-lunch",
     title: "மாதாந்திர ஆராதனைக்குப் பிந்தைய மதிய உணவு (Monthly After-Church Lunch)",
     englishTitle: "Monthly After-Church Lunch",
-    date: "2026-07-26",
+    date: getNextFourthSunday(),
     time: "ஒவ்வொரு மாதமும் 4-வது வாரம் (ஞாயிறு ஆராதனை முடிந்த உடனே)",
     englishTime: "The 4th week of each month (Immediately following the Sunday Service)",
     location: "லயன்ஸ் பார்க் (Lions Park), ஸ்பிரிங்ஃபீல்ட் லேக்ஸ்",

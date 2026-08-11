@@ -270,6 +270,24 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* 8. Church Governance */}
+      <section className="bg-neutral-light/50 border-t border-border py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary mb-2">
+            <ShieldAlert className="w-6 h-6" />
+          </div>
+          <h2 className="font-serif text-3xl font-black text-primary">நிர்வாகம் மற்றும் கட்டமைப்பு (Church Governance)</h2>
+          <div className="text-stone-700 leading-relaxed text-sm md:text-base space-y-4 max-w-3xl mx-auto">
+            <p>
+              வார்த்தை தமிழ் திருச்சபையானது, குயின்ஸ்லாந்தில் பதிவுசெய்யப்பட்ட (IA58572) வார்த்தை மினிஸ்ட்ரிஸ் இன்க். கீழ் செயல்படுகிறது. 1981 சங்கங்கள் ஒருங்கிணைப்புச் சட்டத்தின் (Qld) படி எங்கள் உறுப்பினர்களால் தேர்ந்தெடுக்கப்பட்ட நிர்வாகக் குழுவால் நாங்கள் நிர்வகிக்கப்படுகிறோம்.
+            </p>
+            <p>
+              நாங்கள் ஆஸ்திரேலிய அறக்கட்டளைகள் மற்றும் இலாப நோக்கமற்ற ஆணையத்தில் (ACNC) பதிவுசெய்யப்பட்ட ஒரு தொண்டு நிறுவனமாகும். எங்கள் நிதியறிக்கைகள் ஆண்டுதோறும் சுயாதீனமாகத் தணிக்கை செய்யப்படுகின்றன.
+            </p>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

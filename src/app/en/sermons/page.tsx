@@ -1,7 +1,7 @@
 "use client";
 
-import SermonsPage from "@/app/sermons/page";
+import { SermonsView } from "@/app/sermons/SermonsContent";
 
 export default function EnglishSermonsPage() {
-  return <SermonsPage />;
+  return <SermonsView isEn={true} />;
 }

@@ -37,8 +37,8 @@ const ImagePlaceholder: React.FC<{ type: string; title: string; subtitle?: strin
   );
 };
 
-export const SermonCard: React.FC<{ sermon: Sermon }> = ({ sermon }) => {
-  const formattedDate = new Date(sermon.date).toLocaleDateString("en-US", {
+export const SermonCard: React.FC<{ sermon: Sermon; isEn?: boolean }> = ({ sermon, isEn }) => {
+  const formattedDate = new Date(sermon.date).toLocaleDateString(isEn ? "en-US" : "ta-IN", {
     month: "long",
     day: "numeric",
     year: "numeric"
@@ -46,21 +46,21 @@ export const SermonCard: React.FC<{ sermon: Sermon }> = ({ sermon }) => {
 
   return (
     <div className="group bg-white rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
-      <Link href={`/sermons/${sermon.id}`} className="block aspect-video w-full relative overflow-hidden bg-neutral-light">
+      <Link href={isEn ? `/en/sermons/${sermon.id}` : `/sermons/${sermon.id}`} className="block aspect-video w-full relative overflow-hidden bg-neutral-light">
         {sermon.thumbnail && sermon.thumbnail.startsWith("/") ? (
           <img 
             src={sermon.thumbnail} 
-            alt={sermon.title} 
+            alt={isEn ? (sermon.englishTitle || sermon.title) : sermon.title} 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
           />
         ) : sermon.youtubeId ? (
           <img 
             src={`https://img.youtube.com/vi/${sermon.youtubeId}/maxresdefault.jpg`} 
-            alt={sermon.title} 
+            alt={isEn ? (sermon.englishTitle || sermon.title) : sermon.title} 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
           />
         ) : (
-          <ImagePlaceholder type="sermon" title={sermon.title} />
+          <ImagePlaceholder type="sermon" title={isEn ? (sermon.englishTitle || sermon.title) : sermon.title} />
         )}
         <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded flex items-center gap-1 font-mono">
           <Clock className="w-3 h-3" />
@@ -70,35 +70,35 @@ export const SermonCard: React.FC<{ sermon: Sermon }> = ({ sermon }) => {
       
       <div className="p-5 flex flex-col flex-grow">
         <div className="flex justify-between items-center gap-2 mb-2 text-xs font-bold text-accent-dark uppercase tracking-wider">
-          <span>{sermon.series}</span>
+          <span>{isEn ? (sermon.englishSeries || sermon.series) : sermon.series}</span>
         </div>
         
         <h3 className="font-serif text-xl font-bold text-primary group-hover:text-primary-light transition-colors line-clamp-1 mb-2">
-          <Link href={`/sermons/${sermon.id}`}>
-            {sermon.title}
+          <Link href={isEn ? `/en/sermons/${sermon.id}` : `/sermons/${sermon.id}`}>
+            {isEn ? (sermon.englishTitle || sermon.title) : sermon.title}
           </Link>
         </h3>
         
         <p className="text-sm text-neutral-muted line-clamp-2 mb-4 flex-grow">
-          {sermon.description}
+          {isEn ? (sermon.englishDescription || sermon.description) : sermon.description}
         </p>
 
         <div className="border-t border-border pt-4 mt-auto flex flex-col gap-1.5 text-xs text-stone-600">
           <div className="flex items-center gap-2">
             <User className="w-3.5 h-3.5 text-accent" />
-            <span>{sermon.speaker}</span>
+            <span>{isEn ? (sermon.englishSpeaker || sermon.speaker) : sermon.speaker}</span>
           </div>
           <div className="flex items-center gap-2">
             <BookOpen className="w-3.5 h-3.5 text-accent" />
-            <span className="font-medium">{sermon.scriptureReference}</span>
+            <span className="font-medium">{isEn ? (sermon.englishScriptureReference || sermon.scriptureReference) : sermon.scriptureReference}</span>
           </div>
           <div className="flex justify-between items-center mt-2 pt-2 border-t border-dashed border-border/80">
             <span>{formattedDate}</span>
             <Link 
-              href={`/sermons/${sermon.id}`}
+              href={isEn ? `/en/sermons/${sermon.id}` : `/sermons/${sermon.id}`}
               className="text-primary hover:text-accent font-semibold inline-flex items-center gap-1 transition-colors"
             >
-              Watch <ArrowRight className="w-3 h-3" />
+              {isEn ? "Watch" : "பார்க்க"} <ArrowRight className="w-3 h-3" />
             </Link>
           </div>
         </div>
@@ -291,7 +291,7 @@ export const MinistryCard: React.FC<{ ministry: Ministry; basePrefix?: string }>
           {ministry.schedule && (
             <div className="flex items-center gap-2">
               <Clock className="w-3.5 h-3.5 text-accent" />
-              <span className="truncate">{ministry.schedule}</span>
+              <span className="truncate">{isEn ? ((ministry as any).englishSchedule || ministry.schedule) : ministry.schedule}</span>
             </div>
           )}
           <div className="flex justify-end pt-2">
@@ -299,7 +299,7 @@ export const MinistryCard: React.FC<{ ministry: Ministry; basePrefix?: string }>
               href={`${basePrefix}/ministries/${ministry.id}`}
               className="text-primary hover:text-accent font-semibold inline-flex items-center gap-1 transition-colors text-xs"
             >
-              Learn More <ArrowRight className="w-3 h-3" />
+              {isEn ? "Details" : "மேலும் அறிய"} <ArrowRight className="w-3 h-3" />
             </Link>
           </div>
         </div>
