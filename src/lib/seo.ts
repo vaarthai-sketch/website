@@ -21,7 +21,7 @@ export function buildMetadata({
   path,
   title,
   description,
-  image,
+  image = '/opengraph-image.jpg',
 }: {
   locale: Locale;
   path: string;
