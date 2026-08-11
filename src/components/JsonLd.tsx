@@ -18,9 +18,9 @@ export const JsonLd: React.FC<JsonLdProps> = ({ type, data }) => {
       "name": "Vaarthai Evangelical Church Inc",
       "alternateName": ["Tamil Church in Brisbane", "Vaarthai Tamil Church", "தமிழ் சபை", "Brisbane Tamil Church", "Tamil Church Family"],
       "description": "Vaarthai Evangelical Church Inc is a Tamil Church in Brisbane. We are a Tamil Church Family dedicated to Tamil Worship, Tamil Gospel, and Tamil Christian fellowship.",
-      "url": "https://vaarthaichurch.org", // Mock production URL
-      "logo": "https://vaarthaichurch.org/logo.png",
-      "image": "https://vaarthaichurch.org/og-image.jpg",
+      "url": "https://vaarthai.org.au", // Mock production URL
+      "logo": "https://vaarthai.org.au/logo.png",
+      "image": "https://vaarthai.org.au/og-image.jpg",
       "tagline": churchConfig.tagline,
       "denomination": "Tamil Evangelical Church",
       "address": {
@@ -50,7 +50,7 @@ export const JsonLd: React.FC<JsonLdProps> = ({ type, data }) => {
       "name": sermon.title,
       "description": sermon.description,
       "thumbnailUrl": [
-        `https://vaarthaichurch.org/images/thumbnails/${sermon.thumbnail}.jpg`
+        `https://vaarthai.org.au/images/thumbnails/${sermon.thumbnail}.jpg`
       ],
       "uploadDate": sermon.date,
       "duration": `PT${sermon.duration.replace(":", "M")}S`,
@@ -94,7 +94,7 @@ export const JsonLd: React.FC<JsonLdProps> = ({ type, data }) => {
         }
       },
       "image": [
-        `https://vaarthaichurch.org/images/events/${event.image}.jpg`
+        `https://vaarthai.org.au/images/events/${event.image}.jpg`
       ],
       "organizer": {
         "@type": "Person",

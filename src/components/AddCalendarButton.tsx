@@ -22,7 +22,7 @@ export const AddCalendarButton: React.FC<AddCalendarButtonProps> = ({ event }) =
       "VERSION:2.0",
       "PRODID:-//Vaarthai Evangelical Church Inc//Events Calendar//EN",
       "BEGIN:VEVENT",
-      `UID:${event.id}@vaarthaichurch.org`,
+      `UID:${event.id}@vaarthai.org.au`,
       `DTSTAMP:${dateFormatted}T000000Z`,
       `DTSTART:${dateFormatted}T180000Z`, // Default starting time block
       `DTEND:${dateFormatted}T200000Z`,
