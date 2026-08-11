@@ -64,7 +64,7 @@ export default function EnglishPastorsDeskPage() {
 
                   <h3 className="text-xl font-bold text-stone-800">An earthquake in Colombia.</h3>
                   <p>
-                    My body trembled as I read the news. On Monday morning, 10 August, a magnitude 7.4 earthquake struck western Colombia. As of Tuesday morning, government reports place the death toll at 111, with more than 1,600 buildings damaged. It is the strongest earthquake recorded in that country in a decade.
+                    My body trembled as I read the news. On Monday morning, 10 August, a magnitude 7.4 earthquake struck western Colombia. As of Tuesday morning (in Australia), government reports place the death toll at 111, with more than 1,600 buildings damaged. It is the strongest earthquake recorded in that country in a decade.
                   </p>
                   <p>
                     One survivor describes stepping out of a lift just as he felt the building begin to move. After that, everything he saw was falling, and all he could hear was the sound of the earth splitting open. The whole thing lasted around fifty seconds — but he says it felt like eternity.
