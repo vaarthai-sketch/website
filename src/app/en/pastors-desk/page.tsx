@@ -10,6 +10,7 @@ export const metadata = buildMetadata({
   path: '/en/pastors-desk',
   title: "VEC-NL 2026-08 Edition 5 - From the Pastor's Desk | Vaarthai Evangelical Church",
   description: `Weekly newsletter and updates from the Pastor at ${churchConfig.name}.`,
+  image: "/colombia-earthquake.jpg",
 });
 
 export default function EnglishPastorsDeskPage() {
