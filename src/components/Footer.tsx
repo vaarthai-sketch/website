@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
           
           {/* Column 1: Brand & Bio */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href={isEnglish ? "/en" : "/"} className="flex items-center gap-2">
               <div className="w-9 h-9 rounded bg-white flex items-center justify-center overflow-hidden shrink-0 shadow-sm p-0.5">
                 <img 
                   src="/logo.png" 

@@ -12,6 +12,7 @@ export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const isEnglish = pathname === "/en" || pathname?.startsWith("/en/");
 
   // Close mobile menu on path changes
   useEffect(() => {
@@ -58,7 +59,7 @@ export const Header: React.FC = () => {
           
           {/* Logo / Brand */}
           <Link 
-            href="/" 
+            href={isEnglish ? "/en" : "/"} 
             className="flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
           >
             <div className="w-12 h-12 md:w-14 md:h-14 rounded bg-white flex items-center justify-center overflow-hidden shrink-0 shadow-sm border border-border p-0.5">
