@@ -33,7 +33,7 @@ export const ministriesData: Ministry[] = [
     englishName: "Vaarthai Kids Ministry",
     name: "வார்த்தை சிறுவர் ஊழியம்",
     purpose: "வார்த்தை திருச்சபையில், 4 முதல் 12 வயது வரையிலான சிறுவர்களுக்கு பாதுகாப்பான, அன்பான மற்றும் மகிழ்ச்சியான சூழலை நாங்கள் வழங்குகிறோம்.",
-    englishPurpose: "At Varthai Church, we provide a safe, welcoming, and joyful environment for children ages 4 to 12.",
+    englishPurpose: "At Vaarthai Church, we provide a safe, welcoming, and joyful environment for children ages 4 to 12.",
     audience: "4 முதல் 12 வயது சிறுவர்கள்",
     englishAudience: "Children ages 4 to 12",
     schedule: "ஒவ்வொரு ஞாயிற்றுக்கிழமையும் காலை 10:30 மணிக்கு",
@@ -52,7 +52,7 @@ export const ministriesData: Ministry[] = [
     englishScripture: "\"But Jesus said, 'Let the little children come to Me, and do not forbid them; for of such is the kingdom of heaven.'\"",
     englishScriptureReference: "Matthew 19:14",
     description: "வார்த்தை திருச்சபையில், 4 முதல் 12 வயது வரையிலான சிறுவர்களுக்கு பாதுகாப்பான, அன்பான மற்றும் மகிழ்ச்சியான சூழலை நாங்கள் வழங்குகிறோம். எங்கள் சிறுவர் ஊழியம், பிள்ளைகள் விசுவாசத்தில் வளரவும், இயேசுவுடன் ஆழமான தனிப்பட்ட உறவை ஏற்படுத்திக்கொள்ளவும் அர்ப்பணிக்கப்பட்டுள்ளது. வயதுக்கு ஏற்ற வேதாகமப் போதனைகள், ஆக்கப்பூர்வமான கலை மற்றும் கைவினைப் பொருள்கள், உற்சாகமான ஆராதனை மற்றும் ஈர்க்கக்கூடிய விளையாட்டுகள் மூலம் தேவனுடைய வார்த்தையை உயிரோட்டமாக மாற்றுகிறோம்—கிறிஸ்துவைப் பற்றி அறிந்துகொள்வதை மகிழ்ச்சி நிறைந்த ஒரு பயணமாக ஆக்குகிறோம்!",
-    englishDescription: "At Varthai Church, we provide a safe, welcoming, and joyful environment for children ages 4 to 12. Our Kids Ministry is dedicated to helping children grow in their faith and develop a deep, personal relationship with Jesus. We bring God's Word to life through age-appropriate Bible teaching, creative arts and crafts, vibrant worship, and engaging games—making learning about Christ a fun-filled adventure!",
+    englishDescription: "At Vaarthai Church, we provide a safe, welcoming, and joyful environment for children ages 4 to 12. Our Kids Ministry is dedicated to helping children grow in their faith and develop a deep, personal relationship with Jesus. We bring God's Word to life through age-appropriate Bible teaching, creative arts and crafts, vibrant worship, and engaging games—making learning about Christ a fun-filled adventure!",
     features: [
       "வயதுக்கு ஏற்ற வேதாகமப் போதனைகள் மற்றும் கதைகள்",
       "ஆக்கப்பூர்வமான கலை, கைவினைப் பொருள்கள் மற்றும் உற்சாகமான ஆராதனை",

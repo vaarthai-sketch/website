@@ -198,8 +198,8 @@ export function SermonsView({ isEn = false }: { isEn?: boolean }) {
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider text-accent bg-accent/10 border border-accent/20">
                     {series.count} {isEn ? "messages" : "செய்திகள்"}
                   </span>
-                <h3 className="font-serif text-xl font-bold text-primary">{series.title}</h3>
-                <p className="text-xs text-stone-600 leading-relaxed">{series.description}</p>
+                <h3 className="font-serif text-xl font-bold text-primary">{isEn ? ((series as any).englishTitle || series.title) : series.title}</h3>
+                <p className="text-xs text-stone-600 leading-relaxed">{isEn ? ((series as any).englishDescription || series.description) : series.description}</p>
               </div>
               <div className="pt-6">
                 <button
