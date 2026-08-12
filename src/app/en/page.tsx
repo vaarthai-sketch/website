@@ -39,12 +39,18 @@ export default function EnglishHomePage() {
             
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               
-              <span className="inline-flex items-center gap-2 px-4.5 py-2 rounded-full text-sm sm:text-base font-extrabold text-accent-light bg-accent/15 border border-accent/30 shadow-sm backdrop-blur-sm transition-all hover:bg-accent/20 hover:scale-[1.02] duration-300 select-none">
-                <svg className="w-4 h-4 text-accent fill-current shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11 2h2v7h6v2h-6v11h-2v-11h-6v-2h6V2z" />
-                </svg>
-                A Warm Welcome to Vaarthai Evangelical Church Inc | Tamil Church in Brisbane
-              </span>
+              <div className="flex flex-col items-center lg:items-start justify-center lg:justify-start gap-3">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs sm:text-sm font-bold text-emerald-300 bg-emerald-900/50 border border-emerald-500/40 shadow-sm backdrop-blur-sm select-none tracking-wide">
+                  <svg className="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  Registered Not-for-Profit Charity
+                </span>
+                <span className="inline-flex items-center gap-2 px-4.5 py-2 rounded-full text-sm sm:text-base font-extrabold text-accent-light bg-accent/15 border border-accent/30 shadow-sm backdrop-blur-sm transition-all hover:bg-accent/20 hover:scale-[1.02] duration-300 select-none">
+                  <svg className="w-4 h-4 text-accent fill-current shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 2h2v7h6v2h-6v11h-2v-11h-6v-2h6V2z" />
+                  </svg>
+                  A Warm Welcome to Vaarthai Evangelical Church Inc | Tamil Church in Brisbane
+                </span>
+              </div>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide leading-[1.3] text-white">
                 <span className="block mb-1 sm:mb-2">Hearing the Word.</span>
                 <span className="block text-accent mb-1 sm:mb-2">Living the Word.</span>
