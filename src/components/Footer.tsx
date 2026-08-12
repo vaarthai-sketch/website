@@ -166,10 +166,7 @@ export const Footer: React.FC = () => {
         {/* Registration Details */}
         <div className="border-t border-[#1E293B] mt-12 pt-8 text-center text-xs text-stone-400">
           <p className="max-w-4xl mx-auto leading-relaxed">
-            {isEnglish 
-              ? "Vaarthai Tamil Church operates under Vaarthai Ministries Inc., an incorporated association registered in Queensland (IA58572). We are a registered charity with the Australian Charities and Not-for-profits Commission (ACNC). ABN: 86 636 931 539."
-              : "வார்த்தை தமிழ் திருச்சபையானது, குயின்ஸ்லாந்தில் பதிவுசெய்யப்பட்ட (IA58572) வார்த்தை மினிஸ்ட்ரிஸ் இன்க். கீழ் செயல்படுகிறது. நாங்கள் ஆஸ்திரேலிய அறக்கட்டளைகள் மற்றும் இலாப நோக்கமற்ற ஆணையத்தில் (ACNC) பதிவுசெய்யப்பட்ட ஒரு தொண்டு நிறுவனமாகும். ABN: 86 636 931 539."
-            }
+            Vaarthai Evangelical Church Inc is an association incorporated in Queensland (registration no. IA58572) and a charity registered with the Australian Charities and Not-for-profits Commission (ACNC). ABN 86 636 931 539.
           </p>
         </div>
 
