@@ -32,7 +32,6 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isEnglish = pathname === "/en" || pathname.startsWith("/en/");
   const basePrefix = isEnglish ? "/en" : "";
 
   const navLinks = [
