@@ -273,10 +273,16 @@ export default function EnglishAboutPage() {
           <h2 className="font-serif text-3xl font-black text-primary">Church Governance</h2>
           <div className="text-stone-700 leading-relaxed text-sm md:text-base space-y-4 max-w-3xl mx-auto">
             <p>
-              Vaarthai Tamil Church operates under Vaarthai Ministries Inc., an incorporated association registered in Queensland (IA58572). We are governed by a Management Committee (Board) elected by our members in accordance with the Associations Incorporation Act 1981 (Qld).
+              Vaarthai Evangelical Church Inc is an association incorporated in Queensland under the Associations Incorporation Act 1981 (registration no. IA58572), and a charity registered with the Australian Charities and Not-for-profits Commission (ACNC). ABN 86 636 931 539.
             </p>
             <p>
-              We are a registered charity with the Australian Charities and Not-for-profits Commission (ACNC). Our finances are independently audited annually, and we hold comprehensive Public Liability and Professional Indemnity insurance.
+              The church is governed by a Management Committee elected by its members, comprising a President, Secretary and Treasurer. We operate under our registered Constitution, our financial policies, and our Child Safety and Wellbeing Policy, and we hold public liability insurance.
+            </p>
+            <p>
+              We comply with Queensland&apos;s Child Safe Standards. Everyone serving in our children&apos;s and youth ministries is required to hold a current Blue Card before commencing.
+            </p>
+            <p>
+              Copies of our governing documents are available on request at <a href="mailto:info@vaarthai.org.au" className="text-emerald-700 hover:underline">info@vaarthai.org.au</a>.
             </p>
           </div>
         </div>

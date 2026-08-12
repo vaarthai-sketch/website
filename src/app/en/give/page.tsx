@@ -57,14 +57,12 @@ export default function EnglishGivePage() {
                 <ShieldCheck className="w-6 h-6 text-accent shrink-0" />
                 <span>Financial Transparency & Accountability</span>
               </h3>
-              <p className="text-stone-700 leading-relaxed text-sm">
-                Our church&apos;s financial stewardship is overseen with complete transparency by our leadership board and external independent auditors. Annual financial reports are presented regularly to our church members.
-              </p>
-            </div>
-            <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mt-auto">
-              <p className="text-xs text-emerald-800 leading-relaxed font-medium">
-                ✓ Vaarthai Tamil Church operates under Vaarthai Ministries Inc., an incorporated association registered in Queensland (IA58572). We are a registered charity with the Australian Charities and Not-for-profits Commission (ACNC). Our finances are independently audited annually.
-              </p>
+              <div className="text-stone-700 leading-relaxed text-sm space-y-3">
+                <p>Vaarthai Evangelical Church Inc is an association incorporated in Queensland (registration no. IA58572) and a charity registered with the Australian Charities and Not-for-profits Commission (ACNC). ABN 86 636 931 539.</p>
+                <p>All offerings are received into the church&apos;s bank account, and every payment requires authorisation by two members of the Management Committee. Our Treasurer maintains the financial records and reports to the Committee at each meeting. A full financial statement is presented to members at the Annual General Meeting.</p>
+                <p>As a registered charity, we lodge an Annual Information Statement with the ACNC each year. Our charity record, including our governing documents and financial reporting, is publicly available on the ACNC Charity Register.</p>
+                <p>Questions about giving or church finances are welcome — contact our Treasurer at <a href="mailto:treasurer@vaarthai.org.au" className="text-emerald-700 hover:underline font-medium">treasurer@vaarthai.org.au</a>.</p>
+              </div>
             </div>
           </div>
 
@@ -102,7 +100,7 @@ export default function EnglishGivePage() {
                   <span>Automated Recurring Giving & Receipts</span>
                 </div>
                 <p className="text-stone-600 leading-relaxed">
-                  Through your secure online profile, you can easily set up automated recurring giving (weekly, bi-weekly, or monthly) and download your annual tax-deductible giving statements at any time.
+                  Through your secure online profile, you can set up automated recurring giving (weekly, fortnightly, or monthly) and download your annual giving statement at any time.
                 </p>
               </div>
             </div>
