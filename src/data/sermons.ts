@@ -24,6 +24,23 @@ export interface Sermon {
 
 export const sermonsData: Sermon[] = [
   {
+    id: "from-self-reliance-to-god-reliance",
+    title: "சுய சார்பிலிருந்து, கடவுளைச் சார்ந்து | From self-reliance to God-reliance",
+    speaker: "Bro Varghese Rayar",
+    date: "2026-08-16",
+    scriptureReference: "Special Message",
+    series: "சகோ. வர்கீஸ் ராயர்",
+    topic: "Faith",
+    description: "சுய சார்பிலிருந்து, கடவுளைச் சார்ந்து வாழ அழைக்கும் ஒரு சிறப்புச் செய்தி.",
+    englishDescription: "A special message calling us to move from self-reliance to God-reliance.",
+    videoPlaceholder: "சுய சார்பிலிருந்து, கடவுளைச் சார்ந்து வீடியோ",
+    youtubeId: "UBypdGSSxfY",
+    audioUrl: "#",
+    notesUrl: "#",
+    duration: "45:00",
+    thumbnail: "",
+  },
+  {
     id: "the-good-hand-of-my-god-part-3",
     title: "என் தேவனுடைய நல்ல கரம் (பாகம் 3) | The Good Hand of My God (Part 3)",
     speaker: "Ps Weslyn",
@@ -77,6 +94,14 @@ export const sermonsData: Sermon[] = [
 ];
 
 export const sermonSeries = [
+  {
+    title: "சகோ. வர்கீஸ் ராயர்",
+    englishTitle: "Bro Varghese Rayar",
+    description: "சகோதரர் வர்கீஸ் ராயர் அவர்கள் பகிர்ந்துகொண்ட சிறப்பு செய்திகள்.",
+    englishDescription: "Special messages shared by Brother Varghese Rayar.",
+    count: 1,
+    image: "series-guest"
+  },
   {
     title: "கர்த்தருடைய கை",
     englishTitle: "The Hand of the Lord",
