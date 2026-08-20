@@ -24,6 +24,23 @@ export interface Sermon {
 
 export const sermonsData: Sermon[] = [
   {
+    id: "the-good-hand-of-my-god-part-3",
+    title: "என் தேவனுடைய நல்ல கரம் (பாகம் 3) | The Good Hand of My God (Part 3)",
+    speaker: "Ps Weslyn",
+    date: "2026-08-09",
+    scriptureReference: "நெகேமியா",
+    series: "கர்த்தருடைய கை",
+    topic: "தேவனுடைய கரம்",
+    description: "நெகேமியாவின் வாழ்க்கையில் தேவனுடைய நல்ல கரம் எப்படிச் செயல்பட்டது என்பதை இந்தச் செய்தியில் தியானிக்கிறோம். 'கர்த்தருடைய கை' தொடரின் மூன்றாம் பகுதி.",
+    englishDescription: "In this sermon, we meditate on how the good hand of God worked in the life of Nehemiah. This is the third part of 'The Hand of the Lord' series.",
+    videoPlaceholder: "என் தேவனுடைய நல்ல கரம் பிரசங்க வீடியோ (பாகம் 3)",
+    youtubeId: "9wroQbh-jbg",
+    audioUrl: "#",
+    notesUrl: "#",
+    duration: "45:00",
+    thumbnail: "",
+  },
+  {
     id: "the-good-hand-of-my-god",
     title: "என் தேவனுடைய நல்ல கரம் | The Good Hand of My God",
     speaker: "Ps Weslyn",
@@ -65,7 +82,7 @@ export const sermonSeries = [
     englishTitle: "The Hand of the Lord",
     description: "அன்றாட வாழ்வில் அமைதி, ஜெபம் மற்றும் எளிய விசுவாச பழக்கங்களைப் பற்றிய தொடர் சொற்பொழிவுகள்.",
     englishDescription: "A sermon series about peace, prayer, and simple habits of faith in everyday life.",
-    count: 2,
+    count: 3,
     image: "series-selah"
   }
 ];
