@@ -38,7 +38,7 @@ export const sermonsData: Sermon[] = [
     audioUrl: "#",
     notesUrl: "#",
     duration: "45:00",
-    thumbnail: "",
+    thumbnail: "/varghese-rayar-thumb.jpg",
   },
   {
     id: "the-good-hand-of-my-god-part-3",
