@@ -37,7 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Dynamic Event routes
   const eventRoutes: MetadataRoute.Sitemap = churchEvents.map((event) => ({
     url: `${SITE}/events/${event.id}`,
-    lastModified: new Date(event.startDate),
+    lastModified: new Date(event.date),
     changeFrequency: 'weekly',
     priority: 0.7,
   }));
