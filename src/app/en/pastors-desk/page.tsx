@@ -70,9 +70,9 @@ export default function EnglishPastorsDeskPage() {
                 prose-li:text-stone-600
                 prose-a:text-accent hover:prose-a:text-accent-dark">
                 
-                <blockquote>
+                <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
                   <p>“If an axe has grown blunt and its edge has not been sharpened, more strength will be needed to cut with it. But wisdom brings success.”</p>
-                  <footer>— Ecclesiastes 10:10</footer>
+                  <p className="mt-2 text-right text-sm">— Ecclesiastes 10:10</p>
                 </blockquote>
 
                 <p>The American President Abraham Lincoln once said: “Give me six hours to chop down a tree, and I will spend the first four sharpening the axe.” These words are simple, but they carry deep wisdom.</p>
@@ -81,9 +81,9 @@ export default function EnglishPastorsDeskPage() {
 
                 <p>But what if the axe is blunt?</p>
 
-                <blockquote>
+                <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
                   <p>“If the iron be blunt, and he do not whet the edge, then must he put to more strength…”</p>
-                  <footer>— Ecclesiastes 10:10</footer>
+                  <p className="mt-2 text-right text-sm">— Ecclesiastes 10:10</p>
                 </blockquote>
 
                 <p>Sometimes the problem is not the size of the tree; it is the condition of the axe.</p>
@@ -94,9 +94,9 @@ export default function EnglishPastorsDeskPage() {
 
                 <p>One of the most important things that sharpens a believer is the Word of God.</p>
 
-                <blockquote>
+                <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
                   <p>“Be transformed by the renewing of your mind.”</p>
-                  <footer>— Romans 12:2</footer>
+                  <p className="mt-2 text-right text-sm">— Romans 12:2</p>
                 </blockquote>
 
                 <p>Every day, something is shaping our minds. News, social media, worries, disappointments, the pressures of life — all of them begin to crowd in on us the moment we wake in the morning.</p>

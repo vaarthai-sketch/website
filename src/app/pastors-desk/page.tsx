@@ -70,11 +70,11 @@ export default function TamilPastorsDeskPage() {
                 prose-li:text-stone-600
                 prose-a:text-accent hover:prose-a:text-accent-dark">
                 
-                <h2>Sharpen the Axe</h2>
+                <h3 className="text-xl font-bold text-stone-800">Sharpen the Axe</h3>
 
-                <blockquote>
+                <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
                   <p>“ஒரு கோடரி மழுங்கிப் போய் அதன் முனை தீட்டப்படாமல் இருந்தால், அதைக்கொண்டு வெட்ட அதிக பலம் தேவைப்படும். ஆனால் ஞானமோ வெற்றியைக் கொண்டுவரும்..”</p>
-                  <footer>— பிரசங்கி 10:10</footer>
+                  <p className="mt-2 text-right text-sm">— பிரசங்கி 10:10</p>
                 </blockquote>
 
                 <p>அமெரிக்க அதிபர் ஆபிரகாம் லிங்கன் ஒருமுறை சொன்னார்: "ஒரு மரத்தை வெட்ட எனக்கு ஆறு மணி நேரம் தந்தால், நான் முதல் நான்கு மணி நேரத்தைக் கோடரியைக் கூர்மையாக்குவதில் செலவிடுவேன்." இந்த வார்த்தைகள் எளிமையானவை, ஆனால் ஆழமான ஞானத்தை உள்ளடக்கியவை.</p>
@@ -83,9 +83,9 @@ export default function TamilPastorsDeskPage() {
 
                 <p>ஆனால் கோடரி மழுங்கியிருந்தால்?</p>
 
-                <blockquote>
+                <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
                   <p>“இரும்பு மழுங்கலாயிருக்க, ஒருவன் அதின் முனையைத் தீட்டாமற்போனால், அதிக பலத்தைப் பிரயோகம்பண்ண வேண்டியதாகும்…”</p>
-                  <footer>— பிரசங்கி 10:10</footer>
+                  <p className="mt-2 text-right text-sm">— பிரசங்கி 10:10</p>
                 </blockquote>
 
                 <p>சில நேரங்களில் பிரச்சனை மரத்தின் அளவில் இல்லை; கோடரியின் நிலையில்தான் இருக்கிறது.</p>
@@ -96,9 +96,9 @@ export default function TamilPastorsDeskPage() {
 
                 <p>ஒரு விசுவாசியைத் தீட்டுகிற மிக முக்கியமான காரியங்களில் ஒன்று தேவனுடைய வார்த்தை.</p>
 
-                <blockquote>
+                <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
                   <p>“உங்கள் மனம் புதிதாகிறதினாலே மறுரூபமாகுங்கள்.”</p>
-                  <footer>— ரோமர் 12:2</footer>
+                  <p className="mt-2 text-right text-sm">— ரோமர் 12:2</p>
                 </blockquote>
 
                 <p>ஒவ்வொரு நாளும் ஏதோ ஒன்று நம் மனதை வடிவமைத்துக்கொண்டிருக்கிறது.. செய்திகள், சமூக ஊடகங்கள், கவலைகள், ஏமாற்றங்கள், வாழ்க்கையின் அழுத்தங்கள் எல்லாம் காலையில் எழுந்த உடனேயே நம்மை ஆக்கிரமிக்கத் தொடங்கி விடுகின்றன.</p>
