@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { sermonsData } from '@/data/sermons';
-import { churchEvents } from '@/data/events';
+import { eventsData } from '@/data/events';
 import { ministriesData } from '@/data/ministries';
 
 const SITE = 'https://vaarthai.org.au';
@@ -35,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // Dynamic Event routes
-  const eventRoutes: MetadataRoute.Sitemap = churchEvents.map((event) => ({
+  const eventRoutes: MetadataRoute.Sitemap = eventsData.map((event) => ({
     url: `${SITE}/events/${event.id}`,
     lastModified: new Date(event.date),
     changeFrequency: 'weekly',
