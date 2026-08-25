@@ -51,28 +51,6 @@ export default function EnglishGivePage() {
             </div>
           </div>
 
-          <div className="bg-white border border-border p-6 sm:p-8 rounded-2xl shadow-sm flex flex-col justify-between h-full space-y-4">
-            <div className="space-y-3">
-              <h3 className="font-serif text-xl sm:text-2xl font-black text-primary flex items-center gap-2">
-                <ShieldCheck className="w-6 h-6 text-accent shrink-0" />
-                <span>Financial Transparency & Accountability</span>
-              </h3>
-              <div className="text-stone-700 leading-relaxed text-sm space-y-3">
-                <p>Vaarthai Evangelical Church Inc is an association incorporated in Queensland (registration no. IA58572) and a charity registered with the Australian Charities and Not-for-profits Commission (ACNC). ABN 86 636 931 539.</p>
-                <p>All offerings are received into the church&apos;s bank account, and every payment requires authorisation by two members of the Management Committee. Our Treasurer maintains the financial records and reports to the Committee at each meeting. A full financial statement is presented to members at the Annual General Meeting.</p>
-                <p>As a registered charity, we lodge an Annual Information Statement with the ACNC each year. Our charity record, including our governing documents and financial reporting, is publicly available on the ACNC Charity Register.</p>
-                <p>Questions about giving or church finances are welcome — contact our Treasurer at <a href="mailto:treasurer@vaarthai.org.au" className="text-emerald-700 hover:underline font-medium">treasurer@vaarthai.org.au</a>.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* 3. Half & Half Giving Portals (Online & Offline/Other Ways - Bottom Row) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          
           {/* Box 1: Secure Online Giving Card */}
           <div className="bg-[#F4F1E8] border border-[#E0DBCB] text-stone-900 rounded-2xl p-6 sm:p-8 shadow-md flex flex-col justify-between relative overflow-hidden h-full space-y-6">
             <div className="absolute inset-0 opacity-25 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
@@ -121,6 +99,13 @@ export default function EnglishGivePage() {
             </div>
           </div>
 
+          </div>
+      </section>
+
+      {/* 3. Half & Half Giving Portals (Online & Offline/Other Ways - Bottom Row) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          
           {/* Box 2: Other Ways to Give Card */}
           <div className="bg-[#F4F1E8] border border-[#E0DBCB] text-stone-900 rounded-2xl p-6 sm:p-8 shadow-md flex flex-col justify-between relative overflow-hidden h-full space-y-6">
             <div className="absolute inset-0 opacity-25 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
@@ -188,6 +173,22 @@ export default function EnglishGivePage() {
               <p className="text-[11px] text-stone-500 text-center italic">
                 * Please contact our church finance office if you need assistance or bank transfer details.
               </p>
+            </div>
+          </div>
+
+        
+          <div className="bg-white border border-border p-6 sm:p-8 rounded-2xl shadow-sm flex flex-col justify-between h-full space-y-4">
+            <div className="space-y-3">
+              <h3 className="font-serif text-xl sm:text-2xl font-black text-primary flex items-center gap-2">
+                <ShieldCheck className="w-6 h-6 text-accent shrink-0" />
+                <span>Financial Transparency & Accountability</span>
+              </h3>
+              <div className="text-stone-700 leading-relaxed text-sm space-y-3">
+                <p>Vaarthai Evangelical Church Inc is an association incorporated in Queensland (registration no. IA58572) and a charity registered with the Australian Charities and Not-for-profits Commission (ACNC). ABN 86 636 931 539.</p>
+                <p>All offerings are received into the church&apos;s bank account, and every payment requires authorisation by two members of the Management Committee. Our Treasurer maintains the financial records and reports to the Committee at each meeting. A full financial statement is presented to members at the Annual General Meeting.</p>
+                <p>As a registered charity, we lodge an Annual Information Statement with the ACNC each year. Our charity record, including our governing documents and financial reporting, is publicly available on the ACNC Charity Register.</p>
+                <p>Questions about giving or church finances are welcome — contact our Treasurer at <a href="mailto:treasurer@vaarthai.org.au" className="text-emerald-700 hover:underline font-medium">treasurer@vaarthai.org.au</a>.</p>
+              </div>
             </div>
           </div>
 

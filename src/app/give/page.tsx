@@ -51,28 +51,6 @@ export default function GivePage() {
             </div>
           </div>
 
-          <div className="bg-white border border-border p-6 sm:p-8 rounded-2xl shadow-sm flex flex-col justify-between h-full space-y-4">
-            <div className="space-y-3">
-              <h3 className="font-serif text-xl sm:text-2xl font-black text-primary flex items-center gap-2">
-                <ShieldCheck className="w-6 h-6 text-accent shrink-0" />
-                <span>நிதி வெளிப்படைத்தன்மையும் கணக்குப்பொறுப்பும்</span>
-              </h3>
-              <div className="text-stone-700 leading-relaxed text-sm space-y-3">
-                <p>Vaarthai Evangelical Church Inc என்பது குயின்ஸ்லாந்து மாநிலத்தில் பதிவு செய்யப்பட்ட கூட்டமைப்பு (பதிவு எண்: IA58572); ஆஸ்திரேலிய தர்ம நிறுவனங்கள் ஆணையத்தில் (ACNC) பதிவு பெற்ற தர்ம நிறுவனம். ABN 86 636 931 539.</p>
-                <p>உங்களுடைய காணிக்கைகள் அனைத்தும் திருச்சபையின் வங்கிக் கணக்கில் ஏற்றுக்கொள்ளப்படுகின்றன. ஒவ்வொரு செலவுக்கும் நிர்வாகக் குழுவின் இரண்டு உறுப்பினர்களின் அங்கீகாரம் கட்டாயமாகும். எங்கள் பொருளாளர் நிதிக் கணக்குகளைப் பராமரித்து, ஒவ்வொரு குழுக் கூட்டத்திலும் அறிக்கை சமர்ப்பிக்கிறார். வருடாந்திர பொதுக்கூட்டத்தில் (AGM) முழு நிதி அறிக்கை சபை உறுப்பினர்களுக்கு முன் வைக்கப்படுகிறது.</p>
-                <p>பதிவு பெற்ற தர்ம நிறுவனம் என்ற முறையில், ஒவ்வொரு ஆண்டும் ACNC-க்கு வருடாந்திரத் தகவல் அறிக்கை சமர்ப்பிக்கப்படுகிறது. அது ACNC Charity Register-இல் பொதுமக்கள் பார்வைக்குக் கிடைக்கும்.</p>
-                <p>நிதி சம்பந்தமான கேள்விகளுக்கு எங்கள் பொருளாளரைத் தொடர்பு கொள்ளுங்கள்: <a href="mailto:treasurer@vaarthai.org.au" className="text-emerald-700 hover:underline font-medium">treasurer@vaarthai.org.au</a></p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* 3. Half & Half Giving Portals (Online & Offline/Other Ways - Bottom Row) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          
           {/* Box 1: Secure Online Giving Card */}
           <div className="bg-[#F4F1E8] border border-[#E0DBCB] text-stone-900 rounded-2xl p-6 sm:p-8 shadow-md flex flex-col justify-between relative overflow-hidden h-full space-y-6">
             <div className="absolute inset-0 opacity-25 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
@@ -121,6 +99,13 @@ export default function GivePage() {
             </div>
           </div>
 
+          </div>
+      </section>
+
+      {/* 3. Half & Half Giving Portals (Online & Offline/Other Ways - Bottom Row) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          
           {/* Box 2: Other Ways to Give Card */}
           <div className="bg-[#F4F1E8] border border-[#E0DBCB] text-stone-900 rounded-2xl p-6 sm:p-8 shadow-md flex flex-col justify-between relative overflow-hidden h-full space-y-6">
             <div className="absolute inset-0 opacity-25 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
@@ -188,6 +173,22 @@ export default function GivePage() {
               <p className="text-[11px] text-stone-500 text-center italic">
                 * ஏதேனும் உதவி அல்லது வங்கி விவரங்கள் தேவைப்பட்டால் எங்கள் நிதி அலுவலகத்தைத் தொடர்பு கொள்ளவும்.
               </p>
+            </div>
+          </div>
+
+        
+          <div className="bg-white border border-border p-6 sm:p-8 rounded-2xl shadow-sm flex flex-col justify-between h-full space-y-4">
+            <div className="space-y-3">
+              <h3 className="font-serif text-xl sm:text-2xl font-black text-primary flex items-center gap-2">
+                <ShieldCheck className="w-6 h-6 text-accent shrink-0" />
+                <span>நிதி வெளிப்படைத்தன்மையும் கணக்குப்பொறுப்பும்</span>
+              </h3>
+              <div className="text-stone-700 leading-relaxed text-sm space-y-3">
+                <p>Vaarthai Evangelical Church Inc என்பது குயின்ஸ்லாந்து மாநிலத்தில் பதிவு செய்யப்பட்ட கூட்டமைப்பு (பதிவு எண்: IA58572); ஆஸ்திரேலிய தர்ம நிறுவனங்கள் ஆணையத்தில் (ACNC) பதிவு பெற்ற தர்ம நிறுவனம். ABN 86 636 931 539.</p>
+                <p>உங்களுடைய காணிக்கைகள் அனைத்தும் திருச்சபையின் வங்கிக் கணக்கில் ஏற்றுக்கொள்ளப்படுகின்றன. ஒவ்வொரு செலவுக்கும் நிர்வாகக் குழுவின் இரண்டு உறுப்பினர்களின் அங்கீகாரம் கட்டாயமாகும். எங்கள் பொருளாளர் நிதிக் கணக்குகளைப் பராமரித்து, ஒவ்வொரு குழுக் கூட்டத்திலும் அறிக்கை சமர்ப்பிக்கிறார். வருடாந்திர பொதுக்கூட்டத்தில் (AGM) முழு நிதி அறிக்கை சபை உறுப்பினர்களுக்கு முன் வைக்கப்படுகிறது.</p>
+                <p>பதிவு பெற்ற தர்ம நிறுவனம் என்ற முறையில், ஒவ்வொரு ஆண்டும் ACNC-க்கு வருடாந்திரத் தகவல் அறிக்கை சமர்ப்பிக்கப்படுகிறது. அது ACNC Charity Register-இல் பொதுமக்கள் பார்வைக்குக் கிடைக்கும்.</p>
+                <p>நிதி சம்பந்தமான கேள்விகளுக்கு எங்கள் பொருளாளரைத் தொடர்பு கொள்ளுங்கள்: <a href="mailto:treasurer@vaarthai.org.au" className="text-emerald-700 hover:underline font-medium">treasurer@vaarthai.org.au</a></p>
+              </div>
             </div>
           </div>
 
