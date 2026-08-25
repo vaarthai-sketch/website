@@ -2,7 +2,7 @@
 
 import React from "react";
 import { 
-  Heart, ShieldCheck, Mail, Smartphone, ArrowRight, DollarSign, Check, Info, FileText, ExternalLink
+  ShieldCheck, Smartphone, Check, FileText, ExternalLink
 } from "lucide-react";
 import { churchConfig } from "@/data/config";
 
