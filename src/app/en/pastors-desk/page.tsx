@@ -8,299 +8,200 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'en',
   path: '/en/pastors-desk',
-  title: "VEC-NL 2026-08 Edition 6 - From the Pastor's Desk | Vaarthai Evangelical Church Inc",
-  description: `What's In Your Cup? Life will shake you — what spills out reveals what you have been storing. A reflection on Luke 6:45 and Proverbs 4:23.`,
-  image: "/coffee-cup.jpg",
+  title: "VEC-NL 2026-08 Edition 7 - Pastor's Desk | Vaarthai Evangelical Church Inc",
+  description: `Sharpen the Axe - “If an axe has grown blunt and its edge has not been sharpened, more strength will be needed to cut with it.” (Ecclesiastes 10:10)`,
+  image: "/sharpen-axe.jpg",
 });
 
 export default function EnglishPastorsDeskPage() {
   return (
     <main className="min-h-screen bg-stone-50 py-12">
       {/* Header section */}
-      <section 
-        className="relative text-white py-16 md:py-24 text-center overflow-hidden bg-cover bg-center bg-no-repeat bg-[#0F172A]"
-        style={{ backgroundImage: "url('/pastor-desk-hero.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-[#0F172A]/40 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-[#0F172A]/30"></div>
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] mix-blend-overlay"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-3xl md:text-5xl font-serif font-bold mb-4">
-            From the Pastor&apos;s Desk
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center justify-center gap-2 mb-6">
+            <span className="h-px w-8 bg-accent/30"></span>
+            <span className="text-accent font-bold tracking-widest uppercase text-sm flex items-center gap-2">
+              <FileText className="w-4 h-4" />
+              From the Pastor's Desk
+            </span>
+            <span className="h-px w-8 bg-accent/30"></span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-serif text-primary font-bold mb-6 leading-tight">
+            Sharpen the Axe
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto text-stone-200">
-            Weekly newsletter, reflections, and updates from our pastoral team.
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4 text-stone-500 font-medium">
+            <div className="flex items-center gap-1.5 bg-white px-3 py-1 rounded-full shadow-sm border border-stone-100">
+              <CalendarIcon className="w-4 h-4 text-accent" />
+              <span>August 26, 2026</span>
+            </div>
+            <div className="flex items-center gap-1.5 bg-white px-3 py-1 rounded-full shadow-sm border border-stone-100">
+              <span className="text-accent font-bold">#</span>
+              <span>Edition 007</span>
+            </div>
+            <div className="flex items-center gap-1.5 bg-white px-3 py-1 rounded-full shadow-sm border border-stone-100">
+              <Coffee className="w-4 h-4 text-accent" />
+              <span>5 min read</span>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Main Content Area */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12">
+          {/* Article Content */}
+          <article className="lg:w-2/3 bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden">
+            {/* Hero Image */}
+            <div className="aspect-[16/9] w-full bg-stone-100 relative overflow-hidden">
+              <img 
+                src="/sharpen-axe.jpg" 
+                alt="Sharpen the Axe" 
+                className="w-full h-full object-cover"
+              />
+            </div>
             
-            {/* Newsletter Content */}
-            <div className="lg:col-span-3">
-              <div className="bg-gradient-to-br from-stone-50 via-white to-stone-100 rounded-lg shadow-sm border border-stone-200 p-6 md:p-10 mb-8 relative overflow-hidden">
-                {/* Decorative Elements */}
-                <Coffee className="absolute top-4 right-4 text-stone-200 w-16 h-16 opacity-30" />
-                <Coffee className="absolute bottom-10 left-4 text-stone-200 w-24 h-24 opacity-30" />
+            <div className="p-8 md:p-12">
+              <div className="prose prose-stone max-w-none prose-lg
+                prose-headings:font-serif prose-headings:text-primary 
+                prose-p:text-stone-600 prose-p:leading-relaxed prose-p:mb-6
+                prose-blockquote:border-l-accent prose-blockquote:bg-stone-50 prose-blockquote:p-4 prose-blockquote:rounded-r-lg prose-blockquote:italic prose-blockquote:text-stone-700
+                prose-strong:text-primary
+                prose-li:text-stone-600
+                prose-a:text-accent hover:prose-a:text-accent-dark">
                 
-                <div className="flex items-center gap-2 text-sm text-stone-600 font-bold mb-4 relative z-10">
-                  <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-08 · Edition 6</span>
-                </div>
-                
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-6 relative z-10 flex items-center gap-2">
-                  <Coffee className="w-8 h-8 text-stone-700" />
-                  What&apos;s In Your Cup?
-                </h2>
-                
-                <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
+                <blockquote>
+                  <p>“If an axe has grown blunt and its edge has not been sharpened, more strength will be needed to cut with it. But wisdom brings success.”</p>
+                  <footer>— Ecclesiastes 10:10</footer>
+                </blockquote>
 
-                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
-                    <img src="/coffee-cup.jpg" alt="A hand holding a coffee cup, mid-spill" className="w-full h-auto object-cover max-h-[500px]" />
-                  </div>
+                <p>The American President Abraham Lincoln once said: “Give me six hours to chop down a tree, and I will spend the first four sharpening the axe.” These words are simple, but they carry deep wisdom.</p>
 
-                  <h3 className="text-xl font-bold text-stone-800">The Cup In Your Hand</h3>
-                  <p>
-                    You are standing there holding a cup of coffee. Suddenly someone bumps into you — or knocks your arm. The coffee goes everywhere.
-                  </p>
-                  <p>
-                    Why did the coffee spill?
-                  </p>
-                  <p>
-                    What do we usually say? &quot;Because someone bumped into me!&quot;
-                  </p>
-                  <p>
-                    That&apos;s the wrong answer.
-                  </p>
-                  <p>
-                    The real reason the coffee spilled is this — there was coffee in the cup. Had there been tea in it, tea is what would have spilled. Had there been water, water would have spilled.
-                  </p>
-                  <p>
-                    The person who bumped you did not change what was in the cup. They did only one thing — they brought out what was already inside.
-                  </p>
-                  <p className="font-bold text-stone-900">
-                    Whatever is inside the cup is what will spill out.
-                  </p>
+                <p>Every day there is something to be done. Work, responsibilities, challenges — there are always trees to be cut down!</p>
 
-                  <h3 className="text-xl font-bold text-stone-800">The Shaking Will Come — That Much Is Certain</h3>
-                  <p>
-                    Last week we thought about an earth that gets shaken. This week we come closer to home — we think about ourselves being shaken.
-                  </p>
-                  <p>
-                    An unexpected phone call. A medical report. A meeting at work. A long day in traffic. A hard word from someone. A small argument at home.
-                  </p>
-                  <p>
-                    When everything is calm, all of us are spiritual people. It is easy to fake it — but only until the shaking comes.
-                  </p>
-                  <p className="font-bold text-stone-900">
-                    The shaking does not create our character. It reveals our character.
-                  </p>
+                <p>But what if the axe is blunt?</p>
 
-                  <h3 className="text-xl font-bold text-stone-800">The Overflow of the Heart</h3>
-                  <p>
-                    Jesus told us this long before the analogy did. And His words are far sharper than the analogy:
-                  </p>
-                  <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
-                    <p>
-                      &quot;A good man out of the good treasure of his heart brings forth that which is good; and an evil man out of the evil treasure of his heart brings forth that which is evil: for out of the abundance of the heart his mouth speaks.&quot;
-                    </p>
-                    <p className="mt-2 text-right text-sm">— Luke 6:45</p>
-                  </blockquote>
-                  <p>
-                    In the Greek, the word translated &quot;abundance&quot; literally means this — that which fills up and runs over; that which is left over and comes out.
-                  </p>
-                  <p>
-                    This is the picture Jesus used: the heart is a vessel. The mouth is its rim. Whatever has been poured in is what comes over the edge.
-                  </p>
-                  <p>
-                    Our angry words are not accidents. They are leaks — leaks of what we had already been storing inside.
-                  </p>
+                <blockquote>
+                  <p>“If the iron be blunt, and he do not whet the edge, then must he put to more strength…”</p>
+                  <footer>— Ecclesiastes 10:10</footer>
+                </blockquote>
 
-                  <h3 className="text-xl font-bold text-stone-800">So Then, Guard the Cup</h3>
-                  <p>
-                    This is why Proverbs commands us:
-                  </p>
-                  <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
-                    <p>
-                      &quot;Keep your heart with all diligence; for out of it are the issues of life.&quot;
-                    </p>
-                    <p className="mt-2 text-right text-sm">— Proverbs 4:23</p>
-                  </blockquote>
-                  <p>
-                    The Hebrew word behind &quot;keep&quot; carries the sense of guarding a fortress — watchful, alert protection.
-                  </p>
-                  <p>
-                    Scripture does not say &quot;guard your behaviour.&quot; It does not say &quot;guard your words.&quot; It says guard your heart — because everything else proceeds from there.
-                  </p>
-                  <p>
-                    Trying to fix what comes out is wasted labour. Change what is inside.
-                  </p>
+                <p>Sometimes the problem is not the size of the tree; it is the condition of the axe.</p>
 
-                  <h3 className="text-xl font-bold text-stone-800">Who Fills the Cup?</h3>
-                  <p>
-                    There is an important distinction to make here.
-                  </p>
-                  <p>
-                    The heart does not change simply because we decide, &quot;I will be a good person.&quot; That is only willpower — and willpower lasts about one morning.
-                  </p>
-                  <p>
-                    Paul writes:
-                  </p>
-                  <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
-                    <p>
-                      &quot;...be filled with the Spirit.&quot;
-                    </p>
-                    <p className="mt-2 text-right text-sm">— Ephesians 5:18</p>
-                  </blockquote>
-                  <p>
-                    The force of the Greek here is: &quot;keep on being filled, continuously.&quot;
-                  </p>
-                  <p>
-                    It is not a matter of being filled once and that being enough. It is daily. And we are not the ones who do the filling — our work is simply to make ourselves available to be filled.
-                  </p>
-                  <p>
-                    And what comes out of a filled heart?
-                  </p>
-                  <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
-                    <p>
-                      &quot;But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, meekness, temperance.&quot;
-                    </p>
-                    <p className="mt-2 text-right text-sm">— Galatians 5:22-23</p>
-                  </blockquote>
-                  <p>
-                    Notice — it is not the &quot;achievements&quot; of the Spirit. It is the fruit of the Spirit. Fruit is not produced by effort; it comes out naturally from the life that is within.
-                  </p>
+                <p>Every day there may be things I need to get done. But before I begin them, the question I must ask is this:</p>
 
-                  <h3 className="text-xl font-bold text-stone-800">A Careful Word</h3>
-                  <p>
-                    Here I want to say something with care.
-                  </p>
-                  <p>
-                    If what spills from your cup is bitterness, it does not mean you are a failed Christian. Sometimes it is the sign of a wound that has not yet healed.
-                  </p>
-                  <p>
-                    Someone may have hurt you deeply. A grief may still be sitting inside, never spoken about. Years of exhaustion may have accumulated.
-                  </p>
-                  <p>
-                    In moments like that, what you need is not the advice &quot;try harder.&quot; What you need is healing.
-                  </p>
-                  <p>
-                    Covering over anger is not filling the cup — it is only a lid. And a lid does not hold forever.
-                  </p>
-                  <p>
-                    Please speak. Speak to me. Speak to a trusted friend, or to a counsellor. Do not carry it alone. The Lord is near to the broken heart (Psalm 34:18).
-                  </p>
+                <p><strong>Have I sharpened myself to face today?</strong></p>
 
-                  <h3 className="text-xl font-bold text-stone-800">What Shall We Do This Week?</h3>
-                  <ul className="list-decimal pl-5 space-y-3">
-                    <li>
-                      <strong>The first pour of the morning.</strong> Fill the cup before the day begins — with Scripture and with prayer. A cup left unfilled in the morning will be empty by evening.
-                    </li>
-                    <li>
-                      <strong>Do not leave forgiveness pending.</strong> &quot;Let not the sun go down upon your wrath&quot; (Ephesians 4:26). Every unforgiven hurt keeps collecting in the cup.
-                    </li>
-                    <li>
-                      <strong>Watch the shaking.</strong> Once this week, when you are shaken — do not respond immediately. Pause for three seconds. What was trying to come out? That is the content of your cup.
-                    </li>
-                    <li>
-                      <strong>Fill others with good words.</strong> Speak one encouraging word to three people this week. The cup is filled by giving, too.
-                    </li>
-                    <li>
-                      <strong>Write down your thanks.</strong> Three things every night. Gratitude is the practice that leaves no room in the heart for bitterness.
-                    </li>
+                <p>One of the most important things that sharpens a believer is the Word of God.</p>
+
+                <blockquote>
+                  <p>“Be transformed by the renewing of your mind.”</p>
+                  <footer>— Romans 12:2</footer>
+                </blockquote>
+
+                <p>Every day, something is shaping our minds. News, social media, worries, disappointments, the pressures of life — all of them begin to crowd in on us the moment we wake in the morning.</p>
+
+                <p>That is why the Word of God must shape us before we go out to face the day.</p>
+
+                <p>His Word renews our thinking; it corrects our vision; it strengthens our faith; it gives wisdom for our decisions.</p>
+
+                <p>We may think, “There is so much work today; there is no time to read the Bible or to pray.” But that is like saying,</p>
+
+                <p><em>“There are so many trees to cut down; there is no time to sharpen the axe!”</em></p>
+
+                <p>Time spent with God is not wasted time. It is the preparation time for everything else.</p>
+
+                <p>So this week, before you pick up your to-do list, pick up the Word of God.</p>
+
+                <p>Read.</p>
+                <p>Meditate.</p>
+                <p>Pray.</p>
+
+                <p>Before you act, be with Him.</p>
+
+                <p>Before you cut down the tree, sharpen the axe!</p>
+
+                <p className="mt-8 font-bold">With blessings,<br/>Pastor Weslyn<br/>Vaarthai Evangelical Church</p>
+
+                <hr className="my-8 border-stone-200" />
+
+                <div className="bg-stone-50 p-6 rounded-xl border border-stone-100">
+                  <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                    <Leaf className="w-5 h-5 text-accent" />
+                    THIS WEEK'S PRACTICE
+                  </h3>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>Set aside 15 minutes each morning for reading Scripture.</li>
+                    <li>Begin your work with a short prayer before you start.</li>
+                    <li>Before asking “What must I accomplish?”, ask “Who am I walking with?”</li>
                   </ul>
-
-                  <h3 className="text-xl font-bold text-stone-800">This Week&apos;s Reflection</h3>
-                  <p>
-                    Life hands you the cup. What you fill it with is yours to choose.
-                  </p>
-                  <p>
-                    If someone shakes you today — what will spill?
-                  </p>
-                  <p>
-                    Joy, gratitude, peace, humility? Or anger, bitterness, blame, and the urge to quit?
-                  </p>
-                  <p>
-                    This week, let us work at filling our cups with gratitude, forgiveness, joy, words of affirmation, gentleness, and love.
-                  </p>
-                  <p>
-                    Because in the end, the One who fills our cup is our Shepherd:
-                  </p>
-                  <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
-                    <p>
-                      &quot;...You anoint my head with oil; my cup runs over.&quot;
-                    </p>
-                    <p className="mt-2 text-right text-sm">— Psalm 23:5</p>
-                  </blockquote>
-                  <p className="font-bold text-stone-900">
-                    A cup that is running over is not afraid of being spilled. Because the One who fills it never stops.
-                  </p>
-
-                  <div className="bg-stone-100 border-l-4 border-stone-500 p-6 rounded-r-lg my-8">
-                    <h4 className="font-bold text-stone-800 mb-2 text-xl">Prayer</h4>
-                    <p className="text-stone-700 m-0">
-                      Lord, search my heart Yourself. Bring into the light the bitterness, the anger, and the wounds I have stored there without even knowing. I confess that I cannot change by my own effort. Fill me daily by Your Spirit. When I am shaken, let Your love and gentleness and peace be what comes out of me. In Jesus&apos; name we pray, Amen.
-                    </p>
-                  </div>
-
-                  {/* YouTube Embed */}
-                  <div className="my-8 aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-md not-prose border-2 border-stone-200 bg-white">
-                    <iframe 
-                      src="https://www.youtube.com/embed/8z50_p-wuv0" 
-                      title="Sermon Video" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      allowFullScreen
-                      className="w-full h-full min-h-[350px] md:min-h-[450px]"
-                    ></iframe>
-                  </div>
-
-                  <p className="font-medium text-stone-900 mt-6">
-                    God bless you!
-                  </p>
-                  <p className="pt-2 font-medium text-stone-800">
-                    Pastor Weslyn
-                  </p>
-                  
-                  <div className="mt-6 pt-6 border-t border-stone-200 flex items-center gap-4 not-prose relative z-10">
-                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-stone-300 shrink-0 shadow-sm bg-white">
-                       <img src="/staff-pastor.png" alt="Ps. Jeyakaran Weslyn" className="w-full h-full object-cover object-top" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-stone-800 m-0 text-lg">Ps. Jeyakaran Weslyn</p>
-                      <p className="text-sm text-stone-600 m-0">Senior Pastor, Vaarthai Evangelical Church Inc</p>
-                    </div>
-                  </div>
                 </div>
+
+                <div className="bg-stone-50 p-6 rounded-xl border border-stone-100 mt-6">
+                  <h3 className="text-xl font-bold text-primary mb-4">PRAYER POINTS</h3>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>For the young families of our church.</li>
+                    <li>For wisdom, that our senior members would guide the younger generation rightly.</li>
+                    <li>That the children and young people of our church would be touched by God.</li>
+                  </ul>
+                </div>
+
+                <div className="bg-stone-50 p-6 rounded-xl border border-stone-100 mt-6">
+                  <h3 className="text-xl font-bold text-primary mb-4">ANNOUNCEMENTS</h3>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>Please join us through Zoom on Wednesday evenings for “Psalms Meditations and Prayer.”</li>
+                    <li>You are kindly asked to help our Sunday morning service begin promptly at 10:00 am.</li>
+                  </ul>
+                </div>
+
               </div>
             </div>
+          </article>
 
-            {/* Sidebar Archive Menu */}
-            <div className="lg:col-span-1">
-              <div className="bg-white rounded-lg shadow-sm border border-border p-6 sticky top-24 sidebar-placeholder-en">
-                <h3 className="text-lg font-bold text-primary mb-4 flex items-center gap-2">
-                  <FileText className="w-5 h-5 text-accent-dark" />
-                  Past Editions
-                </h3>
-                <div className="space-y-3">
+          {/* Sidebar */}
+          <aside className="lg:w-1/3 space-y-8">
+            {/* Subscribe Widget */}
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4 text-accent">
+                <FileText className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-serif text-primary font-bold mb-2">Subscribe</h3>
+              <p className="text-stone-600 text-sm mb-6 leading-relaxed">
+                Receive the Pastor's Desk weekly directly in your inbox.
+              </p>
+              <NewsletterForm isEn={true} />
+            </div>
+
+            {/* Archives Widget */}
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+              <h3 className="text-lg font-serif text-primary font-bold mb-4 flex items-center gap-2">
+                <CalendarIcon className="w-5 h-5 text-accent" />
+                Recent Editions
+              </h3>
+              <div className="space-y-3">
                   <Link href="/en/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
-                    <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
+                    <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
-                      <p className="text-sm font-bold text-stone-900 group-hover:text-primary transition-colors">Edition 6</p>
+                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 7</p>
+                      <p className="text-xs text-stone-500">Aug 2026</p>
+                    </div>
+                  </Link>
+                  <Link href="/en/pastors-desk/archive/august/edition-6" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 6</p>
                       <p className="text-xs text-stone-500">Aug 2026</p>
                     </div>
                   </Link>
                   <Link href="/en/pastors-desk/archive/august/edition-5" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
-                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 5</p>
                       <p className="text-xs text-stone-500">Aug 2026</p>
                     </div>
                   </Link>
                   <Link href="/en/pastors-desk/archive/august/edition-4" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
-                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 4</p>
                       <p className="text-xs text-stone-500">Aug 2026</p>
@@ -309,35 +210,29 @@ export default function EnglishPastorsDeskPage() {
 
                   <h4 className="font-bold text-xs text-stone-400 uppercase tracking-wider mt-6 mb-2 pl-2 border-t border-stone-100 pt-4">July 2026</h4>
                   <Link href="/en/pastors-desk/archive/july/edition-3" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
-                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 3</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
                   <Link href="/en/pastors-desk/archive/july/edition-2" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
-                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 2</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
                   <Link href="/en/pastors-desk/archive/july/edition-1" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
-                    <ChevronRight className="w-4 h-4 text-stone-400 mt-0.5 shrink-0 group-hover:text-accent transition-colors" />
+                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 1</p>
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
                 </div>
-                <div className="mt-8 pt-8 border-t border-stone-200">
-                  <h4 className="font-bold text-sm text-primary mb-3">Subscribe</h4>
-                  <NewsletterForm />
-                </div>
-              </div>
             </div>
-
-          </div>
+          </aside>
         </div>
       </section>
     </main>
