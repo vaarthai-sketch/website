@@ -6,71 +6,62 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
-  locale: 'en',
+  title: "VEC-NL 2026-08 Edition 7 - Pastor's Desk",
+  description: "Sharpen the Axe - Ecclesiastes 10:10",
   path: '/en/pastors-desk',
-  title: "VEC-NL 2026-08 Edition 7 - Pastor's Desk | Vaarthai Evangelical Church Inc",
-  description: `Sharpen the Axe - “If an axe has grown blunt and its edge has not been sharpened, more strength will be needed to cut with it.” (Ecclesiastes 10:10)`,
-  image: "/sharpen-axe.jpg",
+  image: '/sharpen-axe.jpg'
 });
 
 export default function EnglishPastorsDeskPage() {
   return (
     <main className="min-h-screen bg-stone-50 py-12">
       {/* Header section */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center gap-2 mb-6">
-            <span className="h-px w-8 bg-accent/30"></span>
-            <span className="text-accent font-bold tracking-widest uppercase text-sm flex items-center gap-2">
-              <FileText className="w-4 h-4" />
-              From the Pastor's Desk
-            </span>
-            <span className="h-px w-8 bg-accent/30"></span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-serif text-primary font-bold mb-6 leading-tight">
-            Sharpen the Axe
+      <section 
+        className="relative text-white py-16 md:py-24 text-center overflow-hidden bg-cover bg-center bg-no-repeat bg-[#0F172A]"
+        style={{ backgroundImage: "url('/pastor-desk-hero.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-[#0F172A]/40 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-[#0F172A]/30"></div>
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] mix-blend-overlay"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <h1 className="text-3xl md:text-5xl font-serif font-bold mb-4">
+            From the Pastor's Desk
           </h1>
-          <div className="flex flex-wrap items-center justify-center gap-4 text-stone-500 font-medium">
-            <div className="flex items-center gap-1.5 bg-white px-3 py-1 rounded-full shadow-sm border border-stone-100">
-              <CalendarIcon className="w-4 h-4 text-accent" />
-              <span>August 26, 2026</span>
-            </div>
-            <div className="flex items-center gap-1.5 bg-white px-3 py-1 rounded-full shadow-sm border border-stone-100">
-              <span className="text-accent font-bold">#</span>
-              <span>Edition 007</span>
-            </div>
-            <div className="flex items-center gap-1.5 bg-white px-3 py-1 rounded-full shadow-sm border border-stone-100">
-              <Coffee className="w-4 h-4 text-accent" />
-              <span>5 min read</span>
-            </div>
-          </div>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto text-stone-200 font-medium">
+            Weekly letter and church updates from the Pastor.
+          </p>
         </div>
       </section>
 
       {/* Main Content Area */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12">
-          {/* Article Content */}
-          <article className="lg:w-2/3 bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden">
-            {/* Hero Image */}
-            <div className="aspect-[16/9] w-full bg-stone-100 relative overflow-hidden">
-              <img 
-                src="/sharpen-axe.jpg" 
-                alt="Sharpen the Axe" 
-                className="w-full h-full object-cover"
-              />
-            </div>
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             
-            <div className="p-8 md:p-12">
-              <div className="prose prose-stone max-w-none prose-lg
-                prose-headings:font-serif prose-headings:text-primary 
-                prose-p:text-stone-600 prose-p:leading-relaxed prose-p:mb-6
-                prose-blockquote:border-l-accent prose-blockquote:bg-stone-50 prose-blockquote:p-4 prose-blockquote:rounded-r-lg prose-blockquote:italic prose-blockquote:text-stone-700
-                prose-strong:text-primary
-                prose-li:text-stone-600
-                prose-a:text-accent hover:prose-a:text-accent-dark">
+            {/* Newsletter Content */}
+            <div className="lg:col-span-3">
+              <div className="bg-gradient-to-br from-stone-50 via-white to-stone-100 rounded-lg shadow-sm border border-stone-200 p-6 md:p-10 mb-8 relative overflow-hidden">
+                {/* Decorative Elements */}
+                <Coffee className="absolute top-4 right-4 text-stone-200 w-16 h-16 opacity-30" />
+                <Coffee className="absolute bottom-10 left-4 text-stone-200 w-24 h-24 opacity-30" />
                 
-                <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
+                <div className="flex items-center gap-2 text-sm text-stone-600 font-bold mb-4 relative z-10">
+                  <CalendarIcon className="w-4 h-4" />
+                  <span>VEC-NL 2026-08 · Edition 7</span>
+                </div>
+                
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-6 relative z-10 flex items-center gap-2">
+                  <Coffee className="w-8 h-8 text-stone-700" />
+                  Sharpen the Axe
+                </h2>
+                
+                <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
+
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                    <img src="/sharpen-axe.jpg" alt="Sharpen the Axe" className="w-full h-auto object-cover max-h-[500px]" />
+                  </div>
+
+<blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
                   <p>“If an axe has grown blunt and its edge has not been sharpened, more strength will be needed to cut with it. But wisdom brings success.”</p>
                   <p className="mt-2 text-right text-sm">— Ecclesiastes 10:10</p>
                 </blockquote>
@@ -174,32 +165,29 @@ export default function EnglishPastorsDeskPage() {
                     <li>You are kindly asked to help our Sunday morning service begin promptly at 10:00 am.</li>
                   </ul>
                 </div>
+                  
+                  <div className="mt-6 pt-6 border-t border-stone-200 flex items-center gap-4 not-prose relative z-10">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-stone-300 shrink-0 shadow-sm bg-white">
+                       <img src="/staff-pastor.png" alt="Ps. Jeyakaran Weslyn" className="w-full h-full object-cover object-top" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-stone-800 m-0 text-lg">Ps. Jeyakaran Weslyn</p>
+                      <p className="text-sm text-stone-600 m-0">Senior Pastor, Vaarthai Evangelical Church Inc</p>
+                    </div>
+                  </div>
 
+                </div>
               </div>
             </div>
-          </article>
 
-          {/* Sidebar */}
-          <aside className="lg:w-1/3 space-y-8">
-            {/* Subscribe Widget */}
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
-              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4 text-accent">
-                <FileText className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-serif text-primary font-bold mb-2">Subscribe</h3>
-              <p className="text-stone-600 text-sm mb-6 leading-relaxed">
-                Receive the Pastor's Desk weekly directly in your inbox.
-              </p>
-              <NewsletterForm />
-            </div>
-
-            {/* Archives Widget */}
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
-              <h3 className="text-lg font-serif text-primary font-bold mb-4 flex items-center gap-2">
-                <CalendarIcon className="w-5 h-5 text-accent" />
-                Recent Editions
-              </h3>
-              <div className="space-y-3">
+            {/* Sidebar Area */}
+            <div className="lg:col-span-1">
+              <div className="bg-white rounded-lg shadow-sm border border-border p-6 sticky top-24 sidebar-placeholder-en">
+                <h3 className="text-lg font-bold text-primary mb-4 flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-accent-dark" />
+                  Archive
+                </h3>
+<div className="space-y-3">
                   <Link href="/en/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
@@ -251,9 +239,15 @@ export default function EnglishPastorsDeskPage() {
                       <p className="text-xs text-stone-500">Jul 2026</p>
                     </div>
                   </Link>
+                
+                <div className="mt-8 pt-8 border-t border-stone-200">
+                  <h4 className="font-bold text-sm text-primary mb-3">Subscribe</h4>
+                  <NewsletterForm />
                 </div>
+              </div>
             </div>
-          </aside>
+
+          </div>
         </div>
       </section>
     </main>
