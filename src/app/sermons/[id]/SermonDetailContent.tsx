@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, BookOpen, Clock, Calendar, Download, Share2, User } from "lucide-react";
+import { ArrowLeft, BookOpen, Clock, Calendar, Share2, User } from "lucide-react";
 import { sermonsData } from "@/data/sermons";
 import { churchConfig } from "@/data/config";
-import { Button } from "@/components/Button";
+
 import { JsonLd } from "@/components/JsonLd";
 
 export async function SermonDetail({ params, isEn = false }: { params: Promise<{ id: string }>; isEn?: boolean }) {
@@ -68,18 +68,7 @@ export async function SermonDetail({ params, isEn = false }: { params: Promise<{
                 <span>{isEn ? "Topic:" : "தலைப்பு:"} <strong>{isEn ? (sermon.englishTopic || sermon.topic) : sermon.topic}</strong></span>
               </div>
 
-              {/* Share & Download Buttons */}
-              <div className="flex items-center gap-3">
-                <Button 
-                  href={sermon.notesUrl}
-                  variant="outline" 
-                  size="sm"
-                  className="font-bold flex items-center gap-1.5"
-                >
-                  <Download className="w-3.5 h-3.5" />
-                  {isEn ? "Study Notes (PDF)" : "பயிற்சி குறிப்புகள் (PDF)"}
-                </Button>
-              </div>
+              {/* Removed Share & Download Buttons */}
             </div>
 
             <div className="space-y-4">
