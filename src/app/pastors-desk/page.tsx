@@ -127,6 +127,27 @@ export default function TamilPastorsDeskPage() {
 
                 <p className="mt-8 font-bold">ஆசீர்வாதங்களுடன்,<br/>பாஸ்டர் வெஸ்லின்<br/>வார்த்தை சுவிசேஷ சபை</p>
 
+                {/* Attached Song Audio Card */}
+                <div className="my-6 bg-accent/10 border border-accent/30 rounded-xl p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-4 shadow-sm not-prose">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center shrink-0 text-primary shadow-md">
+                    <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1 text-center sm:text-left">
+                    <h4 className="font-bold text-primary text-base sm:text-lg m-0">காலை தோறும் இயேசுவே - தின தியானப் பாடல்</h4>
+                    <p className="text-xs sm:text-sm text-stone-600 m-0 mt-1">பாடல் & இயக்கம்: Ps. ஜெயகரன் வெஸ்லின் (Morning Meditation Song)</p>
+                  </div>
+                  <div className="w-full sm:w-auto mt-2 sm:mt-0">
+                    <audio controls preload="metadata" className="w-full sm:w-64 h-10 rounded-lg">
+                      <source src="/kaalai-thorum-yesuve.mp3" type="audio/mpeg" />
+                      <source src="/kalai-thorum-yesuve.mp3" type="audio/mpeg" />
+                      <source src="/meditation-song.mp3" type="audio/mpeg" />
+                      உங்கள் உலாவி (Browser) இந்த ஆடியோவை ஆதரிக்கவில்லை.
+                    </audio>
+                  </div>
+                </div>
+
                 <hr className="my-8 border-stone-200" />
 
                 <div className="bg-stone-50 p-6 rounded-xl border border-stone-100">
