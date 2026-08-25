@@ -18,9 +18,29 @@ export async function generateMetadata({ params }: PageProps) {
   const sermon = sermonsData.find((s) => s.id === resolvedParams.id);
   if (!sermon) return { title: "Not Found" };
 
+  const imageUrl = sermon.thumbnail && sermon.thumbnail.startsWith("/") 
+    ? sermon.thumbnail 
+    : sermon.youtubeId 
+      ? `https://img.youtube.com/vi/${sermon.youtubeId}/maxresdefault.jpg`
+      : undefined;
+
   return {
     title: `${sermon.title} | Sermons | ${churchConfig.name}`,
     description: sermon.description,
+    openGraph: imageUrl ? {
+      images: [
+        {
+          url: imageUrl,
+          width: 1280,
+          height: 720,
+          alt: sermon.title,
+        },
+      ],
+    } : undefined,
+    twitter: imageUrl ? {
+      card: "summary_large_image",
+      images: [imageUrl],
+    } : undefined,
   };
 }
 
