@@ -90,10 +90,13 @@ export async function SermonDetail({ params, isEn = false }: { params: Promise<{
                 <h3 className="font-serif">{isEn ? "Scripture Reading:" : "வேத வாசிப்பு:"} {isEn ? (sermon.englishScriptureReference || sermon.scriptureReference) : sermon.scriptureReference}</h3>
               </div>
               <p className="text-sm italic text-stone-700 leading-relaxed">
-                "All Scripture is breathed out by God and profitable for teaching, for reproof, for correction, and for training in righteousness, that the man of God may be complete, equipped for every good work."
+                {isEn 
+                  ? (sermon.englishScriptureText || "\"All Scripture is breathed out by God and profitable for teaching, for reproof, for correction, and for training in righteousness, that the man of God may be complete, equipped for every good work.\"")
+                  : (sermon.scriptureText || "\"வேதவாக்கியங்களெல்லாம் தேவ ஆவியினால் அருளப்பட்டிருக்கிறது; தேவனுடைய மனுஷன் தேறினவனாகவும், எந்த நற்கிரியையுஞ்செய்யத் தகுதியுள்ளவனாகவும் இருக்கும்படியாக, அவைகள் உபதேசத்துக்கும், கடிந்துகொள்ளுதலுக்கும், சீர்திருத்தலுக்கும், நீதியைப் படிப்பிக்குதலுக்கும் பிரயோஜனமுள்ளவைகளாயிருக்கிறது.\"")
+                }
               </p>
               <cite className="block text-xs font-bold text-accent-dark tracking-wide uppercase not-italic">
-                — 2 Timothy 3:16-17 ({churchConfig.bibleTranslation.split(" ")[0]})
+                — {isEn ? (sermon.englishScriptureReference || "2 Timothy 3:16-17") : (sermon.scriptureReference || "2 தீமோத்தேயு 3:16-17")} ({churchConfig.bibleTranslation.split(" ")[0]})
               </cite>
             </div>
 
