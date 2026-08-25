@@ -60,7 +60,7 @@ export default function GivePage() {
                 <div>
                   <span className="text-xs font-bold text-accent-dark uppercase tracking-widest block">SECURE ONLINE GIVING</span>
                   <h3 className="font-serif text-xl sm:text-2xl font-black text-primary flex items-center gap-2 mt-0.5">
-                    <span>முதற்பலனும் காணிக்கையும்</span>
+                    <span>முதற்பலன் காணிக்கைகள்</span>
                   </h3>
                 </div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 border border-emerald-300 px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 shadow-2xs">
