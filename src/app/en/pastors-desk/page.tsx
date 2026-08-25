@@ -6,6 +6,7 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
+  locale: 'en',
   title: "VEC-NL 2026-08 Edition 7 - Pastor's Desk",
   description: "Sharpen the Axe - Ecclesiastes 10:10",
   path: '/en/pastors-desk',
@@ -240,6 +241,7 @@ export default function EnglishPastorsDeskPage() {
                     </div>
                   </Link>
                 
+                </div>
                 <div className="mt-8 pt-8 border-t border-stone-200">
                   <h4 className="font-bold text-sm text-primary mb-3">Subscribe</h4>
                   <NewsletterForm />
