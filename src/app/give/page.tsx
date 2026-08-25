@@ -31,7 +31,7 @@ export default function GivePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
-          <div className="bg-white border border-border p-6 sm:p-8 rounded-2xl shadow-sm flex flex-col justify-between h-full space-y-4">
+          <div className="bg-white border border-border p-6 sm:p-8 rounded-2xl shadow-sm flex flex-col h-full space-y-6">
             <div className="space-y-3">
               <h2 className="font-serif text-xl sm:text-2xl font-black text-primary">
                 ஆராதனையின் ஒரு பகுதி காணிக்கை
@@ -41,7 +41,7 @@ export default function GivePage() {
               </p>
             </div>
             
-            <div className="bg-neutral-light/50 border-l-4 border-accent p-4 rounded-r-lg mt-auto">
+            <div className="bg-neutral-light/50 border-l-4 border-accent p-4 rounded-r-lg">
               <p className="text-xs italic text-stone-700 leading-relaxed">
                 \"அவனவன் விசனமாயுமல்ல, கட்டாயமாயுமல்ல, தன் மனதில் தீர்மானித்தபடியே கொடுக்கக்கடவன்; உற்சாகமாய்க் கொடுக்கிறவனிடத்தில் தேவன் பிரியமாயிருக்கிறார்.\"
               </p>

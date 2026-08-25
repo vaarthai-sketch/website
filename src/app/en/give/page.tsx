@@ -31,7 +31,7 @@ export default function EnglishGivePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
-          <div className="bg-white border border-border p-6 sm:p-8 rounded-2xl shadow-sm flex flex-col justify-between h-full space-y-4">
+          <div className="bg-white border border-border p-6 sm:p-8 rounded-2xl shadow-sm flex flex-col h-full space-y-6">
             <div className="space-y-3">
               <h2 className="font-serif text-xl sm:text-2xl font-black text-primary">
                 Giving as an Act of Worship
@@ -41,7 +41,7 @@ export default function EnglishGivePage() {
               </p>
             </div>
             
-            <div className="bg-neutral-light/50 border-l-4 border-accent p-4 rounded-r-lg mt-auto">
+            <div className="bg-neutral-light/50 border-l-4 border-accent p-4 rounded-r-lg">
               <p className="text-xs italic text-stone-700 leading-relaxed">
                 &ldquo;Each one must give as he has decided in his heart, not reluctantly or under compulsion, for God loves a cheerful giver.&rdquo;
               </p>
