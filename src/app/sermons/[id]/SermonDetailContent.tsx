@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, BookOpen, Clock, Calendar, Share2, User } from "lucide-react";
+import { ArrowLeft, BookOpen, Clock, Calendar, User } from "lucide-react";
 import { sermonsData } from "@/data/sermons";
 import { churchConfig } from "@/data/config";
 
