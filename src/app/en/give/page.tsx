@@ -60,7 +60,7 @@ export default function EnglishGivePage() {
                 <div>
                   <span className="text-xs font-bold text-accent-dark uppercase tracking-widest block">SECURE ONLINE GIVING</span>
                   <h3 className="font-serif text-xl sm:text-2xl font-black text-primary flex items-center gap-2 mt-0.5">
-                    <span>Vaarthai Tithes & Offerings</span>
+                    <span>Firstfruits & Offerings</span>
                   </h3>
                 </div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 border border-emerald-300 px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 shadow-2xs">
@@ -69,7 +69,7 @@ export default function EnglishGivePage() {
               </div>
 
               <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-normal">
-                Your generous tithes and offerings help support the ongoing ministries and mission of Vaarthai Evangelical Church Inc. All online donations are 100% securely processed to ensure your peace of mind. Easily give with any Credit/Debit Card, Apple Pay, or Google Pay.
+                Your generous firstfruit offerings help support the ongoing ministries and mission of Vaarthai Evangelical Church Inc. All online donations are 100% securely processed to ensure your peace of mind. Easily give with any Credit/Debit Card, Apple Pay, or Google Pay.
               </p>
 
               <div className="bg-white/80 border border-[#E0DBCB] rounded-xl p-4 space-y-2 text-xs text-stone-700 shadow-2xs">
@@ -90,7 +90,7 @@ export default function EnglishGivePage() {
                 data-open-in-church-center-modal="true"
                 className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base sm:text-lg shadow-md hover:scale-[1.01] transition-all duration-200 text-center cursor-pointer"
               >
-                <span>Give Tithes & Offerings</span>
+                <span>Offerings</span>
                 <ExternalLink className="w-5 h-5 shrink-0" />
               </a>
               <p className="text-[11px] text-stone-500 text-center italic">
