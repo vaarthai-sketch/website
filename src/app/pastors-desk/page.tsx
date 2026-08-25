@@ -194,7 +194,7 @@ export default function TamilPastorsDeskPage() {
               <p className="text-stone-600 text-sm mb-6 leading-relaxed">
                 Receive the Pastor's Desk weekly directly in your inbox.
               </p>
-              <NewsletterForm isEn={false} />
+              <NewsletterForm />
             </div>
 
             {/* Archives Widget */}

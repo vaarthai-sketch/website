@@ -190,7 +190,7 @@ export default function EnglishPastorsDeskPage() {
               <p className="text-stone-600 text-sm mb-6 leading-relaxed">
                 Receive the Pastor's Desk weekly directly in your inbox.
               </p>
-              <NewsletterForm isEn={true} />
+              <NewsletterForm />
             </div>
 
             {/* Archives Widget */}
