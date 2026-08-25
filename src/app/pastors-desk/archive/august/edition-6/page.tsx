@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar as CalendarIcon, FileText, ChevronRight, Leaf, Coffee } from "lucide-react";
+import { Calendar as CalendarIcon, FileText, ChevronRight, Coffee } from "lucide-react";
 import Link from "next/link";
 
 import { NewsletterForm } from "@/components/NewsletterForm";
