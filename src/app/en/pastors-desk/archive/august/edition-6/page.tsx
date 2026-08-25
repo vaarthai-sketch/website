@@ -1,7 +1,7 @@
 import React from "react";
-import { Calendar as CalendarIcon, FileText, ChevronRight, Globe, Leaf, Coffee } from "lucide-react";
+import { Calendar as CalendarIcon, FileText, ChevronRight, Leaf, Coffee } from "lucide-react";
 import Link from "next/link";
-import { churchConfig } from "@/data/config";
+
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { buildMetadata } from '@/lib/seo';
 
