@@ -55,7 +55,7 @@ export const Header: React.FC = () => {
         { 
           category: "Community",
           items: [
-            { name: "Life Groups", href: `${basePrefix}/ministries/life-groups` },
+            { name: "Life Groups", href: `${basePrefix}/ministries/small-groups` },
             { name: "Vaarthai Men", href: `${basePrefix}/ministries/men` },
             { name: "Vaarthai Women", href: `${basePrefix}/ministries/women` }
           ]
@@ -70,7 +70,7 @@ export const Header: React.FC = () => {
         { 
           category: "Mission",
           items: [
-            { name: "Global Missions & Outreach", href: `${basePrefix}/ministries/global-missions` }
+            { name: "Global Missions & Outreach", href: `${basePrefix}/ministries/missions` }
           ]
         },
       ]
