@@ -135,7 +135,8 @@ export const Header: React.FC = () => {
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-6" aria-label="Main Navigation">
+          <div className="hidden lg:flex items-center justify-end flex-grow ml-4 gap-6 xl:gap-8">
+            <nav className="flex items-center gap-4 xl:gap-6" aria-label="Main Navigation">
             {navStructure.map((link) => {
               const isActive = pathname === link.href || (link.href && pathname.startsWith(link.href) && link.href !== (isEnglish ? '/en' : '/'));
               
@@ -207,8 +208,6 @@ export const Header: React.FC = () => {
               );
             })}
           </nav>
-
-          <div className="hidden lg:flex items-center gap-3">
             <LanguageToggle />
           </div>
 
