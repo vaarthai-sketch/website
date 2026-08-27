@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import { Grid, List, Calendar, MapPin, Clock, Search, RefreshCw, AlertCircle } from "lucide-react";
-import { eventsData } from "@/data/events";
+import { getEventsData } from "@/data/events";
 import { EventCard } from "@/components/Card";
 import { Button } from "@/components/Button";
 
@@ -30,12 +30,12 @@ export default function EventsPage({ basePrefix = "" }: { basePrefix?: string })
 
   // Get featured event
   const featuredEvent = useMemo(() => {
-    return eventsData.find(e => e.isFeatured) || eventsData[0];
+    return getEventsData().find(e => e.isFeatured) || getEventsData()[0];
   }, []);
 
   // Filter events
   const filteredEvents = useMemo(() => {
-    let list = [...eventsData];
+    let list = [...getEventsData()];
 
     // Filter by text search
     if (searchQuery.trim()) {

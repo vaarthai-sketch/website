@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Clock, MapPin, Mail, Tag, BookOpen } from "lucide-react";
-import { eventsData } from "@/data/events";
+import { getEventsData } from "@/data/events";
 import { EventRegistrationForm } from "@/components/EventRegistrationForm";
 import { AddCalendarButton } from "@/components/AddCalendarButton";
 import { JsonLd } from "@/components/JsonLd";
@@ -12,15 +12,17 @@ interface PageProps {
 }
 
 // Pre-render static params for build-time generation
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
-  return eventsData.map((event) => ({
+  return getEventsData().map((event) => ({
     id: event.id,
   }));
 }
 
 export default async function EventDetailPage({ params }: PageProps) {
   const resolvedParams = await params;
-  const event = eventsData.find((e) => e.id === resolvedParams.id);
+  const event = getEventsData().find((e) => e.id === resolvedParams.id);
 
   if (!event) {
     notFound();

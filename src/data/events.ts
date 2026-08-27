@@ -25,7 +25,7 @@ function getNextWednesday(): string {
   const today = new Date();
   const d = new Date(today);
   d.setDate(today.getDate() + ((7 + 3 - today.getDay()) % 7));
-  if (today.getDay() === 3) d.setDate(d.getDate() + 7);
+  // Keep it as today if today is Wednesday. It will roll over to the next Wednesday on Thursday morning.
   return d.toISOString().split('T')[0];
 }
 
@@ -50,12 +50,12 @@ function getNextFourthSunday(): string {
   return fs.toISOString().split('T')[0];
 }
 
-export const eventsData: ChurchEvent[] = [
+export const getEventsData = (): ChurchEvent[] => [
   {
     id: "mid-week-online-prayer",
     title: "வாராந்திர ஆன்லைன் ஜெபம் (Mid-Week Online Prayer)",
     englishTitle: "Mid-Week Online Prayer",
-    date: "2026-08-12",
+    date: getNextWednesday(),
     time: "புதன்கிழமை இரவுகள்",
     englishTime: "Wednesday Nights",
     location: "ஆன்லைன் (Zoom வழியாக - இணைப்பிற்கு எங்களைத் தொடர்பு கொள்ளவும்)",
@@ -94,3 +94,4 @@ export const eventsData: ChurchEvent[] = [
     isFeatured: false
   }
 ];
+
