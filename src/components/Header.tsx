@@ -229,16 +229,7 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Hanging "Plan Your Visit" Button for Desktop (Below Menu, overlapping hero) */}
-      <div className="hidden lg:block absolute top-full right-8 xl:right-[calc(50vw-40rem)] mt-4 z-50">
-        <Button 
-          href={`${basePrefix}/plan-your-visit`} 
-          variant="accent" 
-          className="font-bold shadow-lg shadow-primary/20 uppercase tracking-widest text-xs px-6 py-3"
-        >
-          PLAN YOUR VISIT
-        </Button>
-      </div>
+
 
       {isOpen && (
         <div 

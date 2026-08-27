@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Kavivanar, Anek_Tamil } from "next/font/google";
 import { Header } from "@/components/Header";
+import { PlanVisitButton } from "@/components/PlanVisitButton";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { churchConfig } from "@/data/config";
@@ -120,6 +121,7 @@ export default function RootLayout({
         <JsonLd type="church" />
 
         <Header />
+        <PlanVisitButton />
         
         <main id="main-content" className="flex-grow flex flex-col focus:outline-none" tabIndex={-1}>
           {children}
