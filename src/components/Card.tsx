@@ -327,7 +327,7 @@ const Users: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
-export const StaffCard: React.FC<{ staff: StaffMember }> = ({ staff }) => {
+export const StaffCard: React.FC<{ staff: StaffMember; isEn?: boolean }> = ({ staff, isEn }) => {
   return (
     <div className="bg-white rounded-xl border border-border p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center h-full group">
       {/* Uniform Circular Cropped Photo Container */}
@@ -352,10 +352,10 @@ export const StaffCard: React.FC<{ staff: StaffMember }> = ({ staff }) => {
       <div className="flex flex-col flex-grow w-full">
         <h3 className="font-serif text-lg font-bold text-primary group-hover:text-accent-dark transition-colors">{staff.name}</h3>
         <p className="text-xs text-accent-dark font-bold tracking-wider uppercase mt-1 mb-3">
-          {staff.role}
+          {isEn && staff.englishRole ? staff.englishRole : staff.role}
         </p>
         <p className="text-sm text-stone-600 line-clamp-4 leading-relaxed flex-grow mb-5">
-          {staff.bio}
+          {isEn && staff.englishBio ? staff.englishBio : staff.bio}
         </p>
 
         <div className="border-t border-border/80 pt-3 mt-auto flex justify-center w-full">

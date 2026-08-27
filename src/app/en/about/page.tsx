@@ -259,7 +259,7 @@ export default function EnglishAboutPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {staffData.map((staff) => (
-            <StaffCard key={staff.id} staff={staff} />
+            <StaffCard key={staff.id} staff={staff} isEn={true} />
           ))}
         </div>
       </section>
