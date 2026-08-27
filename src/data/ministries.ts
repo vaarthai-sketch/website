@@ -119,7 +119,7 @@ export const ministriesData: Ministry[] = [
     leaderTitle: "வாலிபர் ஊழிய ஒருங்கிணைப்பாளர்",
     englishLeaderTitle: "Young Adults Coordinator",
     leaderEmail: "info@vaarthai.org.au",
-    image: "ministry-young-adults",
+    image: "/ministry-young-adults.jpg",
     scripture: "\"உன் சுயபுத்தியின்மேல் சாயாமல், உன் முழு இருதயத்தோடும் கர்த்தரில் நம்பிக்கையாயிருந்து, உன் வழிகளிலெல்லாம் அவரை நினைத்துக்கொள்; அப்பொழுது அவர் உன் பாதைகளைச் செவ்வைப்படுத்துவார்.\"",
     scriptureReference: "நீதிமொழிகள் 3:5-6",
     englishScripture: "\"Trust in the Lord with all your heart, and lean not on your own understanding; in all your ways acknowledge Him, and He shall direct your paths.\"",
@@ -298,7 +298,7 @@ export const ministriesData: Ministry[] = [
     leaderTitle: "மிஷனரி குழுத் தலைவர்",
     englishLeaderTitle: "Missions Team Director",
     leaderEmail: "missions@vaarthai.org.au",
-    image: "ministry-missions",
+    image: "/ministry-global-evangelism.jpg",
     description: "நாம் வாழும் இடத்தைத் தாண்டி நற்செய்தியைக் கொண்டு செல்வதை நம்புகிறோம். ஆறு நாடுகளில் உள்ள மிஷனரி பங்காளர்களை ஆதரிக்கிறோம், கல்வி மற்றும் மருத்துவ உதவிகளைச் செய்கிறோம்.",
     englishDescription: "We believe in taking the Good News far beyond our local borders. We actively partner with and support indigenous missionaries across six nations, providing essential education, medical aid, and church planting support.",
     features: [
@@ -329,7 +329,7 @@ export const ministriesData: Ministry[] = [
     leaderTitle: "உதவி போதகர்",
     englishLeaderTitle: "Associate Pastor",
     leaderEmail: "sarah@vaarthai.org.au",
-    image: "ministry-outreach",
+    image: "/ministry-social-service.jpg",
     description: "உள்ளூர் பள்ளிகள், முதியோர் இல்லங்கள் மற்றும் உணவுப் பாங்க்குகளுடன் இணைந்து பல்வேறு உதவிகளைச் செய்கிறோம். குளிர்கால உடைகள், கல்வி உபகரணங்கள் மற்றும் உணவு விநியோகம் செய்கிறோம்.",
     englishDescription: "We partner closely with local schools, nursing homes, and food banks to make a tangible difference in our city. We organize winter coat drives, back-to-school supply distributions, and regular grocery drives.",
     features: [
@@ -362,7 +362,7 @@ export const ministriesData: Ministry[] = [
     leaderTitle: "தலைமை போதகர்",
     englishLeaderTitle: "Senior Pastor",
     leaderEmail: "care@vaarthai.org.au",
-    image: "ministry-care",
+    image: "/ministry-pastoral-care.jpg",
     description: "வாழ்வின் சவாலான காலங்களில் போதகர்கள் உங்களுக்கு வழிகாட்டவும், ஜெபிக்கவும், வேதாகம ஆலோசனைகளை வழங்கவும் தயாராக உள்ளனர். மருத்துவமனை சந்திப்புகளும் செய்யப்படுகின்றன.",
     englishDescription: "During difficult seasons of life, our pastoral team is dedicated to walking beside you. We provide confidential biblical counselling, heartfelt prayer, hospital visitations, and bereavement support.",
     features: [
