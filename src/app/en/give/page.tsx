@@ -132,7 +132,7 @@ export default function EnglishGivePage() {
                   <div className="space-y-0.5">
                     <h4 className="font-serif font-bold text-primary text-sm sm:text-base">During Sunday Services</h4>
                     <p className="text-xs text-stone-600 leading-relaxed">
-                      You may place cash or checks into the offering boxes situated at the rear of the sanctuary during any of our Sunday services.
+                      You may give your firstfruits and offerings when the ushers pass the offering bags during our Sunday services.
                     </p>
                   </div>
                 </div>

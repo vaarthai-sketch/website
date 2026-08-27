@@ -132,7 +132,7 @@ export default function GivePage() {
                   <div className="space-y-0.5">
                     <h4 className="font-serif font-bold text-primary text-sm sm:text-base">ஞாயிறு ஆராதனைகளில்</h4>
                     <p className="text-xs text-stone-600 leading-relaxed">
-                      ஞாயிறு ஆராதனைகளில் ஆலயப் பின்புறம் உள்ள காணிக்கைப் பெட்டிகளில் செக் அல்லது ரொக்கமாகக் காணிக்கை செலுத்தலாம்.
+                      ஞாயிறு ஆராதனைகளில், காணிக்கை பைகளை உங்களுக்கு முன்பாக உதவியாளர்கள் கொண்டு வரும்போது காணிக்கை செலுத்தலாம்.
                     </p>
                   </div>
                 </div>
