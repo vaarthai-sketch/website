@@ -315,37 +315,6 @@ export const ministriesData: Ministry[] = [
     ]
   },
   {
-    id: "community-outreach",
-    englishName: "Vaarthai Social Service Ministry",
-    name: "வார்த்தை சமூக நற்பணி ஊழியம்",
-    purpose: "ஏழைகளுக்கும் தேவையிலுள்ளோருக்கும் உதவிக்கரம் நீட்டி கிறிஸ்துவின் அன்பை வெளிப்படுத்துதல்.",
-    englishPurpose: "Demonstrating the love of Christ by practically extending a helping hand to the poor and needy.",
-    audience: "சேவை செய்ய விரும்பும் அனைத்து சபை மக்கள்",
-    englishAudience: "All church members eager to serve the local community",
-    location: "பல்வேறு தொண்டு நிறுவனங்கள் மற்றும் வீதிகள்",
-    englishLocation: "Community Centers, Local Schools & Streets",
-    leaderName: "சாரா ஜென்கின்ஸ்",
-    englishLeaderName: "Sarah Jenkins",
-    leaderTitle: "உதவி போதகர்",
-    englishLeaderTitle: "Associate Pastor",
-    leaderEmail: "sarah@vaarthai.org.au",
-    image: "/ministry-social-service.jpg",
-    description: "உள்ளூர் பள்ளிகள், முதியோர் இல்லங்கள் மற்றும் உணவுப் பாங்க்குகளுடன் இணைந்து பல்வேறு உதவிகளைச் செய்கிறோம். குளிர்கால உடைகள், கல்வி உபகரணங்கள் மற்றும் உணவு விநியோகம் செய்கிறோம்.",
-    englishDescription: "We partner closely with local schools, nursing homes, and food banks to make a tangible difference in our city. We organize winter coat drives, back-to-school supply distributions, and regular grocery drives.",
-    features: [
-      "வாரம் தோறும் சேகரிக்கப்படும் உலர் உணவுக் கொடைகள்",
-      "பள்ளி மாணவர்களுக்கான கல்விப் பொருட்கள் வழங்கல்",
-      "முதியோர் மற்றும் ஆதரவற்றோர் இல்ல உதவிகள்",
-      "அவசர கால மற்றும் பேரிடர் நிவாரண உதவிகள்"
-    ],
-    englishFeatures: [
-      "Weekly collection and distribution of non-perishable groceries",
-      "Back-to-school backpack and stationary drives for local children",
-      "Regular visitation and companionship at senior nursing homes",
-      "Emergency relief aid and community crisis support initiatives"
-    ]
-  },
-  {
     id: "pastoral-care",
     englishName: "Vaarthai Pastoral Care & Counselling",
     name: "வார்த்தை போதக பராமரிப்பு மற்றும் ஆலோசனை",
