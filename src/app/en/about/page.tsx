@@ -76,7 +76,7 @@ export default function EnglishAboutPage() {
       </section>
 
       {/* 2. Our Story Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section id="our-story" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="space-y-3 max-w-3xl">
           <span className="text-xs font-bold text-accent uppercase tracking-widest">Our Roots</span>
           <h2 className="font-serif text-3xl md:text-4xl font-black text-primary">
@@ -164,7 +164,7 @@ export default function EnglishAboutPage() {
       </section>
 
       {/* 4. Mission & Vision */}
-      <section className="bg-neutral-light/50 border-y border-border py-16">
+      <section id="mission" className="bg-neutral-light/50 border-y border-border py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             
@@ -218,7 +218,7 @@ export default function EnglishAboutPage() {
       </section>
 
       {/* 6. Statement of Faith */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section id="faith" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="bg-neutral-light/50 border border-border p-8 sm:p-12 rounded-xl">
           <div className="max-w-3xl mx-auto space-y-8">
             
@@ -248,7 +248,7 @@ export default function EnglishAboutPage() {
       </section>
 
       {/* 7. Leadership / Staff Team */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section id="leadership" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center max-w-2xl mx-auto">
           <span className="text-xs font-bold text-accent uppercase tracking-widest">Church Leadership</span>
           <h2 className="font-serif text-3xl font-black text-primary mt-1">Our Pastoral Team</h2>
@@ -265,7 +265,7 @@ export default function EnglishAboutPage() {
       </section>
 
       {/* 8. Church Governance */}
-      <section className="bg-neutral-light/50 border-t border-border py-16">
+      <section id="governance" className="bg-neutral-light/50 border-t border-border py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary mb-2">
             <ShieldAlert className="w-6 h-6" />

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Calendar, Cross } from "lucide-react";
+import { Menu, X, Calendar, ChevronDown, ChevronRight } from "lucide-react";
 import { churchConfig } from "@/data/config";
 import { Button } from "./Button";
 import { LanguageToggle } from "./LanguageToggle";
@@ -11,39 +11,97 @@ import { LanguageToggle } from "./LanguageToggle";
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [expandedMobileMenu, setExpandedMobileMenu] = useState<string | null>(null);
+  
   const pathname = usePathname();
   const isEnglish = pathname === "/en" || pathname?.startsWith("/en/");
 
-  // Close mobile menu on path changes
   useEffect(() => {
     setIsOpen(false);
+    setExpandedMobileMenu(null);
   }, [pathname]);
 
-  // Handle scroll shadow effect
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const basePrefix = isEnglish ? "/en" : "";
 
-  const navLinks = [
-    { name: "Home", href: isEnglish ? "/en" : "/" },
-    { name: "About", href: `${basePrefix}/about` },
-    { name: "Ministries", href: `${basePrefix}/ministries` },
-    { name: "Sermons", href: `${basePrefix}/sermons` },
-    { name: "Events", href: `${basePrefix}/events` },
-    { name: "Photos", href: `${basePrefix}/gallery` },
-    { name: "Give", href: `${basePrefix}/give` },
-    { name: "Contact", href: `${basePrefix}/contact` },
+  const navStructure = [
+    { name: "HOME", href: isEnglish ? "/en" : "/" },
+    { 
+      name: "ABOUT US",
+      dropdown: [
+        { name: "Our Story", href: `${basePrefix}/about#our-story` },
+        { name: "Mission, Vision & Values", href: `${basePrefix}/about#mission` },
+        { name: "Statement of Faith", href: `${basePrefix}/about#faith` },
+        { name: "Leadership", href: `${basePrefix}/about#leadership` },
+        { name: "Governance & Charity Information", href: `${basePrefix}/about#governance` }
+      ]
+    },
+    { 
+      name: "MINISTRIES",
+      megaMenu: [
+        { 
+          category: "Next Generation",
+          items: [
+            { name: "Kids Ministry", href: `${basePrefix}/ministries/children` },
+            { name: "Youth Ministry", href: `${basePrefix}/ministries/youth` },
+            { name: "Young Adults", href: `${basePrefix}/ministries/young-adults` }
+          ]
+        },
+        { 
+          category: "Community",
+          items: [
+            { name: "Life Groups", href: `${basePrefix}/ministries/life-groups` },
+            { name: "Vaarthai Men", href: `${basePrefix}/ministries/men` },
+            { name: "Vaarthai Women", href: `${basePrefix}/ministries/women` }
+          ]
+        },
+        { 
+          category: "Worship & Care",
+          items: [
+            { name: "Worship & Music", href: `${basePrefix}/ministries/worship` },
+            { name: "Pastoral Care", href: `${basePrefix}/ministries/pastoral-care` }
+          ]
+        },
+        { 
+          category: "Mission",
+          items: [
+            { name: "Global Missions & Outreach", href: `${basePrefix}/ministries/global-missions` }
+          ]
+        },
+      ]
+    },
+    {
+      name: "MEDIA & RESOURCES",
+      dropdown: [
+        { name: "Sermons", href: `${basePrefix}/sermons` },
+        { name: "Pastor's Desk", href: `${basePrefix}/pastors-desk` },
+        { name: "Photo Gallery", href: `${basePrefix}/gallery` }
+      ]
+    },
+    {
+      name: "WHAT'S ON",
+      dropdown: [
+        { name: "Upcoming Events", href: `${basePrefix}/events` },
+        { name: "Midweek Prayer", href: `${basePrefix}/events/mid-week-online-prayer` },
+        { name: "Sunday Service", href: `${basePrefix}/plan-your-visit` }
+      ]
+    },
+    { name: "CONTACT", href: `${basePrefix}/contact` },
+    { name: "GIVE", href: `${basePrefix}/give` }
   ];
+
+  const toggleMobileMenu = (name: string) => {
+    if (expandedMobileMenu === name) {
+      setExpandedMobileMenu(null);
+    } else {
+      setExpandedMobileMenu(name);
+    }
+  };
 
   return (
     <header 
@@ -56,7 +114,6 @@ export const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
-          {/* Logo / Brand */}
           <Link 
             href={isEnglish ? "/en" : "/"} 
             className="flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
@@ -78,17 +135,69 @@ export const Header: React.FC = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6" aria-label="Main Navigation">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+            {navStructure.map((link) => {
+              const isActive = pathname === link.href || (link.href && pathname.startsWith(link.href) && link.href !== (isEnglish ? '/en' : '/'));
+              
+              if (link.megaMenu) {
+                return (
+                  <div key={link.name} className="relative group py-6">
+                    <button className="flex items-center gap-1 text-xs font-bold tracking-widest text-stone-700 hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-accent rounded-sm">
+                      {link.name} <ChevronDown className="w-3.5 h-3.5 group-hover:rotate-180 transition-transform duration-200" />
+                    </button>
+                    
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 w-max max-w-5xl bg-white border border-border shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0 p-8 grid grid-cols-4 gap-12 z-50">
+                      {link.megaMenu.map((cat, idx) => (
+                        <div key={idx} className="space-y-4">
+                          <h4 className="text-xs font-bold text-accent uppercase tracking-widest border-b border-border pb-2">{cat.category}</h4>
+                          <ul className="space-y-2">
+                            {cat.items.map((item, itemIdx) => (
+                              <li key={itemIdx}>
+                                <Link 
+                                  href={item.href}
+                                  className="text-sm text-stone-600 hover:text-primary hover:font-medium transition-colors block py-1"
+                                >
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+
+              if (link.dropdown) {
+                return (
+                  <div key={link.name} className="relative group py-6">
+                    <button className="flex items-center gap-1 text-xs font-bold tracking-widest text-stone-700 hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-accent rounded-sm">
+                      {link.name} <ChevronDown className="w-3.5 h-3.5 group-hover:rotate-180 transition-transform duration-200" />
+                    </button>
+                    
+                    <div className="absolute top-full left-0 min-w-[240px] bg-white border border-border shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0 py-2 z-50">
+                      {link.dropdown.map((item, idx) => (
+                        <Link 
+                          key={idx}
+                          href={item.href}
+                          className="block px-4 py-2.5 text-sm text-stone-600 hover:bg-neutral-light hover:text-primary transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={link.name}
-                  href={link.href}
-                  className={`text-sm font-semibold tracking-wide transition-colors focus-visible:ring-2 focus-visible:ring-accent rounded-sm px-1 py-0.5 ${
+                  href={link.href!}
+                  className={`text-xs font-bold tracking-widest transition-colors focus-visible:ring-2 focus-visible:ring-accent rounded-sm py-6 ${
                     isActive 
-                      ? "text-accent border-b-2 border-accent pb-1" 
+                      ? "text-accent border-b-2 border-accent" 
                       : "text-stone-700 hover:text-primary"
                   }`}
                   aria-current={isActive ? "page" : undefined}
@@ -99,21 +208,18 @@ export const Header: React.FC = () => {
             })}
           </nav>
 
-          {/* Join Us Sunday Button & Language Switcher */}
           <div className="hidden lg:flex items-center gap-3">
             <LanguageToggle />
             <Button 
               href={`${basePrefix}/plan-your-visit`} 
               variant="primary" 
               size="sm"
-              className="font-bold flex items-center gap-1.5"
+              className="font-bold flex items-center gap-1.5 uppercase tracking-wider text-xs"
             >
-              <Calendar className="w-4 h-4" />
-              Join Us Sunday
+              PLAN YOUR VISIT
             </Button>
           </div>
 
-          {/* Mobile Language Toggle & Menu Button */}
           <div className="flex lg:hidden items-center gap-2">
             <LanguageToggle />
             <button
@@ -131,39 +237,80 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
       {isOpen && (
         <div 
-          className="lg:hidden bg-white border-b border-border shadow-lg animate-fade-in-up" 
+          className="lg:hidden bg-white border-b border-border shadow-lg max-h-[calc(100vh-80px)] overflow-y-auto animate-fade-in-up" 
           id="mobile-menu"
         >
-          <div className="px-4 pt-2 pb-6 space-y-1 sm:px-6">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+          <div className="px-4 pt-2 pb-6 space-y-2 sm:px-6">
+            {navStructure.map((link) => {
+              const hasChildren = link.dropdown || link.megaMenu;
+              const isExpanded = expandedMobileMenu === link.name;
+              
+              if (hasChildren) {
+                return (
+                  <div key={link.name} className="border-b border-stone-100 last:border-0 pb-1">
+                    <button
+                      onClick={() => toggleMobileMenu(link.name)}
+                      className="flex items-center justify-between w-full px-3 py-3 text-sm font-bold tracking-widest text-stone-800 hover:bg-stone-50 rounded-md transition-colors"
+                    >
+                      {link.name}
+                      <ChevronDown className={`w-4 h-4 text-stone-500 transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`} />
+                    </button>
+                    
+                    {isExpanded && (
+                      <div className="pl-4 pr-3 py-2 space-y-4 bg-stone-50/50 rounded-md mt-1">
+                        {link.dropdown && link.dropdown.map((item, idx) => (
+                          <Link
+                            key={idx}
+                            href={item.href}
+                            className="block py-2 text-sm text-stone-600 hover:text-primary border-l-2 border-transparent hover:border-accent pl-3 transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                        
+                        {link.megaMenu && link.megaMenu.map((cat, idx) => (
+                          <div key={idx} className="space-y-2 pt-2 first:pt-0">
+                            <span className="text-xs font-bold text-accent uppercase tracking-wider block pl-2">{cat.category}</span>
+                            <div className="space-y-1 border-l border-stone-200 ml-2">
+                              {cat.items.map((item, itemIdx) => (
+                                <Link
+                                  key={itemIdx}
+                                  href={item.href}
+                                  className="block py-1.5 pl-4 text-sm text-stone-600 hover:text-primary transition-colors"
+                                >
+                                  {item.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={link.name}
-                  href={link.href}
-                  className={`block px-3 py-3 rounded-md text-base font-bold transition-all ${
-                    isActive 
-                      ? "bg-neutral-light text-accent pl-4 border-l-4 border-accent" 
-                      : "text-stone-800 hover:bg-stone-50 hover:text-primary"
-                  }`}
-                  aria-current={isActive ? "page" : undefined}
+                  href={link.href!}
+                  className="block px-3 py-3 rounded-md text-sm font-bold tracking-widest text-stone-800 hover:bg-stone-50 transition-colors border-b border-stone-100 last:border-0"
                 >
                   {link.name}
                 </Link>
               );
             })}
-            <div className="pt-4 border-t border-border px-3">
+            
+            <div className="pt-6 px-3">
               <Button 
                 href={`${basePrefix}/plan-your-visit`} 
                 variant="primary" 
                 fullWidth 
-                className="py-3 font-bold flex items-center justify-center gap-2"
+                className="py-3 font-bold flex items-center justify-center gap-2 uppercase tracking-widest text-xs"
               >
-                <Calendar className="w-4 h-4" />
-                Join Us Sunday
+                PLAN YOUR VISIT
               </Button>
             </div>
           </div>
