@@ -233,7 +233,7 @@ export const Header: React.FC = () => {
       <div className="hidden lg:block absolute top-full right-8 xl:right-[calc(50vw-40rem)] mt-4 z-50">
         <Button 
           href={`${basePrefix}/plan-your-visit`} 
-          variant="primary" 
+          variant="accent" 
           className="font-bold shadow-lg shadow-primary/20 uppercase tracking-widest text-xs px-6 py-3"
         >
           PLAN YOUR VISIT
@@ -309,7 +309,7 @@ export const Header: React.FC = () => {
             <div className="pt-6 px-3">
               <Button 
                 href={`${basePrefix}/plan-your-visit`} 
-                variant="primary" 
+                variant="accent" 
                 fullWidth 
                 className="py-3 font-bold flex items-center justify-center gap-2 uppercase tracking-widest text-xs"
               >
