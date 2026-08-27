@@ -166,7 +166,7 @@ export const Footer: React.FC = () => {
         {/* Registration Details */}
         <div className="border-t border-[#1E293B] mt-12 pt-8 text-center text-xs text-stone-400">
           <p className="max-w-4xl mx-auto leading-relaxed">
-            Vaarthai Evangelical Church Inc is an association incorporated in Queensland (registration no. IA58572) and a charity registered with the Australian Charities and Not-for-profits Commission (ACNC). ABN 86 636 931 539.
+            Vaarthai Evangelical Church Inc is an association incorporated in Queensland (registration no. IA58572) and a charity registered with the Australian Charities and Not-for-profits Commission (ACNC). ABN 32 327 903 035.
           </p>
         </div>
 

@@ -273,7 +273,7 @@ export default function EnglishAboutPage() {
           <h2 className="font-serif text-3xl font-black text-primary">Church Governance</h2>
           <div className="text-stone-700 leading-relaxed text-sm md:text-base space-y-4 max-w-3xl mx-auto">
             <p>
-              Vaarthai Evangelical Church Inc is an association incorporated in Queensland under the Associations Incorporation Act 1981 (registration no. IA58572), and a charity registered with the Australian Charities and Not-for-profits Commission (ACNC). ABN 86 636 931 539.
+              Vaarthai Evangelical Church Inc is an association incorporated in Queensland under the Associations Incorporation Act 1981 (registration no. IA58572), and a charity registered with the Australian Charities and Not-for-profits Commission (ACNC). ABN 32 327 903 035.
             </p>
             <p>
               The church is governed by a Management Committee elected by its members, comprising a President, Secretary and Treasurer. We operate under our registered Constitution, our financial policies, and our Child Safety and Wellbeing Policy, and we hold public liability insurance.

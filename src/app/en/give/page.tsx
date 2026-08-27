@@ -184,7 +184,7 @@ export default function EnglishGivePage() {
                 <span>Financial Transparency & Accountability</span>
               </h3>
               <div className="text-stone-700 leading-relaxed text-sm space-y-3">
-                <p>Vaarthai Evangelical Church Inc is an association incorporated in Queensland (registration no. IA58572) and a charity registered with the Australian Charities and Not-for-profits Commission (ACNC). ABN 86 636 931 539.</p>
+                <p>Vaarthai Evangelical Church Inc is an association incorporated in Queensland (registration no. IA58572) and a charity registered with the Australian Charities and Not-for-profits Commission (ACNC). ABN 32 327 903 035.</p>
                 <p>All offerings are received into the church&apos;s bank account, and every payment requires authorisation by two members of the Management Committee. Our Treasurer maintains the financial records and reports to the Committee at each meeting. A full financial statement is presented to members at the Annual General Meeting.</p>
                 <p>As a registered charity, we lodge an Annual Information Statement with the ACNC each year. Our charity record, including our governing documents and financial reporting, is publicly available on the ACNC Charity Register.</p>
                 <p>Questions about giving or church finances are welcome — contact our Treasurer at <a href="mailto:treasurer@vaarthai.org.au" className="text-emerald-700 hover:underline font-medium">treasurer@vaarthai.org.au</a>.</p>
