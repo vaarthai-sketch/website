@@ -92,7 +92,6 @@ export const Header: React.FC = () => {
       ]
     },
     { name: "CONTACT", href: `${basePrefix}/contact` },
-    { name: "GIVE", href: `${basePrefix}/give` }
   ];
 
   const toggleMobileMenu = (name: string) => {
@@ -301,9 +300,17 @@ export const Header: React.FC = () => {
                 href={`${basePrefix}/plan-your-visit`} 
                 variant="accent" 
                 fullWidth 
-                className="py-3 font-bold flex items-center justify-center gap-2 uppercase tracking-widest text-xs"
+                className="py-3 font-bold flex items-center justify-center gap-2 uppercase tracking-widest text-xs mb-3"
               >
                 PLAN YOUR VISIT
+              </Button>
+              <Button 
+                href={`${basePrefix}/give`} 
+                variant="primary" 
+                fullWidth 
+                className="py-3 font-bold flex items-center justify-center gap-2 uppercase tracking-widest text-xs !bg-emerald-600 hover:!bg-emerald-700 active:!bg-emerald-800 !border-transparent"
+              >
+                GIVE
               </Button>
             </div>
           </div>
