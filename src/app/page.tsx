@@ -59,9 +59,14 @@ export default function HomePage() {
               </div>
 
               {/* Service times banner */}
-              <div className="flex items-center justify-center lg:justify-start gap-2 pt-4 text-sm text-stone-300">
-                <Clock className="w-4 h-4 text-accent shrink-0" />
-                <span>ஞாயிறு ஆராதனை: <strong>காலை 10:00 மணி (Brisbane, QLD, Australia)</strong></span>
+              <div className="mt-8 bg-accent/95 backdrop-blur-md border border-accent-light/50 rounded-xl p-4 sm:px-6 flex items-center justify-center lg:justify-start gap-4 shadow-xl shadow-accent/20 max-w-sm">
+                <div className="bg-white/20 p-2.5 rounded-lg shrink-0">
+                  <Clock className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-white/80 mb-0.5">ஞாயிறு ஆராதனை</p>
+                  <p className="text-xl sm:text-2xl font-black text-white leading-none">காலை 10:00 மணி</p>
+                </div>
               </div>
             </div>
 
