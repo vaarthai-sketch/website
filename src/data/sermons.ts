@@ -26,6 +26,26 @@ export interface Sermon {
 
 export const sermonsData: Sermon[] = [
   {
+    id: "the-good-hand-of-my-god-part-5",
+    title: "என் தேவனுடைய நல்ல கரம் (பாகம் 5) | The Good Hand of My God (Part 5)",
+    speaker: "Ps Weslyn",
+    date: "2026-08-30",
+    scriptureReference: "",
+    englishScriptureReference: "",
+    scriptureText: "",
+    englishScriptureText: "",
+    series: "கர்த்தருடைய கை",
+    topic: "தேவனுடைய கரம்",
+    description: "கர்த்தருடைய கை தொடர் செய்தியின் ஐந்தாம் பாகம்.",
+    englishDescription: "Part 5 of The Hand of the Lord series.",
+    videoPlaceholder: "என் தேவனுடைய நல்ல கரம் பிரசங்க வீடியோ (பாகம் 5)",
+    youtubeId: "KhVK30adzy0",
+    audioUrl: "#",
+    notesUrl: "#",
+    duration: "45:00",
+    thumbnail: "",
+  },
+  {
     id: "the-good-hand-of-my-god-part-4",
     title: "என் தேவனுடைய நல்ல கரம் (பாகம் 4) | The Good Hand of My God (Part 4)",
     speaker: "Ps Weslyn",
