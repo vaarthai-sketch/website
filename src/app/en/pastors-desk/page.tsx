@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar as CalendarIcon, FileText, ChevronRight, Leaf, Coffee, Globe } from "lucide-react";
+import { Calendar as CalendarIcon, FileText, ChevronRight, Leaf, Coffee, Globe, Droplet } from "lucide-react";
 import Link from "next/link";
 
 import { NewsletterForm } from "@/components/NewsletterForm";
@@ -8,9 +8,9 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'en',
   title: "VEC-NL 2026-09 Edition 9 - Pastor's Desk",
-  description: "Peace, Be Still! — A Word for Nepal and Tibet",
+  description: "Peace, Be Still! (Peace, Be Still!) — A Word for Nepal and Tibet",
   path: '/en/pastors-desk',
-  image: '/newsletter-9.png'
+  image: '/pastor-desk-hero.jpg'
 });
 
 export default function PastorsDeskPage() {
@@ -19,7 +19,7 @@ export default function PastorsDeskPage() {
       {/* Header section */}
       <section 
         className="relative text-white py-16 md:py-24 text-center overflow-hidden bg-cover bg-center bg-no-repeat bg-[#0F172A]"
-        style={{ backgroundImage: "url('/newsletter-9.png')" }}
+        style={{ backgroundImage: "url('/pastor-desk-hero.jpg')" }}
       >
         <div className="absolute inset-0 bg-[#0F172A]/60 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-[#0F172A]/30"></div>
@@ -37,7 +37,7 @@ export default function PastorsDeskPage() {
             Peace, Be Still!
           </h1>
           <p className="text-xl md:text-2xl text-stone-300 font-serif italic mb-8 max-w-2xl mx-auto">
-            A Word for Nepal and Tibet
+            "Peace, Be Still!" — A Word for Nepal and Tibet
           </p>
           <div className="flex items-center justify-center gap-4 text-sm font-medium text-stone-300">
             <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #009</span>
@@ -54,66 +54,101 @@ export default function PastorsDeskPage() {
           <article className="lg:w-2/3 bg-white rounded-xl shadow-sm border border-stone-200 overflow-hidden">
             <div className="p-8 md:p-12 space-y-8 text-stone-700 leading-relaxed text-lg">
               
-              <div className="prose prose-stone lg:prose-lg max-w-none font-serif">
-                <p>A few weeks ago, we prayed together for those affected by the earthquake in Colombia. Today, the catastrophic flash floods triggered by a glacier collapse along the Nepal–Tibet border have shocked the world. Homes, bridges, and roads have been swept away; many families are grieving the loss of their loved ones, while the search for those still missing continues.</p>
-                <p>We are not called to pronounce this tragedy as God’s punishment. The Bible does not offer simple explanations for every disaster. Instead, it tells us that “the whole creation groans and labours with birth pangs together” (Romans 8:22).</p>
-                <p>Therefore, in moments like these, our first response must be not explanation, but compassion; not judgement, but prayer.</p>
-
-                <h3 className="text-2xl font-black text-primary mt-12 mb-6">JESUS IN THE BOAT</h3>
-                <div className="bg-stone-50 border-l-4 border-accent p-6 rounded-r-lg my-8 shadow-sm">
-                  <p className="italic text-stone-600 mb-2 font-medium">
-                    “And a great windstorm arose, and the waves beat into the boat, so that it was already filling… And they awoke Him and said to Him, ‘Teacher, do You not care that we are perishing?’ Then He arose and rebuked the wind, and said to the sea, ‘Peace, be still!’ And the wind ceased and there was a great calm.”
-                  </p>
-                  <p className="text-sm font-bold text-accent uppercase tracking-widest">— Mark 4:37–39</p>
+              <div className="bg-gradient-to-br from-stone-50 via-white to-stone-100 rounded-lg shadow-sm border border-stone-200 p-6 md:p-10 mb-8 relative overflow-hidden">
+                {/* Decorative Elements */}
+                <Droplet className="absolute top-4 right-4 text-stone-200 w-16 h-16 opacity-30" />
+                <Droplet className="absolute bottom-10 left-4 text-stone-200 w-24 h-24 opacity-30" />
+                
+                <div className="flex items-center gap-2 text-sm text-stone-600 font-bold mb-4 relative z-10">
+                  <CalendarIcon className="w-4 h-4" />
+                  <span>VEC-NL 2026-09 · Edition 9</span>
                 </div>
                 
-                <p>Jesus did not watch the storm from a distant shore. He was in the very same boat that was being tossed by the waves, alongside His frightened disciples.</p>
-                <p>The disciples had not forgotten that Jesus was in the boat. However, in the middle of the storm, they began to doubt whether He truly cared for them: <strong>“Teacher, do You not care that we are perishing?”</strong></p>
-                <p>Jesus’ sleep was not a sign of indifference; it was a sign that He was unafraid. The disciples saw the power of the storm, but they had not yet fully understood the power of the One who was with them.</p>
-                <p>In this incident, Jesus calmed the storm. However, the Christian faith does not promise that every storm in our lives will immediately cease. Sometimes He calms the storm; at other times, He carries His people through it.</p>
-                <p>Yet, in both circumstances, one truth remains unchanged: <strong>He is with us. We are not forgotten, and we are not alone.</strong></p>
-
-                <h3 className="text-2xl font-black text-primary mt-12 mb-6">LET US STAND WITH THEM</h3>
-                <p>The people suffering in Nepal and Tibet need more than our explanations at this moment. They need our prayers, our compassion, and our practical support.</p>
-                <div className="bg-stone-50 border-l-4 border-accent p-6 rounded-r-lg my-8 shadow-sm">
-                  <p className="italic text-stone-600 mb-2 font-medium">
-                    “Then the disciples, each according to his ability, determined to send relief to the brethren dwelling in Judea.”
-                  </p>
-                  <p className="text-sm font-bold text-accent uppercase tracking-widest">— Acts 11:29</p>
-                </div>
-                <p>There was a great distance between the church in Antioch and the believers in Judea, but that distance did not prevent them from showing love. Likewise, although Nepal and Tibet may be far from us geographically, those affected by this disaster are not strangers to us. They are our neighbours, and the believers among them are our brothers and sisters in Christ.</p>
-                <p>Let us not merely watch the news from a distance. Let us stand with them through prayer, compassion, and every form of practical assistance available to us.</p>
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-6 relative z-10 flex items-center gap-2">
+                  <Droplet className="w-8 h-8 text-stone-700" />
+                  Peace, Be Still!
+                </h2>
                 
-                <h3 className="text-2xl font-black text-primary mt-12 mb-6">PRAYER POINTS</h3>
-                <ul className="list-disc pl-5 space-y-2">
-                  <li>Pray that God will comfort the families of those who have lost their lives.</li>
-                  <li>Pray that those still missing will be found and that the rescue teams will be protected.</li>
-                  <li>Pray that displaced families will receive shelter, food, clean water, and medical assistance.</li>
-                  <li>Pray that the churches and believers in the affected areas will remain steadfast in faith and hope.</li>
-                  <li>Pray for wisdom to know how our church can contribute to the relief efforts.</li>
-                  <li>Pray that anyone among us who has relatives in Nepal or Tibet will not have to carry this burden alone.</li>
-                </ul>
+                <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10 font-serif">
 
-                <h3 className="text-2xl font-black text-primary mt-12 mb-6">FINAL PRAYER</h3>
-                <p>Lord, be with those who are weeping in Nepal and Tibet. Comfort those who have lost their loved ones. Help the rescue teams find those who are still missing, and protect everyone involved in the rescue and recovery efforts.</p>
-                <p>Give us compassionate hearts and open hands to help those in need. Even in the middle of this storm, let them hear Your voice saying, “I am with you.”</p>
-                <p>In Jesus’ name, Amen.</p>
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                    <img src="/nepal-flood.jpg" alt="Nepal Flood" className="w-full h-auto object-cover max-h-[500px]" />
+                  </div>
 
-                <h3 className="text-2xl font-black text-primary mt-12 mb-6">ANNOUNCEMENTS</h3>
-                <ul className="space-y-4">
-                  <li className="flex gap-3">
-                    <Globe className="w-6 h-6 text-accent shrink-0 mt-1" />
-                    <p>Please make every effort to join us on Wednesday evening via Zoom for “Meditations on the Psalms and Prayer.” <br/><Link href="/en/events/mid-week-online-prayer" className="text-accent hover:underline font-bold">👉 Register Here</Link></p>
-                  </li>
-                  <li className="flex gap-3">
-                    <CalendarIcon className="w-6 h-6 text-accent shrink-0 mt-1" />
-                    <p>Last Sunday, we were able to begin our worship service on time. Thank you to everyone for your cooperation. Please continue to support us in maintaining this punctuality in the weeks ahead.</p>
-                  </li>
-                  <li className="flex gap-3">
-                    <Coffee className="w-6 h-6 text-accent shrink-0 mt-1" />
-                    <p><strong>Vaarthai Live Kitchen:</strong> Held after our worship service, this has been warmly enjoyed by everyone. We are delighted that it has become a wonderful time of fellowship in which we can connect with one another and deepen our relationships.</p>
-                  </li>
-                </ul>
+                  <p>A few weeks ago, we prayed together for those affected by the earthquake in Colombia. Today, the catastrophic flash floods triggered by a glacier collapse along the Nepal–Tibet border have shocked the world. Homes, bridges, and roads have been swept away; many families are grieving the loss of their loved ones, while the search for those still missing continues.</p>
+                  
+                  <p>We are not called to pronounce this tragedy as God’s punishment. The Bible does not offer simple explanations for every disaster. Instead, it tells us that “the whole creation groans and labours with birth pangs together” (Romans 8:22).</p>
+                  
+                  <p>Therefore, in moments like these, our first response must be not explanation, but compassion; not judgement, but prayer.</p>
+
+                  <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-10 mb-4 border-b border-stone-200 pb-2">JESUS IN THE BOAT</h3>
+                  
+                  <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
+                    <p>“And a great windstorm arose, and the waves beat into the boat, so that it was already filling… And they awoke Him and said to Him, ‘Teacher, do You not care that we are perishing?’ Then He arose and rebuked the wind, and said to the sea, ‘Peace, be still!’ And the wind ceased and there was a great calm.”</p>
+                    <p className="mt-2 text-right text-sm">— Mark 4:37–39</p>
+                  </blockquote>
+                  
+                  <p>Jesus did not watch the storm from a distant shore. He was in the very same boat that was being tossed by the waves, alongside His frightened disciples.</p>
+                  <p>The disciples had not forgotten that Jesus was in the boat. However, in the middle of the storm, they began to doubt whether He truly cared for them:</p>
+                  <p className="font-bold text-center italic text-stone-800">“Teacher, do You not care that we are perishing?”</p>
+                  <p>Jesus’ sleep was not a sign of indifference; it was a sign that He was unafraid. The disciples saw the power of the storm, but they had not yet fully understood the power of the One who was with them.</p>
+                  <p>In this incident, Jesus calmed the storm. However, the Christian faith does not promise that every storm in our lives will immediately cease. Sometimes He calms the storm; at other times, He carries His people through it.</p>
+                  
+                  <p>Yet, in both circumstances, one truth remains unchanged:</p>
+                  <p className="font-bold text-lg text-center text-stone-800 border-y border-stone-200 py-4 my-6">He is with us. We are not forgotten, and we are not alone.</p>
+
+                  <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-10 mb-4 border-b border-stone-200 pb-2">LET US STAND WITH THEM</h3>
+                  <p>The people suffering in Nepal and Tibet need more than our explanations at this moment. They need our prayers, our compassion, and our practical support.</p>
+                  
+                  <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
+                    <p>“Then the disciples, each according to his ability, determined to send relief to the brethren dwelling in Judea.”</p>
+                    <p className="mt-2 text-right text-sm">— Acts 11:29</p>
+                  </blockquote>
+                  
+                  <p>There was a great distance between the church in Antioch and the believers in Judea, but that distance did not prevent them from showing love. Likewise, although Nepal and Tibet may be far from us geographically, those affected by this disaster are not strangers to us. They are our neighbours, and the believers among them are our brothers and sisters in Christ.</p>
+                  <p>Let us not merely watch the news from a distance. Let us stand with them through prayer, compassion, and every form of practical assistance available to us.</p>
+                  
+                  <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-10 mb-4 border-b border-stone-200 pb-2">PRAYER POINTS</h3>
+                  <ul className="list-disc pl-6 space-y-2 text-stone-700">
+                    <li>Pray that God will comfort the families of those who have lost their lives.</li>
+                    <li>Pray that those still missing will be found and that the rescue teams will be protected.</li>
+                    <li>Pray that displaced families will receive shelter, food, clean water, and medical assistance.</li>
+                    <li>Pray that the churches and believers in the affected areas will remain steadfast in faith and hope.</li>
+                    <li>Pray for wisdom to know how our church can contribute to the relief efforts.</li>
+                    <li>Pray that anyone among us who has relatives in Nepal or Tibet will not have to carry this burden alone.</li>
+                  </ul>
+
+                  <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-10 mb-4 border-b border-stone-200 pb-2">FINAL PRAYER</h3>
+                  <div className="bg-stone-100 rounded-lg p-6 font-serif italic text-stone-800">
+                    <p>Lord, be with those who are weeping in Nepal and Tibet. Comfort those who have lost their loved ones. Help the rescue teams find those who are still missing, and protect everyone involved in the rescue and recovery efforts. Give us compassionate hearts and open hands to help those in need. Even in the middle of this storm, let them hear Your voice saying, “I am with you.”</p>
+                    <p className="mt-4 font-bold text-right">In Jesus’ name, Amen.</p>
+                  </div>
+
+                  <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-12 mb-6 border-b border-stone-200 pb-2">ANNOUNCEMENTS</h3>
+                  
+                  <div className="space-y-6">
+                    <div className="flex gap-4 p-4 rounded-lg bg-stone-50 border border-stone-100">
+                      <Globe className="w-6 h-6 text-accent shrink-0 mt-1" />
+                      <div>
+                        <p className="text-stone-700 mb-2">Please make every effort to join us on Wednesday evening via Zoom for “Meditations on the Psalms and Prayer.”</p>
+                        <Link href="/en/events/mid-week-online-prayer" className="inline-flex items-center gap-1 text-sm font-bold text-accent hover:text-accent-dark hover:underline">
+                          👉 Register Here <ChevronRight className="w-4 h-4" />
+                        </Link>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-4 p-4 rounded-lg bg-stone-50 border border-stone-100">
+                      <CalendarIcon className="w-6 h-6 text-accent shrink-0 mt-1" />
+                      <p className="text-stone-700">Last Sunday, we were able to begin our worship service on time. Thank you to everyone for your cooperation. Please continue to support us in maintaining this punctuality in the weeks ahead.</p>
+                    </div>
+                    
+                    <div className="flex gap-4 p-4 rounded-lg bg-stone-50 border border-stone-100">
+                      <Coffee className="w-6 h-6 text-accent shrink-0 mt-1" />
+                      <p className="text-stone-700"><strong>Vaarthai Live Kitchen (VLiK):</strong> Held after our worship service, this has been warmly enjoyed by everyone. We are delighted that it has become a wonderful time of fellowship in which we can connect with one another and deepen our relationships.</p>
+                    </div>
+                  </div>
+
+                </div>
               </div>
 
             </div>
