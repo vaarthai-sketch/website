@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
   title: "VEC-NL 2026-09 Edition 9 - Pastor's Desk",
   description: "Peace, Be Still! (Peace, Be Still!) — A Word for Nepal and Tibet",
   path: '/en/pastors-desk',
-  image: '/pastor-desk-hero.jpg'
+  image: '/nepal-flood.jpg'
 });
 
 export default function PastorsDeskPage() {
