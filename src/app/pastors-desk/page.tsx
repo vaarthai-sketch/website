@@ -81,7 +81,7 @@ export default function PastorsDeskPage() {
                   
                   <p>எனவே, இத்தகைய நேரங்களில் நமது முதல் பதில் விளக்கம் அல்ல—இரக்கம்; தீர்ப்பு அல்ல—ஜெபம்.</p>
 
-                  <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-10 mb-4 border-b border-stone-200 pb-2">படகிலே இருந்த இயேசு • JESUS IN THE BOAT</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-10 mb-4 border-b border-stone-200 pb-2">படகிலே இருந்த இயேசு</h3>
                   
                   <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
                     <p>“பெருங்காற்று உண்டாகி, படவு நிரம்பத்தக்கதாக, அலைகள் அதின்மேல் மோதிற்று… அவர்கள் அவரை எழுப்பி: போதகரே, நாங்கள் மடிந்துபோகிறது உமக்குக் கவலையில்லையா என்றார்கள். அவர் எழுந்து, காற்றை அதட்டி, கடலைப் பார்த்து: இரையாதே, அமைதலாயிரு என்றார்; அப்பொழுது காற்று நின்றுபோய், மிகுந்த அமைதல் உண்டாயிற்று.”</p>
@@ -97,7 +97,7 @@ export default function PastorsDeskPage() {
                   <p>ஆனால் இரண்டிலும் ஒரு உண்மை மாறுவதில்லை:</p>
                   <p className="font-bold text-lg text-center text-stone-800 border-y border-stone-200 py-4 my-6">அவர் நம்முடன் இருக்கிறார். நாம் மறக்கப்படவில்லை; நாம் தனியாகவும் இல்லை.</p>
 
-                  <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-10 mb-4 border-b border-stone-200 pb-2">அவர்களுடன் நிற்போம் • LET US STAND WITH THEM</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-10 mb-4 border-b border-stone-200 pb-2">அவர்களுடன் நிற்போம்</h3>
                   <p>நேபாளத்திலும் திபெத்திலும் துயரப்படுகிற மக்களுக்குத் தற்போது நமது விளக்கங்களைவிட, நமது ஜெபமும் இரக்கமும் உதவியும் தேவை.</p>
                   
                   <blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
@@ -108,7 +108,7 @@ export default function PastorsDeskPage() {
                   <p>அந்தியோகியா சபைக்கும் யூதேயாவுக்கும் இடையே தூரம் இருந்தது; ஆனால் அந்தத் தூரம் அவர்களின் அன்பைத் தடுக்கவில்லை. அதுபோல, நேபாளமும் திபெத்தும் நமக்குத் தொலைவில் இருந்தாலும், பாதிக்கப்பட்டவர்கள் நமக்கு அந்நியர்கள் அல்ல. அவர்கள் நமது அயலார்; அவர்களுள் இருக்கும் விசுவாசிகள் கிறிஸ்துவுக்குள் நமது சகோதர சகோதரிகள்.</p>
                   <p>நாம் தூரத்திலிருந்து செய்திகளைப் பார்ப்பவர்களாக மட்டும் இல்லாமல், ஜெபத்திலும் இரக்கத்திலும் இயன்ற உதவியிலும் அவர்களுடன் நிற்போம்.</p>
                   
-                  <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-10 mb-4 border-b border-stone-200 pb-2">ஜெபக் குறிப்புகள் • PRAYER POINTS</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-10 mb-4 border-b border-stone-200 pb-2">ஜெபக் குறிப்புகள்</h3>
                   <ul className="list-disc pl-6 space-y-2 text-stone-700">
                     <li>உயிரிழந்தவர்களின் குடும்பங்களுக்கு தேவனுடைய ஆறுதல் கிடைக்கும்படி.</li>
                     <li>காணாமல் போனவர்கள் கண்டுபிடிக்கப்படவும், மீட்புக் குழுவினர் பாதுகாக்கப்படவும்.</li>
@@ -135,7 +135,7 @@ export default function PastorsDeskPage() {
                     ></iframe>
                   </div>
 
-<h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-12 mb-6 border-b border-stone-200 pb-2">அறிவிப்புகள் / ANNOUNCEMENTS</h3>
+<h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-12 mb-6 border-b border-stone-200 pb-2">அறிவிப்புகள்</h3>
                   
                   <div className="space-y-6">
                     <div className="flex gap-4 p-4 rounded-lg bg-stone-50 border border-stone-100">
