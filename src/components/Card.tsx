@@ -255,7 +255,7 @@ export const MinistryCard: React.FC<{ ministry: Ministry; basePrefix?: string }>
 
   return (
     <div className="group bg-white rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
-      <div className="h-40 w-full relative overflow-hidden bg-neutral-light">
+      <div className="aspect-video w-full relative overflow-hidden bg-neutral-light">
         {ministry.image && ministry.image.startsWith("/") ? (
           <img 
             src={ministry.image} 
