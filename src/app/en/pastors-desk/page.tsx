@@ -71,8 +71,8 @@ export default function PastorsDeskPage() {
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10 font-serif">
 
-                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
-                    <img src="/nepal-flood.jpg" alt="Nepal Flood" className="w-full h-auto object-cover max-h-[500px]" />
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200 bg-stone-100 flex justify-center">
+                    <img src="/nepal-flood.jpg" alt="Nepal Flood" className="w-full sm:max-w-md h-auto" />
                   </div>
 
                   <p>A few weeks ago, we prayed together for those affected by the earthquake in Colombia. Today, the catastrophic flash floods triggered by a glacier collapse along the Nepal–Tibet border have shocked the world. Homes, bridges, and roads have been swept away; many families are grieving the loss of their loved ones, while the search for those still missing continues.</p>

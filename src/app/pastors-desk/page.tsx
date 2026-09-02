@@ -71,8 +71,8 @@ export default function PastorsDeskPage() {
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10 font-serif">
 
-                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
-                    <img src="/nepal-flood.jpg" alt="Nepal Flood" className="w-full h-auto object-cover max-h-[500px]" />
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200 bg-stone-100 flex justify-center">
+                    <img src="/nepal-flood.jpg" alt="Nepal Flood" className="w-full sm:max-w-md h-auto" />
                   </div>
 
                   <p>சில வாரங்களுக்கு முன்பு, கொலம்பியாவில் ஏற்பட்ட நிலநடுக்கத்தால் பாதிக்கப்பட்டவர்களுக்காக நாம் ஒன்றாக ஜெபித்தோம். இன்று, நேபாளம்–திபெத் எல்லைப் பகுதியில் பனிப்பாறைச் சரிவால் ஏற்பட்ட திடீர் வெள்ளப்பெருக்கு உலகையே அதிர்ச்சிக்குள்ளாக்கியுள்ளது. வீடுகள், பாலங்கள், சாலைகள் அடித்துச் செல்லப்பட்டுள்ளன; பல குடும்பங்கள் தங்கள் அன்பானவர்களை இழந்து தவிக்கின்றன; காணாமல் போனவர்களைத் தேடும் பணிகளும் தொடர்ந்து நடைபெறுகின்றன.</p>
