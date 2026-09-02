@@ -155,7 +155,7 @@ export default function PastorsDeskPage() {
                     
                     <div className="flex gap-4 p-4 rounded-lg bg-stone-50 border border-stone-100">
                       <Coffee className="w-6 h-6 text-accent shrink-0 mt-1" />
-                      <p className="text-stone-700"><strong>Vaarthai Live Kitchen (VLiK):</strong> நம்முடைய ஆராதனைக்குப் பின் நடைபெறும் இந்த ஐக்கியம் எல்லோராலும் உறவுகளைப் பரிமாரிக் கொள்ளும் நேரமாக VLiK இருப்பதில் மிக்க மகிழ்ச்சி!</p>
+                      <p className="text-stone-700"><strong>Vaarthai Live Kitchen (VLiK):</strong> நம்முடைய ஆராதனைக்குப் பின் நடைபெறும் இந்த ஐக்கியம் எல்லோருக்கும் பிடித்திருக்கிறது. உறவுகளைப் பரிமாரிக் கொள்ளும் நேரமாக VLiK இருப்பதில் மிக்க மகிழ்ச்சி!</p>
                     </div>
                   </div>
 
