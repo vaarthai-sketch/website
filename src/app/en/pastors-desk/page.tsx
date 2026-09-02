@@ -124,7 +124,18 @@ export default function PastorsDeskPage() {
                     <p className="mt-4 font-bold text-right">In Jesus’ name, Amen.</p>
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-12 mb-6 border-b border-stone-200 pb-2">ANNOUNCEMENTS</h3>
+                                    <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-12 mb-6 border-b border-stone-200 pb-2">Worship Song</h3>
+                  <div className="my-8 aspect-video w-full rounded-xl overflow-hidden shadow-md border-2 border-stone-200 bg-stone-100">
+                    <iframe 
+                      src="https://www.youtube.com/embed/_3uhYL4zgRE" 
+                      title="YouTube video player" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowFullScreen
+                      className="w-full h-full border-0"
+                    ></iframe>
+                  </div>
+
+<h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-12 mb-6 border-b border-stone-200 pb-2">ANNOUNCEMENTS</h3>
                   
                   <div className="space-y-6">
                     <div className="flex gap-4 p-4 rounded-lg bg-stone-50 border border-stone-100">
