@@ -127,7 +127,7 @@ export default function PastorsDeskPage() {
                                     <h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-12 mb-6 border-b border-stone-200 pb-2">Worship Song</h3>
                   <div className="my-8 aspect-video w-full rounded-xl overflow-hidden shadow-md border-2 border-stone-200 bg-stone-100">
                     <iframe 
-                      src="https://www.youtube.com/embed/_3uhYL4zgRE" 
+                      src="https://www.youtube.com/embed/gnVi9pPubeU" 
                       title="YouTube video player" 
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                       allowFullScreen
