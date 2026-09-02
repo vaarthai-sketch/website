@@ -7,7 +7,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   locale: 'en',
-  title: "VEC-NL 2026-09 Edition 9 - Pastor's Desk",
+  title: "VEC-NL 2026-09 Edition 8 - Pastor's Desk",
   description: "Peace, Be Still! (Peace, Be Still!) — A Word for Nepal and Tibet",
   path: '/en/pastors-desk',
   image: '/nepal-flood.jpg'
@@ -40,7 +40,7 @@ export default function PastorsDeskPage() {
             "Peace, Be Still!" — A Word for Nepal and Tibet
           </p>
           <div className="flex items-center justify-center gap-4 text-sm font-medium text-stone-300">
-            <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #009</span>
+            <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #008</span>
             <span className="flex items-center gap-1"><CalendarIcon className="w-4 h-4 text-accent" /> September 2026</span>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function PastorsDeskPage() {
                 
                 <div className="flex items-center gap-2 text-sm text-stone-600 font-bold mb-4 relative z-10">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-09 · Edition 9</span>
+                  <span>VEC-NL 2026-09 · Edition 8</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-6 relative z-10 flex items-center gap-2">
@@ -179,7 +179,7 @@ export default function PastorsDeskPage() {
                   <Link href="/en/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
-                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 9</p>
+                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 8</p>
                       <p className="text-xs text-stone-500">Sep 2026</p>
                     </div>
                   </Link>

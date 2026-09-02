@@ -88,7 +88,7 @@ def update_sidebar(filepath, is_en, current_edition):
     if '{/* SIDEBAR_CONTENT_PLACEHOLDER */}' in content:
         content = content.replace('{/* SIDEBAR_CONTENT_PLACEHOLDER */}', sidebar)
     else:
-        content = re.sub(r'<div className="space-y-3">.*?</div>\s*</div>\s*</aside>', sidebar + '\n            </div>\n          </aside>', content, flags=re.DOTALL)
+        content = re.sub(r'<div className="space-y-3">.*?</div>\s*</aside>', sidebar + '\n          </aside>', content, flags=re.DOTALL)
         
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(content)
