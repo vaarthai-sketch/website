@@ -64,7 +64,7 @@ export default async function MinistryDetailPage({ params }: PageProps) {
                 <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:16px_16px]"></div>
                 
                 {/* Miniature Photo inside the box */}
-                <div className="w-full sm:w-56 md:w-64 aspect-[4/3] rounded-xl overflow-hidden shadow-xl border-2 border-accent/40 shrink-0 relative z-10 bg-white">
+                <div className="w-full sm:w-64 md:w-80 aspect-video rounded-xl overflow-hidden shadow-xl border-2 border-accent/40 shrink-0 relative z-10 bg-white">
                   <img 
                     src={ministry.image} 
                     alt={ministry.name} 
