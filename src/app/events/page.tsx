@@ -6,7 +6,8 @@ import { getEventsData } from "@/data/events";
 import { EventCard } from "@/components/Card";
 import { Button } from "@/components/Button";
 
-export default function EventsPage({ basePrefix = "" }: { basePrefix?: string }) {
+export default function EventsPage(props: any) {
+  const basePrefix = props.basePrefix || "";
   const isEn = basePrefix === "/en";
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [activeCategory, setActiveCategory] = useState<string>("all");
