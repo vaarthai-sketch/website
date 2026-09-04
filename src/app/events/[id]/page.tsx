@@ -76,14 +76,16 @@ export default async function EventDetailPage({ params }: PageProps) {
                 <img 
                   src={event.image} 
                   alt={event.title} 
-                  className="w-full h-full object-cover" 
+                  className={`w-full h-full ${event.imageHasText ? 'object-contain bg-black' : 'object-cover'}`} 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/85 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
-                  <span className="text-xs uppercase font-bold tracking-widest text-accent-light mb-1">
-                    வார்த்தை சுவிசேஷ திருச்சபை நிகழ்வு
-                  </span>
-                  <h2 className="font-serif text-2xl font-bold">{event.title}</h2>
-                </div>
+                {!event.imageHasText && (
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/85 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                    <span className="text-xs uppercase font-bold tracking-widest text-accent-light mb-1">
+                      வார்த்தை சுவிசேஷ திருச்சபை நிகழ்வு
+                    </span>
+                    <h2 className="font-serif text-2xl font-bold">{event.title}</h2>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="aspect-[21/9] w-full rounded-xl overflow-hidden bg-gradient-to-tr from-[#0F172A] to-[#020617] relative p-8 flex flex-col justify-end text-white shadow-sm">

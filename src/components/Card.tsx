@@ -143,7 +143,7 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list"; b
 
         {event.image && event.image.startsWith("/") && (
           <div className="w-28 h-20 rounded-md overflow-hidden shrink-0 hidden sm:block bg-neutral-light">
-            <img src={event.image} alt={displayTitle} className="w-full h-full object-cover" />
+            <img src={event.image} alt={displayTitle} className={`w-full h-full ${event.imageHasText ? 'object-contain bg-black' : 'object-cover'}`} />
           </div>
         )}
 

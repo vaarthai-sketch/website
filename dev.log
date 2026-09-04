@@ -1,1 +1,12 @@
-zsh:1: command not found: npm
+
+> church-website@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.20.17:3000
+✓ Ready in 218ms
+⚠ Turbopack's filesystem cache has been deleted because we previously detected an internal error in Turbopack. Builds or page loads may be slower as a result.
+
+ GET /events 200 in 2.0s (next.js: 1874ms, application-code: 130ms)
+ GET /events 200 in 48ms (next.js: 2ms, application-code: 45ms)
