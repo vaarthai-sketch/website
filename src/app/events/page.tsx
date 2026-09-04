@@ -104,23 +104,29 @@ export default function EventsPage({ basePrefix = "" }: { basePrefix?: string })
             <div className="lg:w-1/2 aspect-video lg:aspect-auto min-h-[250px] bg-gradient-to-br from-[#0F172A] to-[#020617] p-8 flex flex-col justify-between text-white relative overflow-hidden">
               {featuredEvent.image && featuredEvent.image.startsWith("/") ? (
                 <>
-                  <img src={featuredEvent.image} alt={displayFeaturedTitle} className="absolute inset-0 w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/40 to-transparent"></div>
+                  <img src={featuredEvent.image} alt={displayFeaturedTitle} className={`absolute inset-0 w-full h-full ${featuredEvent.imageHasText ? 'object-contain bg-black' : 'object-cover'}`} />
+                  {!featuredEvent.imageHasText && (
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/40 to-transparent"></div>
+                  )}
                 </>
               ) : (
                 <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
               )}
               
-              <span className="relative z-10 self-start text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded">
-                {isEn ? "Featured Event" : "முக்கிய நிகழ்வு"}
-              </span>
-              
-              <div className="relative z-10 mt-auto">
-                <span className="text-xs uppercase tracking-widest text-stone-300 font-semibold">Vaarthai Evangelical Church Inc</span>
-                <h3 className="font-serif text-2xl md:text-3xl font-bold mt-1 line-clamp-2">
-                  {displayFeaturedTitle}
-                </h3>
-              </div>
+              {!featuredEvent.imageHasText && (
+                <>
+                  <span className="relative z-10 self-start text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded">
+                    {isEn ? "Featured Event" : "முக்கிய நிகழ்வு"}
+                  </span>
+                  
+                  <div className="relative z-10 mt-auto">
+                    <span className="text-xs uppercase tracking-widest text-stone-300 font-semibold">Vaarthai Evangelical Church Inc</span>
+                    <h3 className="font-serif text-2xl md:text-3xl font-bold mt-1 line-clamp-2">
+                      {displayFeaturedTitle}
+                    </h3>
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Description Info */}

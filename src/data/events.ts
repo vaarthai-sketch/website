@@ -19,6 +19,7 @@ export interface ChurchEvent {
   image: string;
   registrationUrl?: string;
   isFeatured?: boolean;
+  imageHasText?: boolean;
 }
 
 function getNextWednesday(): string {
@@ -80,7 +81,8 @@ export const getEventsData = (): ChurchEvent[] => [
     englishOrganizer: "Vaarthai Evangelical Church",
     organizerEmail: "info@vaarthai.org.au",
     image: "/event-fathers-day.jpg",
-    isFeatured: true
+    isFeatured: true,
+    imageHasText: true
   },
   {
     id: "mid-week-online-prayer",

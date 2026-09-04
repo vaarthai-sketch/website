@@ -195,7 +195,7 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list"; b
           <img 
             src={event.image} 
             alt={displayTitle} 
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+            className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${event.imageHasText ? 'object-contain bg-black' : 'object-cover'}`} 
           />
         ) : (
           <ImagePlaceholder type="event" title={displayTitle} />
