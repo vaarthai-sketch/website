@@ -64,6 +64,25 @@ function getNextFourthSunday(): string {
 
 export const getEventsData = (): ChurchEvent[] => [
   {
+    id: "fathers-day-special-service",
+    title: "தந்தையர் தின சிறப்பு ஆராதனை (Father's Day Special Service)",
+    englishTitle: "Father's Day Special Service",
+    date: "2026-09-06",
+    time: "காலை 10:00 மணி",
+    englishTime: "10:00 AM",
+    location: "389 Old Logan Rd, Springfield, QLD 4300",
+    englishLocation: "389 Old Logan Rd, Springfield, QLD 4300",
+    category: "All-Church",
+    englishCategory: "Special Service",
+    description: "தந்தையர் தின சிறப்பு ஆராதனை! 'அப்பாவைப் போல்' (Like Father) என்ற தலைப்பில் போதகர் வெஸ்லின் (Ps Weslyn) அவர்கள் தேவச் செய்தியளிக்கிறார். குடும்பமாக வாருங்கள், தேவனை ஆராதிப்போம்.\n\nநிகழ்வு விவரங்கள்:\n* தேதி: செப்டம்பர் 6 (6th Sep)\n* நேரம்: காலை 10 மணி\n* இடம்: வார்த்தை சுவிசேஷ திருச்சபை, 389 Old Logan Rd, Springfield, QLD 4300\n* செய்தி: போதகர் வெஸ்லின்",
+    englishDescription: "Join us for our Father's Day Special Service! Ps Weslyn will be sharing a special message titled 'Like Father' (அப்பாவைப் போல்). Come as a family and let us worship the Lord together.\n\nEvent Details:\n* Date: 6th September\n* Time: 10:00 AM\n* Location: Vaarthai Evangelical Church, 389 Old Logan Rd, Springfield, QLD 4300\n* Speaker: Ps Weslyn",
+    organizer: "Vaarthai Evangelical Church",
+    englishOrganizer: "Vaarthai Evangelical Church",
+    organizerEmail: "info@vaarthai.org.au",
+    image: "/event-fathers-day.jpg",
+    isFeatured: true
+  },
+  {
     id: "mid-week-online-prayer",
     title: "வாராந்திர ஆன்லைன் ஜெபம் (Mid-Week Online Prayer)",
     englishTitle: "Mid-Week Online Prayer",
