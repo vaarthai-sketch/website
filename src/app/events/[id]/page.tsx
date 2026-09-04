@@ -6,9 +6,33 @@ import { getEventsData } from "@/data/events";
 import { EventRegistrationForm } from "@/components/EventRegistrationForm";
 import { AddCalendarButton } from "@/components/AddCalendarButton";
 import { JsonLd } from "@/components/JsonLd";
+import type { Metadata } from "next";
 
 interface PageProps {
   params: Promise<{ id: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const event = getEventsData().find((e) => e.id === resolvedParams.id);
+  
+  if (!event) return {};
+
+  return {
+    title: event.title,
+    description: event.description.substring(0, 160) + '...',
+    openGraph: {
+      title: event.title,
+      description: event.description.substring(0, 160) + '...',
+      images: event.image ? [event.image] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: event.title,
+      description: event.description.substring(0, 160) + '...',
+      images: event.image ? [event.image] : [],
+    }
+  };
 }
 
 // Pre-render static params for build-time generation
