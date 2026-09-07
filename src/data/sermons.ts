@@ -26,6 +26,29 @@ export interface Sermon {
 
 export const sermonsData: Sermon[] = [
   {
+    id: "like-father",
+    title: "அப்பாவைப் போல் | Like Father | Father's Day",
+    englishTitle: "Like Father | Father's Day",
+    speaker: "Ps Weslyn",
+    date: "2026-09-06",
+    scriptureReference: "சங்கீதம் 103:14; யாத்திராகமம் 20:12",
+    englishScriptureReference: "Psalm 103:14; Exodus 20:12",
+    scriptureText: "அவர் நம்முடைய உருவத்தை அறிவார்; நாம் மண்ணென்று நினைவுகூருகிறார்.",
+    englishScriptureText: "For he knows how we are formed, he remembers that we are dust.",
+    series: "Special Services",
+    englishSeries: "Special Services",
+    topic: "தந்தைமை (Fatherhood)",
+    englishTopic: "Fatherhood",
+    description: "ஒரு மனிதன் தந்தையாகிற நாளில் அவன் தந்தையாக இருப்பது எப்படி என்று தெரிந்தவனாக ஆவதில்லை; அவன் கற்றுக்கொள்ளப்படுகிறவனாகத்தான் ஆகிறான்.\n\nபரலோகத்திலும் பூலோகத்திலும் உள்ள ஒவ்வொரு தந்தைமையும் அவருடைய நாமத்தினாலேதான் பெயர் பெற்றிருக்கிறது. அதாவது தேவன் நம்முடைய அப்பாவின் நகல் அல்ல; நம்முடைய அப்பாதான் அவருடைய நிழல்.\n\nஇந்தச் செய்தியில்:\n- பிதாவின் இருதயம் எப்படிப்பட்டது (சங்கீதம் 103:14)\n- கனம் பண்ணுகிற இடத்தில் சுதந்தரம் ஓடுகிறது (யாத்திராகமம் 20:12)\n- பத்தாயிரம் உபதேசிகள், ஆனால் பிதாக்கள் அநேகர் இல்லை (1 கொரிந்தியர் 4:15)",
+    englishDescription: "A man doesn't know how to be a father the day he becomes one; he learns as he goes.\n\nEvery fatherhood in heaven and on earth derives its name from Him. God is not a copy of our father; rather, our father is a shadow of Him.\n\nIn this message:\n- The heart of the Father (Psalm 103:14)\n- Inheritance flows where there is honor (Exodus 20:12)\n- Ten thousand instructors, but not many fathers (1 Corinthians 4:15)",
+    videoPlaceholder: "அப்பாவைப் போல் பிரசங்க வீடியோ",
+    youtubeId: "D105PXvouEc",
+    audioUrl: "#",
+    notesUrl: "#",
+    duration: "54:57",
+    thumbnail: "",
+  },
+  {
     id: "gods-hand-is-upon-us-part-5",
     title: "கர்த்தருடைய கை அவர்களோடே (பாகம் 5) | God’s Hand Is Upon Us (Part 5)",
     speaker: "Ps Weslyn",
@@ -148,6 +171,14 @@ export const sermonsData: Sermon[] = [
 ];
 
 export const sermonSeries = [
+  {
+    title: "Special Services",
+    englishTitle: "Special Services",
+    description: "சிறப்பு ஆராதனைகள் மற்றும் பண்டிகை கால செய்திகள்.",
+    englishDescription: "Special services and holiday messages.",
+    count: 1,
+    image: "series-special"
+  },
   {
     title: "சகோ. வர்கீஸ் ராயர்",
     englishTitle: "Bro Varghese Rayar",
