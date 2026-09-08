@@ -117,15 +117,15 @@ export default function PastorsDeskPage() {
                   <Droplet className="w-6 h-6 text-accent shrink-0 mt-1" />
                   <div>
                     <p className="text-stone-700 font-bold mb-1">அக்டோபர் மாதத்தில் ஞானஸ்நானம் / Baptism in October</p>
-                    <p className="text-stone-600 text-sm">வரவிருக்கும் அக்டோபர் மாதத்தில் ஞானஸ்நான ஆராதனை நடைபெற உள்ளது. ஞானஸ்நானம் எடுக்க விரும்புகிறவர்கள், தயவுசெய்து நம்முடைய சபை செயலாளர் திரு. தேவையிரக்கம் பால் அவர்களிடம் பதிவு செய்யுமாறு கேட்டுக்கொள்கிறோம். ஞானஸ்நானத்தின் வேதாகம அர்த்தத்தையும் முக்கியத்துவத்தையும் விளக்கும் ஆயத்த வகுப்புகள் இனி வரும் வாரங்களில் நடைபெறும்.</p>
+                    <p className="text-stone-600 text-sm">வரவிருக்கும் அக்டோபர் மாதத்தில் ஞானஸ்நான ஆராதனை நடைபெற உள்ளது. ஞானஸ்நானம் எடுக்க விரும்புகிறவர்கள், தயவுசெய்து நம்முடைய சபை செயலாளர் திரு. தேவஇரக்கம் பால் அவர்களிடம் பதிவு செய்யுமாறு கேட்டுக்கொள்கிறோம். ஞானஸ்நானத்தின் வேதாகம அர்த்தத்தையும் முக்கியத்துவத்தையும் விளக்கும் ஆயத்த வகுப்புகள் இனி வரும் வாரங்களில் நடைபெறும்.</p>
                   </div>
                 </div>
                 
                 <div className="flex gap-4 p-4 rounded-lg bg-stone-50 border border-stone-100">
                   <FileText className="w-6 h-6 text-accent shrink-0 mt-1" />
                   <div>
-                    <p className="text-stone-700 font-bold mb-1">A Listening Ear</p>
-                    <p className="text-stone-600 text-sm">As this week’s newsletter reminds us, some wounds remain unseen. If you are carrying emotional pain or facing personal struggles, you do not have to walk through them alone. Our pastor, Ps Weslyn, is also a clinical counsellor. If you would like to speak with him, you are warmly welcome to contact him directly to arrange an appointment.</p>
+                    <p className="text-stone-700 font-bold mb-1">உங்களுக்குச் செவிகொடுக்க…</p>
+                    <p className="text-stone-600 text-sm">இந்த வாரச் செய்திமடல் நினைவூட்டுவதுபோல, சில காயங்கள் வெளியில் தெரிவதில்லை. நீங்கள் மனவேதனையைச் சுமந்துகொண்டிருந்தாலோ, தனிப்பட்ட போராட்டங்களை எதிர்கொண்டிருந்தாலோ, அவற்றைத் தனியாகச் சமாளிக்க வேண்டியதில்லை. நமது போதகர் பாஸ்டர் வெஸ்லின், உளநல ஆலோசகராகவும் (Clinical Counsellor) பணியாற்றுகிறார். அவருடன் பேச விரும்பினால், தயக்கமின்றி அவரை நேரடியாகத் தொடர்புகொண்டு, சந்திப்பிற்கான நேரத்தை ஏற்பாடு செய்துகொள்ளலாம்.</p>
                     <p className="text-stone-600 text-sm mt-2 font-medium">Email: <a href="mailto:weslyn@vaarthai.org.au" className="text-accent hover:underline">weslyn@vaarthai.org.au</a> | Phone: 0485 07 77 11</p>
                   </div>
                 </div>
