@@ -3,7 +3,7 @@ import { sermonsData } from '@/data/sermons';
 import { getEventsData } from '@/data/events';
 import { ministriesData } from '@/data/ministries';
 
-const SITE = 'https://vaarthai.org.au';
+const SITE = 'https://www.vaarthai.org.au';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://vaarthai.org.au/sitemap.xml',
+    sitemap: 'https://www.vaarthai.org.au/sitemap.xml',
   };
 }
