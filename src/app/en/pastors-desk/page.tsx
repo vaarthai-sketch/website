@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   title: "VEC-NL 2026-09 Edition 9 - Pastor's Desk",
   description: "Wounds We Cannot See",
   path: "/en/pastors-desk",
-  image: "/pastor-desk-hero.jpg"
+  image: "/newsletter-911.webp"
 });
 
 export default function PastorsDeskPage() {
