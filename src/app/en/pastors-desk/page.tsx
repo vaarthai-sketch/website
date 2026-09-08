@@ -63,8 +63,13 @@ export default function PastorsDeskPage() {
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
 
-                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
-                    <img src="/newsletter-911.webp" alt="Wounds We Cannot See - September 11" className="w-full h-auto object-cover max-h-[500px]" />
+                  <div className="my-6">
+                    <div className="rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                      <img src="/newsletter-911.webp" alt="Wounds We Cannot See - September 11" className="w-full h-auto object-cover max-h-[500px]" />
+                    </div>
+                    <p className="text-right text-xs text-stone-400 mt-2 italic">
+                      Photo: Wikipedia
+                    </p>
                   </div>
                 
                   <p>It is hard to believe that this September 11 marks 25 years since the attacks that shook the world. Writing in New York Magazine, journalist Lukas I. Alpert shares how an email from a former colleague made him reflect on his own life. Both had worked at Ground Zero. Years later, both were diagnosed with thyroid cancer. His friend’s suspicion that the illness might be linked to the toxic air they had breathed there made Alpert realise that the attacks might have affected him in ways he had never recognised.</p>

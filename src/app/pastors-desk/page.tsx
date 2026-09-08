@@ -66,8 +66,13 @@ export default function PastorsDeskPage() {
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
 
-                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
-                    <img src="/newsletter-911.webp" alt="Wounds We Cannot See - September 11" className="w-full h-auto object-cover max-h-[500px]" />
+                  <div className="my-6">
+                    <div className="rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                      <img src="/newsletter-911.webp" alt="Wounds We Cannot See - September 11" className="w-full h-auto object-cover max-h-[500px]" />
+                    </div>
+                    <p className="text-right text-xs text-stone-400 mt-2 italic">
+                      Photo: Wikipedia
+                    </p>
                   </div>
 
                   <p>உலகையே உலுக்கிய செப்டம்பர் 11 தாக்குதல்கள் நடந்து, இந்த செப்டம்பர் 11 அன்று 25 ஆண்டுகள் நிறைவடைகின்றன என்பதை நம்பவே கடினமாக இருக்கிறது. நியூயார்க் இதழில் எழுதிய பத்திரிகையாளர் லூகஸ் ஐ. ஆல்பர்ட், முன்னாள் சக ஊழியர் ஒருவரின் மின்னஞ்சல் தனது வாழ்க்கையைத் திரும்பிப் பார்க்க வைத்ததைப் பகிர்ந்துகொள்கிறார். இருவரும் தாக்குதல் நடந்த இடத்தில் பணியாற்றியவர்கள். பல ஆண்டுகளுக்குப் பிறகு, இருவருக்கும் தைராய்டு புற்றுநோய் இருப்பது கண்டறியப்பட்டது. அங்கு சுவாசித்த நச்சுக் காற்றுக்கும் நோய்க்கும் தொடர்பு இருக்கலாம் என்ற நண்பரின் சந்தேகம், அந்தத் தாக்குதல் தன்னையும் அறியாத விதத்தில் பாதித்திருக்கக்கூடும் என்பதை அவருக்கு உணர்த்தியது.</p>
