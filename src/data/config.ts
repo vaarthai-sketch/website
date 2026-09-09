@@ -36,6 +36,7 @@ export interface ChurchConfig {
     instagram?: string;
     youtube?: string;
     twitter?: string;
+    tiktok?: string;
   };
   links: {
     give: string;
@@ -116,6 +117,7 @@ export const churchConfig: ChurchConfig = {
     facebook: "https://www.facebook.com/profile.php?id=61590272413124",
     youtube: "https://www.youtube.com/@Vaarthai-EC",
     instagram: "https://www.instagram.com/vaarthaichurch",
+    tiktok: "https://www.tiktok.com/@vaarthai",
   },
   links: {
     give: "https://vaarthai.churchcenter.com/giving?open-in-church-center-modal=true",
