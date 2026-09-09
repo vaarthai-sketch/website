@@ -37,6 +37,7 @@ export interface ChurchConfig {
     youtube?: string;
     twitter?: string;
     tiktok?: string;
+    linkedin?: string;
   };
   links: {
     give: string;
