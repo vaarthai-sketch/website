@@ -114,11 +114,12 @@ export const churchConfig: ChurchConfig = {
   ],
   socials: {
     facebook: "https://www.facebook.com/profile.php?id=61590272413124",
-    youtube: "https://www.youtube.com/@VaarthaiChurch",
+    youtube: "https://www.youtube.com/@Vaarthai-EC",
+    instagram: "https://www.instagram.com/vaarthaichurch",
   },
   links: {
     give: "https://vaarthai.churchcenter.com/giving?open-in-church-center-modal=true",
-    livestream: "https://www.youtube.com/@VaarthaiChurch/streams"
+    livestream: "https://www.youtube.com/@Vaarthai-EC/streams"
   },
   newsletterForm: {
     actionUrl: "https://docs.google.com/forms/d/e/1FAIpQLSckkROVclnNhbbWj0hn-SOsz4dCH7cYCEfl4VWlqSybOdxd3g/formResponse",
