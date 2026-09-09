@@ -119,6 +119,7 @@ export const churchConfig: ChurchConfig = {
     youtube: "https://www.youtube.com/@Vaarthai-EC",
     instagram: "https://www.instagram.com/vaarthaichurch",
     tiktok: "https://www.tiktok.com/@vaarthai",
+    linkedin: "https://www.linkedin.com/company/vaarthai-evangelical-church-inc/?viewAsMember=true",
   },
   links: {
     give: "https://vaarthai.churchcenter.com/giving?open-in-church-center-modal=true",
