@@ -22,6 +22,13 @@ export interface ChurchEvent {
   imageHasText?: boolean;
 }
 
+function getNextSunday(): string {
+  const today = new Date();
+  const d = new Date(today);
+  d.setDate(today.getDate() + ((7 + 0 - today.getDay()) % 7));
+  return d.toISOString().split('T')[0];
+}
+
 function getNextWednesday(): string {
   const today = new Date();
   const d = new Date(today);
@@ -64,25 +71,24 @@ function getNextFourthSunday(): string {
 }
 
 export const getEventsData = (): ChurchEvent[] => [
-  {
-    id: "fathers-day-special-service",
-    title: "தந்தையர் தின சிறப்பு ஆராதனை (Father's Day Special Service)",
-    englishTitle: "Father's Day Special Service",
-    date: "2026-09-06",
+    {
+    id: "sunday-worship-service",
+    title: "ஞாயிறு ஆராதனை (Sunday Worship Service)",
+    englishTitle: "Sunday Worship Service",
+    date: getNextSunday(),
     time: "காலை 10:00 மணி",
     englishTime: "10:00 AM",
     location: "389 Old Logan Rd, Springfield, QLD 4300",
     englishLocation: "389 Old Logan Rd, Springfield, QLD 4300",
-    category: "All-Church",
-    englishCategory: "Special Service",
-    description: "தந்தையர் தின சிறப்பு ஆராதனை! 'அப்பாவைப் போல்' (Like Father) என்ற தலைப்பில் போதகர் வெஸ்லின் (Ps Weslyn) அவர்கள் தேவச் செய்தியளிக்கிறார். குடும்பமாக வாருங்கள், தேவனை ஆராதிப்போம்.\n\nநிகழ்வு விவரங்கள்:\n* தேதி: செப்டம்பர் 6 (6th Sep)\n* நேரம்: காலை 10 மணி\n* இடம்: வார்த்தை சுவிசேஷ திருச்சபை, 389 Old Logan Rd, Springfield, QLD 4300\n* செய்தி: போதகர் வெஸ்லின்",
-    englishDescription: "Join us for our Father's Day Special Service! Ps Weslyn will be sharing a special message titled 'Like Father' (அப்பாவைப் போல்). Come as a family and let us worship the Lord together.\n\nEvent Details:\n* Date: 6th September\n* Time: 10:00 AM\n* Location: Vaarthai Evangelical Church, 389 Old Logan Rd, Springfield, QLD 4300\n* Speaker: Ps Weslyn",
+    category: "Worship",
+    englishCategory: "Sunday Service",
+    description: "எங்கள் ஞாயிறு ஆராதனைக்கு உங்களை அன்புடன் வரவேற்கிறோம். தேவனை ஆராதிக்கவும், வார்த்தையைத் தியானிக்கவும், ஐக்கியமாக கூடிவரவும் உங்களை அழைக்கிறோம்.\n\nநிகழ்வு விவரங்கள்:\n* எப்பொழுது: ஒவ்வொரு ஞாயிற்றுக்கிழமையும்\n* நேரம்: காலை 10:00 மணி\n* இடம்: வார்த்தை சுவிசேஷ திருச்சபை, 389 Old Logan Rd, Springfield, QLD 4300",
+    englishDescription: "You are warmly invited to our Sunday Worship Service. Come and join us as we worship God, meditate on His Word, and fellowship together.\n\nEvent Details:\n* When: Every Sunday\n* Time: 10:00 AM\n* Location: Vaarthai Evangelical Church, 389 Old Logan Rd, Springfield, QLD 4300",
     organizer: "Vaarthai Evangelical Church",
     englishOrganizer: "Vaarthai Evangelical Church",
     organizerEmail: "info@vaarthai.org.au",
-    image: "/event-fathers-day.jpg",
-    isFeatured: true,
-    imageHasText: true
+    image: "/hero-bg.jpg",
+    isFeatured: true
   },
   {
     id: "mid-week-online-prayer",
