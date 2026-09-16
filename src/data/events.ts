@@ -88,7 +88,6 @@ export const getEventsData = (): ChurchEvent[] => [
     englishOrganizer: "Vaarthai Evangelical Church",
     organizerEmail: "info@vaarthai.org.au",
     image: "/hero-bg.jpg",
-    isFeatured: true
   },
   {
     id: "mid-week-online-prayer",
@@ -109,7 +108,6 @@ export const getEventsData = (): ChurchEvent[] => [
     englishOrganizer: "Ps Weslyn",
     organizerEmail: "info@vaarthai.org.au",
     image: "/event-mid-week-prayer.jpg",
-    isFeatured: true
   },
   {
     id: "monthly-after-church-lunch",
@@ -130,7 +128,6 @@ export const getEventsData = (): ChurchEvent[] => [
     englishOrganizer: "Mr Devairakkam Paul",
     organizerEmail: "info@vaarthai.org.au",
     image: "/event-after-church-lunch.jpg",
-    isFeatured: false
   },
   {
     id: "carolights-26",
