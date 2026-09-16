@@ -131,6 +131,33 @@ export const getEventsData = (): ChurchEvent[] => [
     organizerEmail: "info@vaarthai.org.au",
     image: "/event-after-church-lunch.jpg",
     isFeatured: false
+  },
+  {
+    id: "carolights-26",
+    title: "Carolights '26 \"The Sound of Good News\"",
+    englishTitle: "Carolights '26 \"The Sound of Good News\"",
+    date: "2026-11-28",
+    time: "சனிக்கிழமை, 28 நவம்பர் 2026",
+    englishTime: "Saturday, 28 November 2026",
+    location: "இடம் குறித்த விவரங்கள் விரைவில் அறிவிக்கப்படும்",
+    englishLocation: "VENUE DETAILS COMING SOON",
+    category: "All-Church",
+    englishCategory: "Special Event & Music",
+    description: "கிறிஸ்துமஸ் பாடல்கள், நேரடி இசை, மகிழ்ச்சியான கொண்டாட்டம் மற்றும் இயேசு கிறிஸ்துவின் நற்செய்தியோடு ஒரு மறக்க முடியாத மாலை.
+
+சிறப்பு பாடகர் குழு: Desire Jesus Brisbane.
+
+www.vaarthai.org.au",
+    englishDescription: "An unforgettable evening of Christmas carols, live music, joyful celebration and the Good News of Jesus Christ.
+
+Featuring Special Choir: DESIRE JESUS BRISBANE.
+
+www.vaarthai.org.au",
+    organizer: "Vaarthai Evangelical Church",
+    englishOrganizer: "Vaarthai Evangelical Church",
+    organizerEmail: "info@vaarthai.org.au",
+    image: "/event-carolights-26.png",
+    isFeatured: true
   }
 ];
 
