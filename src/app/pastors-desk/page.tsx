@@ -17,7 +17,7 @@ export default function PastorsDeskPage() {
     <main className="min-h-screen bg-stone-50 py-12">
       <section 
         className="relative text-white py-16 md:py-24 text-center overflow-hidden bg-cover bg-center bg-no-repeat bg-[#0F172A]"
-        style={{ backgroundImage: "url('/edition-11-joe-marino.jpg')" }}
+        style={{ backgroundImage: "url('/pastor-desk-hero.jpg')" }}
       >
         <div className="absolute inset-0 bg-[#0F172A]/70 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-[#0F172A]/30"></div>
@@ -48,7 +48,17 @@ export default function PastorsDeskPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           <div className="lg:col-span-8">
             <div className="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-10 text-stone-800">
-              
+              <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10">
+                
+<div className="my-6">
+  <div className="rounded-xl overflow-hidden shadow-md border-2 border-stone-200 bg-white">
+    <img src="/edition-11-joe-marino.jpg" alt="Photograph: Joe Marino" className="w-full h-auto object-cover max-h-[500px]" />
+  </div>
+  <p className="text-right text-xs text-stone-400 mt-2 italic">
+    Photograph: Joe Marino
+  </p>
+</div>
+
 <p className="mb-4">இந்த வாரம் உலகின் கவனத்தை ஈர்த்த ஒரு முக்கிய அறிவிப்பு வெளியானது. விண்வெளியில் செயல்படக்கூடிய ஆயுதங்களை அமெரிக்கா நிலைநிறுத்தியிருப்பதாக அந்நாட்டின் விமானப்படைச் செயலாளர் முதன்முறையாக வெளிப்படையாக அறிவித்தார். அந்த ஆயுதங்கள் என்ன, அவை எவ்வாறு செயல்படுகின்றன என்ற விவரங்கள் வெளியிடப்படவில்லை. ஆனால் பூமியிலுள்ள தேசங்களின் போட்டியும் பதற்றமும் விண்வெளிவரை சென்றுவிட்டதா என்ற கேள்வியை இது எழுப்பியுள்ளது.</p>
 
 <p className="mb-4">ஒருகாலத்தில் விண்வெளி மனிதனுடைய ஆச்சரியம், அறிவியல் ஆராய்ச்சி மற்றும் புதிய கண்டுபிடிப்புகளின் அடையாளமாக இருந்தது. இன்று அது பாதுகாப்பு, அதிகாரம் மற்றும் ஆயுதப் போட்டியைப் பற்றிய உரையாடலின் ஒரு பகுதியாக மாறியிருக்கிறது.</p>
@@ -95,7 +105,7 @@ export default function PastorsDeskPage() {
 
 <p className="mb-4">எனவே, தேசங்களுக்கிடையே சமாதானம் வேண்டும் என்று ஜெபிப்பதற்கு முன்பு, நம்மையே ஒரு கேள்வி கேட்டுக்கொள்வோம்:</p>
 
-<p className="mb-4 font-bold text-stone-900 text-lg text-center border-y border-stone-200 py-4 my-6">நான் யாருடன் சமாதானம் செய்ய வேண்டும்?</p>
+<p className="font-bold text-lg text-center text-stone-800 border-y border-stone-200 py-4 my-6">நான் யாருடன் சமாதானம் செய்ய வேண்டும்?</p>
 
 <p className="mb-4">ஒருவரை அழைக்க வேண்டுமா? மன்னிப்புக் கேட்க வேண்டுமா? நீண்ட நாட்களாக வைத்திருக்கும் கோபத்தை விட்டுவிட வேண்டுமா? உடைந்துபோன உறவைச் சரிசெய்ய முதல் அடியை எடுக்க வேண்டுமா?</p>
 
@@ -121,7 +131,7 @@ export default function PastorsDeskPage() {
 
 <p className="mb-8">இயேசுவின் நாமத்தில், ஆமென்.</p>
 
-<div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg mt-8 mb-8 shadow-md">
+<div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl mt-8 mb-8 shadow-md border-2 border-stone-200">
   <iframe 
     className="absolute top-0 left-0 w-full h-full" 
     src="https://www.youtube.com/embed/2xoqMtOyiR8" 
@@ -131,6 +141,7 @@ export default function PastorsDeskPage() {
   </iframe>
 </div>
 
+              </div>
             </div>
           </div>
           
