@@ -40,6 +40,6 @@ export const staffData: StaffMember[] = [
     englishBio: "Managing our church financial stewardship and operations with utmost integrity, care, and biblical transparency to support all ministries, missions, and community outreach efforts.",
     email: "treasurer@vaarthai.org.au",
     image: "/staff-treasurer.png",
-    imageStyle: { objectPosition: "center top", transform: "scale(1.08) " }
+    imageStyle: { objectPosition: "center top", transform: "scale(1.08)" }
   }
 ];
