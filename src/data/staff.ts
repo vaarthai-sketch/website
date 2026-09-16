@@ -29,7 +29,7 @@ export const staffData: StaffMember[] = [
     bio: "திருச்சபையின் நிர்வாக மற்றும் அலுவலகப் பணிகளைப் பொறுப்புடன் கவனித்து, சபையின் செயல்பாடுகளுக்கு உதவுகிறார்.",
     englishBio: "Faithfully overseeing church administration and day-to-day office operations, providing dedicated guidance and reliable support across all church ministries and activities.",
     email: "secretary@vaarthai.org.au",
-    image: "/staff-secretary.jpg"
+    image: "/staff-secretary.png"
   },
   {
     id: "joe-jeyandran",
