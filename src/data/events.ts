@@ -88,6 +88,7 @@ export const getEventsData = (): ChurchEvent[] => [
     englishOrganizer: "Vaarthai Evangelical Church",
     organizerEmail: "info@vaarthai.org.au",
     image: "/hero-bg.jpg",
+    isFeatured: true
   },
   {
     id: "mid-week-online-prayer",
@@ -145,8 +146,7 @@ export const getEventsData = (): ChurchEvent[] => [
     organizer: "Vaarthai Evangelical Church",
     englishOrganizer: "Vaarthai Evangelical Church",
     organizerEmail: "info@vaarthai.org.au",
-    image: "/event-carolights-26.png",
-    isFeatured: true
+    image: "/event-carolights-26.png"
   }
 ];
 
