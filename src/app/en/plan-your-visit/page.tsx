@@ -248,10 +248,10 @@ export default function EnglishPlanYourVisitPage() {
             <div className="space-y-4">
               <h3 className="font-serif font-bold text-primary text-lg flex items-center gap-2">
                 <Map className="w-5 h-5 text-accent" />
-                Location & Map
+                Sunday Worship Location
               </h3>
               <p className="text-sm text-stone-700 leading-relaxed">
-                Our church facility is located at <strong>{churchConfig.contact.address.street}, {churchConfig.contact.address.city}</strong>.
+                Join us every Sunday at <strong>10:00 AM</strong> for our weekly worship service.<br/><br/>We meet at the <strong>Westside Community Centre</strong>, located at <strong>{churchConfig.contact.address.street}, {churchConfig.contact.address.city}, {churchConfig.contact.address.state} {churchConfig.contact.address.zip}</strong>.
               </p>
               <div className="aspect-[21/9] w-full rounded-lg overflow-hidden border border-border bg-stone-100 shadow-inner relative flex items-center justify-center">
                 <iframe

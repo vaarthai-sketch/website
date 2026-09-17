@@ -159,7 +159,8 @@ export default function EnglishContactPage() {
               <div className="flex gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">Church Address</span>
+                  <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">Sunday Worship Venue (10:00 AM)</span>
+                  <p className="text-stone-900 font-medium mb-1">Westside Community Centre</p>
                   <p className="text-stone-900 font-medium">
                     {churchConfig.contact.address.street}<br />
                     {churchConfig.contact.address.city}, {churchConfig.contact.address.state} {churchConfig.contact.address.zip}
@@ -178,7 +179,7 @@ export default function EnglishContactPage() {
               <div className="flex gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">Mailing Address</span>
+                  <span className="text-xs text-stone-400 font-bold uppercase tracking-wider block">Office & Postal Address</span>
                   <p className="text-stone-900 font-medium">
                     {churchConfig.contact.officeAddress.poBox}<br />
                     {churchConfig.contact.officeAddress.city} {churchConfig.contact.officeAddress.state} {churchConfig.contact.officeAddress.zip}
