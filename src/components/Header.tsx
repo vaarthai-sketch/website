@@ -33,6 +33,7 @@ export const Header: React.FC = () => {
     { name: "HOME", href: isEnglish ? "/en" : "/" },
     { 
       name: "ABOUT US",
+      href: `${basePrefix}/about`,
       dropdown: [
         { name: "Our Story", href: `${basePrefix}/about#our-story` },
         { name: "Mission, Vision & Values", href: `${basePrefix}/about#mission` },
@@ -43,6 +44,7 @@ export const Header: React.FC = () => {
     },
     { 
       name: "MINISTRIES",
+      href: `${basePrefix}/ministries`,
       megaMenu: [
         { 
           category: "Next Generation",
@@ -77,6 +79,7 @@ export const Header: React.FC = () => {
     },
     {
       name: "MEDIA & RESOURCES",
+      href: `${basePrefix}/sermons`,
       dropdown: [
         { name: "Sermons", href: `${basePrefix}/sermons` },
         { name: "Pastor's Desk", href: `${basePrefix}/pastors-desk` },
@@ -85,6 +88,7 @@ export const Header: React.FC = () => {
     },
     {
       name: "WHAT'S ON",
+      href: `${basePrefix}/events`,
       dropdown: [
         { name: "Upcoming Events", href: `${basePrefix}/events` },
         { name: "Midweek Prayer", href: `${basePrefix}/events/mid-week-online-prayer` },
@@ -142,9 +146,9 @@ export const Header: React.FC = () => {
               if (link.megaMenu) {
                 return (
                   <div key={link.name} className="relative group py-6">
-                    <button className="flex items-center gap-1 text-xs font-bold tracking-widest text-stone-700 hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-accent rounded-sm">
+                    <Link href={link.href || '#'} className="flex items-center gap-1 text-xs font-bold tracking-widest text-stone-700 hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-accent rounded-sm">
                       {link.name} <ChevronDown className="w-3.5 h-3.5 group-hover:rotate-180 transition-transform duration-200" />
-                    </button>
+                    </Link>
                     
                     <div className="absolute top-full left-1/2 -translate-x-1/2 w-max max-w-5xl bg-white border border-border shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0 p-8 grid grid-cols-4 gap-12 z-50">
                       {link.megaMenu.map((cat, idx) => (
@@ -172,9 +176,9 @@ export const Header: React.FC = () => {
               if (link.dropdown) {
                 return (
                   <div key={link.name} className="relative group py-6">
-                    <button className="flex items-center gap-1 text-xs font-bold tracking-widest text-stone-700 hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-accent rounded-sm">
+                    <Link href={link.href || '#'} className="flex items-center gap-1 text-xs font-bold tracking-widest text-stone-700 hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-accent rounded-sm">
                       {link.name} <ChevronDown className="w-3.5 h-3.5 group-hover:rotate-180 transition-transform duration-200" />
-                    </button>
+                    </Link>
                     
                     <div className="absolute top-full left-0 min-w-[240px] bg-white border border-border shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0 py-2 z-50">
                       {link.dropdown.map((item, idx) => (
