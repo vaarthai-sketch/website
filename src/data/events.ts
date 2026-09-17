@@ -140,16 +140,8 @@ export const getEventsData = (): ChurchEvent[] => [
     englishLocation: "VENUE DETAILS COMING SOON",
     category: "All-Church",
     englishCategory: "Special Event & Music",
-    description: "கிறிஸ்துமஸ் பாடல்கள், நேரடி இசை, மகிழ்ச்சியான கொண்டாட்டம் மற்றும் இயேசு கிறிஸ்துவின் நற்செய்தியோடு ஒரு மறக்க முடியாத மாலை.
-
-சிறப்பு பாடகர் குழு: Desire Jesus Brisbane.
-
-www.vaarthai.org.au",
-    englishDescription: "An unforgettable evening of Christmas carols, live music, joyful celebration and the Good News of Jesus Christ.
-
-Featuring Special Choir: DESIRE JESUS BRISBANE.
-
-www.vaarthai.org.au",
+    description: "கிறிஸ்துமஸ் பாடல்கள், நேரடி இசை, மகிழ்ச்சியான கொண்டாட்டம் மற்றும் இயேசு கிறிஸ்துவின் நற்செய்தியோடு ஒரு மறக்க முடியாத மாலை.\n\nசிறப்பு பாடகர் குழு: Desire Jesus Brisbane.\n\nwww.vaarthai.org.au",
+    englishDescription: "An unforgettable evening of Christmas carols, live music, joyful celebration and the Good News of Jesus Christ.\n\nFeaturing Special Choir: DESIRE JESUS BRISBANE.\n\nwww.vaarthai.org.au",
     organizer: "Vaarthai Evangelical Church",
     englishOrganizer: "Vaarthai Evangelical Church",
     organizerEmail: "info@vaarthai.org.au",
