@@ -66,93 +66,58 @@ export default function PastorsDeskPage() {
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10 font-serif">
 
 <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
-  <img src="/edition-10-joe-marino.jpg" alt="Photograph: Joe Marino" className="w-full h-auto object-cover max-h-[500px]" />
+  <img src="/un-assembly.webp" alt="UN General Assembly" className="w-full h-auto object-cover max-h-[500px]" />
 </div>
-<p className="text-right text-xs text-stone-400 mt-2 italic">
-  Photograph: Joe Marino
+
+<h3 className="text-xl font-bold text-primary mt-8 mb-4 border-b pb-2">The World This Week: A Search for Stability</h3>
+<p>
+  This week, global leaders are gathered in New York for the United Nations General Assembly, and the dominant themes reflect a world grappling with deep uncertainty. Discussions have centred on rising geopolitical tensions in the Middle East, the urgent realities of extreme weather following a year of record-breaking climate events, and the unpredictable, disruptive potential of new technologies like AI. Across these diverse issues, a single thread unites the global conversation: a search for stability in systems that feel increasingly fragile.
 </p>
 
-<p>This week, a significant announcement captured international attention. The United States publicly confirmed for the first time that it has deployed weapons capable of operating in space. The announcement described them as “on-orbit space control weapons,” but did not disclose what the weapons are or how they operate. It has nevertheless raised an important question: A search for stability in systems that feel increasingly fragile.</p>
+<h3 className="text-xl font-bold text-primary mt-8 mb-4 border-b pb-2">Devotional Reflection: The Rock Eternal</h3>
+<p>
+  When we read the news of international conflicts, environmental crises and rapid technological shifts, it is easy to let the anxiety of the world become our own. The headlines remind us daily that human institutions, no matter how powerful or well-intentioned, are inherently limited in their ability to guarantee true peace.
+</p>
 
-<p>Space once represented humanity’s wonder, scientific exploration and desire to discover the unknown. Today, it is increasingly becoming part of conversations about defence, power and military competition.</p>
-
-<p className="font-bold text-stone-900 text-lg">Humanity has reached the heavens—but has the human heart found peace?</p>
-
-<p>Psalm 19:1 declares, “The heavens declare the glory of God; and the firmament shows His handiwork.” When David looked at the heavens, he saw the glory of God. Yet when humanity looks at those same heavens, we can begin to ask how we might establish our power there or defend ourselves against our enemies.</p>
-
-<p>Even into the place where God displays His glory, humanity carries its fears and conflicts. The heavens have not changed; it is the human heart that needs to change.</p>
-
-<p>Humanity has made extraordinary progress in science and technology. Yet scientific advancement does not automatically remove selfishness, pride, fear or the desire for power.</p>
-
-<p>James 4:1 asks, “Where do wars and fights come from among you? Do they not come from your desires for pleasure that war in your members?” The Bible does not treat war merely as a problem between nations; it also reveals its roots within the human heart.</p>
-
-<p>Technology magnifies what is already present within the hearts of those who use it. In loving hands, it can preserve life. In hearts governed by fear and hostility, the same technology can become an instrument of destruction.</p>
-
-<p className="font-bold text-stone-900 text-lg">New technology may give humanity new abilities, but only Jesus Christ can give us a new heart.</p>
-
-<p>The world often believes that peace can be secured through greater power and stronger defences. We do not deny that nations require protection or that leaders must make complex decisions. Weapons may deter certain attacks, but they cannot remove hostility from the human heart.</p>
-
-<p>This is why Jesus said:</p>
-
-<blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
-  <p>“Peace I leave with you, My peace I give to you; not as the world gives do I give to you. Let not your heart be troubled, neither let it be afraid.”</p>
-  <p className="mt-2 text-right text-sm">— John 14:27</p>
+<blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
+  "You will keep in perfect peace those whose minds are steadfast, because they trust in you. Trust in the LORD forever, for the LORD, the LORD himself, is the Rock eternal."
+  <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— Isaiah 26:3–4</footer>
 </blockquote>
 
-<p>The peace Jesus gives does not mean a life without difficulties. It is born from being reconciled to God. His peace governs our fears, quietens our anger and transforms hostility into forgiveness. This is why Ephesians 2:14 says, “For He Himself is our peace.”</p>
+<p>
+  Isaiah did not write these words in a season of calm. While world empires rose and fell around Judah, he gave God&apos;s people a song to sing &ldquo;in that day&rdquo; (26:1). The peace he promises does not come from circumstances changing; it comes from a mind that is steadfastly fixed on the LORD.
+</p>
+<p>
+  That is why the phrase &ldquo;the Rock eternal&rdquo; matters so much today. The economy, international diplomacy and technology are like sand: standing today, liable to shift tomorrow. But the LORD is the unchanging Rock. Our trust is not anchored to the temporary stability of the world&apos;s systems, but to His eternal Word.
+</p>
 
-<p className="font-bold text-stone-900 text-lg">Peace is not merely a policy or an idea; peace is a Person—Jesus Christ.</p>
-
-<p>The prophet Isaiah presents a beautiful picture of the future under God’s reign:</p>
-
-<blockquote className="bg-stone-100 border-l-4 border-stone-400 p-4 rounded-r-lg italic font-serif text-stone-700">
-  <p>“They shall beat their swords into ploughshares, and their spears into pruning hooks; nation shall not lift up sword against nation, neither shall they learn war anymore.”</p>
-  <p className="mt-2 text-right text-sm">— Isaiah 2:4</p>
+<blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
+  "I have told you these things, so that in me you may have peace. In this world you will have trouble. But take heart! I have overcome the world."
+  <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— John 16:33</footer>
 </blockquote>
 
-<p>The sword becomes a ploughshare. What was used to destroy is used to cultivate. What once produced death becomes an instrument that sustains life. This is the transformation promised under Christ's reign.</p>
+<p>
+  Jesus never promised a world without trouble; He promised peace in Himself, the One who has overcome the world. The world is still searching for stability — we have already found our refuge.
+</p>
 
-<p>We may not determine what nations place in space. But we can decide to cultivate peace within our homes, our church and our relationships.</p>
-
-<p>Jesus said, “Blessed are the peacemakers” (Matthew 5:9). Peacemakers are not people who avoid difficult issues. They speak the truth in love, take the initiative to forgive and seek to restore broken relationships.</p>
-
-<p>Before we pray for peace among the nations, let us ask ourselves:</p>
-
-<p className="font-bold text-lg text-center text-stone-800 border-y border-stone-200 py-4 my-6">With whom do I need to make peace?</p>
-
-<p>Is there a telephone call we need to make? Do we need to ask someone for forgiveness? Is there resentment we need to release? Do we need to take the first step towards repairing a broken relationship?</p>
-
-<p>Humanity has reached the heavens, yet it continues to search for the way to peace. Jesus did not merely show us that way—He came to be our peace.</p>
-
-<p>While the world places weapons in the heavens, may the Church sow seeds of peace upon the earth.</p>
-
-<h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-10 mb-4 border-b border-stone-200 pb-2">PRAYER POINTS</h3>
-<ul className="list-disc pl-6 space-y-2 text-stone-700">
-  <li>Pray that world leaders will act with wisdom, restraint and responsibility.</li>
-  <li>Pray that space will not become another battlefield but will be used for the good of humanity.</li>
-  <li>Pray for people affected by war and international conflict.</li>
-  <li>Pray for reconciliation within broken families, churches and communities.</li>
-  <li>Pray that we will not merely speak about peace but actively become peacemakers.</li>
+<h3 className="text-xl font-bold text-primary mt-8 mb-4 border-b pb-2">Application for This Week</h3>
+<ul className="space-y-4">
+  <li className="flex gap-3"><span className="text-accent font-bold">◆</span><span><strong>Consume with discernment:</strong> When reading the news this week, intentionally pause to bring your anxieties to God rather than carrying the weight of the world on your shoulders.</span></li>
+  <li className="flex gap-3"><span className="text-accent font-bold">◆</span><span><strong>Be a presence of peace:</strong> In a culture gripped by anxiety about the future, let your calm trust in God&apos;s providence be a testimony of hope to those around you.</span></li>
+  <li className="flex gap-3"><span className="text-accent font-bold">◆</span><span><strong>Hide the Word in your heart:</strong> Memorise Isaiah 26:3 this week and pray it whenever anxiety rises.</span></li>
 </ul>
 
-<h3 className="text-xl md:text-2xl font-bold text-stone-900 mt-10 mb-4 border-b border-stone-200 pb-2">CLOSING PRAYER</h3>
-<p>God of peace, the heavens and the earth belong to You. Give wisdom and responsibility to the leaders of the nations. Protect those whose lives are affected by war, threats and conflict.</p>
+<h3 className="text-xl font-bold text-primary mt-8 mb-4 border-b pb-2">Weekly Prayer Points</h3>
+<ol className="list-decimal pl-5 space-y-2">
+  <li>Pray for wisdom for global leaders navigating complex international conflicts and humanitarian crises (1 Timothy 2:1–2).</li>
+  <li>Pray for communities vulnerable to extreme weather, that they would receive protection, necessary aid and comfort.</li>
+  <li>Pray for our Vaarthai church family, that we would remain deeply rooted in faith and serve as vessels of peace in our neighbourhoods and workplaces.</li>
+</ol>
 
-<p>Lord Jesus, You are our peace. Remove the pride, anger, fear and hostility within our hearts. Make us not merely people who speak about peace, but people who create peace.</p>
-
-<p>Use us to sow Your peace in our homes, our church and our community. May our confidence rest not in human power, but in You—the Prince of Peace.</p>
-
-<p>In Jesus’ name, amen.</p>
-
-<div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl mt-8 mb-8 shadow-md border-2 border-stone-200">
-  <iframe 
-    className="absolute top-0 left-0 w-full h-full" 
-    src="https://www.youtube.com/embed/2xoqMtOyiR8" 
-    frameBorder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowFullScreen>
-  </iframe>
+<div className="mt-12 rounded-xl overflow-hidden shadow-md border-2 border-stone-200 aspect-video">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/w3tKP5xo7mU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 </div>
+
 
                 </div>
               </div>
