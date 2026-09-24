@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   locale: "ta",
   title: "VEC-NL 2026-09 Edition 11 - போதகர் மேசையிலிருந்து",
-  description: "We Have Reached the Heavens—But Have We Found Peace?",
+  description: "அசையும் உலகில் அசையாத சமாதானம்",
   path: "/pastors-desk",
   image: "/un-assembly.webp"
 });
@@ -32,10 +32,10 @@ export default function PastorsDeskPage() {
             <span className="h-px w-8 bg-accent/30"></span>
           </div>
           <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-            வானங்களை எட்டினோம்; சமாதானத்தை அடைந்தோமா?
+            அசையும் உலகில் அசையாத சமாதானம்
           </h1>
           <p className="text-xl md:text-2xl text-stone-300 font-serif italic mb-8 max-w-2xl mx-auto">
-            We Have Reached the Heavens—But Have We Found Peace?
+            Finding Peace in a Shifting World
           </p>
           <div className="flex items-center justify-center gap-4 text-sm font-medium text-stone-300">
             <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #011</span>
@@ -60,7 +60,7 @@ export default function PastorsDeskPage() {
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-6 relative z-10 flex items-center gap-2">
-                  வானங்களை எட்டினோம்; சமாதானத்தை அடைந்தோமா?
+                  அசையும் உலகில் அசையாத சமாதானம்
                 </h2>
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10 font-serif">
