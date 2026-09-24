@@ -6,10 +6,10 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   locale: "ta",
-  title: "VEC-NL 2026-09 Edition 11 - போதகர் மேசையிலிருந்து",
+  title: "VEC-NL 2026-09 Edition 10 - போதகர் மேசையிலிருந்து",
   description: "We Have Reached the Heavens—But Have We Found Peace?",
   path: "/pastors-desk",
-  image: "/un-assembly.webp"
+  image: "/edition-10-joe-marino.jpg"
 });
 
 export default function PastorsDeskPage() {
@@ -38,7 +38,7 @@ export default function PastorsDeskPage() {
             We Have Reached the Heavens—But Have We Found Peace?
           </p>
           <div className="flex items-center justify-center gap-4 text-sm font-medium text-stone-300">
-            <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #011</span>
+            <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #010</span>
             <span className="flex items-center gap-1"><CalendarIcon className="w-4 h-4 text-accent" /> செப்டம்பர் 2026</span>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function PastorsDeskPage() {
                 
                 <div className="flex items-center gap-2 text-sm text-stone-600 font-bold mb-4 relative z-10">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-09 · Edition 11</span>
+                  <span>VEC-NL 2026-09 · Edition 10</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-6 relative z-10 flex items-center gap-2">
@@ -169,17 +169,17 @@ export default function PastorsDeskPage() {
               </h3>
               <div className="space-y-3">
                   <h4 className="font-bold text-xs text-stone-400 uppercase tracking-wider mb-2 pl-2">September 2026</h4>
-                  <Link href="/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
-                    <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0 transition-colors" />
+                  <Link href="/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
-                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 11</p>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 11</p>
                       <p className="text-xs text-stone-500">Sep 2026</p>
                     </div>
                   </Link>
-                  <Link href="/pastors-desk/archive/september/edition-10" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
-                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
+                  <Link href="/pastors-desk/archive/september/edition-10" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
-                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 10</p>
+                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 10</p>
                       <p className="text-xs text-stone-500">Sep 2026</p>
                     </div>
                   </Link>
