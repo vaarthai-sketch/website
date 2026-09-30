@@ -156,7 +156,7 @@ export default function PastorsDeskPage() {
 </p>
 
 <div className="mt-12 rounded-xl overflow-hidden shadow-md border-2 border-stone-200 aspect-video">
-  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iPY_rKxbc9Q" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eqDKNARFIoA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 </div>
 
 
