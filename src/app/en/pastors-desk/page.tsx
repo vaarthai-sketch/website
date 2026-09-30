@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   title: "VEC-NL 2026-10 Edition 12 - From the Pastor's Desk",
   description: "Life in the Heat",
   path: "/en/pastors-desk",
-  image: "/pastor-desk-hero.jpg"
+  image: "https://i.ytimg.com/vi/eqDKNARFIoA/maxresdefault.jpg"
 });
 
 export default function PastorsDeskPage() {
