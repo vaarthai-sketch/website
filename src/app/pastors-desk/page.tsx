@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   title: "VEC-NL 2026-10 Edition 12 - போதகர் மேசையிலிருந்து",
   description: "அனலின் நடுவிலும் வாழ்க்கை!",
   path: "/pastors-desk",
-  image: "https://i.ytimg.com/vi/eqDKNARFIoA/maxresdefault.jpg"
+  image: "/pastor-desk-hero.jpg"
 });
 
 export default function PastorsDeskPage() {
