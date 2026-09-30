@@ -6,10 +6,10 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   locale: "ta",
-  title: "VEC-NL 2026-09 Edition 11 - போதகர் மேசையிலிருந்து",
-  description: "அசையும் உலகில் அசையாத சமாதானம்",
+  title: "VEC-NL 2026-10 Edition 12 - போதகர் மேசையிலிருந்து",
+  description: "அனலின் நடுவிலும் வாழ்க்கை!",
   path: "/pastors-desk",
-  image: "/un-assembly.webp"
+  image: "/pastor-desk-hero.jpg"
 });
 
 export default function PastorsDeskPage() {
@@ -32,14 +32,14 @@ export default function PastorsDeskPage() {
             <span className="h-px w-8 bg-accent/30"></span>
           </div>
           <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-            அசையும் உலகில் அசையாத சமாதானம்
+            அனலின் நடுவிலும் வாழ்க்கை!
           </h1>
           <p className="text-xl md:text-2xl text-stone-300 font-serif italic mb-8 max-w-2xl mx-auto">
-            Finding Peace in a Shifting World
+            Life in the Heat
           </p>
           <div className="flex items-center justify-center gap-4 text-sm font-medium text-stone-300">
-            <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #011</span>
-            <span className="flex items-center gap-1"><CalendarIcon className="w-4 h-4 text-accent" /> செப்டம்பர் 2026</span>
+            <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #012</span>
+            <span className="flex items-center gap-1"><CalendarIcon className="w-4 h-4 text-accent" /> அக்டோபர் 2026</span>
           </div>
         </div>
       </section>
@@ -56,68 +56,109 @@ export default function PastorsDeskPage() {
                 
                 <div className="flex items-center gap-2 text-sm text-stone-600 font-bold mb-4 relative z-10">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-09 · Edition 11</span>
+                  <span>VEC-NL 2026-10 · Edition 12</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-6 relative z-10 flex items-center gap-2">
-                  அசையும் உலகில் அசையாத சமாதானம்
+                  அனலின் நடுவிலும் வாழ்க்கை!
                 </h2>
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10 font-serif">
 
-<div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
-  <img src="/un-assembly.webp" alt="UN General Assembly" className="w-full h-auto object-cover max-h-[500px]" />
+<div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200 bg-stone-900">
+  <video 
+    src="https://assets.science.nasa.gov/content/dam/science/psd/astrobiology/research-images/MovieS12_60C_normalmotility_switching%201080p_Crop.mp4" 
+    autoPlay 
+    loop 
+    muted 
+    playsInline 
+    className="w-full h-auto object-cover max-h-[500px]" 
+  />
 </div>
+<p className="text-right text-xs text-stone-400 mt-2 italic">Source: science.nasa.gov</p>
 
-<h3 className="text-xl font-bold text-primary mt-8 mb-4 border-b pb-2">இந்த வாரம் உலகில்: நிலைத்தன்மைக்கான தேடல்</h3>
 <p>
-  இந்த வாரம், ஐக்கிய நாடுகள் பொதுச் சபைக்காக உலகத் தலைவர்கள் நியூயார்க்கில் கூடியிருக்கிறார்கள். மத்திய கிழக்கில் அதிகரித்துவரும் பதற்றங்கள், சாதனை அளவிலான காலநிலை நிகழ்வுகளைத் தொடர்ந்து வரும் கடுமையான வானிலையின் அவசர யதார்த்தங்கள், செயற்கை நுண்ணறிவு (AI) போன்ற புதிய தொழில்நுட்பங்களின் கணிக்க முடியாத தாக்கம் — இவையே விவாதங்களின் மையமாக இருக்கின்றன. இந்த வெவ்வேறு பிரச்சனைகள் அனைத்தையும் ஒரே இழை இணைக்கிறது: நாளுக்கு நாள் பலவீனமாகத் தோன்றும் அமைப்புகளுக்குள் நிலைத்தன்மையைத் தேடும் முயற்சி.
+  சமீபத்தில் அமெரிக்காவின் கலிபோர்னியாவில் உள்ள வெந்நீர் ஊற்றுகளில் விஞ்ஞானிகள் ஒரு ஆச்சரியமான உயிரினத்தைக் கண்டுபிடித்திருக்கிறார்கள்.<br/>
+  “Fire Amoeba” என்று அழைக்கப்படும் இந்த மிகச் சிறிய ஓரணு உயிரினம், கடுமையான வெப்பத்தை வெறுமனே தாங்கி உயிரோடு இருப்பது மட்டுமல்ல—63°C வெப்பத்திலும் வளர்ந்து, இனப்பெருக்கம் செய்கிறது! 64°C வெப்பத்தில்கூட தொடர்ந்து செயல்படுகிறது.
 </p>
 
-<h3 className="text-xl font-bold text-primary mt-8 mb-4 border-b pb-2">தியானம்: நித்திய கன்மலை</h3>
 <p>
-  சர்வதேச மோதல்கள், சுற்றுச்சூழல் நெருக்கடிகள், வேகமான தொழில்நுட்ப மாற்றங்கள் பற்றிய செய்திகளை வாசிக்கும்போது, உலகத்தின் கவலை மிக எளிதாக நம்முடைய கவலையாகி விடுகிறது. மனித அமைப்புகள் எவ்வளவு வல்லமையுள்ளவையாகவும் நல்லெண்ணம் கொண்டவையாகவும் இருந்தாலும், உண்மையான சமாதானத்தை உறுதிசெய்ய அவைகளால் முடியாது என்பதைத் தலைப்புச் செய்திகள் ஒவ்வொரு நாளும் நமக்கு நினைவூட்டுகின்றன.
+  இதில் என்னைக் கவர்ந்த விஷயம் இதுதான்:<br/>
+  <strong>அது வாழ்வதற்கு வெப்பம் மறைய வேண்டிய அவசியமில்லை. அந்த வெப்பத்தின் நடுவிலேயே வாழும் திறன் அதற்கு இருக்கிறது.</strong>
 </p>
+
+<p>இதை வாசித்தபோது ஏசாயாவில் தேவன் சொன்ன வார்த்தை நினைவுக்கு வந்தது:</p>
 
 <blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
-  "உம்மை உறுதியாய்ப் பற்றிக்கொண்ட மனதையுடையவன் உம்மையே நம்பியிருக்கிறபடியால், நீர் அவனைப் பூரண சமாதானத்துடன் காத்துக்கொள்ளுவீர். கர்த்தரை என்றென்றைக்கும் நம்புங்கள்; கர்த்தராகிய யேகோவா நித்திய கன்மலையாயிருக்கிறார்."
-  <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— ஏசாயா 26:3–4</footer>
+  "நீ அக்கினியில் நடக்கும்போது வேகாதிருப்பாய்; அக்கினிஜுவாலை உன்பேரில் பற்றாது."
+  <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— ஏசாயா 43:2</footer>
 </blockquote>
 
 <p>
-  ஏசாயா இந்த வார்த்தைகளை அமைதியான காலத்தில் எழுதவில்லை. உலக வல்லரசுகள் எழும்பி விழுந்துகொண்டிருந்த காலத்தில், “அந்நாளில் யூதா தேசத்தில் பாடப்படும் பாட்டு” (26:1) என்று தேவனுடைய ஜனங்களுக்கு ஒரு பாடலைக் கொடுத்தார். அவர் வாக்குப்பண்ணும் சமாதானம் சூழ்நிலைகள் மாறுவதால் வருவதில்லை; மனம் கர்த்தரை உறுதியாய்ப் பற்றிக்கொள்வதால் வருகிறது.
-</p>
-<p>
-  அதனால்தான் “நித்திய கன்மலை” என்ற வார்த்தை இன்று நமக்கு மிக முக்கியமானது. பொருளாதாரம், சர்வதேச ராஜதந்திரம், தொழில்நுட்பம் — இவை மணலைப் போன்றவை; இன்று நிற்கின்றன, நாளை சரியக்கூடும். ஆனால் கர்த்தர் மாறாத கன்மலை. நம் நம்பிக்கை உலக அமைப்புகளின் தற்காலிக நிலைத்தன்மையில் அல்ல, நித்திய வார்த்தையின் மேல் நங்கூரமிடப்பட்டிருக்கிறது.
+  தேவன், “உன் வாழ்க்கையில் அக்கினியே வராது” என்று சொல்லவில்லை.<br/>
+  “நீ அக்கினியில் நடக்கும்போது…” என்கிறார்.
 </p>
 
+<p>
+  சில நேரங்களில்,<br/>
+  “ஆண்டவரே, இந்தச் சூழ்நிலையிலிருந்து என்னை வெளியே கொண்டுவாருங்கள். இந்த அழுத்தத்தை நீக்குங்கள். இந்தப் பிரச்சனையை மாற்றுங்கள்”<br/>
+  என்று நாம் ஜெபிக்கிறோம்.
+</p>
+
+<p>சில நேரங்களில் தேவன் அப்படியே செய்கிறார்.</p>
+
+<p>
+  ஆனால் சில காலங்களில் அனல் உடனடியாக மாறுவதில்லை. அதற்குப் பதிலாக, அந்த அனலின் நடுவிலும் வாழவும், வளரவும், விசுவாசத்தில் நிலைத்திருக்கவும் தேவன் நமக்குக் கிருபை தருகிறார்.
+</p>
+
+<p>
+  ஒருவேளை நீங்களும் இப்போது ஒரு “அனலின்” வழியாகச் சென்றுகொண்டிருக்கலாம்.<br/>
+  குடும்பப் பிரச்சனை, பொருளாதார அழுத்தம், வேலைப்பளு, ஏமாற்றம், எதிர்காலத்தைக் குறித்த நிச்சயமின்மை, அல்லது இன்னும் பதில் கிடைக்காத ஒரு ஜெபம்...
+</p>
+
+<p className="font-bold text-lg text-primary">
+  அக்கினி இருக்கிறது என்பதால், தேவன் இல்லை என்று நினைத்துவிடாதீர்கள்.
+</p>
+
+<p>அவர் சொல்கிறார்:</p>
+
 <blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
-  "என்னிடத்தில் உங்களுக்குச் சமாதானம் உண்டாயிருக்கும்படி இவைகளை உங்களுக்குச் சொன்னேன். உலகத்தில் உங்களுக்கு உபத்திரவம் உண்டு, ஆனாலும் திடன்கொள்ளுங்கள், நான் உலகத்தை ஜெயித்தேன்."
-  <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— யோவான் 16:33</footer>
+  "நீ தண்ணீர்களைக் கடக்கும்போது நான் உன்னோடு இருப்பேன்… நீ அக்கினியில் நடக்கும்போது வேகாதிருப்பாய்."
 </blockquote>
 
 <p>
-  இயேசு உபத்திரவம் இல்லாத உலகத்தை வாக்குப்பண்ணவில்லை; உலகத்தை ஜெயித்த தம்மிடத்தில் சமாதானத்தை வாக்குப்பண்ணினார். உலகம் இன்னும் நிலைத்தன்மையைத் தேடிக்கொண்டிருக்கிறது; நாமோ ஏற்கனவே நம் அடைக்கலத்தைக் கண்டடைந்திருக்கிறோம்.
+  தேவனுடைய அற்புதம் எப்போதும் அக்கினியை அகற்றுவது மட்டுமல்ல.<br/>
+  சில நேரங்களில் அக்கினியின் வழியாக நம்மை நடத்தி, அதன் நடுவிலும் அவர் நம்மோடு இருந்தார் என்பதை உணரச் செய்வதும் அற்புதம்தான்.
 </p>
 
-<h3 className="text-xl font-bold text-primary mt-8 mb-4 border-b pb-2">இந்த வாரத்திற்கான சிந்தனை</h3>
-<ul className="space-y-4">
-  <li className="flex gap-3"><span className="text-accent font-bold">◆</span><span><strong>விவேகத்துடன் செய்திகளை வாசியுங்கள்:</strong> செய்திகளை வாசிக்கும்போது, ஒரு கணம் நிறுத்தி, உங்கள் கவலைகளைத் தேவனிடம் ஒப்படையுங்கள். உலகத்தின் பாரத்தை உங்கள் தோள்களில் சுமக்க வேண்டியதில்லை.</span></li>
-  <li className="flex gap-3"><span className="text-accent font-bold">◆</span><span><strong>சமாதானத்தின் சாட்சியாக இருங்கள்:</strong> எதிர்காலத்தைப் பற்றிய பயத்தில் இருக்கும் சமுதாயத்தில், தேவனுடைய பராமரிப்பின் மேல் நீங்கள் வைத்திருக்கும் அமைதியான நம்பிக்கை, உங்களைச் சுற்றியுள்ளவர்களுக்கு நம்பிக்கையின் சாட்சியாக இருக்கட்டும்.</span></li>
-  <li className="flex gap-3"><span className="text-accent font-bold">◆</span><span><strong>வசனத்தை மனப்பாடம் செய்யுங்கள்:</strong> இந்த வாரம் ஏசாயா 26:3-ஐ மனப்பாடம் செய்து, கவலை எழும்போதெல்லாம் அதைச் சொல்லி ஜெபியுங்கள்.</span></li>
-  <li className="flex gap-3"><span className="text-accent font-bold">◆</span><span><strong>கீழே உள்ள பாடலை கேளுங்கள்:</strong> பாடுங்கள். அப்படிச்செய்யும்போது எளிதாக வசனம் உங்களுக்குள்ளாகச் சென்று விடும்.</span></li>
-</ul>
+<p>நம்மால் முடியாது என்று தோன்றும்போது, அவருடைய இன்னொரு வாக்குத்தத்தத்தை நினைவுகூருவோம்:</p>
 
-<h3 className="text-xl font-bold text-primary mt-8 mb-4 border-b pb-2">இந்த வார ஜெபக் குறிப்புகள்</h3>
-<ol className="list-decimal pl-5 space-y-2">
-  <li>சர்வதேச மோதல்களையும் மனிதாபிமான நெருக்கடிகளையும் கையாளும் உலகத் தலைவர்களுக்குத் தேவ ஞானம் கிடைக்க ஜெபியுங்கள் (1 தீமோத்தேயு 2:1–2).</li>
-  <li>கடுமையான வானிலையால் பாதிக்கப்படக்கூடிய சமூகங்களுக்குப் பாதுகாப்பு, தேவையான உதவி, ஆறுதல் கிடைக்க ஜெபியுங்கள்.</li>
-  <li>நம்முடைய வார்த்தை சபைக் குடும்பம் விசுவாசத்தில் ஆழமாக வேரூன்றி, நம் சமுதாயத்திலும் பணியிடங்களிலும் சமாதானத்தின் கருவிகளாக இருக்க ஜெபியுங்கள்.</li>
-</ol>
+<blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
+  "என் கிருபை உனக்குப் போதும்."
+  <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— 2 கொரிந்தியர் 12:9</footer>
+</blockquote>
+
+<p>எனவே இந்த வாரம் நமது ஜெபம் இப்படியாக இருக்கட்டும்:</p>
+
+<p className="font-serif italic text-xl text-center text-stone-600 my-8">
+  “ஆண்டவரே, இந்த அனலை இன்னும் நீர் அகற்றவில்லையென்றால், அதன் வழியாக விசுவாசத்தோடு நடக்க எனக்குக் கிருபை தாரும்.”
+</p>
+
+<p>
+  அனல் கடுமையாக இருக்கலாம்.<br/>
+  ஆனால் அவருடைய கிருபை போதுமானது!
+</p>
+
+<p>
+  ஆசீர்வாதங்களுடன்,<br/>
+  <strong>பாஸ்டர் வெஸ்லின்</strong><br/>
+  வார்த்தை சுவிசேஷ சபை
+</p>
 
 <div className="mt-12 rounded-xl overflow-hidden shadow-md border-2 border-stone-200 aspect-video">
-  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/w3tKP5xo7mU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iPY_rKxbc9Q" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 </div>
+
 
                 </div>
               </div>
@@ -133,11 +174,20 @@ export default function PastorsDeskPage() {
                 முந்தைய வெளியீடுகள்
               </h3>
               <div className="space-y-3">
-                  <h4 className="font-bold text-xs text-stone-400 uppercase tracking-wider mb-2 pl-2">September 2026</h4>
+                  <h4 className="font-bold text-xs text-stone-400 uppercase tracking-wider mb-2 pl-2">October 2026</h4>
                   <Link href="/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
-                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 11</p>
+                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 12</p>
+                      <p className="text-xs text-stone-500">Oct 2026</p>
+                    </div>
+                  </Link>
+
+                  <h4 className="font-bold text-xs text-stone-400 uppercase tracking-wider mt-6 mb-2 pl-2 border-t border-stone-100 pt-4">September 2026</h4>
+                  <Link href="/pastors-desk/archive/september/edition-11" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 11</p>
                       <p className="text-xs text-stone-500">Sep 2026</p>
                     </div>
                   </Link>
