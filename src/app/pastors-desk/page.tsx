@@ -104,7 +104,7 @@ export default function PastorsDeskPage() {
 
                   <div className="bg-stone-100 p-5 rounded-lg border-l-4 border-primary my-6">
                     <p className="text-lg md:text-xl font-bold text-primary m-0">
-                      இந்த நூறு நாட்களில் நாம் என்ன சாதித்திருக்கிறோம் என்பதை மட்டுமல்ல, தேவன் நம்மிடையே என்ன ஆரம்பித்திருக்கிறார் என்பதையே நாம் கொண்டாடுகிறோம்!
+                      இந்த நூறு நாட்களில் நாம் என்ன சாதித்திருக்கிறோம் என்பதை அல்ல, தேவன் நம்மிடையே என்ன ஆரம்பித்திருக்கிறார் என்பதையே நாம் கொண்டாடுகிறோம்!
                     </p>
                   </div>
 
@@ -139,7 +139,7 @@ export default function PastorsDeskPage() {
                   <p className="pt-4">
                     அனைவருக்கும் என் மனமார்ந்த நன்றியும் அன்பும்!<br/>
                     ஆசீர்வாதங்களுடன்,<br/>
-                    <strong>பாஸ்டர் வெஸ்லின்</strong><br/>
+                    <strong>Ps வெஸ்லின்</strong><br/>
                     வார்த்தை சுவிசேஷ சபை
                   </p>
 
