@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   title: "VEC-NL 2026-10 Edition 13 - போதகர் மேசையிலிருந்து",
   description: "100 நாட்கள் — இதுவரை கர்த்தர் நமக்கு உதவி செய்தார்! “இதுவரைக்கும் கர்த்தர் நமக்கு உதவி செய்தார்.” — 1 சாமுவேல் 7:12",
   path: "/pastors-desk",
-  image: "/pastor-desk-hero.jpg",
+  image: "/edition-13-ebenezer.jpg",
 });
 
 export default function PastorsDeskPage() {

@@ -42,6 +42,10 @@ export function buildMetadata({
     },
   };
 
+  const imageUrl = image
+    ? (image.startsWith('http') ? image : `${SITE}${image.startsWith('/') ? image : `/${image}`}`)
+    : undefined;
+
   return {
     title,
     description,
@@ -57,13 +61,13 @@ export function buildMetadata({
       description,
       locale: localeMeta[locale].ogLocale,
       alternateLocale: [localeMeta[isEn ? 'ta' : 'en'].ogLocale],
-      ...(image ? { images: [{ url: image, width: 1200, height: 630 }] } : {}),
+      ...(imageUrl ? { images: [{ url: imageUrl, width: 1200, height: 630 }] } : {}),
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      ...(image ? { images: [image] } : {}),
+      ...(imageUrl ? { images: [imageUrl] } : {}),
     },
     robots: { index: true, follow: true },
   };
