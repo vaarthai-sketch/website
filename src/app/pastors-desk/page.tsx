@@ -1,15 +1,15 @@
 import React from "react";
-import { Calendar as CalendarIcon, FileText, ChevronRight, Leaf, Globe, Droplet, Coffee } from "lucide-react";
+import { Calendar as CalendarIcon, FileText, ChevronRight, Leaf } from "lucide-react";
 import Link from "next/link";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   locale: "ta",
-  title: "VEC-NL 2026-10 Edition 12 - போதகர் மேசையிலிருந்து",
-  description: "அனலின் நடுவிலும் வாழ்க்கை!",
+  title: "VEC-NL 2026-10 Edition 13 - போதகர் மேசையிலிருந்து",
+  description: "100 நாட்கள் — இதுவரை கர்த்தர் நமக்கு உதவி செய்தார்! “இதுவரைக்கும் கர்த்தர் நமக்கு உதவி செய்தார்.” — 1 சாமுவேல் 7:12",
   path: "/pastors-desk",
-  image: "/pastor-desk-hero.jpg"
+  image: "/pastor-desk-hero.jpg",
 });
 
 export default function PastorsDeskPage() {
@@ -32,13 +32,13 @@ export default function PastorsDeskPage() {
             <span className="h-px w-8 bg-accent/30"></span>
           </div>
           <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-            அனலின் நடுவிலும் வாழ்க்கை!
+            100 நாட்கள் — இதுவரை கர்த்தர் நமக்கு உதவி செய்தார்!
           </h1>
           <p className="text-xl md:text-2xl text-stone-300 font-serif italic mb-8 max-w-2xl mx-auto">
-            Life in the Heat
+            100 Days — This Far the Lord Has Helped Us!
           </p>
           <div className="flex items-center justify-center gap-4 text-sm font-medium text-stone-300">
-            <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #012</span>
+            <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #013</span>
             <span className="flex items-center gap-1"><CalendarIcon className="w-4 h-4 text-accent" /> அக்டோபர் 2026</span>
           </div>
         </div>
@@ -56,109 +56,104 @@ export default function PastorsDeskPage() {
                 
                 <div className="flex items-center gap-2 text-sm text-stone-600 font-bold mb-4 relative z-10">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-10 · Edition 12</span>
+                  <span>VEC-NL 2026-10 · Edition 13</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-6 relative z-10 flex items-center gap-2">
-                  அனலின் நடுவிலும் வாழ்க்கை!
+                  100 நாட்கள் — இதுவரை கர்த்தர் நமக்கு உதவி செய்தார்!
                 </h2>
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10 font-serif">
 
-<div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200 bg-stone-900">
-  <video 
-    src="https://assets.science.nasa.gov/content/dam/science/psd/astrobiology/research-images/MovieS12_60C_normalmotility_switching%201080p_Crop.mp4" 
-    autoPlay 
-    loop 
-    muted 
-    playsInline 
-    className="w-full h-auto object-cover max-h-[500px]" 
-  />
-</div>
-<p className="text-right text-xs text-stone-400 mt-2 italic">Source: science.nasa.gov</p>
+                  <blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
+                    &ldquo;இதுவரைக்கும் கர்த்தர் நமக்கு உதவி செய்தார்.&rdquo;
+                    <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— 1 சாமுவேல் 7:12</footer>
+                  </blockquote>
 
-<p>
-  சமீபத்தில் அமெரிக்காவின் கலிபோர்னியாவில் உள்ள வெந்நீர் ஊற்றுகளில் விஞ்ஞானிகள் ஒரு ஆச்சரியமான உயிரினத்தைக் கண்டுபிடித்திருக்கிறார்கள்.<br/>
-  “Fire Amoeba” என்று அழைக்கப்படும் இந்த மிகச் சிறிய ஓரணு உயிரினம், கடுமையான வெப்பத்தை வெறுமனே தாங்கி உயிரோடு இருப்பது மட்டுமல்ல—63°C வெப்பத்திலும் வளர்ந்து, இனப்பெருக்கம் செய்கிறது! 64°C வெப்பத்தில்கூட தொடர்ந்து செயல்படுகிறது.
-</p>
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                    <img 
+                      src="/edition-13-ebenezer.jpg" 
+                      alt="Ebenezer Stone - 100 Days of Vaarthai Evangelical Church" 
+                      className="w-full h-auto object-cover max-h-[500px]" 
+                    />
+                  </div>
 
-<p>
-  இதில் என்னைக் கவர்ந்த விஷயம் இதுதான்:<br/>
-  <strong>அது வாழ்வதற்கு வெப்பம் மறைய வேண்டிய அவசியமில்லை. அந்த வெப்பத்தின் நடுவிலேயே வாழும் திறன் அதற்கு இருக்கிறது.</strong>
-</p>
+                  <p>
+                    நேற்று நமது வார்த்தை சுவிசேஷ சபை, ஆரம்பிக்கப்பட்டு 100 நாட்கள் நிறைவடைந்த ஒரு மகிழ்ச்சியான மைல்கல்லை எட்டியுள்ளோம்!
+                  </p>
 
-<p>இதை வாசித்தபோது ஏசாயாவில் தேவன் சொன்ன வார்த்தை நினைவுக்கு வந்தது:</p>
+                  <p>
+                    ஒரு சபையின் வரலாற்றில் நூறு நாட்கள் என்பது மிகக் குறுகிய காலமாகத் தோன்றலாம். ஆனால் நம்மைப் பொறுத்தவரை, இந்த நூறு நாட்களும் விசுவாசம், கீழ்ப்படிதல், ஜெபம், அர்ப்பணிப்பு, ஊழியம், எல்லாவற்றிற்கும் மேலாக தேவனுடைய உண்மைத்தன்மை நிறைந்த ஒரு பயணம்.
+                  </p>
 
-<blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
-  "நீ அக்கினியில் நடக்கும்போது வேகாதிருப்பாய்; அக்கினிஜுவாலை உன்பேரில் பற்றாது."
-  <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— ஏசாயா 43:2</footer>
-</blockquote>
+                  <p>
+                    இஸ்ரவேல் மக்களுக்கு தேவன் செய்த உதவிகளை நினைவுகூர்ந்த சாமுவேல், ஒரு கல்லை நாட்டி அதற்கு எபெனேசர் என்று பெயரிட்டு, &ldquo;இதுவரைக்கும் கர்த்தர் நமக்கு உதவி செய்தார்&rdquo; என்று சொன்னார்.
+                  </p>
 
-<p>
-  தேவன், “உன் வாழ்க்கையில் அக்கினியே வராது” என்று சொல்லவில்லை.<br/>
-  “நீ அக்கினியில் நடக்கும்போது…” என்கிறார்.
-</p>
+                  <p className="font-semibold text-primary text-xl">
+                    இன்று வார்த்தை சபைக் குடும்பமாக நாமும் அதையே நன்றியுடன் சொல்ல முடிகிறது!
+                  </p>
 
-<p>
-  சில நேரங்களில்,<br/>
-  “ஆண்டவரே, இந்தச் சூழ்நிலையிலிருந்து என்னை வெளியே கொண்டுவாருங்கள். இந்த அழுத்தத்தை நீக்குங்கள். இந்தப் பிரச்சனையை மாற்றுங்கள்”<br/>
-  என்று நாம் ஜெபிக்கிறோம்.
-</p>
+                  <p>
+                    இந்தப் பயணத்தில் எங்களோடு இணைந்து ஜெபித்த, உழைத்த, கொடுத்த, உற்சாகப்படுத்திய, ஆதரவளித்த ஒவ்வொருவருக்காகவும் தேவனைத் துதிக்கிறேன். நீங்கள் அன்போடு செய்த ஒவ்வொரு சிறிய காரியமும் விலையேறப்பெற்றது.
+                  </p>
 
-<p>சில நேரங்களில் தேவன் அப்படியே செய்கிறார்.</p>
+                  <p className="font-medium text-stone-800">
+                    ஆனால் இந்த நேரத்தில் நாம் ஒரு முக்கியமான உண்மையை நினைவில் கொள்ள வேண்டும்.
+                  </p>
 
-<p>
-  ஆனால் சில காலங்களில் அனல் உடனடியாக மாறுவதில்லை. அதற்குப் பதிலாக, அந்த அனலின் நடுவிலும் வாழவும், வளரவும், விசுவாசத்தில் நிலைத்திருக்கவும் தேவன் நமக்குக் கிருபை தருகிறார்.
-</p>
+                  <div className="bg-stone-100 p-5 rounded-lg border-l-4 border-primary my-6">
+                    <p className="text-lg md:text-xl font-bold text-primary m-0">
+                      இந்த நூறு நாட்களில் நாம் என்ன சாதித்திருக்கிறோம் என்பதை மட்டுமல்ல, தேவன் நம்மிடையே என்ன ஆரம்பித்திருக்கிறார் என்பதையே நாம் கொண்டாடுகிறோம்!
+                    </p>
+                  </div>
 
-<p>
-  ஒருவேளை நீங்களும் இப்போது ஒரு “அனலின்” வழியாகச் சென்றுகொண்டிருக்கலாம்.<br/>
-  குடும்பப் பிரச்சனை, பொருளாதார அழுத்தம், வேலைப்பளு, ஏமாற்றம், எதிர்காலத்தைக் குறித்த நிச்சயமின்மை, அல்லது இன்னும் பதில் கிடைக்காத ஒரு ஜெபம்...
-</p>
+                  <p>
+                    அப்போஸ்தலனாகிய பவுல் நமக்கு நினைவூட்டுகிறார்:
+                  </p>
 
-<p className="font-bold text-lg text-primary">
-  அக்கினி இருக்கிறது என்பதால், தேவன் இல்லை என்று நினைத்துவிடாதீர்கள்.
-</p>
+                  <blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
+                    &ldquo;உங்களில் நற்கிரியையைத் தொடங்கினவர் அதை இயேசுகிறிஸ்துவின் நாள்பரியந்தம் முடிய நடத்திவருவாரென்று நம்பியிருக்கிறேன்.&rdquo;
+                    <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— பிலிப்பியர் 1:6</footer>
+                  </blockquote>
 
-<p>அவர் சொல்கிறார்:</p>
+                  <p className="font-semibold text-lg text-stone-800">
+                    இந்த நூறு நாட்கள் நமது இலக்கல்ல. இது ஒரு அழகான ஆரம்பம் மட்டுமே!
+                  </p>
 
-<blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
-  "நீ தண்ணீர்களைக் கடக்கும்போது நான் உன்னோடு இருப்பேன்… நீ அக்கினியில் நடக்கும்போது வேகாதிருப்பாய்."
-</blockquote>
+                  <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center my-6">
+                    <p className="text-sm uppercase tracking-wider text-accent font-bold mb-2">வரப்போகும் நாட்களிலும் நமது தரிசனம் மாறாமல் இருக்கட்டும்</p>
+                    <p className="font-serif text-2xl md:text-3xl font-black text-primary">
+                      கேட்போம் | வாழ்வோம் | பகிர்வோம்
+                    </p>
+                  </div>
 
-<p>
-  தேவனுடைய அற்புதம் எப்போதும் அக்கினியை அகற்றுவது மட்டுமல்ல.<br/>
-  சில நேரங்களில் அக்கினியின் வழியாக நம்மை நடத்தி, அதன் நடுவிலும் அவர் நம்மோடு இருந்தார் என்பதை உணரச் செய்வதும் அற்புதம்தான்.
-</p>
+                  <p>
+                    வார்த்தை சபை மக்கள் கூடிவரும் ஒரு இடமாக மட்டுமல்லாமல், தேவனுடைய வார்த்தையால் வாழ்க்கைகள் மறுரூபமாக்கப்பட்டு, அவருடைய அன்பு மற்றவர்களுக்கும் எடுத்துச் செல்லப்படும் ஒரு விசுவாசக் குடும்பமாக வளரட்டும்!
+                  </p>
 
-<p>நம்மால் முடியாது என்று தோன்றும்போது, அவருடைய இன்னொரு வாக்குத்தத்தத்தை நினைவுகூருவோம்:</p>
+                  <p className="font-medium text-stone-800">
+                    கடந்த நூறு நாட்கள் தேவனுடைய உண்மைத்தன்மைக்குச் சாட்சி; வரப்போகும் நாட்கள் நம்முடைய விசுவாசத்திற்கும் உண்மையுள்ள ஊழியத்திற்குமான அழைப்பு!
+                  </p>
 
-<blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
-  "என் கிருபை உனக்குப் போதும்."
-  <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— 2 கொரிந்தியர் 12:9</footer>
-</blockquote>
+                  <p className="pt-4">
+                    அனைவருக்கும் என் மனமார்ந்த நன்றியும் அன்பும்!<br/>
+                    ஆசீர்வாதங்களுடன்,<br/>
+                    <strong>பாஸ்டர் வெஸ்லின்</strong><br/>
+                    வார்த்தை சுவிசேஷ சபை
+                  </p>
 
-<p>எனவே இந்த வாரம் நமது ஜெபம் இப்படியாக இருக்கட்டும்:</p>
-
-<p className="font-serif italic text-xl text-center text-stone-600 my-8">
-  “ஆண்டவரே, இந்த அனலை இன்னும் நீர் அகற்றவில்லையென்றால், அதன் வழியாக விசுவாசத்தோடு நடக்க எனக்குக் கிருபை தாரும்.”
-</p>
-
-<p>
-  அனல் கடுமையாக இருக்கலாம்.<br/>
-  ஆனால் அவருடைய கிருபை போதுமானது!
-</p>
-
-<p>
-  ஆசீர்வாதங்களுடன்,<br/>
-  <strong>பாஸ்டர் வெஸ்லின்</strong><br/>
-  வார்த்தை சுவிசேஷ சபை
-</p>
-
-<div className="mt-12 rounded-xl overflow-hidden shadow-md border-2 border-stone-200 aspect-video">
-  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eqDKNARFIoA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-</div>
-
+                  <div className="mt-12 rounded-xl overflow-hidden shadow-md border-2 border-stone-200 aspect-video">
+                    <iframe 
+                      width="100%" 
+                      height="100%" 
+                      src="https://www.youtube.com/embed/Dgp7vxN3fe8" 
+                      title="YouTube video player" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowFullScreen
+                    ></iframe>
+                  </div>
 
                 </div>
               </div>
@@ -178,7 +173,14 @@ export default function PastorsDeskPage() {
                   <Link href="/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
-                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 12</p>
+                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 13</p>
+                      <p className="text-xs text-stone-500">Oct 2026</p>
+                    </div>
+                  </Link>
+                  <Link href="/pastors-desk/archive/october/edition-12" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 12</p>
                       <p className="text-xs text-stone-500">Oct 2026</p>
                     </div>
                   </Link>
