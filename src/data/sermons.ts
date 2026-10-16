@@ -26,6 +26,30 @@ export interface Sermon {
 
 export const sermonsData: Sermon[] = [
   {
+    id: "prayer-of-jabez-part-3",
+    title: "யாபேசின் ஜெபம் — பகுதி 3 | தேவரீர் என்னை ஆசீர்வதித்து | The Prayer of Jabez — Part 3",
+    englishTitle: "Oh, That You Would Bless Me Indeed | The Prayer of Jabez — Part 3",
+    speaker: "Ps Weslyn",
+    date: "2026-10-11",
+    scriptureReference: "1 நாளாகமம் 4:10; ஆதியாகமம் 12:2–3; சங்கீதம் 67:1–2; கலாத்தியர் 3:13–14; எபேசியர் 1:3",
+    englishScriptureReference: "1 Chronicles 4:10; Genesis 12:2–3; Psalm 67:1–2; Galatians 3:13–14; Ephesians 1:3",
+    scriptureText: "யாபேஸ் இஸ்ரவேலின் தேவனை நோக்கி: தேவரீர் என்னை ஆசீர்வதித்து, என் எல்லையைப் பெரிதாக்கி, உமது கரம் என்னோடே இருந்து, தீங்கு என்னைத் துக்கப்படுத்தாதபடிக்கு அதற்கு என்னை விலக்கிக் காத்தருளும் என்று வேண்டிக்கொண்டான்; அவன் வேண்டிக்கொண்டதை தேவன் அருளினார்.",
+    englishScriptureText: "Jabez called upon the God of Israel, saying, \"Oh that you would bless me and enlarge my border, and that your hand might be with me, and that you would keep me from harm so that it might not bring me pain!\" And God granted what he asked.",
+    series: "யாபேசின் ஜெபம் (Prayer of Jabez)",
+    englishSeries: "Prayer of Jabez",
+    topic: "ஜெபம் (Prayer)",
+    englishTopic: "Prayer",
+    description: "“தேவரீர் என்னை ஆசீர்வதித்து” என்று ஜெபிக்கும்போது, நாம் எதைக் கேட்கிறோம்? ஆசீர்வாதம் குறித்து வேதம் நமக்கு என்ன கற்றுத்தருகிறது?\n\n1 நாளாகமம் 4:10 அடிப்படையில், இந்தச் செய்தி யாபேசின் முதலாவது விண்ணப்பத்தை ஆராய்கிறது. படைப்பிலிருந்து ஆபிரகாமின் வாக்குத்தத்தம் வரை, அங்கிருந்து கிறிஸ்துவில் அதன் நிறைவேற்றம் வரை—தேவனுடைய ஆசீர்வாதத்தின் நோக்கத்தைப் பார்க்கிறோம்.\n\nநமது அன்றாடத் தேவைகளைத் தேவனிடம் நம்பிக்கையோடு கொண்டுவரலாம். அதோடு, கிறிஸ்துவுக்குள் நாம் பெற்றுள்ள ஆவிக்குரிய ஆசீர்வாதங்களை அறிந்து, நம்மிடம் உள்ள நன்மைகளை மற்றவர்களுடன் பகிர்ந்து வாழவும் அழைக்கப்படுகிறோம்.\n\nஇந்தச் செய்தியில்:\n• ஆசீர்வாதத்தின் மூலமான தேவனை அறிந்து வாழுதல்.\n• தேவனுடைய வார்த்தையையும் உண்மைத்தன்மையையும் நம்பி ஜெபித்தல்.\n• நாம் பெற்ற ஆசீர்வாதம் மற்றவர்களுக்கும் நன்மையாகுதல்.\n• கிறிஸ்துவில் கிடைக்கும் மீட்பு, பாவமன்னிப்பு, பரிசுத்த ஆவியின் வாக்குத்தத்தம்.\n\nசிந்திக்க ஒரு கேள்வி: தேவன் ஏற்கெனவே எனக்குக் கொடுத்த எந்த நன்மையை இந்த வாரம் ஒருவருடன் பகிரலாம்?",
+    englishDescription: "In Part 3 of The Prayer of Jabez, we explore the request, “Oh, that You would bless me indeed.” Following the theme of blessing through Scripture, this message points us to God’s faithfulness, the fulfilment of Abraham’s blessing in Christ, and our calling to bless others. Bring your needs to God, trust His wisdom, and share what He has already entrusted to you.",
+    videoPlaceholder: "யாபேசின் ஜெபம் பிரசங்க வீடியோ (பகுதி 3)",
+    englishVideoPlaceholder: "The Prayer of Jabez Sermon Video (Part 3)",
+    youtubeId: "wbmVYeyq9sU",
+    audioUrl: "#",
+    notesUrl: "#",
+    duration: "46:05",
+    thumbnail: "",
+  },
+  {
     id: "prayer-of-jabez-part-2",
     title: "நான் ஜெபிக்கத் தகுதியுள்ளவனா? | Am I Qualified to Pray? — யாபேசின் ஜெபம் பகுதி 2",
     englishTitle: "Am I Qualified to Pray? | Prayer of Jabez Part 2",
@@ -217,6 +241,14 @@ export const sermonsData: Sermon[] = [
 
 export const sermonSeries = [
   {
+    title: "யாபேசின் ஜெபம் (Prayer of Jabez)",
+    englishTitle: "Prayer of Jabez",
+    description: "1 நாளாகமம் 4:9-10 வசனங்களின் அடிப்படையில் யாபேசின் ஜெபத்தைக் குறித்த வேத தியானத் தொடர்.",
+    englishDescription: "A biblical meditation series on the Prayer of Jabez based on 1 Chronicles 4:9-10.",
+    count: 3,
+    image: "series-jabez"
+  },
+  {
     title: "Special Services",
     englishTitle: "Special Services",
     description: "சிறப்பு ஆராதனைகள் மற்றும் பண்டிகை கால செய்திகள்.",
@@ -237,7 +269,7 @@ export const sermonSeries = [
     englishTitle: "The Hand of the Lord",
     description: "அன்றாட வாழ்வில் அமைதி, ஜெபம் மற்றும் எளிய விசுவாச பழக்கங்களைப் பற்றிய தொடர் சொற்பொழிவுகள்.",
     englishDescription: "A sermon series about peace, prayer, and simple habits of faith in everyday life.",
-    count: 4,
+    count: 5,
     image: "series-selah"
   }
 ];
