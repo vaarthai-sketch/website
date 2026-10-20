@@ -26,6 +26,30 @@ export interface Sermon {
 
 export const sermonsData: Sermon[] = [
   {
+    id: "prayer-of-jabez-part-5",
+    title: "உமது கரம் என்னோடிருக்கட்டும் | யாபேசின் ஜெபம் — பகுதி 5 | Let Your Hand Be With Me — The Prayer of Jabez Part 5",
+    englishTitle: "Let Your Hand Be With Me | The Prayer of Jabez — Part 5",
+    speaker: "Ps Weslyn",
+    date: "2026-10-18",
+    scriptureReference: "1 நாளாகமம் 4:10 · யாத்திராகமம் 14:31 · யோசுவா 4:24 · மத்தேயு 3:13-17 · மத்தேயு 14:22-33 · யோவான் 6:16-21 · ரோமர் 6:4 · கொலோசெயர் 2:12 · ஏசாயா 43:2",
+    englishScriptureReference: "1 Chronicles 4:10 · Exodus 14:31 · Joshua 4:24 · Matthew 3:13-17 · Matthew 14:22-33 · John 6:16-21 · Romans 6:4 · Colossians 2:12 · Isaiah 43:2",
+    scriptureText: "நீ தண்ணீர்களைக் கடக்கும்போது நான் உன்னோடு இருப்பேன்; நீ ஆறுகளைக் கடக்கும்போது அவைகள் உன்மேல் புரளுவதில்லை.",
+    englishScriptureText: "When you pass through the waters, I will be with you; and through the rivers, they shall not overwhelm you.",
+    series: "யாபேசின் ஜெபம் (Prayer of Jabez)",
+    englishSeries: "Prayer of Jabez",
+    topic: "ஜெபம் (Prayer)",
+    englishTopic: "Prayer",
+    description: "\"நீ தண்ணீர்களைக் கடக்கும்போது நான் உன்னோடு இருப்பேன்.\"\n\nயாபேசு தான் அறிந்த தேவனுடைய கரம், தான் இதுவரை கால் வைக்காத நிலத்திற்குள் தன்னோடுகூட வர வேண்டும் என்று ஜெபிக்கிறான்.\n\nவேதத்திலே தேவனுடைய கரம் மிகத் தெளிவாய்க் காணப்பட்ட இடம் — தண்ணீர். சிவந்த சமுத்திரத்தைப் பிளந்த கரம். யோர்தானை நிறுத்தின கரம். அமிழ்ந்துகொண்டிருந்த பேதுருவை \"உடனே\" பிடித்துத் தூக்கின கரம். பாவமில்லாதிருந்தும், பிதாவுக்குக் கீழ்ப்படிந்து யோர்தானுக்குள் இறங்கி நமக்கு மாதிரியை வைத்த இயேசு.\n\nஎங்கள் சபையின் ஞானஸ்நான ஆராதனைக்கு முன்பாகப் பிரசங்கிக்கப்பட்ட இந்தச் செய்தி, ஞானஸ்நானம் என்றால் என்ன என்பதைத் தெளிவாக்குகிறது. தண்ணீர் இரட்சிப்பதில்லை; ஆனால் ஞானஸ்நானம் ஒரு விருப்பத் தேர்வும் அல்ல. அது \"ஆண்டவரே, உமது கரம் என்னோடிருக்கட்டும்\" என்ற ஜெபத்தை வாயினால் மாத்திரமல்ல, முழுச் சரீரத்தினாலும் ஜெபிப்பது.",
+    englishDescription: "Jabez prays that the hand of the God he knows—the hand he has experienced—might accompany him into lands where he has never before set foot.\n\nScripture shows that hand most clearly at the water. It parted the Red Sea, stopped the Jordan, and reached into the waves for a sinking Peter. And in the Jordan, the sinless Son of God went down into the water. He had no need of repentance, but He went to obey His Father and to show us the way.\n\nPreached ahead of our baptism service, this message sets out what baptism is and what it isn't. The water does not save, but neither is baptism optional. It is Jabez's prayer prayed with the whole body: \"Lord, let Your hand be with me.\"",
+    videoPlaceholder: "யாபேசின் ஜெபம் பிரசங்க வீடியோ (பகுதி 5)",
+    englishVideoPlaceholder: "The Prayer of Jabez Sermon Video (Part 5)",
+    youtubeId: "SXHG9K9jHlA",
+    audioUrl: "#",
+    notesUrl: "#",
+    duration: "57:21",
+    thumbnail: "",
+  },
+  {
     id: "prayer-of-jabez-part-3",
     title: "யாபேசின் ஜெபம் — பகுதி 3 | தேவரீர் என்னை ஆசீர்வதித்து | The Prayer of Jabez — Part 3",
     englishTitle: "Oh, That You Would Bless Me Indeed | The Prayer of Jabez — Part 3",
@@ -245,7 +269,7 @@ export const sermonSeries = [
     englishTitle: "Prayer of Jabez",
     description: "1 நாளாகமம் 4:9-10 வசனங்களின் அடிப்படையில் யாபேசின் ஜெபத்தைக் குறித்த வேத தியானத் தொடர்.",
     englishDescription: "A biblical meditation series on the Prayer of Jabez based on 1 Chronicles 4:9-10.",
-    count: 3,
+    count: 4,
     image: "series-jabez"
   },
   {
