@@ -65,24 +65,30 @@ export default function PastorsDeskPage() {
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10 font-serif">
 
-                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
-                    <img 
-                      src="/edition-14-phoenix.jpg" 
-                      alt="Phoenix Rescue Capsule - 2010 Chile Mine Rescue" 
-                      className="w-full h-auto object-cover max-h-[500px]" 
-                    />
+                  <div className="my-6">
+                    <div className="rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                      <img 
+                        src="/edition-14-phoenix.jpg" 
+                        alt="Phoenix Rescue Capsule - 2010 Chile Mine Rescue" 
+                        className="w-full h-auto object-cover max-h-[500px]" 
+                      />
+                    </div>
+                    <p className="text-right text-xs text-stone-400 mt-1.5 italic">Credit: Britannica</p>
                   </div>
 
                   <p>
                     பதினாறு ஆண்டுகளுக்கு முன், 2010 அக்டோபர் 13 அன்று, சிலி நாட்டின் ஒரு சுரங்கத்திலிருந்து மனிதர்கள் ஒவ்வொருவராக மேலே வந்தார்கள். நீண்ட நாட்கள் இருளில் இருந்ததால், கண்களைப் பாதுகாக்கக் கருப்புக் கண்ணாடி அணிந்திருந்தார்கள். காத்திருந்த குடும்பத்தினர் கண்ணீரோடு அவர்களைத் தழுவிக்கொண்டார்கள்.
                   </p>
 
-                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
-                    <img 
-                      src="/edition-14-family.jpg" 
-                      alt="Rescued Chilean Miner Embracing Family" 
-                      className="w-full h-auto object-cover max-h-[500px]" 
-                    />
+                  <div className="my-6">
+                    <div className="rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                      <img 
+                        src="/edition-14-family.jpg" 
+                        alt="Rescued Chilean Miner Celebrating After Rescue" 
+                        className="w-full h-auto object-cover max-h-[500px]" 
+                      />
+                    </div>
+                    <p className="text-right text-xs text-stone-400 mt-1.5 italic">Credit: Britannica</p>
                   </div>
 
                   <p>
