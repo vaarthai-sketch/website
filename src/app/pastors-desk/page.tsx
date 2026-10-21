@@ -6,10 +6,10 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   locale: "ta",
-  title: "VEC-NL 2026-10 Edition 13 - போதகர் மேசையிலிருந்து",
-  description: "100 நாட்கள் — இதுவரை கர்த்தர் நமக்கு உதவி செய்தார்! “இதுவரைக்கும் கர்த்தர் நமக்கு உதவி செய்தார்.” — 1 சாமுவேல் 7:12",
+  title: "VEC-NL 2026-10 Edition 14 - போதகர் மேசையிலிருந்து",
+  description: "இருளிலிருந்து வெளிச்சத்திற்கு — பிதாவின் மகிமையினாலே கிறிஸ்து மரித்தோரிலிருந்து எழுப்பப்பட்டதுபோல, நாமும் புதிதான ஜீவனுள்ளவர்களாய் நடந்துகொள்ளும்படிக்கு...",
   path: "/pastors-desk",
-  image: "/edition-13-ebenezer.jpg",
+  image: "/edition-14-phoenix.jpg",
 });
 
 export default function PastorsDeskPage() {
@@ -32,13 +32,13 @@ export default function PastorsDeskPage() {
             <span className="h-px w-8 bg-accent/30"></span>
           </div>
           <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-            100 நாட்கள் — இதுவரை கர்த்தர் நமக்கு உதவி செய்தார்!
+            இருளிலிருந்து வெளிச்சத்திற்கு
           </h1>
           <p className="text-xl md:text-2xl text-stone-300 font-serif italic mb-8 max-w-2xl mx-auto">
-            100 Days — This Far the Lord Has Helped Us!
+            From Darkness into Light
           </p>
           <div className="flex items-center justify-center gap-4 text-sm font-medium text-stone-300">
-            <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #013</span>
+            <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #014</span>
             <span className="flex items-center gap-1"><CalendarIcon className="w-4 h-4 text-accent" /> அக்டோபர் 2026</span>
           </div>
         </div>
@@ -56,103 +56,101 @@ export default function PastorsDeskPage() {
                 
                 <div className="flex items-center gap-2 text-sm text-stone-600 font-bold mb-4 relative z-10">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-10 · Edition 13</span>
+                  <span>VEC-NL 2026-10 · Edition 14</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-6 relative z-10 flex items-center gap-2">
-                  100 நாட்கள் — இதுவரை கர்த்தர் நமக்கு உதவி செய்தார்!
+                  இருளிலிருந்து வெளிச்சத்திற்கு
                 </h2>
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10 font-serif">
 
-                  <blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
-                    &ldquo;இதுவரைக்கும் கர்த்தர் நமக்கு உதவி செய்தார்.&rdquo;
-                    <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— 1 சாமுவேல் 7:12</footer>
-                  </blockquote>
-
                   <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
                     <img 
-                      src="/edition-13-ebenezer.jpg" 
-                      alt="Ebenezer Stone - 100 Days of Vaarthai Evangelical Church" 
+                      src="/edition-14-phoenix.jpg" 
+                      alt="Phoenix Rescue Capsule - 2010 Chile Mine Rescue" 
                       className="w-full h-auto object-cover max-h-[500px]" 
                     />
                   </div>
 
                   <p>
-                    நேற்று நமது வார்த்தை சுவிசேஷ சபை, ஆரம்பிக்கப்பட்டு 100 நாட்கள் நிறைவடைந்த ஒரு மகிழ்ச்சியான மைல்கல்லை எட்டியுள்ளோம்!
+                    பதினாறு ஆண்டுகளுக்கு முன், 2010 அக்டோபர் 13 அன்று, சிலி நாட்டின் ஒரு சுரங்கத்திலிருந்து மனிதர்கள் ஒவ்வொருவராக மேலே வந்தார்கள். நீண்ட நாட்கள் இருளில் இருந்ததால், கண்களைப் பாதுகாக்கக் கருப்புக் கண்ணாடி அணிந்திருந்தார்கள். காத்திருந்த குடும்பத்தினர் கண்ணீரோடு அவர்களைத் தழுவிக்கொண்டார்கள்.
                   </p>
 
-                  <p>
-                    ஒரு சபையின் வரலாற்றில் நூறு நாட்கள் என்பது மிகக் குறுகிய காலமாகத் தோன்றலாம். ஆனால் நம்மைப் பொறுத்தவரை, இந்த நூறு நாட்களும் விசுவாசம், கீழ்ப்படிதல், ஜெபம், அர்ப்பணிப்பு, ஊழியம், எல்லாவற்றிற்கும் மேலாக தேவனுடைய உண்மைத்தன்மை நிறைந்த ஒரு பயணம்.
-                  </p>
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                    <img 
+                      src="/edition-14-family.jpg" 
+                      alt="Rescued Chilean Miner Embracing Family" 
+                      className="w-full h-auto object-cover max-h-[500px]" 
+                    />
+                  </div>
 
                   <p>
-                    இஸ்ரவேல் மக்களுக்கு தேவன் செய்த உதவிகளை நினைவுகூர்ந்த சாமுவேல், ஒரு கல்லை நாட்டி அதற்கு எபெனேசர் என்று பெயரிட்டு, &ldquo;இதுவரைக்கும் கர்த்தர் நமக்கு உதவி செய்தார்&rdquo; என்று சொன்னார்.
+                    69 நாட்களுக்கு முன்பு சுரங்கம் இடிந்து விழுந்தபோது, 33 தொழிலாளர்கள் அரை கிலோமீட்டருக்கும் அதிகமான ஆழத்தில் சிக்கிக்கொண்டார்கள். தங்களைத் தாங்களே மீட்டுக்கொள்ள அவர்களுக்கு வழியே இல்லை. மீட்புக் குழுவினர் பாறையைத் துளைத்துப் பாதை அமைத்தார்கள். அதன் வழியாக, ‘ஃபீனிக்ஸ்’ (Phoenix) என்ற மீட்புக் கலத்தில், முதலில் ஒரு மீட்புப் பணியாளர் அவர்கள் இருந்த இடத்திற்கே இறங்கிச் சென்றார். பின்பு அதே கலத்தில் ஒவ்வொருவரும் மேலே கொண்டுவரப்பட்டார்கள். முப்பத்து மூவரும் உயிருடன் வெளியே வந்தார்கள்.
                   </p>
 
                   <p className="font-semibold text-primary text-xl">
-                    இன்று வார்த்தை சபைக் குடும்பமாக நாமும் அதையே நன்றியுடன் சொல்ல முடிகிறது!
+                    அவர்களுடைய மீட்பின் கதை, நமக்காக இயேசு செய்ததை நினைவூட்டுகிறது.
                   </p>
 
                   <p>
-                    இந்தப் பயணத்தில் எங்களோடு இணைந்து ஜெபித்த, உழைத்த, கொடுத்த, உற்சாகப்படுத்திய, ஆதரவளித்த ஒவ்வொருவருக்காகவும் தேவனைத் துதிக்கிறேன். நீங்கள் அன்போடு செய்த ஒவ்வொரு சிறிய காரியமும் விலையேறப்பெற்றது.
+                    பாவத்தின் இருளில் சிக்கியிருந்த நம்மால், நம்மை நாமே மீட்டுக்கொள்ள முடியவில்லை. ஆகவே, தேவகுமாரனே நாம் இருந்த இடத்திற்கு இறங்கி வந்தார். நமது பாவங்களைச் சிலுவையில் சுமந்தார்; மரித்தார்; உயிர்த்தெழுந்தார். அவரை விசுவாசிக்கிற நமக்குப் பாவமன்னிப்பையும் புதிய வாழ்க்கையையும் தருகிறார். தேவன் நம்மை இருளின் அதிகாரத்திலிருந்து விடுவித்து, தமது அன்பின் குமாரனுடைய ராஜ்யத்திற்குள் கொண்டுவந்திருக்கிறார் (கொலோசெயர் 1:13).
+                  </p>
+
+                  <p>
+                    ஆனால், அந்தத் தொழிலாளர்களின் கதை மீட்கப்பட்ட நாளோடு முடியவில்லை. பின்வந்த ஆண்டுகளில், அவர்களில் பலர் பயங்கரக் கனவுகளோடும் மனக்காயங்களோடும் போராடினார்கள். சுரங்கத்திலிருந்து வெளியே வர ஒரு நாள் போதுமானதாக இருந்தது; விடுதலையோடு வாழக் கற்றுக்கொள்ள நீண்ட காலம் தேவைப்பட்டது. கிறிஸ்தவ வாழ்க்கையும் அப்படித்தான். கிறிஸ்து நம்மை முழுமையாக மீட்டுவிட்டார்; மீட்கப்பட்டவர்களாக வாழக் கற்றுக்கொள்வதோ நாள்தோறுமான பயணம்.
                   </p>
 
                   <p className="font-medium text-stone-800">
-                    ஆனால் இந்த நேரத்தில் நாம் ஒரு முக்கியமான உண்மையை நினைவில் கொள்ள வேண்டும்.
-                  </p>
-
-                  <div className="bg-stone-100 p-5 rounded-lg border-l-4 border-primary my-6">
-                    <p className="text-lg md:text-xl font-bold text-primary m-0">
-                      இந்த நூறு நாட்களில் நாம் என்ன சாதித்திருக்கிறோம் என்பதை அல்ல, தேவன் நம்மிடையே என்ன ஆரம்பித்திருக்கிறார் என்பதையே நாம் கொண்டாடுகிறோம்!
-                    </p>
-                  </div>
-
-                  <p>
-                    அப்போஸ்தலனாகிய பவுல் நமக்கு நினைவூட்டுகிறார்:
+                    நவம்பர் 1 அன்று நமது சபையில் நடைபெறவிருக்கும் ஞானஸ்நானங்களை இந்த நற்செய்தியின் வெளிச்சத்தில் பார்ப்போம்.
                   </p>
 
                   <blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
-                    &ldquo;உங்களில் நற்கிரியையைத் தொடங்கினவர் அதை இயேசுகிறிஸ்துவின் நாள்பரியந்தம் முடிய நடத்திவருவாரென்று நம்பியிருக்கிறேன்.&rdquo;
-                    <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— பிலிப்பியர் 1:6</footer>
+                    &ldquo;…பிதாவின் மகிமையினாலே கிறிஸ்து மரித்தோரிலிருந்து எழுப்பப்பட்டதுபோல, நாமும் புதிதான ஜீவனுள்ளவர்களாய் நடந்துகொள்ளும்படிக்கு, ஞானஸ்நானத்தினால் மரணத்திற்குள்ளாகும்படி அவரோடேகூட அடக்கம்பண்ணப்பட்டோம்.&rdquo;
+                    <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— ரோமர் 6:4</footer>
                   </blockquote>
 
-                  <p className="font-semibold text-lg text-stone-800">
-                    இந்த நூறு நாட்கள் நமது இலக்கல்ல. இது ஒரு அழகான ஆரம்பம் மட்டுமே!
+                  <p>
+                    ஞானஸ்நானத்தில், கிறிஸ்துவின் மரணத்தோடும் உயிர்த்தெழுதலோடும் நமக்குள்ள இணைப்பை வெளிப்படையாக அறிக்கையிடுகிறோம். தண்ணீருக்குள் இறங்குவது அவரோடுகூட அடக்கம்பண்ணப்பட்டதையும், தண்ணீரிலிருந்து எழுவது புதிய வாழ்க்கையில் நடக்க அழைக்கப்பட்டிருப்பதையும் காட்டுகிறது.
                   </p>
 
-                  <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center my-6">
-                    <p className="text-sm uppercase tracking-wider text-accent font-bold mb-2">வரப்போகும் நாட்களிலும் நமது தரிசனம் மாறாமல் இருக்கட்டும்</p>
-                    <p className="font-serif text-2xl md:text-3xl font-black text-primary">
-                      கேட்போம் | வாழ்வோம் | பகிர்வோம்
+                  <p>
+                    “நடந்துகொள்ளும்படிக்கு” என்ற வார்த்தை நமது அன்றாட வாழ்க்கைக்கான அழைப்பு. நமது உறவுகளிலும் தீர்மானங்களிலும் கிறிஸ்துவைப் பின்பற்றுகிறோம். மறைத்துவைத்திருக்கும் பாவத்தை அறிக்கையிடுகிறோம். நாம் காயப்படுத்தியவரிடம் மன்னிப்புக் கேட்கிறோம். நம்மை அடிமைப்படுத்தும் பழக்கத்திலிருந்து விடுபட உதவியை நாடுகிறோம்.
+                  </p>
+
+                  <p>
+                    நம்மில் சிலர் கடந்தகாலத் தோல்விகளை நினைத்து, “என்னால் உண்மையிலேயே மாற முடியுமா?” என்று தயங்கலாம். “ஒருவன் கிறிஸ்துவுக்குள் இருந்தால் புதுச்சிருஷ்டியாயிருக்கிறான்; பழையவைகள் ஒழிந்துபோயின, எல்லாம் புதிதாயின” (2 கொரிந்தியர் 5:17). கிறிஸ்துவின் கிருபையினால், நமது பாவத்தை உண்மையாக ஒப்புக்கொண்டு, பரிசுத்த ஆவியானவரின் உதவியோடு இன்றே புதிய கீழ்ப்படிதலைத் தொடங்கலாம்.
+                  </p>
+
+                  <p>
+                    அன்பான வார்த்தை குடும்பமே, சுரங்கத்திலிருந்து வந்தவர்களை அவர்களுடைய குடும்பங்கள் தழுவிக்கொண்டதுபோல, ஞானஸ்நானம் பெறுகிறவர்களை நாமும் மகிழ்ச்சியுடன் வரவேற்போம். அவர்களுடன் ஜெபித்து, தேவனுடைய வார்த்தையைப் பகிர்ந்து, சிரமமான நாட்களில் அவர்களைத் தாங்குவோம். ஞானஸ்நானம் பற்றி நீங்களும் ஜெபத்தோடு சிந்தித்துக்கொண்டிருந்தால், போதகரிடம் தயங்காமல் பேசுங்கள்.
+                  </p>
+
+                  <p className="font-semibold text-primary text-lg">
+                    நாமும் நம்முடைய வாழ்க்கையை ஆண்டவரிடம் புதிதாக ஒப்புக்கொடுத்து, அவரோடு நடப்போம்.
+                  </p>
+
+                  <div className="bg-stone-100 p-6 rounded-xl border-l-4 border-primary my-8 space-y-2">
+                    <p className="text-sm font-bold uppercase tracking-wider text-primary m-0">சிந்தனை</p>
+                    <p className="text-base md:text-lg font-medium text-stone-800 m-0">
+                      கிறிஸ்து என்னை விடுவித்த பின்னரும், நான் இன்னும் பற்றிக்கொண்டிருக்கும் பழைய பழக்கம் அல்லது பாவம் ஏதேனும் உண்டா? அதை அவரிடம் ஒப்புக்கொடுக்க இன்று நான் எடுக்க வேண்டிய அடி என்ன?
                     </p>
                   </div>
 
-                  <p>
-                    வார்த்தை சபை மக்கள் கூடிவரும் ஒரு இடமாக மட்டுமல்லாமல், தேவனுடைய வார்த்தையால் வாழ்க்கைகள் மறுரூபமாக்கப்பட்டு, அவருடைய அன்பு மற்றவர்களுக்கும் எடுத்துச் செல்லப்படும் ஒரு விசுவாசக் குடும்பமாக வளரட்டும்!
-                  </p>
+                  <div className="bg-accent/10 p-6 rounded-xl border border-accent/30 my-8 space-y-2">
+                    <p className="text-sm font-bold uppercase tracking-wider text-accent-dark m-0">ஜெபம்</p>
+                    <p className="text-base md:text-lg italic text-stone-800 m-0">
+                      அன்புள்ள பிதாவே, உமது குமாரன் மூலமாக எங்களை இருளிலிருந்து மீட்டு, புதிய வாழ்க்கையைத் தந்ததற்காக நன்றி. எங்கள் பாவங்களை உம்மிடம் ஒப்புக்கொடுக்கிறோம். உமது பரிசுத்த ஆவியினால் எங்களைப் புதுப்பித்து, உமக்குக் கீழ்ப்படிந்து வாழப் பெலன் தாரும். ஞானஸ்நானம் பெறுகிற ஒவ்வொருவரையும் விசுவாசத்தில் உறுதிப்படுத்தி, அவர்களை அன்புடன் தாங்கும் சபைக் குடும்பமாக எங்களை உருவாக்கும். இயேசுவின் நாமத்தில் ஜெபிக்கிறோம். ஆமென்.
+                    </p>
+                  </div>
 
-                  <p className="font-medium text-stone-800">
-                    கடந்த நூறு நாட்கள் தேவனுடைய உண்மைத்தன்மைக்குச் சாட்சி; வரப்போகும் நாட்கள் நம்முடைய விசுவாசத்திற்கும் உண்மையுள்ள ஊழியத்திற்குமான அழைப்பு!
-                  </p>
-
-                  <p className="pt-4">
-                    அனைவருக்கும் என் மனமார்ந்த நன்றியும் அன்பும்!<br/>
-                    ஆசீர்வாதங்களுடன்,<br/>
-                    <strong>Ps வெஸ்லின்</strong><br/>
-                    வார்த்தை சுவிசேஷ சபை
-                  </p>
-
-                  <div className="mt-12 rounded-xl overflow-hidden shadow-md border-2 border-stone-200 aspect-video">
-                    <iframe 
-                      width="100%" 
-                      height="100%" 
-                      src="https://www.youtube.com/embed/Dgp7vxN3fe8" 
-                      title="YouTube video player" 
-                      frameBorder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      allowFullScreen
-                    ></iframe>
+                  <div className="pt-4 border-t border-stone-200">
+                    <p className="font-bold text-primary mb-1">
+                      Ps. Weslyn | Vaarthai Evangelical Church
+                    </p>
+                    <p className="text-sm font-bold text-accent tracking-wider">
+                      கேட்போம் | வாழ்வோம் | பகிர்வோம்
+                    </p>
                   </div>
 
                 </div>
@@ -173,7 +171,14 @@ export default function PastorsDeskPage() {
                   <Link href="/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
-                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 13</p>
+                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 14</p>
+                      <p className="text-xs text-stone-500">Oct 2026</p>
+                    </div>
+                  </Link>
+                  <Link href="/pastors-desk/archive/october/edition-13" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 13</p>
                       <p className="text-xs text-stone-500">Oct 2026</p>
                     </div>
                   </Link>
