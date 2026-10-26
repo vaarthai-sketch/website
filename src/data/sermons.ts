@@ -26,6 +26,30 @@ export interface Sermon {
 
 export const sermonsData: Sermon[] = [
   {
+    id: "prayer-of-jabez-part-6",
+    title: "தீங்கிலிருந்து காத்தருளும் | Keep Me From Evil — யாபேசின் ஜெபம் · பகுதி 6",
+    englishTitle: "Keep Me From Evil | The Prayer of Jabez — Part 6",
+    speaker: "Ps Weslyn",
+    date: "2026-10-25",
+    scriptureReference: "1 நாளாகமம் 4:10",
+    englishScriptureReference: "1 Chronicles 4:10",
+    scriptureText: "தீங்கு என்னைத் துக்கப்படுத்தாதபடிக்கு அதற்கு என்னை விலக்கிக் காத்தருளும் என்று வேண்டிக்கொண்டான்; அவன் வேண்டிக்கொண்டதை தேவன் அருளினார்.",
+    englishScriptureText: "And that You would keep me from evil, that I may not cause pain! So God granted him what he requested.",
+    series: "யாபேசின் ஜெபம் (Prayer of Jabez)",
+    englishSeries: "Prayer of Jabez",
+    topic: "ஜெபம் (Prayer)",
+    englishTopic: "Prayer",
+    description: "ஆபத்து ஆசீர்வாதத்திற்கு முன்பு அல்ல, ஆசீர்வாதத்திற்குப் பின்பே வருகிறது. இயேசு யோர்தானில் “நேசகுமாரன்” என்ற குரலைக் கேட்டவுடனே வனாந்தரத்திற்குள் நடத்தப்பட்டார். யாபேசின் ஜெபத்தின் கடைசி வேண்டுதல் நமக்கு ஒன்றைக் காட்டுகிறது: பெரிதான எல்லைதான் நிற்பதற்கு மிகவும் ஆபத்தான இடம். இது ஒரு மந்திரம் அல்ல. இது தினமும் தேவனைச் சார்ந்திருக்கும் உறவு.",
+    englishDescription: "The danger comes not before the blessing but after it. Jesus heard “This is My beloved Son” at the Jordan and was then led straight into the wilderness. Jabez’s final request shows that the enlarged border is the most dangerous place to stand. This message looks at David, Uzziah and Elijah, and at what Jabez actually asked: not only “let me not be hurt” but “let me not cause pain.” It also covers how God keeps us, through our watchfulness and His faithfulness. Baptism is not the finish line. It is the border crossing.",
+    videoPlaceholder: "யாபேசின் ஜெபம் பிரசங்க வீடியோ (பகுதி 6)",
+    englishVideoPlaceholder: "The Prayer of Jabez Sermon Video (Part 6)",
+    youtubeId: "8EztIwnpFL4",
+    audioUrl: "#",
+    notesUrl: "#",
+    duration: "56:28",
+    thumbnail: "",
+  },
+  {
     id: "prayer-of-jabez-part-5",
     title: "உமது கரம் என்னோடிருக்கட்டும் | யாபேசின் ஜெபம் — பகுதி 5 | Let Your Hand Be With Me — The Prayer of Jabez Part 5",
     englishTitle: "Let Your Hand Be With Me | The Prayer of Jabez — Part 5",
@@ -269,7 +293,7 @@ export const sermonSeries = [
     englishTitle: "Prayer of Jabez",
     description: "1 நாளாகமம் 4:9-10 வசனங்களின் அடிப்படையில் யாபேசின் ஜெபத்தைக் குறித்த வேத தியானத் தொடர்.",
     englishDescription: "A biblical meditation series on the Prayer of Jabez based on 1 Chronicles 4:9-10.",
-    count: 4,
+    count: 5,
     image: "series-jabez"
   },
   {
