@@ -191,7 +191,7 @@ export default function PastorsDeskPage() {
 
                   <p className="font-semibold text-primary">
                     Yesterday&apos;s science fiction has become today&apos;s reality.<br/>
-                    But God&apos;s promise to give us a new heart.
+                    But God&apos;s promise is to give us a new heart.
                   </p>
 
                   <div className="bg-accent/10 p-6 rounded-xl border border-accent/30 my-8 space-y-3">
