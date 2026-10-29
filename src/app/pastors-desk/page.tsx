@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   title: "VEC-NL 2026-10 Edition 15 - போதகர் மேசையிலிருந்து",
   description: "நேற்றைய கற்பனை… இன்றைய நிஜம்! ஆனால், ஒரு புதிய இருதயம்? — “அப்பொழுது நான் உங்கள்மேல் சுத்தமான ஜலம் தெளிப்பேன்; நீங்கள் சுத்தமாவீர்கள்... உங்களுக்கு நவமான இருதயத்தைக் கொடுத்து, உங்கள் உள்ளத்திலே புதிதான ஆவியைக் கட்டளையிடுவேன்.” — எசேக்கியேல் 36:25–26",
   path: "/pastors-desk",
-  image: "/edition-15-baptism.jpg",
+  image: "/edition-15-heart.jpg",
 });
 
 export default function PastorsDeskPage() {
