@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   title: "VEC-NL 2026-10 Edition 15 - From the Pastor's Desk",
   description: "Yesterday’s Imagination… Today’s Reality! But What About a New Heart? — “Then I will sprinkle clean water on you, and you shall be clean... I will give you a new heart and put a new spirit within you.” — Ezekiel 36:25–26",
   path: "/en/pastors-desk",
-  image: "/pastor-desk-hero.jpg",
+  image: "/edition-15-baptism.jpg",
 });
 
 export default function PastorsDeskPage() {
@@ -84,6 +84,14 @@ export default function PastorsDeskPage() {
                     Medical science, too, has made astonishing progress. Today, doctors can remove a failing human heart and replace it with another, saving a person&apos;s life.
                   </p>
 
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                    <img 
+                      src="/edition-15-heart.jpg" 
+                      alt="Heart Transplant - Medical Science" 
+                      className="w-full h-auto object-cover max-h-[500px]" 
+                    />
+                  </div>
+
                   <p>
                     Last month, a family friend visited us in her new Tesla.
                   </p>
@@ -151,6 +159,14 @@ export default function PastorsDeskPage() {
                   <p className="font-medium text-stone-800">
                     This Sunday, two people will be baptised at our Vaarthai Evangelical Church. What a joyful occasion for all of us!
                   </p>
+
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                    <img 
+                      src="/edition-15-baptism.jpg" 
+                      alt="Baptism - New Life in Christ" 
+                      className="w-full h-auto object-cover max-h-[500px]" 
+                    />
+                  </div>
 
                   <p>
                     Baptism is not merely a religious ritual or a traditional ceremony. It is a public testimony of faith, declaring that we are united with Jesus Christ in His death, burial, and resurrection.

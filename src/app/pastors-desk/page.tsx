@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   title: "VEC-NL 2026-10 Edition 15 - போதகர் மேசையிலிருந்து",
   description: "நேற்றைய கற்பனை… இன்றைய நிஜம்! ஆனால், ஒரு புதிய இருதயம்? — “அப்பொழுது நான் உங்கள்மேல் சுத்தமான ஜலம் தெளிப்பேன்; நீங்கள் சுத்தமாவீர்கள்... உங்களுக்கு நவமான இருதயத்தைக் கொடுத்து, உங்கள் உள்ளத்திலே புதிதான ஆவியைக் கட்டளையிடுவேன்.” — எசேக்கியேல் 36:25–26",
   path: "/pastors-desk",
-  image: "/pastor-desk-hero.jpg",
+  image: "/edition-15-baptism.jpg",
 });
 
 export default function PastorsDeskPage() {
@@ -80,6 +80,14 @@ export default function PastorsDeskPage() {
                     மருத்துவ அறிவியலும் வியக்கத்தக்க வளர்ச்சியடைந்திருக்கிறது. செயலிழந்த மனித இருதயத்தை அகற்றிவிட்டு, மற்றொரு இருதயத்தைப் பொருத்தி உயிரைக் காப்பாற்ற முடிகிறது.
                   </p>
 
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                    <img 
+                      src="/edition-15-heart.jpg" 
+                      alt="Heart Transplant - Medical Science" 
+                      className="w-full h-auto object-cover max-h-[500px]" 
+                    />
+                  </div>
+
                   <p>
                     கடந்த மாதம், எங்கள் குடும்ப நண்பர் ஒருவர் தனது புதிய டெஸ்லா (Tesla) காரில் எங்கள் வீட்டிற்கு வந்திருந்தார்.
                   </p>
@@ -147,6 +155,14 @@ export default function PastorsDeskPage() {
                   <p className="font-medium text-stone-800">
                     இந்த ஞாயிற்றுக்கிழமை, நமது வார்த்தை சுவிசேஷ சபையில் இருவர் ஞானஸ்நானம் பெறவிருக்கிறார்கள். இது நம் அனைவருக்கும் மகிழ்ச்சியான தருணம்!
                   </p>
+
+                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
+                    <img 
+                      src="/edition-15-baptism.jpg" 
+                      alt="Baptism - New Life in Christ" 
+                      className="w-full h-auto object-cover max-h-[500px]" 
+                    />
+                  </div>
 
                   <p>
                     ஞானஸ்நானம் என்பது வெறும் மதச்சடங்கோ, பாரம்பரிய நிகழ்வோ அல்ல. இயேசு கிறிஸ்துவின் மரணத்திலும், அடக்கத்திலும், உயிர்த்தெழுதலிலும் நாம் அவரோடு இணைந்திருக்கிறோம் என்பதை வெளிப்படையாக அறிவிக்கும் விசுவாசத்தின் சாட்சியாகும்.
