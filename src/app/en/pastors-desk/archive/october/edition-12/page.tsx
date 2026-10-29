@@ -174,6 +174,13 @@ export default function PastorsDeskPage() {
                   <Link href="/en/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 15</p>
+                      <p className="text-xs text-stone-500">Oct 2026</p>
+                    </div>
+                  </Link>
+                  <Link href="/en/pastors-desk/archive/october/edition-14" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
+                    <div>
                       <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 14</p>
                       <p className="text-xs text-stone-500">Oct 2026</p>
                     </div>
