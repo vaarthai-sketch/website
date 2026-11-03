@@ -26,6 +26,30 @@ export interface Sermon {
 
 export const sermonsData: Sermon[] = [
   {
+    id: "prayer-of-jabez-part-7",
+    title: "தேவன் அருளினார் | And God Granted — யாபேசின் ஜெபம் · பகுதி 7",
+    englishTitle: "And God Granted | The Prayer of Jabez — Part 7",
+    speaker: "Ps Weslyn",
+    date: "2026-11-01",
+    scriptureReference: "1 நாளாகமம் 4:10; 2:55 · 1 யோவான் 5:14–15 · எண்ணாகமம் 6:24–26 · 1 சாமுவேல் 1:10, 18, 27 · 2 கொரிந்தியர் 12:9 · மத்தேயு 26:39",
+    englishScriptureReference: "1 Chronicles 4:10; 2:55 · 1 John 5:14–15 · Numbers 6:24–26 · 1 Samuel 1:10, 18, 27 · 2 Corinthians 12:9 · Matthew 26:39",
+    scriptureText: "...அவன் வேண்டிக்கொண்டதை தேவன் அருளினார்.",
+    englishScriptureText: "...And God granted him that which he requested.",
+    series: "யாபேசின் ஜெபம் (Prayer of Jabez)",
+    englishSeries: "Prayer of Jabez",
+    topic: "ஜெபம் (Prayer)",
+    englishTopic: "Prayer",
+    description: "யாபேசின் ஜெபத்தின் மிகச் சிறிய வாக்கியம்தான் மிக முக்கியமான வாக்கியம். இதுவரை பேசினது யாபேஸ்; இந்த வாக்கியத்திலே செயல்படுகிறவர் தேவன். தேவன் ஏன் பதில் கொடுத்தார்? பதில் \"இன்னும் இல்லை\" அல்லது \"இல்லை\" என்று வரும்போது என்ன? \"வேதனை\" என்ற பெயரோடு பிறந்த ஒருவனின் பெயர் எப்படி \"வார்த்தையின் வீடாக\" மாறினது? ஞானஸ்நான ஞாயிறு அன்று பிரசங்கிக்கப்பட்ட செய்தி இது.",
+    englishDescription: "The shortest sentence in Jabez’s prayer is the most important one. Up to this point Jabez has been speaking, and in this sentence God acts. In this Baptism Sunday message we look at why God answered, what to do when the answer is “not yet” or “no”, and how a name that meant pain became a house of the Word.",
+    videoPlaceholder: "யாபேசின் ஜெபம் பிரசங்க வீடியோ (பகுதி 7)",
+    englishVideoPlaceholder: "The Prayer of Jabez Sermon Video (Part 7)",
+    youtubeId: "vuFmVgMQafM",
+    audioUrl: "#",
+    notesUrl: "#",
+    duration: "49:50",
+    thumbnail: "",
+  },
+  {
     id: "prayer-of-jabez-part-6",
     title: "தீங்கிலிருந்து காத்தருளும் | Keep Me From Evil — யாபேசின் ஜெபம் · பகுதி 6",
     englishTitle: "Keep Me From Evil | The Prayer of Jabez — Part 6",
@@ -293,7 +317,7 @@ export const sermonSeries = [
     englishTitle: "Prayer of Jabez",
     description: "1 நாளாகமம் 4:9-10 வசனங்களின் அடிப்படையில் யாபேசின் ஜெபத்தைக் குறித்த வேத தியானத் தொடர்.",
     englishDescription: "A biblical meditation series on the Prayer of Jabez based on 1 Chronicles 4:9-10.",
-    count: 5,
+    count: 6,
     image: "series-jabez"
   },
   {
