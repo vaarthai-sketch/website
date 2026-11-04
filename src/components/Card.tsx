@@ -51,12 +51,20 @@ export const SermonCard: React.FC<{ sermon: Sermon; isEn?: boolean }> = ({ sermo
           <img 
             src={sermon.thumbnail} 
             alt={isEn ? (sermon.englishTitle || sermon.title) : sermon.title} 
+            width={640}
+            height={360}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
           />
         ) : sermon.youtubeId ? (
           <img 
-            src={`https://img.youtube.com/vi/${sermon.youtubeId}/maxresdefault.jpg`} 
+            src={`https://img.youtube.com/vi/${sermon.youtubeId}/hqdefault.jpg`} 
             alt={isEn ? (sermon.englishTitle || sermon.title) : sermon.title} 
+            width={480}
+            height={360}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
           />
         ) : (
@@ -143,7 +151,7 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list"; b
 
         {event.image && event.image.startsWith("/") && (
           <div className="w-28 h-20 rounded-md overflow-hidden shrink-0 hidden sm:block bg-neutral-light">
-            <img src={event.image} alt={displayTitle} className={`w-full h-full ${event.imageHasText ? 'object-contain bg-black' : 'object-cover'}`} />
+            <img src={event.image} alt={displayTitle} width={112} height={80} loading="lazy" decoding="async" className={`w-full h-full ${event.imageHasText ? 'object-contain bg-black' : 'object-cover'}`} />
           </div>
         )}
 
@@ -195,6 +203,10 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list"; b
           <img 
             src={event.image} 
             alt={displayTitle} 
+            width={640}
+            height={384}
+            loading="lazy"
+            decoding="async"
             className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${event.imageHasText ? 'object-contain bg-black' : 'object-cover'}`} 
           />
         ) : (
@@ -260,6 +272,10 @@ export const MinistryCard: React.FC<{ ministry: Ministry; basePrefix?: string }>
           <img 
             src={ministry.image} 
             alt={displayTitle} 
+            width={640}
+            height={360}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
             style={{ objectPosition: ministry.id === "children" ? "center 15%" : ((ministry as any).imagePosition || "center") }}
           />
@@ -336,6 +352,10 @@ export const StaffCard: React.FC<{ staff: StaffMember; isEn?: boolean }> = ({ st
           <img 
             src={staff.image} 
             alt={staff.name} 
+            width={144}
+            height={144}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover rounded-full bg-white transition-transform duration-300" 
             style={staff.imageStyle || { objectPosition: 'top' }}
           />

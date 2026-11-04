@@ -84,6 +84,10 @@ export default function PastorsDeskPage() {
                     <img 
                       src="/edition-15-heart.jpg" 
                       alt="Heart Transplant - Medical Science" 
+                      width={1024}
+                      height={1024}
+                      fetchPriority="high"
+                      decoding="async"
                       className="w-full h-auto object-cover max-h-[500px]" 
                     />
                   </div>
@@ -160,6 +164,10 @@ export default function PastorsDeskPage() {
                     <img 
                       src="/edition-15-baptism.jpg" 
                       alt="Baptism - New Life in Christ" 
+                      width={1024}
+                      height={1024}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-auto object-cover max-h-[500px]" 
                     />
                   </div>
@@ -212,6 +220,7 @@ export default function PastorsDeskPage() {
                       height="100%" 
                       src="https://www.youtube.com/embed/CUZAOsqsZAA" 
                       title="YouTube video player" 
+                      loading="lazy"
                       frameBorder="0" 
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                       allowFullScreen

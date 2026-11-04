@@ -144,6 +144,10 @@ export default function EnglishAboutPage() {
           <img 
             src="/church-history.jpg" 
             alt="Church Family & History Banner" 
+            width={1024}
+            height={326}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover object-top transform hover:scale-[1.01] transition-transform duration-700" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20"></div>
@@ -163,6 +167,10 @@ export default function EnglishAboutPage() {
                   <img 
                     src="/pastor-about.jpg" 
                     alt="Pastor Weslyn" 
+                    width={1024}
+                    height={663}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-500" 
                   />
                 </div>

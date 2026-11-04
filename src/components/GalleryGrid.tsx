@@ -89,6 +89,10 @@ export default function GalleryGrid({ folders }: { folders: FolderData[] }) {
                     <img 
                       src={folder.images[0]} 
                       alt={folder.name}
+                      width={640}
+                      height={480}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   ) : (

@@ -22,10 +22,18 @@ export default function EnglishHomePage() {
       
       {/* 1. HERO SECTION */}
       <section 
-        className="relative text-white py-24 md:py-32 overflow-hidden bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+        className="relative text-white py-24 md:py-32 overflow-hidden bg-[#0F172A]" 
         aria-label="Welcome"
       >
+        <img 
+          src="/hero-bg.jpg" 
+          alt="" 
+          width={1024} 
+          height={437} 
+          fetchPriority="high" 
+          decoding="async" 
+          className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none" 
+        />
         {/* Dark overlay to ensure text readability but allow image to show */}
         <div className="absolute inset-0 bg-[#0F172A]/70 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/90 via-[#0F172A]/50 to-transparent"></div>
@@ -87,6 +95,9 @@ export default function EnglishHomePage() {
                 <img 
                   src="/logo.png" 
                   alt={`${churchConfig.name} logo`} 
+                  width={256}
+                  height={256}
+                  decoding="async"
                   className="w-full h-full object-contain" 
                 />
               </div>
@@ -99,6 +110,9 @@ export default function EnglishHomePage() {
                     <img 
                       src="/logo.png" 
                       alt="logo" 
+                      width={28}
+                      height={28}
+                      decoding="async"
                       className="w-full h-full object-contain"
                     />
                   </div>
@@ -136,6 +150,10 @@ export default function EnglishHomePage() {
             <img 
               src="/home-welcome.jpg" 
               alt="Vaarthai Church Worship Gathering" 
+              width={1024}
+              height={576}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent opacity-60"></div>

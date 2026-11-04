@@ -23,10 +23,18 @@ export const Footer: React.FC = () => {
 
   return (
     <footer 
-      className="relative text-[#ECE9E4] border-t border-[#1E293B] bg-cover bg-center bg-no-repeat overflow-hidden" 
-      style={{ backgroundImage: "url('/footer-bg.jpg')" }}
+      className="relative text-[#ECE9E4] border-t border-[#1E293B] bg-[#0F172A] overflow-hidden" 
       aria-labelledby="footer-heading"
     >
+      <img 
+        src="/footer-bg.jpg" 
+        alt="" 
+        width={1024} 
+        height={576} 
+        loading="lazy" 
+        decoding="async" 
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none" 
+      />
       {/* Dark overlay to ensure text readability but allow image to show */}
       <div className="absolute inset-0 bg-[#0F172A]/70 mix-blend-multiply"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/90 via-[#0F172A]/60 to-transparent"></div>
@@ -44,6 +52,10 @@ export const Footer: React.FC = () => {
                 <img 
                   src="/logo.png" 
                   alt={`${churchConfig.name} logo`} 
+                  width={36}
+                  height={36}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-contain"
                 />
               </div>

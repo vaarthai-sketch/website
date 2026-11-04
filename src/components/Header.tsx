@@ -125,6 +125,10 @@ export const Header: React.FC = () => {
               <img 
                 src="/logo.png" 
                 alt={`${churchConfig.name} logo`} 
+                width={56}
+                height={56}
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-full object-contain"
               />
             </div>

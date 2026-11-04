@@ -97,9 +97,7 @@ export default function PastorsDeskArchive1Page() {
                       <p className="text-xs sm:text-sm text-stone-600 m-0 mt-1">பாடல் & இயக்கம்: Ps. ஜெயகரன் வெஸ்லின் (Morning Meditation Song)</p>
                     </div>
                     <div className="w-full sm:w-auto mt-2 sm:mt-0">
-                      <audio controls preload="metadata" className="w-full sm:w-64 h-10 rounded-lg">
-                        <source src="/kaalai-thorum-yesuve.mp3" type="audio/mpeg" />
-                        <source src="/kalai-thorum-yesuve.mp3" type="audio/mpeg" />
+                      <audio controls preload="none" className="w-full sm:w-64 h-10 rounded-lg">
                         <source src="/meditation-song.mp3" type="audio/mpeg" />
                         உங்கள் உலாவி (Browser) இந்த ஆடியோவை ஆதரிக்கவில்லை.
                       </audio>
