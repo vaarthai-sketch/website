@@ -179,7 +179,11 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Registration Details */}
-        <div className="border-t border-[#1E293B] mt-12 pt-8 text-center text-xs text-stone-400">
+        <div className="border-t border-[#1E293B] mt-12 pt-8 text-center text-xs text-stone-400 space-y-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-emerald-300 bg-emerald-900/40 border border-emerald-500/30 select-none tracking-wide">
+            <svg className="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            Registered Not-for-Profit Charity
+          </div>
           <p className="max-w-4xl mx-auto leading-relaxed">
             Vaarthai Evangelical Church Inc is an association incorporated in Queensland (registration no. IA58572) and a charity registered with the Australian Charities and Not-for-profits Commission (ACNC). ABN 32 327 903 035.
           </p>
