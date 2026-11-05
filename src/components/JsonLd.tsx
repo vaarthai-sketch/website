@@ -18,9 +18,9 @@ export const JsonLd: React.FC<JsonLdProps> = ({ type, data }) => {
       "name": "Vaarthai Evangelical Church Inc",
       "alternateName": ["Tamil Church in Brisbane", "Vaarthai Tamil Church", "தமிழ் சபை", "Brisbane Tamil Church", "Tamil Church Family"],
       "description": "Vaarthai Evangelical Church Inc is a Tamil Church in Brisbane. We are a Tamil Church Family dedicated to Tamil Worship, Tamil Gospel, and Tamil Christian fellowship.",
-      "url": "https://vaarthai.org.au", // Mock production URL
-      "logo": "https://vaarthai.org.au/logo.png",
-      "image": "https://vaarthai.org.au/og-image.jpg",
+      "url": "https://www.vaarthai.org.au",
+      "logo": "https://www.vaarthai.org.au/logo.png",
+      "image": "https://www.vaarthai.org.au/opengraph-image.jpg",
       "tagline": churchConfig.tagline,
       "denomination": "Tamil Evangelical Church",
       "address": {
@@ -29,7 +29,7 @@ export const JsonLd: React.FC<JsonLdProps> = ({ type, data }) => {
         "addressLocality": churchConfig.contact.address.city,
         "addressRegion": churchConfig.contact.address.state,
         "postalCode": churchConfig.contact.address.zip,
-        "addressCountry": "US"
+        "addressCountry": "AU"
       },
       "telephone": churchConfig.contact.phone,
       "email": churchConfig.contact.email,
@@ -37,8 +37,8 @@ export const JsonLd: React.FC<JsonLdProps> = ({ type, data }) => {
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Sunday",
-          "opens": "08:30",
-          "closes": "12:30"
+          "opens": "10:00",
+          "closes": "12:00"
         }
       ]
     };
@@ -90,7 +90,7 @@ export const JsonLd: React.FC<JsonLdProps> = ({ type, data }) => {
           "addressLocality": churchConfig.contact.address.city,
           "addressRegion": churchConfig.contact.address.state,
           "postalCode": churchConfig.contact.address.zip,
-          "addressCountry": "US"
+          "addressCountry": "AU"
         }
       },
       "image": [

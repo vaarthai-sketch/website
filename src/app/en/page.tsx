@@ -7,18 +7,43 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 import { GoogleReviews } from "@/components/GoogleReviews";
 
 import { buildMetadata } from '@/lib/seo';
+import { FaqSchema } from '@/components/StructuredData';
 
 export const metadata = buildMetadata({
   locale: 'en',
   path: '',
-  title: `Welcome | ${churchConfig.name} - Evangelical Church in Brisbane`,
-  description: `Welcome to ${churchConfig.name}. We are a Gospel-centered Tamil and multi-generational church community in Brisbane, loving God and making disciples.`,
+  title: `Tamil Church in Brisbane | Vaarthai Evangelical Church Inc`,
+  description: `Looking for a Tamil Church in Brisbane? Welcome to ${churchConfig.name} at 389 Old Logan Rd, Springfield QLD 4300. Join our Brisbane Tamil Church family every Sunday at 10:00 AM for Tamil & English worship, biblical preaching by Pastor Weslyn, and Vaarthai Kids Sunday School.`,
 });
+
+const englishHomeFaqs = [
+  {
+    question: "Where is Vaarthai Tamil Church in Brisbane located?",
+    answer:
+      "Vaarthai Evangelical Church Inc meets every Sunday at the Westside Community Centre, 389 Old Logan Rd, Springfield QLD 4300 — convenient for Tamil individuals, students, and families across Greater Brisbane, Springfield, Camira, Forest Lake, Ipswich, Sunnybank, and Logan City.",
+  },
+  {
+    question: "What time is the Sunday Tamil worship service in Brisbane?",
+    answer:
+      "Our Sunday worship service takes place every Sunday at 10:00 AM (running for approximately 90–105 minutes), followed by fellowship over tea and refreshments.",
+  },
+  {
+    question: "Are services in Tamil and English?",
+    answer:
+      "Yes! Our services feature heartfelt Tamil and English worship along with clear, Bible-based preaching by Pastor Weslyn, so every generation — from grandparents to youth and children — can grow together in faith.",
+  },
+  {
+    question: "Is there a Children's Ministry (Sunday School) and on-site parking?",
+    answer:
+      "Yes, Vaarthai Kids runs during the 10:00 AM Sunday service for children ages 4 through Grade 6 with Blue Card certified teachers, and free on-site and wheelchair-accessible parking is available right outside the hall.",
+  },
+];
 
 export default function EnglishHomePage() {
 
   return (
     <div className="space-y-20 pb-20">
+      <FaqSchema faqs={englishHomeFaqs} />
       
       {/* 1. HERO SECTION */}
       <section 
@@ -27,7 +52,7 @@ export default function EnglishHomePage() {
       >
         <img 
           src="/hero-bg.jpg" 
-          alt="" 
+          alt="Tamil Church in Brisbane - Vaarthai Evangelical Church Inc Sunday Worship" 
           width={1024} 
           height={437} 
           fetchPriority="high" 
@@ -60,6 +85,7 @@ export default function EnglishHomePage() {
                 </span>
               </div>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide leading-[1.3] text-white">
+                <span className="sr-only">Vaarthai Evangelical Church Inc — Tamil Church in Brisbane: </span>
                 <span className="block mb-1 sm:mb-2">Hearing the Word.</span>
                 <span className="block text-accent mb-1 sm:mb-2">Living the Word.</span>
                 <span className="block">Sharing the Word.</span>
@@ -325,7 +351,37 @@ export default function EnglishHomePage() {
       {/* 5. GOOGLE REVIEWS */}
       <GoogleReviews isEn={true} />
 
-      {/* 6. NEWSLETTER SIGNUP */}
+      {/* 6. LOCAL SEO & FAQ SECTION FOR TAMIL CHURCH IN BRISBANE */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div className="bg-white border border-border rounded-2xl p-8 sm:p-12 shadow-sm space-y-8">
+          <div className="max-w-3xl space-y-3">
+            <span className="text-xs font-bold text-accent uppercase tracking-widest">
+              Tamil Church in Brisbane, QLD
+            </span>
+            <h2 className="font-serif text-2xl sm:text-3xl font-black text-primary">
+              Your Home for Tamil Christian Worship &amp; Fellowship in Brisbane
+            </h2>
+            <p className="text-sm sm:text-base text-stone-700 leading-relaxed">
+              <strong>Vaarthai Evangelical Church Inc</strong> is a Gospel-centered <strong>Tamil Church in Brisbane</strong> pastored by <Link href="/en/about" className="text-primary underline hover:text-accent font-semibold">Pastor Weslyn</Link>. Meeting every Sunday at <strong>10:00 AM</strong> at <strong>389 Old Logan Rd, Springfield QLD 4300</strong>, our Brisbane Tamil Church family welcomes individuals, university students, and families from across <strong>Brisbane, Springfield, Camira, Forest Lake, Ipswich, Sunnybank, Mount Gravatt, and Logan City</strong>.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+            {englishHomeFaqs.map((faq, idx) => (
+              <div key={idx} className="bg-neutral-light/50 border border-border rounded-xl p-6 space-y-2">
+                <h3 className="font-serif font-bold text-primary text-base">
+                  {faq.question}
+                </h3>
+                <p className="text-sm text-stone-600 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. NEWSLETTER SIGNUP */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-neutral-light border border-border rounded-xl p-8 sm:p-12 text-center">
           <h2 className="font-serif text-2xl sm:text-3xl font-black text-primary mb-3">

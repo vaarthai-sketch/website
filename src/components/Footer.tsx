@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
               </span>
             </Link>
             <p className="text-sm text-stone-300 leading-relaxed">
-              We are a community centered on the gospel, seeking to love God, love our neighbors, and make disciples in Brisbane and around the world.
+              Vaarthai Evangelical Church Inc is a welcoming Tamil Church in Brisbane centered on the Gospel, seeking to love God, serve families across Brisbane, Springfield, Ipswich &amp; Logan, and make disciples of Jesus Christ.
             </p>
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">

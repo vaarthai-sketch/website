@@ -26,29 +26,40 @@ export function ChurchSchema({ locale }: { locale: Locale }) {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Church',
+        '@type': ['Church', 'PlaceOfWorship', 'LocalBusiness'],
         '@id': CHURCH_ID,
         name: churchConfig.name,
         alternateName: [
-          'வார்த்தை சுவிசேஷ திருச்சபை',
+          'Tamil Church in Brisbane',
+          'Brisbane Tamil Church',
           'Vaarthai Tamil Church',
           'Vaarthai Church',
+          'Vaarthai Evangelical Church',
+          'Tamil Christian Church Brisbane',
+          'Springfield Tamil Church',
+          'வார்த்தை சுவிசேஷ திருச்சபை',
+          'பிரிஸ்பேன் தமிழ் சபை',
+          'தமிழ் திருச்சபை பிரிஸ்பேன்',
         ],
         url: SITE,
         logo: {
           '@type': 'ImageObject',
           url: `${SITE}/logo.png`,
         },
-        image: `${SITE}/home-welcome.jpg`,
+        image: [
+          `${SITE}/home-welcome.jpg`,
+          `${SITE}/opengraph-image.jpg`,
+          `${SITE}/pastor-about.jpg`,
+        ],
         description:
-          'A Tamil-speaking evangelical church in Brisbane, Queensland. ' +
-          'Sunday worship at 10:00 AM with Tamil preaching and children\u2019s ministry.',
+          'Vaarthai Evangelical Church Inc is a welcoming Tamil Church in Brisbane (meeting at 389 Old Logan Rd, Springfield QLD 4300). Join our Tamil Church Family for Sunday worship at 10:00 AM with biblical preaching by Pastor Weslyn, Tamil & English songs, fellowship, and Vaarthai Kids Sunday School.',
         telephone: churchConfig.contact.phone,
         email: churchConfig.contact.email,
+        priceRange: 'Free',
         address: {
           '@type': 'PostalAddress',
           streetAddress: churchConfig.contact.address.street,
-          addressLocality: churchConfig.contact.address.city, // e.g. Camira / Springfield
+          addressLocality: churchConfig.contact.address.city,
           addressRegion: churchConfig.contact.address.state,
           postalCode: churchConfig.contact.address.zip,
           addressCountry: 'AU',
@@ -61,11 +72,23 @@ export function ChurchSchema({ locale }: { locale: Locale }) {
         hasMap: MAP_URL,
         areaServed: [
           { '@type': 'City', name: 'Brisbane' },
+          { '@type': 'City', name: 'Springfield' },
           { '@type': 'City', name: 'Ipswich' },
           { '@type': 'City', name: 'Logan City' },
+          { '@type': 'Place', name: 'Camira' },
+          { '@type': 'Place', name: 'Forest Lake' },
+          { '@type': 'Place', name: 'Redbank Plains' },
+          { '@type': 'Place', name: 'Sunnybank' },
+          { '@type': 'AdministrativeArea', name: 'South East Queensland' },
         ],
-        knowsLanguage: ['ta', 'en-AU'],
+        knowsLanguage: ['ta', 'en-AU', 'en'],
         openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['https://schema.org/Sunday'],
+            opens: '10:00',
+            closes: '12:00',
+          },
           {
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: ['https://schema.org/Thursday', 'https://schema.org/Friday'],
@@ -91,15 +114,24 @@ export function ChurchSchema({ locale }: { locale: Locale }) {
             name: 'Accessible parking',
             value: true,
           },
+          {
+            '@type': 'LocationFeatureSpecification',
+            name: 'Children Sunday School (Vaarthai Kids)',
+            value: true,
+          },
         ],
         founder: {
           '@type': 'Person',
-          name: 'Pastor Weslyn', 
+          name: 'Pastor Weslyn',
           jobTitle: 'Founding Senior Minister',
         },
         sameAs: [
           churchConfig.socials?.facebook || '',
           churchConfig.socials?.youtube || '',
+          churchConfig.socials?.instagram || '',
+          churchConfig.socials?.tiktok || '',
+          churchConfig.socials?.linkedin || '',
+          MAP_URL,
         ].filter(Boolean),
       },
 
@@ -107,8 +139,9 @@ export function ChurchSchema({ locale }: { locale: Locale }) {
         '@type': 'WebSite',
         '@id': WEBSITE_ID,
         url: SITE,
-        name: churchConfig.name,
-        inLanguage: locale === 'ta' ? 'ta' : 'en-AU',
+        name: 'Vaarthai Evangelical Church Inc | Tamil Church in Brisbane',
+        alternateName: ['Tamil Church in Brisbane', 'Brisbane Tamil Church', 'Vaarthai Church'],
+        inLanguage: ['ta', 'en-AU'],
         publisher: { '@id': CHURCH_ID },
       },
 
@@ -117,12 +150,12 @@ export function ChurchSchema({ locale }: { locale: Locale }) {
         '@id': `${SITE}/#sunday-service`,
         name:
           locale === 'ta'
-            ? 'ஞாயிறு தமிழ் ஆராதனை'
-            : 'Sunday Tamil Worship Service',
+            ? 'ஞாயிறு தமிழ் ஆராதனை | Sunday Tamil Worship Service in Brisbane'
+            : 'Sunday Tamil Worship Service in Brisbane',
         description:
           locale === 'ta'
-            ? 'ஞாயிறு காலை 10:00 மணிக்கு தமிழ் ஆராதனை. சிறுவர்களுக்கான வகுப்புகளும் உண்டு.'
-            : 'Weekly Tamil worship service with preaching and children\u2019s classes.',
+            ? 'பிரிஸ்பேன் நகரில் வாரந்தோறும் ஞாயிறு காலை 10:00 மணிக்கு தமிழ் ஆராதனை மற்றும் சிறுவர்களுக்கான வகுப்புகள்.'
+            : 'Weekly Tamil & English worship service in Brisbane every Sunday at 10:00 AM with biblical preaching and children\u2019s classes.',
         eventSchedule: {
           '@type': 'Schedule',
           repeatFrequency: 'P1W',
@@ -143,6 +176,29 @@ export function ChurchSchema({ locale }: { locale: Locale }) {
   };
 
   return <JsonLd data={graph} />;
+}
+
+export function FaqSchema({
+  faqs,
+}: {
+  faqs: { question: string; answer: string }[];
+}) {
+  return (
+    <JsonLd
+      data={{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      }}
+    />
+  );
 }
 
 /* ------------------------------------------------------------------ */

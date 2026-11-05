@@ -9,8 +9,8 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'en',
   path: '/about',
-  title: "About Us | Vaarthai Evangelical Church Inc - Brisbane",
-  description: `Learn about the story, core beliefs, mission, vision, values, and leadership team of ${churchConfig.name} in Brisbane, QLD, Australia.`,
+  title: "About Us | Tamil Church in Brisbane | Vaarthai Evangelical Church Inc",
+  description: `Learn about Vaarthai Evangelical Church Inc — a Gospel-centered Tamil Church in Brisbane led by Pastor Weslyn. Discover our story, Statement of Faith, mission, and leadership in Springfield, QLD.`,
 });
 
 export default function EnglishAboutPage() {

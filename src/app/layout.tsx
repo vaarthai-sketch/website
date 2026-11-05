@@ -3,7 +3,6 @@ import { Inter, Playfair_Display, Kavivanar, Anek_Tamil } from "next/font/google
 import { Header } from "@/components/Header";
 import { PlanVisitButton } from "@/components/PlanVisitButton";
 import { Footer } from "@/components/Footer";
-import { JsonLd } from "@/components/JsonLd";
 import { churchConfig } from "@/data/config";
 import Script from "next/script";
 import "./globals.css";
@@ -37,41 +36,43 @@ const siteUrl = "https://www.vaarthai.org.au";
 
 export const metadata: Metadata = {
   title: {
-    default: `Vaarthai Evangelical Church Inc | Tamil Church in Brisbane`,
+    default: `Tamil Church in Brisbane | Vaarthai Evangelical Church Inc`,
     template: `%s | Tamil Church in Brisbane | Vaarthai`
   },
-  description: `Welcome to Vaarthai Evangelical Church Inc (Tamil Church in Brisbane) in ${churchConfig.contact.address.city}, ${churchConfig.contact.address.state}. Join our Tamil Church Family for worship services on Sundays at ${churchConfig.services[0].times.join(" & ")}.`,
+  description: `Looking for a Tamil Church in Brisbane? Welcome to Vaarthai Evangelical Church Inc at 389 Old Logan Rd, Springfield QLD 4300. Join our Tamil Church Family for Sunday worship at 10:00 AM with Pastor Weslyn, Tamil & English worship, and Kids Sunday School.`,
   keywords: [
-    "Tamil Church", "Tamil Church in Brisbane", "Tamil Worship", "Vaarthai Church", "Vaarthai",
-    "Tamil Family Church", "Tamil Gospel",
+    "Tamil Church in Brisbane", "Brisbane Tamil Church", "Tamil Church Brisbane",
+    "Tamil Christian Church Brisbane", "Tamil Church Springfield QLD", "Tamil Church",
+    "Tamil Worship Brisbane", "Vaarthai Church", "Vaarthai Evangelical Church", "Vaarthai",
+    "Tamil Family Church", "Tamil Gospel", "Pastor Weslyn Brisbane",
     "Tamil Christian", "Tamil Believer", "Tamil fellowship", "Tamil friends", "Tamil Family",
     "Tamil Church Family", "Family Tamil Church", "Tamil Word Church", "தமிழ் சபை",
-    "தமிழ் திருச்சபை", "தமிழ் கிறிஸ்தவ ஐக்கியம்", "ஐக்கிய கிறிஸ்துவ சபை", "வேதாகம சபை",
-    "Brisbane Tamil Church", "QLD", "Australia", "Camira", "church", "worship"
+    "பிரிஸ்பேன் தமிழ் சபை", "தமிழ் திருச்சபை", "தமிழ் கிறிஸ்தவ ஐக்கியம்", "ஐக்கிய கிறிஸ்துவ சபை", "வேதாகம சபை",
+    "QLD", "Australia", "Springfield", "Camira", "Ipswich", "Logan", "church", "worship"
   ],
   authors: [{ name: churchConfig.name }],
   metadataBase: new URL(siteUrl),
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_AU",
     url: siteUrl,
-    title: `Vaarthai Evangelical Church Inc | Tamil Church in Brisbane`,
-    description: `Welcome to Vaarthai Evangelical Church Inc (Tamil Church in Brisbane). Join our Tamil Church Family for worship services on Sundays!`,
-    siteName: "Vaarthai Tamil Church in Brisbane",
+    title: `Tamil Church in Brisbane | Vaarthai Evangelical Church Inc`,
+    description: `Welcome to Vaarthai Evangelical Church Inc — a welcoming Tamil Church in Brisbane (389 Old Logan Rd, Springfield QLD). Join our Tamil Church Family on Sundays at 10:00 AM!`,
+    siteName: "Vaarthai Evangelical Church Inc | Tamil Church in Brisbane",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/opengraph-image.jpg",
         width: 1200,
         height: 630,
-        alt: `${churchConfig.name} - Welcome`
+        alt: `${churchConfig.name} - Tamil Church in Brisbane`
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: `Vaarthai Evangelical Church Inc | Tamil Church in Brisbane`,
-    description: `Welcome to Vaarthai Evangelical Church Inc (Tamil Church in Brisbane). Join our Tamil Church Family for worship services on Sundays!`,
-    images: ["/og-image.jpg"],
+    title: `Tamil Church in Brisbane | Vaarthai Evangelical Church Inc`,
+    description: `Welcome to Vaarthai Evangelical Church Inc — a welcoming Tamil Church in Brisbane. Join us for Sunday worship at 10:00 AM!`,
+    images: ["/opengraph-image.jpg"],
   },
   robots: {
     index: true,
@@ -132,9 +133,6 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link font-bold">
           Skip to main content
         </a>
-        
-        {/* Church PlaceOfWorship JSON-LD Structured Data */}
-        <JsonLd type="church" />
 
         <Header />
         <PlanVisitButton />

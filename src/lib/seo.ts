@@ -46,8 +46,13 @@ export function buildMetadata({
     ? (image.startsWith('http') ? image : `${SITE}${image.startsWith('/') ? image : `/${image}`}`)
     : undefined;
 
+  const fullTitle =
+    title.includes('Tamil Church in Brisbane') || title.includes('Vaarthai')
+      ? { absolute: title }
+      : title;
+
   return {
-    title,
+    title: fullTitle,
     description,
     alternates: {
       canonical: currentUrl,
