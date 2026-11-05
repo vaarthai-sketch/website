@@ -92,6 +92,16 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} ${kavivanar.variable} ${anekTamil.variable} h-full antialiased`}
     >
       <head>
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K2M4S6RK"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+`,
+          }}
+        />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-1Z56MXX55Z" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
