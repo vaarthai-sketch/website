@@ -93,12 +93,16 @@ export default function RootLayout({
     >
       <head>
         <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K2M4S6RK"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K2M4S6RK"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
   window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+  gtag('config', 'GTM-K2M4S6RK');
+  gtag('config', 'G-1Z56MXX55Z');
 `,
           }}
         />
@@ -115,6 +119,14 @@ export default function RootLayout({
         <script src="https://js.churchcenter.com/modal/v1" async></script>
       </head>
       <body className="min-h-full bg-background text-foreground flex flex-col font-sans">
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-K2M4S6RK"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <ChurchSchema locale="ta" />
         {/* Skip to Content for screenreaders accessibility */}
         <a href="#main-content" className="skip-link font-bold">
