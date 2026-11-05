@@ -21,7 +21,20 @@ type Locale = 'ta' | 'en';
 /* 1. Organisation + Website — render once, in the root layout        */
 /* ------------------------------------------------------------------ */
 
+function getNextSundayBrisbane(): string {
+  const now = new Date();
+  const brisbaneTimeStr = now.toLocaleString('en-US', { timeZone: 'Australia/Brisbane' });
+  const today = new Date(brisbaneTimeStr);
+  const d = new Date(today);
+  d.setDate(today.getDate() + ((7 - today.getDay()) % 7));
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
 export function ChurchSchema({ locale }: { locale: Locale }) {
+  const nextSunday = getNextSundayBrisbane();
   const graph = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -156,11 +169,15 @@ export function ChurchSchema({ locale }: { locale: Locale }) {
           locale === 'ta'
             ? 'பிரிஸ்பேன் நகரில் வாரந்தோறும் ஞாயிறு காலை 10:00 மணிக்கு தமிழ் ஆராதனை மற்றும் சிறுவர்களுக்கான வகுப்புகள்.'
             : 'Weekly Tamil & English worship service in Brisbane every Sunday at 10:00 AM with biblical preaching and children\u2019s classes.',
+        startDate: `${nextSunday}T10:00:00+10:00`,
+        endDate: `${nextSunday}T12:00:00+10:00`,
         eventSchedule: {
           '@type': 'Schedule',
+          startDate: '2026-07-05',
           repeatFrequency: 'P1W',
           byDay: 'https://schema.org/Sunday',
-          startTime: '10:00',
+          startTime: '10:00:00',
+          endTime: '12:00:00',
           duration: 'PT2H',
           scheduleTimezone: 'Australia/Brisbane',
         },
@@ -168,6 +185,18 @@ export function ChurchSchema({ locale }: { locale: Locale }) {
         eventStatus: 'https://schema.org/EventScheduled',
         location: { '@id': CHURCH_ID },
         organizer: { '@id': CHURCH_ID },
+        performer: {
+          '@type': 'Person',
+          name: 'Pastor Weslyn',
+        },
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'AUD',
+          availability: 'https://schema.org/InStock',
+          url: `${SITE}/plan-your-visit`,
+          validFrom: '2026-07-05T00:00:00+10:00',
+        },
         inLanguage: locale === 'ta' ? 'ta' : 'en-AU',
         isAccessibleForFree: true,
         image: [`${SITE}/home-welcome.jpg`],

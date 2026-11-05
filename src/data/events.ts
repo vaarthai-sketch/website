@@ -3,6 +3,8 @@ export interface ChurchEvent {
   title: string;
   englishTitle: string;
   date: string;
+  startTimeIso?: string;
+  endTimeIso?: string;
   time: string;
   englishTime: string;
   location: string;
@@ -76,6 +78,8 @@ export const getEventsData = (): ChurchEvent[] => [
     title: "ஞாயிறு ஆராதனை (Sunday Worship Service)",
     englishTitle: "Sunday Worship Service",
     date: getNextSunday(),
+    startTimeIso: "10:00:00+10:00",
+    endTimeIso: "12:00:00+10:00",
     time: "காலை 10:00 மணி",
     englishTime: "10:00 AM",
     location: "389 Old Logan Rd, Springfield, QLD 4300",
@@ -95,6 +99,8 @@ export const getEventsData = (): ChurchEvent[] => [
     title: "வாராந்திர ஆன்லைன் ஜெபம் (Mid-Week Online Prayer)",
     englishTitle: "Mid-Week Online Prayer",
     date: getNextWednesday(),
+    startTimeIso: "19:30:00+10:00",
+    endTimeIso: "21:00:00+10:00",
     time: "புதன்கிழமை இரவுகள்",
     englishTime: "Wednesday Nights",
     location: "ஆன்லைன் (Zoom வழியாக - இணைப்பிற்கு எங்களைத் தொடர்பு கொள்ளவும்)",
@@ -115,6 +121,8 @@ export const getEventsData = (): ChurchEvent[] => [
     title: "மாதாந்திர ஆராதனைக்குப் பிந்தைய மதிய உணவு (Monthly After-Church Lunch)",
     englishTitle: "Monthly After-Church Lunch",
     date: getNextFourthSunday(),
+    startTimeIso: "12:00:00+10:00",
+    endTimeIso: "14:30:00+10:00",
     time: "ஒவ்வொரு மாதமும் 4-வது ஞாயிறு (ஞாயிறு ஆராதனை முடிந்த உடனே)",
     englishTime: "The 4th Sunday of each month (Immediately following the Sunday Service)",
     location: "லயன்ஸ் பார்க் (Lions Park), ஸ்பிரிங்ஃபீல்ட் லேக்ஸ்",
@@ -135,6 +143,8 @@ export const getEventsData = (): ChurchEvent[] => [
     title: "Carolights '26 \"The Sound of Good News\"",
     englishTitle: "Carolights '26 \"The Sound of Good News\"",
     date: "2026-11-28",
+    startTimeIso: "18:00:00+10:00",
+    endTimeIso: "21:00:00+10:00",
     time: "சனிக்கிழமை, 28 நவம்பர் 2026",
     englishTime: "Saturday, 28 November 2026",
     location: "இடம் குறித்த விவரங்கள் விரைவில் அறிவிக்கப்படும்",

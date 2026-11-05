@@ -4,9 +4,28 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, Clock, MapPin, Users, Mail, User, CheckCircle } from "lucide-react";
 import { ministriesData } from "@/data/ministries";
 import { MinistryInquiryForm } from "@/components/MinistryInquiryForm";
+import { buildMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
 
 interface PageProps {
   params: Promise<{ id: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const ministry = ministriesData.find((m) => m.id === resolvedParams.id);
+  if (!ministry) return {};
+
+  const displayName = ministry.englishName || ministry.name;
+  const displayDesc = ministry.englishPurpose || ministry.purpose || (ministry.englishDescription || ministry.description).substring(0, 160);
+
+  return buildMetadata({
+    locale: "en",
+    path: `/ministries/${ministry.id}`,
+    title: `${displayName} | Tamil Church in Brisbane | Vaarthai Evangelical Church`,
+    description: displayDesc,
+    image: ministry.image || "/opengraph-image.jpg",
+  });
 }
 
 export async function generateStaticParams() {

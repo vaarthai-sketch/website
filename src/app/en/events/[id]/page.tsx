@@ -6,6 +6,7 @@ import { getEventsData } from "@/data/events";
 import { EventRegistrationForm } from "@/components/EventRegistrationForm";
 import { AddCalendarButton } from "@/components/AddCalendarButton";
 import { JsonLd } from "@/components/JsonLd";
+import { buildMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 interface PageProps {
@@ -21,21 +22,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const displayTitle = event.englishTitle || event.title;
   const displayDescription = (event.englishDescription || event.description).substring(0, 160) + '...';
 
-  return {
-    title: displayTitle,
+  return buildMetadata({
+    locale: "en",
+    path: `/events/${event.id}`,
+    title: `${displayTitle} | Tamil Church in Brisbane | Vaarthai`,
     description: displayDescription,
-    openGraph: {
-      title: displayTitle,
-      description: displayDescription,
-      images: event.image ? [event.image] : [],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: displayTitle,
-      description: displayDescription,
-      images: event.image ? [event.image] : [],
-    }
-  };
+    image: event.image || "/opengraph-image.jpg",
+  });
 }
 
 export const revalidate = 3600;

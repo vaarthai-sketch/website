@@ -3,6 +3,8 @@ import { SermonDetail } from "./SermonDetailContent";
 import { sermonsData } from "@/data/sermons";
 import { churchConfig } from "@/data/config";
 
+import { buildMetadata } from "@/lib/seo";
+
 interface PageProps {
   params: Promise<{ id: string }>;
 }
@@ -21,27 +23,16 @@ export async function generateMetadata({ params }: PageProps) {
   const imageUrl = sermon.thumbnail && sermon.thumbnail.startsWith("/") 
     ? sermon.thumbnail 
     : sermon.youtubeId 
-      ? `https://img.youtube.com/vi/${sermon.youtubeId}/maxresdefault.jpg`
-      : undefined;
+      ? `https://img.youtube.com/vi/${sermon.youtubeId}/hqdefault.jpg`
+      : "/opengraph-image.jpg";
 
-  return {
+  return buildMetadata({
+    locale: "ta",
+    path: `/sermons/${sermon.id}`,
     title: `${sermon.title} | Sermons | ${churchConfig.name}`,
     description: sermon.description,
-    openGraph: imageUrl ? {
-      images: [
-        {
-          url: imageUrl,
-          width: 1280,
-          height: 720,
-          alt: sermon.title,
-        },
-      ],
-    } : undefined,
-    twitter: imageUrl ? {
-      card: "summary_large_image",
-      images: [imageUrl],
-    } : undefined,
-  };
+    image: imageUrl,
+  });
 }
 
 export default async function SermonDetailPage({ params }: PageProps) {

@@ -6,6 +6,7 @@ import { getEventsData } from "@/data/events";
 import { EventRegistrationForm } from "@/components/EventRegistrationForm";
 import { AddCalendarButton } from "@/components/AddCalendarButton";
 import { JsonLd } from "@/components/JsonLd";
+import { buildMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 interface PageProps {
@@ -18,21 +19,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   
   if (!event) return {};
 
-  return {
-    title: event.title,
-    description: event.description.substring(0, 160) + '...',
-    openGraph: {
-      title: event.title,
-      description: event.description.substring(0, 160) + '...',
-      images: event.image ? [event.image] : [],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: event.title,
-      description: event.description.substring(0, 160) + '...',
-      images: event.image ? [event.image] : [],
-    }
-  };
+  return buildMetadata({
+    locale: "ta",
+    path: `/events/${event.id}`,
+    title: `${event.title} | Tamil Church in Brisbane | Vaarthai`,
+    description: event.description.substring(0, 160) + "...",
+    image: event.image || "/opengraph-image.jpg",
+  });
 }
 
 // Pre-render static params for build-time generation

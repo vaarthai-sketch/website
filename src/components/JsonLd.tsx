@@ -44,18 +44,28 @@ export const JsonLd: React.FC<JsonLdProps> = ({ type, data }) => {
     };
   } else if (type === "sermon" && data) {
     const sermon = data as Sermon;
+    const durationParts = (sermon.duration || "45:00").split(":").map(Number);
+    const isoDuration =
+      durationParts.length === 3
+        ? `PT${durationParts[0]}H${durationParts[1]}M${durationParts[2]}S`
+        : durationParts.length === 2
+          ? `PT${durationParts[0]}M${durationParts[1]}S`
+          : "PT45M";
+    const thumbUrl =
+      sermon.thumbnail && sermon.thumbnail.startsWith("/")
+        ? `https://www.vaarthai.org.au${sermon.thumbnail}`
+        : `https://i.ytimg.com/vi/${sermon.youtubeId || "vuFmVgMQafM"}/hqdefault.jpg`;
+
     schema = {
       "@context": "https://schema.org",
       "@type": "VideoObject",
       "name": sermon.title,
       "description": sermon.description,
-      "thumbnailUrl": [
-        `https://vaarthai.org.au/images/thumbnails/${sermon.thumbnail}.jpg`
-      ],
-      "uploadDate": sermon.date,
-      "duration": `PT${sermon.duration.replace(":", "M")}S`,
-      "embedUrl": `https://www.youtube.com/embed/${sermon.youtubeId || "dQw4w9WgXcQ"}`,
-      "interactionCount": "124",
+      "thumbnailUrl": [thumbUrl],
+      "uploadDate": `${sermon.date}T10:00:00+10:00`,
+      "duration": isoDuration,
+      "embedUrl": `https://www.youtube.com/embed/${sermon.youtubeId || "vuFmVgMQafM"}`,
+      "contentUrl": `https://www.youtube.com/watch?v=${sermon.youtubeId || "vuFmVgMQafM"}`,
       "author": {
         "@type": "Person",
         "name": sermon.speaker
@@ -67,23 +77,25 @@ export const JsonLd: React.FC<JsonLdProps> = ({ type, data }) => {
     };
   } else if (type === "event" && data) {
     const event = data as ChurchEvent;
-    
-    // Parse date into ISO format
-    const startDateTime = `${event.date}T${event.time.split(" - ")[0].includes("PM") && !event.time.split(" - ")[0].includes("12:") ? 
-      (parseInt(event.time.split(" - ")[0].split(":")[0]) + 12) + ":" + event.time.split(" - ")[0].split(":")[1].replace(" PM", "") : 
-      event.time.split(" - ")[0].replace(" AM", "").padStart(5, "0")}:00`;
-      
+    const startDateTime = `${event.date}T${event.startTimeIso || "10:00:00+10:00"}`;
+    const endDateTime = `${event.date}T${event.endTimeIso || "12:00:00+10:00"}`;
+    const imageUrl =
+      event.image && event.image.startsWith("http")
+        ? event.image
+        : `https://www.vaarthai.org.au${event.image && event.image.startsWith("/") ? event.image : "/home-welcome.jpg"}`;
+
     schema = {
       "@context": "https://schema.org",
       "@type": "Event",
       "name": event.title,
       "description": event.description,
       "startDate": startDateTime,
+      "endDate": endDateTime,
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
       "location": {
         "@type": "Place",
-        "name": event.location === "Main Sanctuary" || event.location === "Fellowship Hall" ? churchConfig.name : event.location,
+        "name": churchConfig.name,
         "address": {
           "@type": "PostalAddress",
           "streetAddress": churchConfig.contact.address.street,
@@ -93,13 +105,23 @@ export const JsonLd: React.FC<JsonLdProps> = ({ type, data }) => {
           "addressCountry": "AU"
         }
       },
-      "image": [
-        `https://vaarthai.org.au/images/events/${event.image}.jpg`
-      ],
+      "image": [imageUrl],
       "organizer": {
+        "@type": "Organization",
+        "name": churchConfig.name,
+        "url": "https://www.vaarthai.org.au"
+      },
+      "performer": {
         "@type": "Person",
-        "name": event.organizer,
-        "email": event.organizerEmail
+        "name": "Pastor Weslyn"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "AUD",
+        "availability": "https://schema.org/InStock",
+        "url": `https://www.vaarthai.org.au/events/${event.id}`,
+        "validFrom": "2026-07-05T00:00:00+10:00"
       }
     };
   }
