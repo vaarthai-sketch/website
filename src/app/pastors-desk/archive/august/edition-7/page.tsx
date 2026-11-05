@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   locale: 'ta',
   title: "VEC-NL 2026-08 Edition 7 - போதகர் மேசையிலிருந்து",
   description: "கோடரியைக் கூர்மையாக்குங்கள் (Sharpen the Axe) - Ecclesiastes 10:10",
-  path: '/pastors-desk',
+  path: '/pastors-desk/archive/august/edition-7',
   image: '/sharpen-axe.jpg'
 });
 

@@ -8,7 +8,7 @@ export const metadata = buildMetadata({
   locale: "en",
   title: "VEC-NL 2026-09 Edition 10 - From the Pastor's Desk",
   description: "Have the competition and tensions among nations on Earth now extended into space?",
-  path: "/en/pastors-desk",
+  path: "/pastors-desk/archive/september/edition-10",
   image: "/edition-10-joe-marino.jpg"
 });
 

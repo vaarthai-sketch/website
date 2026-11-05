@@ -8,7 +8,7 @@ export const metadata = buildMetadata({
   locale: "en",
   title: "VEC-NL 2026-09 Edition 11 - From the Pastor's Desk",
   description: "Finding Peace in a Shifting World",
-  path: "/en/pastors-desk",
+  path: "/pastors-desk/archive/september/edition-11",
   image: "/un-assembly.webp"
 });
 

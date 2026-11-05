@@ -1,10 +1,13 @@
 import { MinistriesView } from "./MinistriesContent";
-import { churchConfig } from "@/data/config";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: `Our Ministries | ${churchConfig.name}`,
-  description: "Discover the active communities, classes, and outreach programs where you can connect and serve.",
-};
+export const metadata = buildMetadata({
+  locale: "ta",
+  path: "/ministries",
+  title: "Our Ministries | Tamil Church in Brisbane | Vaarthai Evangelical Church",
+  description:
+    "Discover Vaarthai Kids, Youth, Men's & Women's Fellowship, Worship, and Outreach ministries at Vaarthai Evangelical Church Inc — Tamil Church in Brisbane.",
+});
 
 export default function MinistriesPage() {
   return <MinistriesView isEn={false} />;

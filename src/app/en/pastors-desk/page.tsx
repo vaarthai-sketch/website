@@ -8,7 +8,7 @@ export const metadata = buildMetadata({
   locale: "en",
   title: "VEC-NL 2026-10 Edition 15 - From the Pastor's Desk",
   description: "Yesterday’s Imagination… Today’s Reality! But What About a New Heart? — “Then I will sprinkle clean water on you, and you shall be clean... I will give you a new heart and put a new spirit within you.” — Ezekiel 36:25–26",
-  path: "/en/pastors-desk",
+  path: "/pastors-desk",
   image: "/edition-15-heart.jpg",
 });
 

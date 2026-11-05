@@ -8,7 +8,7 @@ export const metadata = buildMetadata({
   locale: "en",
   title: "VEC-NL 2026-09 Edition 9 - Pastor's Desk",
   description: "Wounds We Cannot See",
-  path: "/en/pastors-desk/archive/september/edition-9",
+  path: "/pastors-desk/archive/september/edition-9",
   image: "/newsletter-911.webp"
 });
 

@@ -11,12 +11,9 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'ta',
   path: '/gallery',
-  title: "Photos - ",
-  description: "View photos from our recent church events and gatherings.",
+  title: "Photo Gallery | Tamil Church in Brisbane | Vaarthai Evangelical Church",
+  description: "View photos from Sunday worship services, Vaarthai Kids, Youth, and church family gatherings at Vaarthai Evangelical Church Inc in Brisbane.",
 });
-
-// Force dynamic so it picks up new uploads
-export const dynamic = 'force-dynamic';
 
 async function getFolders() {
   const GALLERY_DIR = path.join(process.cwd(), 'public', 'gallery');

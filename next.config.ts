@@ -8,10 +8,17 @@ const nextConfig: NextConfig = {
         destination: '/en/:path*',
         permanent: true,
       },
+      {
+        source: '/events/fathers-day-special-service',
+        destination: '/events',
+        permanent: true,
+      },
+      {
+        source: '/en/events/fathers-day-special-service',
+        destination: '/en/events',
+        permanent: true,
+      },
     ];
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,

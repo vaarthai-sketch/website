@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   locale: 'ta',
   title: "VEC-NL 2026-09 Edition 8 - போதகர் மேசையிலிருந்து",
   description: "அமைதலாயிரு! (Peace, Be Still!) — A Word for Nepal and Tibet",
-  path: '/pastors-desk',
+  path: '/pastors-desk/archive/september/edition-8',
   image: '/nepal-flood.jpg'
 });
 

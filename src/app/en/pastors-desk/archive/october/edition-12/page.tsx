@@ -8,7 +8,7 @@ export const metadata = buildMetadata({
   locale: "en",
   title: "VEC-NL 2026-10 Edition 12 - From the Pastor's Desk",
   description: "Life in the Heat",
-  path: "/en/pastors-desk/archive/october/edition-12",
+  path: "/pastors-desk/archive/october/edition-12",
   image: "/pastor-desk-hero.jpg"
 });
 

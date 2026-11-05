@@ -8,7 +8,7 @@ export const metadata = buildMetadata({
   locale: "en",
   title: "VEC-NL 2026-10 Edition 14 - From the Pastor's Desk",
   description: "From Darkness into Light — “We were buried therefore with him by baptism into death, in order that, just as Christ was raised from the dead by the glory of the Father, we too might walk in newness of life.” — Romans 6:4",
-  path: "/en/pastors-desk/archive/october/edition-14",
+  path: "/pastors-desk/archive/october/edition-14",
   image: "/edition-14-phoenix.jpg",
 });
 

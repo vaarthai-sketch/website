@@ -7,7 +7,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   locale: 'en',
-  path: '/en/pastors-desk/archive/august/edition-6',
+  path: '/pastors-desk/archive/august/edition-6',
   title: "VEC-NL 2026-08 Edition 6 - From the Pastor's Desk | Vaarthai Evangelical Church Inc",
   description: `What's In Your Cup? Life will shake you — what spills out reveals what you have been storing. A reflection on Luke 6:45 and Proverbs 4:23.`,
   image: "/coffee-cup.jpg",

@@ -8,7 +8,7 @@ export const metadata = buildMetadata({
   locale: "ta",
   title: "VEC-NL 2026-09 Edition 11 - போதகர் மேசையிலிருந்து",
   description: "அசையும் உலகில் அசையாத சமாதானம்",
-  path: "/pastors-desk",
+  path: "/pastors-desk/archive/september/edition-11",
   image: "/un-assembly.webp"
 });
 

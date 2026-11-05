@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   locale: 'en',
   title: "VEC-NL 2026-08 Edition 7 - Pastor's Desk",
   description: "Sharpen the Axe - Ecclesiastes 10:10",
-  path: '/en/pastors-desk',
+  path: '/pastors-desk/archive/august/edition-7',
   image: '/sharpen-axe.jpg'
 });
 

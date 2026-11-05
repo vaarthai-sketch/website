@@ -8,7 +8,7 @@ export const metadata = buildMetadata({
   locale: "ta",
   title: "VEC-NL 2026-09 Edition 10 - போதகர் மேசையிலிருந்து",
   description: "We Have Reached the Heavens—But Have We Found Peace?",
-  path: "/pastors-desk",
+  path: "/pastors-desk/archive/september/edition-10",
   image: "/edition-10-joe-marino.jpg"
 });
 

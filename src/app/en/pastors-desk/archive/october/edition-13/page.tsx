@@ -8,7 +8,7 @@ export const metadata = buildMetadata({
   locale: "en",
   title: "VEC-NL 2026-10 Edition 13 - From the Pastor's Desk",
   description: "100 DAYS — THIS FAR THE LORD HAS HELPED US! “Thus far the LORD has helped us.” — 1 Samuel 7:12 (NKJV)",
-  path: "/en/pastors-desk/archive/october/edition-13",
+  path: "/pastors-desk/archive/october/edition-13",
   image: "/edition-13-ebenezer.jpg",
 });
 
