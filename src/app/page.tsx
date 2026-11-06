@@ -92,7 +92,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="space-y-3 max-w-2xl mx-auto lg:mx-0">
-                <p className="text-base text-stone-200 leading-relaxed font-sans font-light">
+                <p className="text-base text-stone-200 leading-relaxed font-sans font-normal">
                   பிரிஸ்பேன் ஸ்பிரிங்ஃபீல்டில் கூடிவரும் எங்கள் தமிழ் திருச்சபை உங்களை அன்புடன் அழைக்கிறது. நீங்கள் வாழ்க்கையின் எந்தக் கட்டத்தில் இருந்தாலும், தேவனுடைய வார்த்தையைக் கேட்கவும், அவரை ஆராதிக்கவும், ஒரு குடும்பமாக இணைந்து வளரவும் எங்களோடு வாருங்கள்.
                 </p>
                 <p className="text-sm text-stone-300/90 leading-relaxed font-sans font-light">
@@ -159,7 +159,7 @@ export default function HomePage() {
                 
                 <div className="my-auto space-y-3 relative z-10">
                   <div className="w-12 h-0.5 bg-accent"></div>
-                  <blockquote className="font-serif text-lg italic font-medium leading-relaxed text-stone-100">
+                  <blockquote className="font-serif text-lg font-medium leading-relaxed text-stone-100">
                     &ldquo;ஆதியிலே வார்த்தை இருந்தது, அந்த வார்த்தை தேவனிடத்திலிருந்தது, அந்த வார்த்தை தேவனாயிருந்தது.&rdquo;
                   </blockquote>
                   <cite className="block text-xs font-bold text-accent uppercase tracking-widest not-italic">

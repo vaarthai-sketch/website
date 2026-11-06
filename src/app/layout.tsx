@@ -34,7 +34,7 @@ const anekTamil = Anek_Tamil({
 
 const balooThambi = Baloo_Thambi_2({
   subsets: ["tamil"],
-  weight: ["600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-baloo-thambi",
   display: "swap",
 });
