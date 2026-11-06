@@ -84,32 +84,47 @@ export const JsonLd: React.FC<JsonLdProps> = ({ type, data }) => {
         ? event.image
         : `https://www.vaarthai.org.au${event.image && event.image.startsWith("/") ? event.image : "/home-welcome.jpg"}`;
 
+    const venueAddress = event.venueAddress || {
+      streetAddress: churchConfig.contact.address.street,
+      addressLocality: churchConfig.contact.address.city,
+      addressRegion: churchConfig.contact.address.state,
+      postalCode: churchConfig.contact.address.zip,
+      addressCountry: "AU",
+    };
+
     schema = {
       "@context": "https://schema.org",
       "@type": "Event",
-      "name": event.title,
-      "description": event.description,
+      "@id": `https://www.vaarthai.org.au/events/${event.id}#event`,
+      "name": event.englishTitle || event.title,
+      "alternateName": event.title,
+      "description": event.englishDescription || event.description,
       "startDate": startDateTime,
       "endDate": endDateTime,
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
+      "isAccessibleForFree": true,
+      "inLanguage": ["ta", "en-AU"],
       "location": {
         "@type": "Place",
-        "name": churchConfig.name,
+        "name": event.venueName || churchConfig.name,
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": churchConfig.contact.address.street,
-          "addressLocality": churchConfig.contact.address.city,
-          "addressRegion": churchConfig.contact.address.state,
-          "postalCode": churchConfig.contact.address.zip,
-          "addressCountry": "AU"
+          "streetAddress": venueAddress.streetAddress,
+          "addressLocality": venueAddress.addressLocality,
+          "addressRegion": venueAddress.addressRegion,
+          "postalCode": venueAddress.postalCode,
+          "addressCountry": venueAddress.addressCountry || "AU"
         }
       },
       "image": [imageUrl],
       "organizer": {
-        "@type": "Organization",
-        "name": churchConfig.name,
-        "url": "https://www.vaarthai.org.au"
+        "@type": "Church",
+        "@id": "https://www.vaarthai.org.au/#church",
+        "name": "Vaarthai Evangelical Church Inc (Tamil Church in Brisbane)",
+        "url": "https://www.vaarthai.org.au",
+        "telephone": event.contactPhone || churchConfig.contact.phone,
+        "email": event.organizerEmail || churchConfig.contact.email
       },
       "performer": {
         "@type": "Person",

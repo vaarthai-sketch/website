@@ -9,6 +9,18 @@ export interface ChurchEvent {
   englishTime: string;
   location: string;
   englishLocation: string;
+  venueName?: string;
+  venueAddress?: {
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
+  mapLink?: string;
+  livestreamUrl?: string;
+  contactPhone?: string;
+  showCountdown?: boolean;
   category: "Community" | "Youth" | "Children" | "Worship" | "All-Church" | "Groups";
   englishCategory: string;
   description: string;
@@ -92,7 +104,7 @@ export const getEventsData = (): ChurchEvent[] => [
     englishOrganizer: "Vaarthai Evangelical Church",
     organizerEmail: "info@vaarthai.org.au",
     image: "/hero-bg.jpg",
-    isFeatured: true
+    isFeatured: false
   },
   {
     id: "mid-week-online-prayer",
@@ -140,23 +152,37 @@ export const getEventsData = (): ChurchEvent[] => [
   },
   {
     id: "carolights-26",
-    title: "Carolights '26 \"The Sound of Good News\"",
-    englishTitle: "Carolights '26 \"The Sound of Good News\"",
+    title: "Carolights '26 — The Sound of Good News",
+    englishTitle: "Carolights '26 — The Sound of Good News",
     date: "2026-11-28",
-    startTimeIso: "18:00:00+10:00",
+    startTimeIso: "17:30:00+10:00",
     endTimeIso: "21:00:00+10:00",
-    time: "சனிக்கிழமை, 28 நவம்பர் 2026",
-    englishTime: "Saturday, 28 November 2026",
-    location: "இடம் குறித்த விவரங்கள் விரைவில் அறிவிக்கப்படும்",
-    englishLocation: "VENUE DETAILS COMING SOON",
+    time: "மாலை 5:30 மணி (5:30 PM) · நிகழ்ச்சிக்குப் பின் கிறிஸ்துமஸ் இரவு விருந்து வழங்கப்படும்",
+    englishTime: "5:30 PM · Christmas Dinner will be served after the program",
+    location: "Oxley Bowling Club, 24A Englefield Road, Oxley QLD 4075",
+    englishLocation: "Oxley Bowling Club, 24A Englefield Road, Oxley QLD 4075",
+    venueName: "Oxley Bowling Club",
+    venueAddress: {
+      streetAddress: "24A Englefield Road",
+      addressLocality: "Oxley",
+      addressRegion: "QLD",
+      postalCode: "4075",
+      addressCountry: "AU",
+    },
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Oxley+Bowling+Club+24A+Englefield+Road+Oxley+QLD+4075",
+    livestreamUrl: "https://www.youtube.com/@Vaarthai-EC/streams",
+    contactPhone: "0423 424 948",
+    showCountdown: true,
     category: "All-Church",
-    englishCategory: "Special Event & Music",
-    description: "கிறிஸ்துமஸ் பாடல்கள், நேரடி இசை, மகிழ்ச்சியான கொண்டாட்டம் மற்றும் இயேசு கிறிஸ்துவின் நற்செய்தியோடு ஒரு மறக்க முடியாத மாலை.\n\nசிறப்பு பாடகர் குழு: Desire Jesus Brisbane.\n\nwww.vaarthai.org.au",
-    englishDescription: "An unforgettable evening of Christmas carols, live music, joyful celebration and the Good News of Jesus Christ.\n\nFeaturing Special Choir: DESIRE JESUS BRISBANE.\n\nwww.vaarthai.org.au",
-    organizer: "Vaarthai Evangelical Church",
-    englishOrganizer: "Vaarthai Evangelical Church",
+    englishCategory: "Christmas Carols & Dinner",
+    description: "இயேசு கிறிஸ்துவின் பிறப்பைக் கொண்டாடும் 'Carolights 2026 — The Sound of Good News' கிறிஸ்துமஸ் சிறப்பு நிகழ்விற்கு வார்த்தை சுவிசேஷ திருச்சபை (A Tamil Church in Brisbane) உங்களை அன்புடன் அழைக்கிறது.\n\nஇனிய கிறிஸ்துமஸ் கீதங்கள் (Carols), நேரடி இசை மற்றும் இயேசு கிறிஸ்துவின் நற்செய்தியோடு ஒரு மறக்க முடியாத மாலைப் பொழுதில் குடும்பத்தாரோடும் நண்பர்களோடும் கலந்து கொள்ளுங்கள். நிகழ்ச்சிக்குப் பிறகு அனைவருக்கும் கிறிஸ்துமஸ் இரவு விருந்து (Christmas Dinner) பரிமாறப்படும்.\n\nநிகழ்வு விவரங்கள்:\n* தேதி: சனிக்கிழமை, 28 நவம்பர் 2026\n* நேரம்: மாலை 5:30 மணி (இந்தியா / இலங்கை நேரம்: மதியம் 1:00 மணி)\n* இடம்: Oxley Bowling Club, 24A Englefield Road, Oxley QLD 4075\n* விருந்து: நிகழ்ச்சிக்குப் பின் கிறிஸ்துமஸ் இரவு உணவு வழங்கப்படும்\n* தொடர்புக்கு: Pastor Weslyn – 0423 424 948",
+    englishDescription: "Vaarthai Evangelical Church (a Tamil Church in Brisbane) warmly invites you to join us as we celebrate the birth of Jesus at Carolights 2026 — The Sound of Good News.\n\nExperience an unforgettable evening of Tamil & English Christmas carols, live music, joyful celebration, and the Good News of Jesus Christ. Christmas dinner will be served after the program — please RSVP with the number of adults and children in your family so we can prepare food and seating for everyone.\n\nEvent Details:\n* Date: Saturday, 28 November 2026\n* Time: 5:30 PM AEST (1:00 PM IST for family & relatives joining live from India & Sri Lanka)\n* Venue: Oxley Bowling Club, 24A Englefield Road, Oxley QLD 4075\n* Dinner: Christmas Dinner will be served after the program\n* Contact: Pastor Weslyn – 0423 424 948",
+    organizer: "Pastor Weslyn (0423 424 948)",
+    englishOrganizer: "Pastor Weslyn (0423 424 948)",
     organizerEmail: "info@vaarthai.org.au",
-    image: "/event-carolights-26.png"
+    image: "/event-carolights-26.jpg",
+    imageHasText: true,
+    isFeatured: true
   }
 ];
 

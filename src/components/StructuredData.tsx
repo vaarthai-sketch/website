@@ -201,6 +201,45 @@ export function ChurchSchema({ locale }: { locale: Locale }) {
         isAccessibleForFree: true,
         image: [`${SITE}/home-welcome.jpg`],
       },
+      {
+        '@type': 'Event',
+        '@id': `${SITE}/events/carolights-26#event`,
+        name: "Carolights '26 — The Sound of Good News",
+        description:
+          'Celebrate the birth of Jesus with Vaarthai Evangelical Church (a Tamil Church in Brisbane) at Carolights 2026: The Sound of Good News. Christmas dinner will be served after the program.',
+        startDate: '2026-11-28T17:30:00+10:00',
+        endDate: '2026-11-28T21:00:00+10:00',
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        eventStatus: 'https://schema.org/EventScheduled',
+        location: {
+          '@type': 'Place',
+          name: 'Oxley Bowling Club',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '24A Englefield Road',
+            addressLocality: 'Oxley',
+            addressRegion: 'QLD',
+            postalCode: '4075',
+            addressCountry: 'AU',
+          },
+        },
+        organizer: { '@id': CHURCH_ID },
+        performer: {
+          '@type': 'Person',
+          name: 'Pastor Weslyn',
+        },
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'AUD',
+          availability: 'https://schema.org/InStock',
+          url: `${SITE}/events/carolights-26`,
+          validFrom: '2026-07-05T00:00:00+10:00',
+        },
+        inLanguage: ['ta', 'en-AU'],
+        isAccessibleForFree: true,
+        image: [`${SITE}/event-carolights-26.jpg`],
+      },
     ],
   };
 
