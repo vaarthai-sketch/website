@@ -157,10 +157,10 @@ export default async function EventDetailPage({ params }: PageProps) {
                     <span>நேரலை ஒளிபரப்பு · Watch Live Online</span>
                   </div>
                   <h3 className="font-serif text-lg font-bold text-white">
-                    நேரில் வர இயலாத முதியோர்கள் மற்றும் இந்தியா, இலங்கை & வெளிநாடுகளில் உள்ள உறவினர்களுக்கு
+                    இல்லத்திலிருந்து இணைபவர்களுக்கும், இந்தியா, இலங்கை மற்றும் உலகெங்கும் உள்ள குடும்பத்தினருக்கும்
                   </h3>
                   <p className="text-xs text-stone-300 leading-relaxed">
-                    பிரிஸ்பேன் நேரம் மாலை 5:30 மணி (இந்தியா / இலங்கை நேரம் மதியம் 1:00 மணி) முதல் எங்கள் YouTube பக்கத்தில் நேரலையில் (Livestream) கண்டு மகிழலாம்.
+                    Joining from home, or watching with family in India, Sri Lanka &amp; around the World? பிரிஸ்பேன் நேரம் மாலை 5:30 மணி (இந்தியா / இலங்கை நேரம் மதியம் 1:00 மணி) முதல் எங்கள் YouTube பக்கத்தில் நேரலையில் (Livestream) கண்டு மகிழலாம்.
                   </p>
                 </div>
                 <a

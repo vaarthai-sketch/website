@@ -167,10 +167,10 @@ export default async function EnglishEventDetailPage({ params }: PageProps) {
                     <span>Christmas Livestream · Watch Live</span>
                   </div>
                   <h3 className="font-serif text-lg font-bold text-white">
-                    Joining from home, or watching with family in India &amp; Sri Lanka?
+                    Joining from home, or watching with family in India, Sri Lanka &amp; around the World?
                   </h3>
                   <p className="text-xs text-stone-300 leading-relaxed">
-                    Elderly members, overseas family, and relatives in India &amp; Sri Lanka can tune in live on YouTube starting at <strong>5:30 PM Brisbane (1:00 PM IST)</strong>.
+                    Elderly members, overseas family, and relatives in India, Sri Lanka &amp; around the world can tune in live on YouTube starting at <strong>5:30 PM Brisbane (1:00 PM IST)</strong>.
                   </p>
                 </div>
                 <a
