@@ -80,10 +80,12 @@ export default function HomePage() {
                   அன்புடன் வரவேற்கிறோம் · A Tamil Church in Brisbane
                 </span>
               </div>
-              <div className="space-y-2">
-                <h1 className="font-kavivanar text-2xl sm:text-3xl md:text-4xl font-normal tracking-wide leading-[1.3] text-white">
+              <div className="space-y-2.5">
+                <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold tracking-normal leading-[1.35] text-white">
                   <span className="sr-only">Vaarthai Evangelical Church — Tamil Church in Brisbane: </span>
-                  வார்த்தையைக் கேட்போம் <span className="text-accent">வார்த்தையின்படி நடப்போம்</span> வார்த்தையைப் பகிர்வோம்
+                  <span className="block">வார்த்தையைக் கேட்போம்</span>
+                  <span className="block text-accent">வார்த்தையின்படி நடப்போம்</span>
+                  <span className="block">வார்த்தையைப் பகிர்வோம்</span>
                 </h1>
                 <p className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-accent-light/90">
                   Hear the Word · Live the Word · Share the Word

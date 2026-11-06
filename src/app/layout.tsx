@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Kavivanar, Anek_Tamil } from "next/font/google";
+import { Inter, Playfair_Display, Kavivanar, Anek_Tamil, Baloo_Thambi_2 } from "next/font/google";
 import { Header } from "@/components/Header";
 import { PlanVisitButton } from "@/components/PlanVisitButton";
 import { Footer } from "@/components/Footer";
@@ -9,26 +9,33 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-inter",
   display: "swap",
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-serif",
+  variable: "--font-playfair",
   display: "swap",
 });
 
 const kavivanar = Kavivanar({
   weight: "400",
   subsets: ["tamil"],
-  variable: "--font-kavivanar",
+  variable: "--font-kavivanar-face",
   display: "swap",
 });
 
 const anekTamil = Anek_Tamil({
   subsets: ["tamil"],
   variable: "--font-anek-tamil",
+  display: "swap",
+});
+
+const balooThambi = Baloo_Thambi_2({
+  subsets: ["tamil"],
+  weight: ["600", "700", "800"],
+  variable: "--font-baloo-thambi",
   display: "swap",
 });
 
@@ -90,7 +97,7 @@ export default function RootLayout({
   return (
     <html
       lang="ta"
-      className={`${inter.variable} ${playfair.variable} ${kavivanar.variable} ${anekTamil.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${kavivanar.variable} ${anekTamil.variable} ${balooThambi.variable} h-full antialiased`}
     >
       <head>
         <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K2M4S6RK"></script>
