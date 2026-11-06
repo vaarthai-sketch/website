@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Kavivanar, Anek_Tamil, Baloo_Thambi_2 } from "next/font/google";
+import { Inter, Playfair_Display, Kavivanar, Anek_Tamil, Baloo_Thambi_2, Mukta_Malar } from "next/font/google";
 import { Header } from "@/components/Header";
 import { PlanVisitButton } from "@/components/PlanVisitButton";
 import { Footer } from "@/components/Footer";
@@ -36,6 +36,13 @@ const balooThambi = Baloo_Thambi_2({
   subsets: ["tamil"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-baloo-thambi",
+  display: "swap",
+});
+
+const muktaMalar = Mukta_Malar({
+  subsets: ["tamil", "latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-mukta-malar",
   display: "swap",
 });
 
@@ -97,7 +104,7 @@ export default function RootLayout({
   return (
     <html
       lang="ta"
-      className={`${inter.variable} ${playfair.variable} ${kavivanar.variable} ${anekTamil.variable} ${balooThambi.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${kavivanar.variable} ${anekTamil.variable} ${balooThambi.variable} ${muktaMalar.variable} h-full antialiased`}
     >
       <head>
         <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K2M4S6RK"></script>
