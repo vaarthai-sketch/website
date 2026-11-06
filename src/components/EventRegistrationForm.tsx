@@ -65,40 +65,63 @@ export const EventRegistrationForm: React.FC<EventRegistrationFormProps> = ({
     const generatedCode = `${prefix}-${randomPart}-${totalHeadcount}P`;
 
     try {
-      // 1. Send automatically to info@vaarthai.org.au without opening email client
-      await fetch("https://formsubmit.co/ajax/info@vaarthai.org.au", {
+      const formSubmitPayload = {
+        _subject: `Event RSVP [${generatedCode}]: ${totalHeadcount} guests (${adultsCount} Adults, ${childrenCount} Children) - ${formData.name.trim()}`,
+        _template: "table",
+        _replyto: formData.email.trim(),
+        _cc: "info@vaarthai.org.au",
+        RSVP_CheckIn_Code: generatedCode,
+        Event: eventTitle,
+        Name: formData.name.trim(),
+        email: formData.email.trim(),
+        Phone: formData.phone.trim() || "Not provided",
+        Adults: String(adultsCount),
+        Children: String(childrenCount),
+        Total_Headcount: String(totalHeadcount),
+        Day_Before_Reminder: formData.reminderOptIn ? "Yes" : "No",
+      };
+
+      // 1. Send directly to pastor@vaarthai.org.au and info@vaarthai.org.au via FormSubmit
+      const pastorPromise = fetch("https://formsubmit.co/ajax/pastor@vaarthai.org.au", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formSubmitPayload),
+      }).catch((err) => console.warn("Formsubmit pastor warn:", err));
+
+      const infoPromise = fetch("https://formsubmit.co/ajax/info@vaarthai.org.au", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          _subject: `Event RSVP (${totalHeadcount} guests): ${eventTitle}`,
-          _template: "table",
-          RSVP_CheckIn_Code: generatedCode,
-          Event: eventTitle,
-          Name: formData.name.trim(),
-          Email: formData.email.trim(),
-          Phone: formData.phone.trim() || "Not provided",
-          Adults: String(adultsCount),
-          Children: String(childrenCount),
-          Total_Headcount: String(totalHeadcount),
-          Day_Before_Reminder: formData.reminderOptIn ? "Yes" : "No",
+          ...formSubmitPayload,
+          _cc: "pastor@vaarthai.org.au",
         }),
-      }).catch((err) => console.warn("Formsubmit warn:", err));
+      }).catch((err) => console.warn("Formsubmit info warn:", err));
 
-      // 2. Also record in internal server API endpoint
-      await fetch("/api/contact", {
+      // 2. Also send to /api/rsvp (forwards to Google Sheets / Apps Script autoresponder + server backup)
+      const rsvpApiPromise = fetch("/api/rsvp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          rsvpCode: generatedCode,
+          eventId,
+          eventTitle,
           name: formData.name.trim(),
           email: formData.email.trim(),
-          department: `Event RSVP: ${eventTitle}`,
-          subject: `RSVP [${generatedCode}]: ${totalHeadcount} guests (${adultsCount} Adults, ${childrenCount} Children)`,
-          message: `RSVP Code: ${generatedCode}\nEvent: ${eventTitle}\nName: ${formData.name.trim()}\nEmail: ${formData.email.trim()}\nPhone: ${formData.phone.trim() || "N/A"}\nAdults: ${adultsCount}\nChildren: ${childrenCount}\nTotal Headcount (Food & Seating): ${totalHeadcount}\nSend Day-Before Reminder: ${formData.reminderOptIn ? "Yes" : "No"}`,
+          phone: formData.phone.trim(),
+          adults: adultsCount,
+          children: childrenCount,
+          totalHeadcount,
+          reminderOptIn: formData.reminderOptIn,
         }),
-      }).catch((err) => console.warn("Contact API warn:", err));
+      }).catch((err) => console.warn("RSVP API warn:", err));
+
+      await Promise.allSettled([pastorPromise, infoPromise, rsvpApiPromise]);
 
       setRsvpCode(generatedCode);
       setStatus("success");

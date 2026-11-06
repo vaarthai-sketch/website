@@ -179,7 +179,7 @@ export const getEventsData = (): ChurchEvent[] => [
     englishDescription: "Vaarthai Evangelical Church (a Tamil Church in Brisbane) warmly invites you to join us as we celebrate the birth of Jesus at Carolights 2026 — The Sound of Good News.\n\nExperience an unforgettable evening of Christmas carols performed by special choir Desire Jesus Brisbane, live music, joyful celebration, and the Good News of Jesus Christ. Christmas dinner will be served after the program — please RSVP with the number of adults and children in your family so we can prepare food and seating for everyone.\n\nEvent Details:\n* Special Choir: Desire Jesus Brisbane (Performing Christmas Carols)\n* Date: Saturday, 28 November 2026\n* Time: 5:30 PM AEST (1:00 PM IST for family & relatives joining live from India, Sri Lanka & around the World)\n* Venue: Oxley Bowling Club, 24A Englefield Road, Oxley QLD 4075\n* Dinner: Christmas Dinner will be served after the program\n* Contact: Pastor Weslyn – 0423 424 948",
     organizer: "Pastor Weslyn (0423 424 948)",
     englishOrganizer: "Pastor Weslyn (0423 424 948)",
-    organizerEmail: "info@vaarthai.org.au",
+    organizerEmail: "pastor@vaarthai.org.au",
     image: "/event-carolights-26.jpg",
     imageHasText: true,
     isFeatured: true
