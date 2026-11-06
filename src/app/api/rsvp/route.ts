@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 
-// Ready-to-use Google Apps Script webhook URL (can be overridden via env var GOOGLE_SHEETS_RSVP_WEBHOOK_URL)
-const DEFAULT_RSVP_WEBHOOK_URL = process.env.GOOGLE_SHEETS_RSVP_WEBHOOK_URL || "";
+// Google Apps Script Web App URL (logs RSVP to Google Sheet + emails guest confirmation & pastor@vaarthai.org.au)
+const DEFAULT_RSVP_WEBHOOK_URL =
+  process.env.GOOGLE_SHEETS_RSVP_WEBHOOK_URL ||
+  "https://script.google.com/macros/s/AKfycbwaaXnP5jFrHTBdqTEiG3AKq8YckkhlY73_HzhzvmEIm6xTDEuHPipidsU0uWQl38a4Iw/exec";
 
 export async function POST(request: Request) {
   try {
@@ -30,29 +32,13 @@ export async function POST(request: Request) {
       timeZone: "Australia/Brisbane",
     });
 
-    const payload = {
-      _subject: `Event RSVP [${rsvpCode}]: ${totalHeadcount} guests (${adults} Adults, ${children} Children) - ${name}`,
-      _template: "table",
-      _replyto: email,
-      _cc: "info@vaarthai.org.au",
-      RSVP_CheckIn_Code: rsvpCode,
-      Event: eventTitle,
-      Name: name,
-      Email: email,
-      Phone: phone || "Not provided",
-      Adults: String(adults),
-      Children: String(children),
-      Total_Headcount: String(totalHeadcount),
-      Day_Before_Reminder: reminderOptIn ? "Yes" : "No",
-      Submitted_At_Brisbane: brisbaneTime,
-    };
-
-    // 1. Forward to Google Apps Script Webhook if configured (sends confirmation email to guest + pastor@vaarthai.org.au + logs to Google Sheet)
+    // 1. Forward to Google Apps Script Webhook (sends confirmation email to guest + pastor@vaarthai.org.au + logs to Google Sheet)
     if (DEFAULT_RSVP_WEBHOOK_URL) {
       try {
         await fetch(DEFAULT_RSVP_WEBHOOK_URL, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          redirect: "follow",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify({
             rsvpCode,
             eventId,
@@ -72,7 +58,24 @@ export async function POST(request: Request) {
       }
     }
 
-    // 2. Send via FormSubmit to both pastor@vaarthai.org.au and info@vaarthai.org.au with proper Origin/Referer headers
+    // 2. Also send via FormSubmit as backup to info@vaarthai.org.au & pastor@vaarthai.org.au
+    const payload = {
+      _subject: `Event RSVP [${rsvpCode}]: ${totalHeadcount} guests (${adults} Adults, ${children} Children) - ${name}`,
+      _template: "table",
+      _replyto: email,
+      _cc: "info@vaarthai.org.au",
+      RSVP_CheckIn_Code: rsvpCode,
+      Event: eventTitle,
+      Name: name,
+      Email: email,
+      Phone: phone || "Not provided",
+      Adults: String(adults),
+      Children: String(children),
+      Total_Headcount: String(totalHeadcount),
+      Day_Before_Reminder: reminderOptIn ? "Yes" : "No",
+      Submitted_At_Brisbane: brisbaneTime,
+    };
+
     const headers = {
       "Content-Type": "application/json",
       Accept: "application/json",
@@ -98,7 +101,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: "RSVP recorded and notifications dispatched.",
+      message: "RSVP recorded and confirmation emails dispatched.",
     });
   } catch (error) {
     console.error("Error processing RSVP:", error);
