@@ -206,7 +206,7 @@ export function ChurchSchema({ locale }: { locale: Locale }) {
         '@id': `${SITE}/events/carolights-26#event`,
         name: "Carolights '26 — The Sound of Good News",
         description:
-          'Celebrate the birth of Jesus with Vaarthai Evangelical Church (a Tamil Church in Brisbane) at Carolights 2026: The Sound of Good News. Christmas dinner will be served after the program.',
+          'Celebrate the birth of Jesus with Vaarthai Evangelical Church (a Tamil Church in Brisbane) at Carolights 2026: The Sound of Good News, featuring special choir Desire Jesus Brisbane performing carols. Christmas dinner will be served after the program.',
         startDate: '2026-11-28T17:30:00+10:00',
         endDate: '2026-11-28T21:00:00+10:00',
         eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
@@ -224,10 +224,16 @@ export function ChurchSchema({ locale }: { locale: Locale }) {
           },
         },
         organizer: { '@id': CHURCH_ID },
-        performer: {
-          '@type': 'Person',
-          name: 'Pastor Weslyn',
-        },
+        performer: [
+          {
+            '@type': 'Person',
+            name: 'Pastor Weslyn',
+          },
+          {
+            '@type': 'PerformingGroup',
+            name: 'Desire Jesus Brisbane',
+          },
+        ],
         offers: {
           '@type': 'Offer',
           price: '0',
