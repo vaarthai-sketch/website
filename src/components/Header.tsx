@@ -134,10 +134,10 @@ export const Header: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-serif font-bold text-lg text-primary leading-tight tracking-tight sm:text-xl">
-                {churchConfig.name}
+                Vaarthai Evangelical Church
               </span>
               <span className="text-[10px] text-accent font-semibold tracking-widest uppercase leading-none mt-0.5">
-                Brisbane, {churchConfig.contact.address.state}
+                Springfield · Brisbane
               </span>
             </div>
           </Link>

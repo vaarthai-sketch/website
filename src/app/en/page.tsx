@@ -77,36 +77,40 @@ export default function EnglishHomePage() {
                   <svg className="w-4 h-4 text-accent fill-current shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11 2h2v7h6v2h-6v11h-2v-11h-6v-2h6V2z" />
                   </svg>
-                  A Warm Welcome to Vaarthai Evangelical Church Inc | Tamil Church in Brisbane
+                  A Warm Welcome · A Tamil Church in Brisbane
                 </span>
               </div>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide leading-[1.3] text-white">
-                <span className="sr-only">Vaarthai Evangelical Church Inc — Tamil Church in Brisbane: </span>
-                <span className="block mb-1 sm:mb-2">Hearing the Word.</span>
-                <span className="block text-accent mb-1 sm:mb-2">Living the Word.</span>
-                <span className="block">Sharing the Word.</span>
+                <span className="sr-only">Vaarthai Evangelical Church — Tamil Church in Brisbane: </span>
+                <span className="block mb-1 sm:mb-2">Hear the Word.</span>
+                <span className="block text-accent mb-1 sm:mb-2">Live the Word.</span>
+                <span className="block">Share the Word.</span>
               </h1>
               <p className="text-base text-stone-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-                Wherever you are on your spiritual journey, our Brisbane Tamil Church welcomes you with open arms. Join our Tamil Church Family to worship God, grow in our Tamil Christian community, and walk closely with Christ.
+                A Tamil-speaking evangelical church in Springfield, Brisbane. Wherever you are in life, come hear God&rsquo;s Word, worship with us, and grow together as family.
               </p>
               
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
                 <Button href="/en/plan-your-visit" variant="accent" size="lg" className="font-bold shadow-md">
-                  Plan Your Visit
+                  Plan a Visit
                 </Button>
                 <Button href="/en/pastors-desk" variant="outline" size="lg" className="border-white text-white hover:bg-accent hover:border-accent hover:border-2 hover:text-white font-bold">
-                  From the Pastor
+                  From the Pastor&rsquo;s Desk
                 </Button>
               </div>
 
               {/* Service times banner */}
-              <div className="mt-8 bg-accent/95 backdrop-blur-md border border-accent-light/50 rounded-xl p-4 sm:px-6 flex items-center justify-center lg:justify-start gap-4 shadow-xl shadow-accent/20 max-w-sm">
+              <div className="mt-8 bg-accent/95 backdrop-blur-md border border-accent-light/50 rounded-xl p-4 sm:px-6 flex items-center justify-center lg:justify-start gap-4 shadow-xl shadow-accent/20 max-w-md">
                 <div className="bg-white/20 p-2.5 rounded-lg shrink-0">
                   <Clock className="w-6 h-6 text-white" />
                 </div>
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-white/80 mb-0.5">Sunday Service</p>
-                  <p className="text-xl sm:text-2xl font-black text-white leading-none">10:00 AM</p>
+                <div className="text-left">
+                  <p className="text-base sm:text-lg font-black text-white leading-snug">
+                    Sunday Service · 10:00 AM
+                  </p>
+                  <p className="text-xs sm:text-sm font-semibold text-white/90 mt-0.5">
+                    389 Old Logan Rd, Springfield
+                  </p>
                 </div>
               </div>
             </div>
@@ -116,7 +120,7 @@ export default function EnglishHomePage() {
               <div className="w-48 h-48 lg:w-64 lg:h-64 select-none">
                 <img 
                   src="/logo.png" 
-                  alt={`${churchConfig.name} logo`} 
+                  alt="Vaarthai Evangelical Church logo" 
                   width={256}
                   height={256}
                   decoding="async"
@@ -139,7 +143,7 @@ export default function EnglishHomePage() {
                     />
                   </div>
                   <div className="text-[10px] font-semibold uppercase tracking-widest text-accent-light font-serif">
-                    {churchConfig.shortName}
+                    Vaarthai Evangelical Church
                   </div>
                 </div>
                 
@@ -154,7 +158,7 @@ export default function EnglishHomePage() {
                 </div>
                 
                 <div className="flex justify-between items-center text-[11px] text-stone-300 border-t border-white/10 pt-3 relative z-10">
-                  <span>Brisbane, QLD</span>
+                  <span>Springfield · Brisbane</span>
                   <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-accent" /> 10:00 AM</span>
                 </div>
               </div>

@@ -77,34 +77,48 @@ export default function HomePage() {
                   <svg className="w-4 h-4 text-accent fill-current shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11 2h2v7h6v2h-6v11h-2v-11h-6v-2h6V2z" />
                   </svg>
-                  வார்த்தை சுவிசேஷ திருச்சபைக்கு உங்களை அன்போடு வரவேற்கிறோம் | Tamil Church in Brisbane
+                  அன்புடன் வரவேற்கிறோம் · A Tamil Church in Brisbane
                 </span>
               </div>
-              <h1 className="font-kavivanar text-2xl sm:text-3xl md:text-4xl font-normal tracking-wide leading-[1.3] text-white">
-                <span className="sr-only">Vaarthai Evangelical Church Inc — Tamil Church in Brisbane (பிரிஸ்பேன் தமிழ் சபை): </span>
-                வார்த்தையைக் கேட்போம் <span className="text-accent">வார்த்தையின்படி நடப்போம்</span> வார்த்தையைப் பகிர்வோம்
-              </h1>
-              <p className="text-base text-stone-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-                பிரிஸ்பேன் நகரில் அமைந்துள்ள எங்கள் தமிழ் சபை (Brisbane Tamil Church), உங்களை அன்புடன் அழைக்கிறது. நீங்கள் எந்த நிலையில் இருந்தாலும், எங்கள் Tamil Church Family-யோடு இணைந்து தேவனை ஆராதிக்க (Tamil Worship) வாருங்கள்.
-              </p>
+              <div className="space-y-2">
+                <h1 className="font-kavivanar text-2xl sm:text-3xl md:text-4xl font-normal tracking-wide leading-[1.3] text-white">
+                  <span className="sr-only">Vaarthai Evangelical Church — Tamil Church in Brisbane: </span>
+                  வார்த்தையைக் கேட்போம் <span className="text-accent">வார்த்தையின்படி நடப்போம்</span> வார்த்தையைப் பகிர்வோம்
+                </h1>
+                <p className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-accent-light/90">
+                  Hear the Word · Live the Word · Share the Word
+                </p>
+              </div>
+              <div className="space-y-3 max-w-2xl mx-auto lg:mx-0">
+                <p className="text-base text-stone-200 leading-relaxed font-sans font-light">
+                  பிரிஸ்பேன் ஸ்பிரிங்ஃபீல்டில் கூடிவரும் எங்கள் தமிழ் திருச்சபை உங்களை அன்புடன் அழைக்கிறது. நீங்கள் வாழ்க்கையின் எந்தக் கட்டத்தில் இருந்தாலும், தேவனுடைய வார்த்தையைக் கேட்கவும், அவரை ஆராதிக்கவும், ஒரு குடும்பமாக இணைந்து வளரவும் எங்களோடு வாருங்கள்.
+                </p>
+                <p className="text-sm text-stone-300/90 leading-relaxed font-sans font-light">
+                  A Tamil-speaking evangelical church in Springfield, Brisbane. Wherever you are in life, come hear God&rsquo;s Word, worship with us, and grow together as family.
+                </p>
+              </div>
               
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
                 <Button href="/plan-your-visit" variant="accent" size="lg" className="font-bold shadow-md">
-                  ஆலயத்திற்கு வர திட்டமிடுங்கள் (Visit)
+                  ஆலயத்திற்கு வாருங்கள் — Plan a Visit
                 </Button>
                 <Button href="/pastors-desk" variant="outline" size="lg" className="border-white text-white hover:bg-accent hover:border-accent hover:border-2 hover:text-white font-bold">
-                  போதகரிடமிருந்து (From the Pastor)
+                  போதகரின் செய்தி — From the Pastor&rsquo;s Desk
                 </Button>
               </div>
 
               {/* Service times banner */}
-              <div className="mt-8 bg-accent/95 backdrop-blur-md border border-accent-light/50 rounded-xl p-4 sm:px-6 flex items-center justify-center lg:justify-start gap-4 shadow-xl shadow-accent/20 max-w-sm">
+              <div className="mt-8 bg-accent/95 backdrop-blur-md border border-accent-light/50 rounded-xl p-4 sm:px-6 flex items-center justify-center lg:justify-start gap-4 shadow-xl shadow-accent/20 max-w-md">
                 <div className="bg-white/20 p-2.5 rounded-lg shrink-0">
                   <Clock className="w-6 h-6 text-white" />
                 </div>
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-white/80 mb-0.5">ஞாயிறு ஆராதனை</p>
-                  <p className="text-xl sm:text-2xl font-black text-white leading-none">காலை 10:00 மணி</p>
+                <div className="text-left">
+                  <p className="text-base sm:text-lg font-black text-white leading-snug">
+                    ஞாயிறு ஆராதனை · காலை 10:00 மணி
+                  </p>
+                  <p className="text-xs sm:text-sm font-semibold text-white/90 mt-0.5">
+                    389 Old Logan Rd, Springfield
+                  </p>
                 </div>
               </div>
             </div>
@@ -114,7 +128,7 @@ export default function HomePage() {
               <div className="w-48 h-48 lg:w-64 lg:h-64 select-none">
                 <img 
                   src="/logo.png" 
-                  alt={`${churchConfig.name} logo`} 
+                  alt="Vaarthai Evangelical Church logo" 
                   width={256}
                   height={256}
                   decoding="async"
@@ -137,22 +151,22 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="text-[10px] font-semibold uppercase tracking-widest text-accent-light font-serif">
-                    {churchConfig.shortName}
+                    Vaarthai Evangelical Church
                   </div>
                 </div>
                 
                 <div className="my-auto space-y-3 relative z-10">
                   <div className="w-12 h-0.5 bg-accent"></div>
                   <blockquote className="font-serif text-lg italic font-medium leading-relaxed text-stone-100">
-                    "ஆதியிலே வார்த்தை இருந்தது, அந்த வார்த்தை தேவனிடத்திலிருந்தது, அந்த வார்த்தை தேவனாயிருந்தது."
+                    &ldquo;ஆதியிலே வார்த்தை இருந்தது, அந்த வார்த்தை தேவனிடத்திலிருந்தது, அந்த வார்த்தை தேவனாயிருந்தது.&rdquo;
                   </blockquote>
                   <cite className="block text-xs font-bold text-accent uppercase tracking-widest not-italic">
-                    — யோவான் 1:1 (ESV)
+                    — யோவான் 1:1
                   </cite>
                 </div>
                 
                 <div className="flex justify-between items-center text-[11px] text-stone-300 border-t border-white/10 pt-3 relative z-10">
-                  <span>Brisbane, QLD</span>
+                  <span>Springfield · Brisbane</span>
                   <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-accent" /> 10:00 AM</span>
                 </div>
               </div>
@@ -188,7 +202,7 @@ export default function HomePage() {
               தேவனை நேசிக்கவும், விசுவாசத்தில் வளரவும், சமுதாயத்திற்குச் சேவை செய்யவும் நாம் அழைக்கப்பட்டுள்ளோம்
             </h2>
             <p className="text-stone-700 leading-relaxed text-sm">
-              வார்த்தை இவாஞ்சலிக்கல் சபையில் எங்கள் நோக்கம் எளிதானது: மக்கள் இயேசு கிறிஸ்துவின் அன்பைக் கண்டடையவும், நற்செய்தி விசுவாசத்தில் வளரவும், ஒருவருக்கொருவர் அன்புடன் தாங்கி உதவவும் விரும்புகிறோம்.
+              வார்த்தை சுவிசேஷ திருச்சபையில் எங்கள் நோக்கம் எளிதானது: மக்கள் இயேசு கிறிஸ்துவின் அன்பைக் கண்டடையவும், நற்செய்தி விசுவாசத்தில் வளரவும், ஒருவருக்கொருவர் அன்புடன் தாங்கி உதவவும் விரும்புகிறோம்.
             </p>
             <p className="text-stone-700 leading-relaxed text-sm">
               நீங்கள் வாழ்க்கையின் பல கேள்விகளுக்கு வேதாகமப் பதிலை எதிர்பார்க்கிறீர்களா, அல்லது குடும்பமாக விசுவாசத்தில் வேரூன்ற விரும்புகிறீர்களா, எங்களோடு இணைந்து கொள்ளுங்கள்.
@@ -249,7 +263,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="text-xs font-bold text-primary hover:text-accent inline-flex items-center gap-1 mt-1 transition-colors"
                 >
-                  வரைபடத்தில் பார்க்க (Get Directions) <ArrowRight className="w-3.5 h-3.5" />
+                  வரைபடத்தில் பார்க்க — Get Directions <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>
             </div>
@@ -293,7 +307,7 @@ export default function HomePage() {
             
             <div className="pt-8 sm:pt-10 relative z-10">
               <Button href="/plan-your-visit" variant="accent" size="lg" className="font-bold text-base sm:text-lg px-8 py-3.5 shadow-md">
-                வருகையைத் திட்டமிட (Plan Your Visit)
+                ஆலயத்திற்கு வாருங்கள் — Plan a Visit
               </Button>
             </div>
           </div>
@@ -332,7 +346,7 @@ export default function HomePage() {
               </div>
               <div className="pt-6">
                 <Button href="/give" variant="accent" size="sm" className="font-bold">
-                  ஆன்லைன் காணிக்கை (Give Online)
+                  ஆன்லைன் காணிக்கை — Give Online
                 </Button>
               </div>
             </div>
@@ -379,7 +393,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-neutral-light border border-border rounded-xl p-8 sm:p-12 text-center">
           <h2 className="font-serif text-2xl sm:text-3xl font-black text-primary mb-3">
-            Subscribe to our Weekly Newsletter (திருச்சபையுடன் இணைந்திருங்கள்)
+            திருச்சபையுடன் இணைந்திருங்கள் — Subscribe to our Weekly Newsletter
           </h2>
           <p className="text-sm sm:text-base text-stone-600 mb-8 max-w-lg mx-auto leading-relaxed">
             Get the Pastor&apos;s weekly letter and church announcements delivered straight to your inbox every Wednesday morning.
