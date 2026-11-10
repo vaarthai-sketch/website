@@ -26,6 +26,31 @@ export interface Sermon {
 
 export const sermonsData: Sermon[] = [
   {
+    id: "out-of-the-shadows",
+    title: "மறைவிலிருந்து வெளிச்சத்திற்கு – தேவனுடைய நேரத்தில் | Out of the Shadows",
+    englishTitle: "Out of the Shadows — In God's Timing",
+    speaker: "Bro Varghese Rayar",
+    englishSpeaker: "Bro Varghese Rayar",
+    date: "2026-11-08",
+    scriptureReference: "அப்போஸ்தலர் 9:29–31; 10–11 · 2 கொரிந்தியர் 12:2–10 · சங்கீதம் 27:14 · ஏசாயா 40:31",
+    englishScriptureReference: "Acts 9:29–31; Acts 10–11 · 2 Corinthians 12:2–10 · Psalm 27:14 · Isaiah 40:31",
+    scriptureText: "என் கிருபை உனக்குப் போதும்; பலவீனத்திலே என் பலம் பூரணமாய் விளங்கும்.",
+    englishScriptureText: "My grace is sufficient for you, for my power is made perfect in weakness.",
+    series: "சகோ. வர்கீஸ் ராயர்",
+    englishSeries: "Bro Varghese Rayar",
+    topic: "காத்திருத்தல் & கிருபை (Waiting on God)",
+    englishTopic: "Waiting on God",
+    description: "நீண்ட நாட்களாகக் காத்திருந்து, தேவன் உங்களை மறந்துவிட்டாரோ என்று எண்ணுகிறீர்களா? \"மறைவிலிருந்து வெளிச்சத்திற்கு\" என்ற இந்தச் செய்தியில், தர்சுவில் சவுல் கழித்த மறைவான ஆண்டுகளையும், அவர் இல்லாமலேயே அந்தியோகியாவை அடைந்த எழுப்புதலையும் பார்க்கிறோம். பேதுருவின் தரிசனம், கொர்நேலியுவின் வீட்டில் புறஜாதிகள்மேல் இறங்கிய பரிசுத்த ஆவியானவர், சவுலைத் தேடிச் சென்ற பர்னபா ஆகியவற்றின் மூலம், காத்திருத்தல் தேவனின் ஆயத்த பள்ளி என்பதை இந்தச் செய்தி நினைவூட்டுகிறது.",
+    englishDescription: "Have you been waiting so long that you wonder if God has forgotten you? In this message, Bro Varghese Rayar takes us into Saul's hidden years in Tarsus. While Saul waited, Peter received his vision, the Spirit fell on Cornelius's household, and revival swept through Antioch without him. Moses in Midian, Joseph in prison, and Paul with his thorn in the flesh all point to the same lesson: waiting is God's chosen classroom, and the grace that sustained Saul in the shadows is sufficient for you.\n\nFour principles for trusting God in the shadows:\n• Obscurity is not insignificance\n• Waiting is not wasting\n• Weakness is not disqualification\n• God's timing is not our timing",
+    videoPlaceholder: "மறைவிலிருந்து வெளிச்சத்திற்கு பிரசங்க வீடியோ",
+    englishVideoPlaceholder: "Out of the Shadows Sermon Video",
+    youtubeId: "Pk_-7PgPdCk",
+    audioUrl: "#",
+    notesUrl: "#",
+    duration: "1:05:50",
+    thumbnail: "",
+  },
+  {
     id: "prayer-of-jabez-part-7",
     title: "தேவன் அருளினார் | And God Granted — யாபேசின் ஜெபம் · பகுதி 7",
     englishTitle: "And God Granted | The Prayer of Jabez — Part 7",
@@ -333,7 +358,7 @@ export const sermonSeries = [
     englishTitle: "Bro Varghese Rayar",
     description: "சகோதரர் வர்கீஸ் ராயர் அவர்கள் பகிர்ந்துகொண்ட சிறப்பு செய்திகள்.",
     englishDescription: "Special messages shared by Brother Varghese Rayar.",
-    count: 1,
+    count: 2,
     image: "series-guest"
   },
   {
