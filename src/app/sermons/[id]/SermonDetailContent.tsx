@@ -139,16 +139,55 @@ export async function SermonDetail({ params, isEn = false }: { params: Promise<{
 
             <div className="border-t border-border pt-6 space-y-4">
               <h4 className="font-serif font-bold text-stone-900 text-sm">
-                About the Series
+                {isEn ? "Messages in This Series" : "இந்தத் தொடரின் செய்திகள்"}
               </h4>
               <p className="text-xs text-stone-500 leading-relaxed">
-                This message was preached during the series <strong>"{isEn ? (sermon.englishSeries || sermon.series) : sermon.series}"</strong>, looking at foundational scripture passages.
+                {isEn ? (
+                  <>
+                    Playlist for <strong>&ldquo;{sermon.englishSeries || sermon.series}&rdquo;</strong> (in order):
+                  </>
+                ) : (
+                  <>
+                    <strong>&ldquo;{sermon.series}&rdquo;</strong> தொடரின் வரிசை:
+                  </>
+                )}
               </p>
+              <ol className="space-y-2 text-xs">
+                {sermonsData
+                  .filter((s) => s.series === sermon.series)
+                  .sort((a, b) => {
+                    if (a.seriesOrder !== undefined && b.seriesOrder !== undefined) {
+                      return a.seriesOrder - b.seriesOrder;
+                    }
+                    return new Date(a.date).getTime() - new Date(b.date).getTime();
+                  })
+                  .map((item, idx) => {
+                    const isCurrent = item.id === sermon.id;
+                    const itemTitle = isEn ? item.englishTitle || item.title : item.title;
+                    return (
+                      <li key={item.id}>
+                        <Link
+                          href={isEn ? `/en/sermons/${item.id}` : `/sermons/${item.id}`}
+                          className={`flex items-start gap-2.5 p-2.5 rounded-lg border transition-colors ${
+                            isCurrent
+                              ? "bg-accent/15 border-accent/40 text-primary font-bold"
+                              : "bg-neutral-light/50 border-border text-stone-700 hover:border-accent/40 hover:text-primary"
+                          }`}
+                        >
+                          <span className="w-5 h-5 rounded-full bg-primary text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+                            {idx + 1}
+                          </span>
+                          <span className="leading-snug line-clamp-2">{itemTitle}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+              </ol>
               <Link 
                 href={isEn ? "/en/sermons" : "/sermons"} 
                 className="text-xs font-bold text-primary hover:text-accent inline-flex items-center gap-1.5 transition-colors border-b border-primary/20 pb-0.5"
               >
-                Browse messages in this series <ArrowLeft className="w-3 h-3 rotate-180" />
+                {isEn ? "Browse all sermons" : "அனைத்து செய்திகளையும் பார்க்க"} <ArrowLeft className="w-3 h-3 rotate-180" />
               </Link>
             </div>
 

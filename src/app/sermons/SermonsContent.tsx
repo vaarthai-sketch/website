@@ -61,8 +61,15 @@ export function SermonsView({ isEn = false }: { isEn?: boolean }) {
       list = list.filter(s => s.topic === selectedTopic);
     }
 
-    // Sort by date
+    // Sort by seriesOrder (1 -> 2 -> 3) when viewing Bro Varghese Rayar's playlist/series, otherwise sort by date
     list.sort((a, b) => {
+      if (
+        (selectedSpeaker === "Bro Varghese Rayar" || selectedSeries === "சகோ. வர்கீஸ் ராயர்") &&
+        a.seriesOrder !== undefined &&
+        b.seriesOrder !== undefined
+      ) {
+        return a.seriesOrder - b.seriesOrder;
+      }
       const dateA = new Date(a.date).getTime();
       const dateB = new Date(b.date).getTime();
       return sortBy === "newest" ? dateB - dateA : dateA - dateB;

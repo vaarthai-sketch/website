@@ -22,16 +22,18 @@ export interface Sermon {
   notesUrl: string;
   duration: string;
   thumbnail: string;
+  seriesOrder?: number;
 }
 
 export const sermonsData: Sermon[] = [
   {
     id: "out-of-the-shadows",
     title: "மறைவிலிருந்து வெளிச்சத்திற்கு – தேவனுடைய நேரத்தில் | Out of the Shadows",
-    englishTitle: "Out of the Shadows — In God's Timing",
+    englishTitle: "Out of the Shadows — In God's Timing (Part 3)",
     speaker: "Bro Varghese Rayar",
     englishSpeaker: "Bro Varghese Rayar",
     date: "2026-11-08",
+    seriesOrder: 3,
     scriptureReference: "அப்போஸ்தலர் 9:29–31; 10–11 · 2 கொரிந்தியர் 12:2–10 · சங்கீதம் 27:14 · ஏசாயா 40:31",
     englishScriptureReference: "Acts 9:29–31; Acts 10–11 · 2 Corinthians 12:2–10 · Psalm 27:14 · Isaiah 40:31",
     scriptureText: "என் கிருபை உனக்குப் போதும்; பலவீனத்திலே என் பலம் பூரணமாய் விளங்கும்.",
@@ -277,13 +279,17 @@ export const sermonsData: Sermon[] = [
   {
     id: "from-self-reliance-to-god-reliance",
     title: "சுய சார்பிலிருந்து, கடவுளைச் சார்ந்து | From self-reliance to God-reliance",
+    englishTitle: "From Self-Reliance to God-Reliance (Part 2)",
     speaker: "Bro Varghese Rayar",
+    englishSpeaker: "Bro Varghese Rayar",
     date: "2026-08-09",
+    seriesOrder: 2,
     scriptureReference: "நீதிமொழிகள் 3:5-6",
     englishScriptureReference: "Proverbs 3:5-6",
     scriptureText: "உன் சுயபுத்தியின்மேல் சாயாமல், உன் முழு இருதயத்தோடும் கர்த்தரில் நம்பிக்கையாயிருந்து, உன் வழிகளிலெல்லாம் அவரை நினைத்துக்கொள்; அப்பொழுது அவர் உன் பாதைகளைச் செவ்வைப்படுத்துவார்.",
     englishScriptureText: "Trust in the LORD with all your heart, and do not lean on your own understanding. In all your ways acknowledge him, and he will make straight your paths.",
     series: "சகோ. வர்கீஸ் ராயர்",
+    englishSeries: "Bro Varghese Rayar",
     topic: "Faith",
     description: "சுய சார்பிலிருந்து, கடவுளைச் சார்ந்து வாழ அழைக்கும் ஒரு சிறப்புச் செய்தி.",
     englishDescription: "A special message calling us to move from self-reliance to God-reliance.",
@@ -293,6 +299,32 @@ export const sermonsData: Sermon[] = [
     notesUrl: "#",
     duration: "45:00",
     thumbnail: "/varghese-rayar-thumb.jpg",
+  },
+  {
+    id: "the-unsung-hero-who-changed-pauls-life",
+    title: "அப்போஸ்தலன் பவுலின் வாழ்க்கையை மாற்றிய அறியப்படாத கதாநாயகன் | Bro Varghese Rayar",
+    englishTitle: "The Unsung Hero Who Changed Apostle Paul's Life (Part 1)",
+    speaker: "Bro Varghese Rayar",
+    englishSpeaker: "Bro Varghese Rayar",
+    date: "2026-07-12",
+    seriesOrder: 1,
+    scriptureReference: "அப்போஸ்தலர் 9:10–27",
+    englishScriptureReference: "Acts 9:10–27",
+    scriptureText: "அப்பொழுது பர்னபா என்பவன் அவனைச் சேர்த்துக்கொண்டு, அப்போஸ்தலரிடத்தில் அழைத்துக்கொண்டுபோய்...",
+    englishScriptureText: "But Barnabas took him and brought him to the apostles and declared to them how on the road he had seen the Lord...",
+    series: "சகோ. வர்கீஸ் ராயர்",
+    englishSeries: "Bro Varghese Rayar",
+    topic: "கீழ்ப்படிதல் & ஊக்கம் (Obedience & Encouragement)",
+    englishTopic: "Obedience & Encouragement",
+    description: "அப்போஸ்தலன் பவுலைக் குறித்து நாம் நினைக்கும் போது, ஒரு சிறந்த இறையியலாளரும் திருச்சபைகளை நிறுவியவருமே நம் நினைவுக்கு வருவார். ஆனால் அவர் வேதாகமத்தில் முதன்முதலில் ஒரு கொலையாளியாகவே அறிமுகப்படுத்தப்படுகிறார்—ஆரம்பகால திருச்சபைக்கு எதிராக கொலைப் பயமுறுத்தல்களை மூச்சாக விட்ட ஒரு மனிதராக. அனனியா மற்றும் பர்னபாவின் கீழ்ப்படிதலும் அன்பும் சவுலின் வாழ்க்கையை எப்படி மாற்றியது என்பதை இந்த முதல் செய்தியில் தியானிக்கிறோம்.",
+    englishDescription: "When we think of the Apostle Paul, we remember a great theologian and church planter. Yet in Scripture he is first introduced breathing threats and murder against the early church. In this opening message of the series, Bro Varghese Rayar looks at the unsung heroes whose obedience and encouragement transformed Saul's life.",
+    videoPlaceholder: "அப்போஸ்தலன் பவுலின் வாழ்க்கையை மாற்றிய அறியப்படாத கதாநாயகன் பிரசங்க வீடியோ",
+    englishVideoPlaceholder: "The Unsung Hero Who Changed Apostle Paul's Life Sermon Video",
+    youtubeId: "7nMx7VXBfiQ",
+    audioUrl: "#",
+    notesUrl: "#",
+    duration: "59:17",
+    thumbnail: "",
   },
   {
     id: "the-good-hand-of-my-god",
@@ -358,7 +390,7 @@ export const sermonSeries = [
     englishTitle: "Bro Varghese Rayar",
     description: "சகோதரர் வர்கீஸ் ராயர் அவர்கள் பகிர்ந்துகொண்ட சிறப்பு செய்திகள்.",
     englishDescription: "Special messages shared by Brother Varghese Rayar.",
-    count: 2,
+    count: 3,
     image: "series-guest"
   },
   {
