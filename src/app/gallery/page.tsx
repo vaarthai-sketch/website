@@ -11,8 +11,8 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'ta',
   path: '/gallery',
-  title: "Photo Gallery | Tamil Church in Brisbane | Vaarthai Evangelical Church",
-  description: "View photos from Sunday worship services, Vaarthai Kids, Youth, and church family gatherings at Vaarthai Evangelical Church Inc in Brisbane.",
+  title: "புகைப்படத் தொகுப்பு | Photo Gallery | Vaarthai Evangelical Church Brisbane",
+  description: "பிரிஸ்பேன் வார்த்தை சுவிசேஷ திருச்சபையின் ஞாயிறு ஆராதனைகள், சிறுவர் ஊழியம், வாலிபர் கூடுகைகள் மற்றும் சபைக் குடும்ப நிகழ்வுகளின் புகைப்படத் தொகுப்பு.",
 });
 
 async function getFolders() {
@@ -60,10 +60,10 @@ export default async function GalleryPage() {
       <section className="bg-primary text-white py-16 md:py-24 mb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h1 className="text-3xl md:text-5xl font-serif font-bold mb-4">
-            Photos
+            புகைப்படத் தொகுப்பு
           </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto text-stone-200">
-            A glimpse into the life and community at {churchConfig.name}.
+            வார்த்தை சுவிசேஷ திருச்சபை ({churchConfig.name}) சபையின் ஞாயிறு ஆராதனைகள், சிறுவர் ஊழியம் மற்றும் ஐக்கிய நிகழ்வுகளின் நினைவுத் தருணங்கள்.
           </p>
         </div>
       </section>

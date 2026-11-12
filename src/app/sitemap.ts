@@ -11,6 +11,7 @@ function withAlternates(path: string, lastModified: Date, changeFrequency: Metad
   const languages = {
     'ta': taUrl,
     'en-AU': enUrl,
+    'x-default': taUrl,
   };
 
   return [

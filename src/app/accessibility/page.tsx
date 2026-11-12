@@ -7,8 +7,8 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'ta',
   path: '/accessibility',
-  title: "Accessibility Statement",
-  description: `Web accessibility details for ${churchConfig.name}. Our commitment to serving all users.`,
+  title: "அணுகல்தன்மை அறிக்கை | Accessibility Statement | Vaarthai Evangelical Church",
+  description: `வார்த்தை சுவிசேஷ திருச்சபை (${churchConfig.name}) இணையதளம் மற்றும் ஆராதனை நிலையத்தின் அணுகல்தன்மை விவரங்கள்.`,
 });
 
 export default function AccessibilityPage() {
@@ -17,8 +17,12 @@ export default function AccessibilityPage() {
       <section className="bg-primary text-white py-16 text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div className="max-w-4xl mx-auto px-4 relative z-10 space-y-2">
-          <h1 className="font-serif text-3xl md:text-4xl font-black">Accessibility Statement</h1>
-          <p className="text-stone-300 text-sm">Our Commitment to Inclusivity & Usability</p>
+          <h1 className="font-serif text-3xl md:text-4xl font-black">
+            அணுகல்தன்மை அறிக்கை | Accessibility Statement
+          </h1>
+          <p className="text-stone-300 text-sm">
+            வார்த்தை சுவிசேஷ திருச்சபை — அனைவருக்கும் எளிய அணுகல்
+          </p>
         </div>
       </section>
 

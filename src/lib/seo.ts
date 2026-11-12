@@ -38,7 +38,7 @@ export function buildMetadata({
     languages: {
       'ta': `${SITE}${path}`,
       'en-AU': `${SITE}/en${path}`,
-      'x-default': `${SITE}/en${path}`,
+      'x-default': `${SITE}${path}`,
     },
   };
 

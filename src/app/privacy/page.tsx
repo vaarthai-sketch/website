@@ -6,8 +6,8 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   locale: 'ta',
   path: '/privacy',
-  title: "Privacy Policy",
-  description: `Privacy Policy for ${churchConfig.name}. Learn how we protect your personal information.`,
+  title: "தனியுரிமைக் கொள்கை | Privacy Policy | Vaarthai Evangelical Church",
+  description: `வார்த்தை சுவிசேஷ திருச்சபை (${churchConfig.name}) சபையின் தனியுரிமைக் கொள்கை மற்றும் தனிப்பட்ட தகவல் பாதுகாப்பு விவரங்கள்.`,
 });
 
 export default function PrivacyPage() {
@@ -16,8 +16,12 @@ export default function PrivacyPage() {
       <section className="bg-primary text-white py-16 text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <h1 className="font-serif text-3xl md:text-4xl font-black">Privacy Policy</h1>
-          <p className="text-stone-300 text-sm mt-2">Effective Date: June 22, 2026</p>
+          <h1 className="font-serif text-3xl md:text-4xl font-black">
+            தனியுரிமைக் கொள்கை | Privacy Policy
+          </h1>
+          <p className="text-stone-300 text-sm mt-2">
+            வார்த்தை சுவிசேஷ திருச்சபை — நடைமுறைத் தேதி: ஜூன் 22, 2026
+          </p>
         </div>
       </section>
 
