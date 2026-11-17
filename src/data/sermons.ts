@@ -27,6 +27,32 @@ export interface Sermon {
 
 export const sermonsData: Sermon[] = [
   {
+    id: "in-the-masters-hands",
+    title: "எஜமானின் கரங்களிலே | In the Master's Hands – Acts 11–13",
+    englishTitle: "In the Master's Hands — Acts 11–13 (Part 4)",
+    speaker: "Bro Varghese Rayar",
+    englishSpeaker: "Bro Varghese Rayar",
+    date: "2026-11-15",
+    seriesOrder: 4,
+    scriptureReference: "அப்போஸ்தலர் 11:19–13:52",
+    englishScriptureReference: "Acts 11:19–13:52",
+    scriptureText: "பரிசுத்த ஆவியானவர்: பர்னபாவையும் சவுலையும் நான் அழைத்த ஊழியத்துக்காக எனக்குப் பிரித்துவிடுங்கள் என்றார்.",
+    englishScriptureText: "The Holy Spirit said, 'Set apart for me Barnabas and Saul for the work to which I have called them.'",
+    series: "சகோ. வர்கீஸ் ராயர்",
+    englishSeries: "Bro Varghese Rayar",
+    topic: "கீழ்ப்படிதல் & ஊழியம் (Obedience & Mission)",
+    englishTopic: "Obedience & Mission",
+    description: "எஜமானின் கரங்களிலே — ஒன்றிணைக்கப்பட்டு, நெருக்கப்பட்டு, கீழ்ப்படிவதற்காக விடுவிக்கப்பட்டவர்கள்.\n\nஅந்தியோகியா போன்ற ஒரு பெரிய, உலகப்பிரகாரமான பட்டணத்தில், தேவன் இரண்டு வெவ்வேறு மனிதர்களை – பர்னபாவையும் சவுலையும் – ஒரே பணிக்காக இணைத்தார். ஏரோது சபையைத் தாக்கியபோது சபை ஊக்கமாய் ஜெபித்தது; தேவன் பேதுருவின் சங்கிலிகளை உடைத்தார். பின்பு, ஆரோக்கியமான ஊழியத்தின் மத்தியில், பரிசுத்த ஆவியானவர் பர்னபாவையும் சவுலையும் தமது ஊழியத்துக்காகப் பிரித்தெடுத்தார்.\n\nமூன்று கட்டங்கள் — ஒரே நோக்கம்:\n• அப். 11 – தேவன் தமது ஊழியர்களை ஆயத்தப்படுத்தி ஒன்றிணைக்கிறார்\n• அப். 12 – எதிர்ப்புகளின் மத்தியிலும் தேவன் செயல்படுகிறார்\n• அப். 13 – தேவன் தமது ஊழியர்களை அழைத்து அனுப்புகிறார்",
+    englishDescription: "In the Master's Hands — Brought Together • Under Pressure • Released to Obey.\n\nIn a city known for excess, God brought together an encourager and a scholar to build a church where believers were first called Christians. When Herod struck, the church prayed and God opened prison doors. Then, in the middle of a fruitful season, the Spirit called Antioch to release its best workers for the first missionary journey.\n\nThree Movements — One Mission:\n• Acts 11 – God prepares us before He partners us (Barnabas & Saul at Antioch)\n• Acts 12 – God works amid opposition (James, Peter, and the praying church)\n• Acts 13 – God calls and sends His servants (Cyprus to Iconium)",
+    videoPlaceholder: "எஜமானின் கரங்களிலே பிரசங்க வீடியோ",
+    englishVideoPlaceholder: "In the Master's Hands Sermon Video",
+    youtubeId: "mxPxahqLadw",
+    audioUrl: "#",
+    notesUrl: "#",
+    duration: "53:25",
+    thumbnail: "",
+  },
+  {
     id: "out-of-the-shadows",
     title: "மறைவிலிருந்து வெளிச்சத்திற்கு – தேவனுடைய நேரத்தில் | Out of the Shadows",
     englishTitle: "Out of the Shadows — In God's Timing (Part 3)",
@@ -390,7 +416,7 @@ export const sermonSeries = [
     englishTitle: "Bro Varghese Rayar",
     description: "சகோதரர் வர்கீஸ் ராயர் அவர்கள் பகிர்ந்துகொண்ட சிறப்பு செய்திகள்.",
     englishDescription: "Special messages shared by Brother Varghese Rayar.",
-    count: 3,
+    count: 4,
     image: "series-guest"
   },
   {
