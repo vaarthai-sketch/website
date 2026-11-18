@@ -67,6 +67,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/pastors-desk/archive/october/edition-12',
     '/pastors-desk/archive/october/edition-13',
     '/pastors-desk/archive/october/edition-14',
+    '/pastors-desk/archive/october/edition-15',
   ];
 
   const staticRoutes = staticPaths.flatMap(({ path, changeFrequency, priority }) =>

@@ -6,10 +6,10 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   locale: "en",
-  title: "VEC-NL 2026-10 Edition 15 - From the Pastor's Desk",
-  description: "Yesterday’s Imagination… Today’s Reality! But What About a New Heart? — “Then I will sprinkle clean water on you, and you shall be clean... I will give you a new heart and put a new spirit within you.” — Ezekiel 36:25–26",
+  title: "VEC-NL 2026-11 Edition 16 - From the Pastor's Desk",
+  description: "Thirty-Three Years… One Week! A faithful heart guards the blessing! — “A good name is rather to be chosen than great riches, and loving favour rather than silver and gold.” — Proverbs 22:1",
   path: "/pastors-desk",
-  image: "/edition-15-heart.jpg",
+  image: "/edition-16-king.jpg",
 });
 
 export default function PastorsDeskPage() {
@@ -27,19 +27,19 @@ export default function PastorsDeskPage() {
             <span className="h-px w-8 bg-accent/30"></span>
             <span className="text-accent font-bold tracking-widest uppercase text-sm flex items-center gap-2">
               <FileText className="w-4 h-4" />
-              From the Pastor's Desk
+              From the Pastor&apos;s Desk
             </span>
             <span className="h-px w-8 bg-accent/30"></span>
           </div>
           <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-black mb-4 leading-tight">
-            Yesterday&apos;s Imagination&hellip; Today&apos;s Reality!
+            Thirty-Three Years&hellip; One Week!
           </h1>
           <p className="text-xl md:text-2xl text-accent font-serif italic mb-8 max-w-2xl mx-auto">
-            But What About a New Heart?
+            A faithful heart guards the blessing!
           </p>
           <div className="flex items-center justify-center gap-4 text-sm font-medium text-stone-300">
-            <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #015</span>
-            <span className="flex items-center gap-1"><CalendarIcon className="w-4 h-4 text-accent" /> October 2026</span>
+            <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">VEC-NL • Edition #016</span>
+            <span className="flex items-center gap-1"><CalendarIcon className="w-4 h-4 text-accent" /> November 2026</span>
           </div>
         </div>
       </section>
@@ -56,38 +56,22 @@ export default function PastorsDeskPage() {
                 
                 <div className="flex items-center gap-2 text-sm text-stone-600 font-bold mb-4 relative z-10">
                   <CalendarIcon className="w-4 h-4" />
-                  <span>VEC-NL 2026-10 · Edition 15</span>
+                  <span>From the Pastor&apos;s Desk · VEC-NL · Edition #016 · November 2026</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-2 relative z-10 flex items-center gap-2">
-                  Yesterday&apos;s Imagination&hellip; Today&apos;s Reality!
+                  Thirty-Three Years&hellip; One Week!
                 </h2>
                 <p className="text-lg md:text-xl font-serif italic text-primary mb-6 relative z-10">
-                  But What About a New Heart?
+                  A faithful heart guards the blessing!
                 </p>
                 
                 <div className="prose prose-stone max-w-none text-stone-700 space-y-6 leading-relaxed text-base md:text-lg relative z-10 font-serif">
 
-                  <p>
-                    There was a time when speaking face-to-face with someone on the other side of the world was merely science fiction. Or perhaps I remember reading about magical mirrors in fairy tales!
-                  </p>
-
-                  <p>
-                    Machines that could converse with humans, artificial intelligence that could think and act like human beings &mdash; all these existed only in the world of imagination.
-                  </p>
-
-                  <p className="font-semibold text-primary">
-                    But today? Imagination is becoming reality!
-                  </p>
-
-                  <p>
-                    Medical science, too, has made astonishing progress. Today, doctors can remove a failing human heart and replace it with another, saving a person&apos;s life.
-                  </p>
-
                   <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
                     <img 
-                      src="/edition-15-heart.jpg" 
-                      alt="Heart Transplant - Medical Science" 
+                      src="/edition-16-king.jpg" 
+                      alt="Thirty-Three Years… One Week! - A Faithful Heart Guards the Blessing" 
                       width={1024}
                       height={1024}
                       fetchPriority="high"
@@ -97,132 +81,102 @@ export default function PastorsDeskPage() {
                   </div>
 
                   <p>
-                    Last month, a family friend visited us in her new Tesla.
+                    Last Thursday, 12 November, a piece of news shook the business world. Jensen Huang, the founder and CEO of Nvidia, stepped down.
                   </p>
 
                   <p>
-                    &ldquo;Come on, let me show you something!&rdquo; she said.
+                    Much of the artificial intelligence we now use runs on the chips his company makes. He started Nvidia as a small firm in 1993 and, over thirty-three years, built it into the most valuable company in the world. In Asia, fans crowded around him for autographs.
                   </p>
 
                   <p>
-                    She entered the address of a nearby shopping complex into the car&apos;s navigation system and took her hands off the steering wheel!
-                  </p>
-
-                  <p>
-                    We watched in amazement.
-                  </p>
-
-                  <p>
-                    On a narrow road, the car gave way to oncoming vehicles. It stopped at red lights. It reached the destination accurately. And that wasn&apos;t all! It found an available parking space and parked itself perfectly!
-                  </p>
-
-                  <p>
-                    What we once saw only in science fiction became a reality right before our eyes that day!
-                  </p>
-
-                  <p>
-                    I was amazed at how far science had advanced.
-                  </p>
-
-                  <div className="bg-stone-100 p-5 rounded-lg border-l-4 border-primary my-6">
-                    <p className="text-lg md:text-xl font-bold text-primary m-0">
-                      But a question arose in my mind: If science can transform the way a car is driven, can it also transform the human heart?
-                    </p>
-                  </div>
-
-                  <p>
-                    Can it fill a heart full of hatred with love? Can it change an unforgiving heart into one that willingly forgives? Can it give a new life to someone struggling under the weight of guilt?
-                  </p>
-
-                  <p>
-                    More than 2,500 years ago, God gave an extraordinary promise through the prophet Ezekiel:
-                  </p>
-
-                  <blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
-                    &ldquo;Then I will sprinkle clean water on you, and you shall be clean... I will give you a new heart and put a new spirit within you.&rdquo;
-                    <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— Ezekiel 36:25–26</footer>
-                  </blockquote>
-
-                  <p className="font-semibold text-primary">
-                    What a beautiful promise!<br/>
-                    First, cleansing! Then, a new heart!
-                  </p>
-
-                  <p>
-                    God is not speaking here about replacing the physical heart in our bodies. He is speaking about a profound transformation that takes place within a person.
-                  </p>
-
-                  <p>
-                    The water mentioned in this promise points to the cleansing that God provides. Baptism, too, is a beautiful symbol that reminds us of God&apos;s cleansing grace. However, water itself has no power to remove sin. It is Jesus Christ who saves us and makes our hearts new.
-                  </p>
-
-                  <p>
-                    This is what Jesus explained to Nicodemus when He said, &ldquo;Unless one is born again, he cannot see the kingdom of God&rdquo; (John 3:3).
+                    But earlier this month he admitted to his staff that he had been unfaithful to his wife. Reports said the relationship was with someone suspected of working for a foreign intelligence service, and the company&apos;s board opened an investigation. Within a week, he walked away from the place he had spent thirty-three years building.
                   </p>
 
                   <p className="font-medium text-stone-800">
-                    This Sunday, two people will be baptised at our Vaarthai Evangelical Church. What a joyful occasion for all of us!
-                  </p>
-
-                  <div className="my-6 rounded-xl overflow-hidden shadow-md border-2 border-stone-200">
-                    <img 
-                      src="/edition-15-baptism.jpg" 
-                      alt="Baptism - New Life in Christ" 
-                      width={1024}
-                      height={1024}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-auto object-cover max-h-[500px]" 
-                    />
-                  </div>
-
-                  <p>
-                    Baptism is not merely a religious ritual or a traditional ceremony. It is a public testimony of faith, declaring that we are united with Jesus Christ in His death, burial, and resurrection.
+                    In his letter to employees he confessed: &ldquo;My actions hurt her and our children. There is no excuse for what I did.&rdquo;
                   </p>
 
                   <p>
-                    Romans 6:4 reminds us of this wonderful truth: Just as Christ was raised from the dead, we too are called to walk in newness of life.
+                    I do not write this to mock or to judge anyone. A man&apos;s fall is, first of all, a deep wound to his family. But this story loudly reminds every one of us of truths the Bible has always told.
                   </p>
 
                   <p>
-                    Today, we marvel at how much the world has changed.<br/>
-                    But have we ever stopped to consider how much our own hearts have changed?
-                  </p>
-
-                  <p>
-                    Do you believe in Jesus but have not yet been baptised? If so, what is holding you back?
-                  </p>
-
-                  <p>
-                    As we celebrate the public declaration of faith by these two individuals this Sunday, let us also reflect on our own journey of faith.
+                    <strong className="text-primary">What is hidden will come to light.</strong> Moses told Israel, &ldquo;Be sure your sin will find you out&rdquo; (Numbers 32:23). Something kept secret was, within weeks, in every newspaper in the world. Where there are no cameras, the eyes of God are still there.
                   </p>
 
                   <p className="font-semibold text-primary">
-                    Yesterday&apos;s science fiction has become today&apos;s reality.<br/>
-                    But God&apos;s promise is to give us a new heart.
+                    A good name is worth more than wealth.
                   </p>
 
-                  <div className="bg-accent/10 p-6 rounded-xl border border-accent/30 my-8 space-y-3">
+                  <blockquote className="border-l-4 border-accent pl-6 py-2 my-8 bg-stone-50 rounded-r-lg shadow-sm italic text-lg text-stone-800">
+                    &ldquo;A good name is rather to be chosen than great riches, and loving favour rather than silver and gold.&rdquo;
+                    <footer className="text-right text-sm font-bold text-accent mt-4 not-italic">— Proverbs 22:1</footer>
+                  </blockquote>
+
+                  <p>
+                    One of the richest men on earth had everything: money, fame and power. Yet no amount of money could buy back the trust he lost. Trust is built over many years; it can collapse in a single wrong decision.
+                  </p>
+
+                  <p>
+                    <strong className="text-primary">A fall rarely happens in one day.</strong> Think of King David. He was at the height of his success. In the season when kings go out to battle, he stayed home in Jerusalem (2 Samuel 11:1). One look from the rooftop; then a decision; then another sin to cover the first. In the end the prophet Nathan stood before him and said, &ldquo;You are the man!&rdquo; (2 Samuel 12:7).
+                  </p>
+
+                  <p>
+                    Great falls usually begin with small compromises. A message sent because &ldquo;no one will know.&rdquo; A chat history deleted. A friendship we tell ourselves is &ldquo;perfectly harmless.&rdquo; So Paul warns, &ldquo;Let him that thinketh he standeth take heed lest he fall&rdquo; (1 Corinthians 10:12).
+                  </p>
+
+                  <p>
+                    <strong className="text-primary">But the story does not have to end there!</strong> David&apos;s story did not end with Nathan&apos;s words. Without excuses he confessed, &ldquo;I have sinned against the LORD&rdquo; (2 Samuel 12:13). Out of that broken heart came Psalm 51.
+                  </p>
+
+                  <p>
+                    There is a great difference between being exposed and confessing. When the world drags our sin into the light, shame follows. When we bring it into God&apos;s light ourselves, forgiveness follows. &ldquo;He that covereth his sins shall not prosper: but whoso confesseth and forsaketh them shall have mercy&rdquo; (Proverbs 28:13).
+                  </p>
+
+                  <p>
+                    Apologising to people matters. But our deepest need is to be reconciled to God. Jesus Christ carried all our sin and shame on the cross. &ldquo;If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness&rdquo; (1 John 1:9).
+                  </p>
+
+                  <p>
+                    Dear Vaarthai family, none of us runs a global corporation. But each of us has a family, a name and a witness to guard. If your spouse picked up your phone, would you be at peace? At work, in our finances and in our friendships, are we the same person when no one is watching?
+                  </p>
+
+                  <p>
+                    If there is a struggle inside you that no one knows about, do not wait until it comes out. Bring it to the Lord today. Open up to a trusted, mature believer or to your pastor (James 5:16). Sin that is confessed loses its power.
+                  </p>
+
+                  <p className="font-medium text-stone-800">
+                    This week, let us pray for the family that is hurting. And let us pray for him too: that he finds not only people&apos;s forgiveness, but God&apos;s grace.
+                  </p>
+
+                  <div className="bg-stone-100 p-6 rounded-xl border-l-4 border-primary my-8 space-y-2">
+                    <p className="text-sm font-bold uppercase tracking-wider text-primary m-0">Reflection</p>
                     <p className="text-base md:text-lg font-medium text-stone-800 m-0">
-                      We warmly congratulate the two individuals who will be baptised this Sunday! May the Lord bless their journey of faith and help them grow each day in the newness of life!
-                    </p>
-                    <p className="text-base md:text-lg font-medium text-stone-800 m-0">
-                      May God renew each of our hearts and guide us to live lives that are pleasing to Him!
+                      Is there anything I am hiding that, if it came out one day, would wound my family and my witness? What is the first step I need to take today to bring it into God&apos;s light?
                     </p>
                   </div>
 
-                  <p className="pt-4">
-                    My warmest greetings and best wishes to you all!<br/>
-                    With love in Christ,<br/>
-                    <strong>Pastor Weslyn</strong><br/>
-                    Vaarthai Evangelical Church
-                  </p>
+                  <div className="bg-accent/10 p-6 rounded-xl border border-accent/30 my-8 space-y-2">
+                    <p className="text-sm font-bold uppercase tracking-wider text-accent-dark m-0">Prayer</p>
+                    <p className="text-base md:text-lg italic text-stone-800 m-0">
+                      Heavenly Father, you see us even when no one else does. Search our hearts and show us the sins we have hidden. Give us strength to confess them and to turn from them rather than cover them. Help us honour you above all else, and use every blessing you give for your glory. Comfort the family wounded in this week&apos;s news. Keep our marriages and our homes faithful. We pray in Jesus&apos; name. Amen.
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-stone-200">
+                    <p className="font-bold text-primary mb-1">
+                      Ps. Weslyn | Vaarthai Evangelical Church
+                    </p>
+                    <p className="text-sm font-bold text-accent tracking-wider">
+                      Listen | Live | Share
+                    </p>
+                  </div>
 
                   <div className="mt-12 rounded-xl overflow-hidden shadow-md border-2 border-stone-200 aspect-video">
                     <iframe 
                       width="100%" 
                       height="100%" 
-                      src="https://www.youtube.com/embed/CUZAOsqsZAA" 
+                      src="https://www.youtube.com/embed/gM7gt_cSxjw" 
                       title="YouTube video player" 
                       loading="lazy"
                       frameBorder="0" 
@@ -245,11 +199,20 @@ export default function PastorsDeskPage() {
                 Previous Editions
               </h3>
               <div className="space-y-3">
-                  <h4 className="font-bold text-xs text-stone-400 uppercase tracking-wider mb-2 pl-2">October 2026</h4>
+                  <h4 className="font-bold text-xs text-stone-400 uppercase tracking-wider mb-2 pl-2">November 2026</h4>
                   <Link href="/en/pastors-desk" className="group flex items-start gap-2 p-3 rounded-md bg-stone-50 border border-stone-200 hover:border-accent hover:bg-accent/5 transition-colors">
                     <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0 transition-colors" />
                     <div>
-                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 15</p>
+                      <p className="text-sm font-medium text-stone-900 font-bold group-hover:text-primary transition-colors">Edition 16</p>
+                      <p className="text-xs text-stone-500">Nov 2026</p>
+                    </div>
+                  </Link>
+
+                  <h4 className="font-bold text-xs text-stone-400 uppercase tracking-wider mt-6 mb-2 pl-2 border-t border-stone-100 pt-4">October 2026</h4>
+                  <Link href="/en/pastors-desk/archive/october/edition-15" className="group flex items-start gap-2 p-3 rounded-md hover:bg-stone-50 transition-colors">
+                    <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
+                    <div>
+                      <p className="text-sm font-medium text-stone-700 group-hover:text-primary transition-colors">Edition 15</p>
                       <p className="text-xs text-stone-500">Oct 2026</p>
                     </div>
                   </Link>
