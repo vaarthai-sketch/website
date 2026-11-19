@@ -269,7 +269,9 @@ export default async function EnglishEventDetailPage({ params }: PageProps) {
                 RSVP &amp; Headcount
               </h3>
               <p className="text-xs text-stone-500 leading-relaxed">
-                Christmas dinner will be served after the program. Please let us know how many adults and children are attending so we can plan seating and catering:
+                {event.id === "carolights-26"
+                  ? "Christmas dinner will be served after the program. Please let us know how many adults and children are attending so we can plan seating and catering:"
+                  : "Planning to join us? Register below with your details and headcount so our team can warmly welcome you:"}
               </p>
               <EventRegistrationForm
                 eventTitle={displayTitle}

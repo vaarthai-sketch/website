@@ -198,7 +198,7 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list"; b
 
   return (
     <div className="group bg-white rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
-      <div className="h-48 w-full relative overflow-hidden bg-neutral-light">
+      <div className={`${event.imageHasText ? "h-64" : "h-48"} w-full relative overflow-hidden bg-neutral-light`}>
         {event.image && event.image.startsWith("/") ? (
           <img 
             src={event.image} 

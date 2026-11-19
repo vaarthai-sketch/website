@@ -29,9 +29,16 @@ export default function EventsPage(props: any) {
     { id: "Groups", label: "குழுக்கள்" }
   ];
 
-  // Get featured event
-  const featuredEvent = useMemo(() => {
-    return getEventsData().find(e => e.isFeatured) || getEventsData()[0];
+  // Get featured events with Carolights '26 always guaranteed in the first box
+  const featuredEvents = useMemo(() => {
+    const all = getEventsData();
+    const featured = all.filter(e => e.isFeatured);
+    featured.sort((a, b) => {
+      if (a.id === "carolights-26") return -1;
+      if (b.id === "carolights-26") return 1;
+      return 0;
+    });
+    return featured.length > 0 ? featured : [all[0]];
   }, []);
 
   // Filter events
@@ -68,12 +75,6 @@ export default function EventsPage(props: any) {
     setActiveCategory("all");
   };
 
-  const displayFeaturedTitle = isEn && featuredEvent ? (featuredEvent.englishTitle || featuredEvent.title) : (featuredEvent?.title || "");
-  const displayFeaturedDesc = isEn && featuredEvent ? (featuredEvent.englishDescription || featuredEvent.description) : (featuredEvent?.description || "");
-  const displayFeaturedTime = isEn && featuredEvent ? (featuredEvent.englishTime || featuredEvent.time) : (featuredEvent?.time || "");
-  const displayFeaturedLoc = isEn && featuredEvent ? (featuredEvent.englishLocation || featuredEvent.location) : (featuredEvent?.location || "");
-  const displayFeaturedCat = isEn && featuredEvent ? (featuredEvent.englishCategory || featuredEvent.category) : (featuredEvent?.category || "");
-
   return (
     <div className="pb-20 space-y-16">
       
@@ -97,67 +98,81 @@ export default function EventsPage(props: any) {
         </div>
       </section>
 
-      {/* 2. Featured Event Highlights (only if search is empty) */}
-      {!searchQuery && activeCategory === "all" && featuredEvent && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border border-accent/20 rounded-xl overflow-hidden bg-white shadow-sm flex flex-col lg:flex-row">
-            {/* Visual placeholder or real image */}
-            <div className="lg:w-1/2 aspect-video lg:aspect-auto min-h-[250px] bg-gradient-to-br from-[#0F172A] to-[#020617] p-8 flex flex-col justify-between text-white relative overflow-hidden">
-              {featuredEvent.image && featuredEvent.image.startsWith("/") ? (
-                <>
-                  <img src={featuredEvent.image} alt={displayFeaturedTitle} className={`absolute inset-0 w-full h-full ${featuredEvent.imageHasText ? 'object-contain bg-black' : 'object-cover'}`} />
-                  {!featuredEvent.imageHasText && (
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/40 to-transparent"></div>
+      {/* 2. Featured Event Highlights (Carolights '26 in first box, followed by special Sunday service) */}
+      {!searchQuery && activeCategory === "all" && featuredEvents.length > 0 && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          {featuredEvents.map((featuredEvent) => {
+            const displayFeaturedTitle = isEn ? (featuredEvent.englishTitle || featuredEvent.title) : featuredEvent.title;
+            const displayFeaturedDesc = isEn ? (featuredEvent.englishDescription || featuredEvent.description) : featuredEvent.description;
+            const displayFeaturedTime = isEn ? (featuredEvent.englishTime || featuredEvent.time) : featuredEvent.time;
+            const displayFeaturedLoc = isEn ? (featuredEvent.englishLocation || featuredEvent.location) : featuredEvent.location;
+            const displayFeaturedCat = isEn ? (featuredEvent.englishCategory || featuredEvent.category) : featuredEvent.category;
+
+            return (
+              <div key={featuredEvent.id} className="border border-accent/20 rounded-xl overflow-hidden bg-white shadow-sm flex flex-col lg:flex-row">
+                {/* Visual placeholder or real image */}
+                <div className="lg:w-1/2 aspect-video lg:aspect-auto min-h-[280px] bg-gradient-to-br from-[#0F172A] to-[#020617] p-8 flex flex-col justify-between text-white relative overflow-hidden">
+                  {featuredEvent.image && featuredEvent.image.startsWith("/") ? (
+                    <>
+                      <img src={featuredEvent.image} alt={displayFeaturedTitle} className={`absolute inset-0 w-full h-full ${featuredEvent.imageHasText ? 'object-contain bg-black' : 'object-cover'}`} />
+                      {!featuredEvent.imageHasText && (
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/40 to-transparent"></div>
+                      )}
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
                   )}
-                </>
-              ) : (
-                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
-              )}
-              
-              {!featuredEvent.imageHasText && (
-                <>
-                  <span className="relative z-10 self-start text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded">
-                    {isEn ? "Featured Event" : "முக்கிய நிகழ்வு"}
-                  </span>
                   
-                  <div className="relative z-10 mt-auto">
-                    <span className="text-xs uppercase tracking-widest text-stone-300 font-semibold">Vaarthai Evangelical Church Inc</span>
-                    <h3 className="font-serif text-2xl md:text-3xl font-bold mt-1 line-clamp-2">
-                      {displayFeaturedTitle}
-                    </h3>
+                  {!featuredEvent.imageHasText && (
+                    <>
+                      <span className="relative z-10 self-start text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded">
+                        {isEn ? "Featured Event" : "முக்கிய நிகழ்வு"}
+                      </span>
+                      
+                      <div className="relative z-10 mt-auto">
+                        <span className="text-xs uppercase tracking-widest text-stone-300 font-semibold">Vaarthai Evangelical Church Inc</span>
+                        <h3 className="font-serif text-2xl md:text-3xl font-bold mt-1 line-clamp-2">
+                          {displayFeaturedTitle}
+                        </h3>
+                      </div>
+                    </>
+                  )}
+                </div>
+
+                {/* Description Info */}
+                <div className="lg:w-1/2 p-8 sm:p-10 flex flex-col justify-center space-y-4">
+                  <span className="self-start text-[10px] px-2 py-0.5 font-bold uppercase tracking-wider rounded border bg-neutral-light border-border text-stone-700">
+                    {displayFeaturedCat}
+                  </span>
+
+                  <h2 className="font-serif text-2xl sm:text-3xl font-black text-primary leading-tight">
+                    {displayFeaturedTitle}
+                  </h2>
+                  
+                  <p className="text-stone-600 text-sm leading-relaxed whitespace-pre-line line-clamp-4">
+                    {displayFeaturedDesc}
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-stone-600 border-t border-border pt-4">
+                    <div className="flex items-center gap-1.5">
+                      <Clock className="w-4 h-4 text-accent shrink-0" />
+                      <span>{new Date(featuredEvent.date).toLocaleDateString(isEn ? "en-US" : "ta-IN", { month: "long", day: "numeric", year: "numeric" })} <br /><strong>{displayFeaturedTime}</strong></span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <MapPin className="w-4 h-4 text-accent shrink-0" />
+                      <span>{displayFeaturedLoc}</span>
+                    </div>
                   </div>
-                </>
-              )}
-            </div>
 
-            {/* Description Info */}
-            <div className="lg:w-1/2 p-8 sm:p-10 flex flex-col justify-center space-y-4">
-              <span className={`self-start text-[10px] px-2 py-0.5 font-bold uppercase tracking-wider rounded border bg-neutral-light border-border text-stone-700`}>
-                {displayFeaturedCat}
-              </span>
-              
-              <p className="text-stone-600 text-sm leading-relaxed whitespace-pre-line line-clamp-4">
-                {displayFeaturedDesc}
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-stone-600 border-t border-border pt-4">
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-4 h-4 text-accent shrink-0" />
-                  <span>{new Date(featuredEvent.date).toLocaleDateString(isEn ? "en-US" : "ta-IN", { month: "long", day: "numeric", year: "numeric" })} <br /><strong>{displayFeaturedTime}</strong></span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <MapPin className="w-4 h-4 text-accent shrink-0" />
-                  <span>{displayFeaturedLoc}</span>
+                  <div className="pt-4 flex items-center gap-3">
+                    <Button href={`${basePrefix}/events/${featuredEvent.id}`} variant="primary" size="sm" className="font-bold">
+                      {isEn ? "Details & RSVP" : "விவரங்கள் & பதிவு"}
+                    </Button>
+                  </div>
                 </div>
               </div>
-
-              <div className="pt-4 flex items-center gap-3">
-                <Button href={`${basePrefix}/events/${featuredEvent.id}`} variant="primary" size="sm" className="font-bold">
-                  {isEn ? "Details & RSVP" : "விவரங்கள் & பதிவு"}
-                </Button>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </section>
       )}
 
