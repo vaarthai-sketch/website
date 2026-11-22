@@ -94,8 +94,22 @@ export default async function EventDetailPage({ params }: PageProps) {
               <EventCountdown targetIso={targetIso} isEn={false} />
             )}
 
-            {/* Cover image or Full Flyer Poster */}
-            {event.image && event.image.startsWith("/") ? (
+            {/* Cover image, YouTube Video, or Full Flyer Poster */}
+            {event.youtubeVideoId ? (
+              <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg border border-accent/30 bg-black">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${event.youtubeVideoId}?rel=0`}
+                  title={event.title}
+                  loading="lazy"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            ) : event.image && event.image.startsWith("/") ? (
               event.imageHasText ? (
                 <div className="w-full rounded-xl overflow-hidden shadow-lg border border-accent/30 bg-gradient-to-b from-[#2A0B14] via-[#131C31] to-[#0F172A] p-3 sm:p-6 flex justify-center">
                   <img

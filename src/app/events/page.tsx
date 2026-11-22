@@ -110,9 +110,21 @@ export default function EventsPage(props: any) {
 
             return (
               <div key={featuredEvent.id} className="border border-accent/20 rounded-xl overflow-hidden bg-white shadow-sm flex flex-col lg:flex-row">
-                {/* Visual placeholder or real image */}
-                <div className="lg:w-1/2 aspect-video lg:aspect-auto min-h-[280px] bg-gradient-to-br from-[#0F172A] to-[#020617] p-8 flex flex-col justify-between text-white relative overflow-hidden">
-                  {featuredEvent.image && featuredEvent.image.startsWith("/") ? (
+                {/* Visual placeholder, YouTube video embed, or real image */}
+                <div className="lg:w-1/2 aspect-video lg:aspect-auto min-h-[320px] bg-gradient-to-br from-[#0F172A] to-[#020617] flex flex-col justify-between text-white relative overflow-hidden">
+                  {featuredEvent.youtubeVideoId ? (
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${featuredEvent.youtubeVideoId}?rel=0`}
+                      title={displayFeaturedTitle}
+                      loading="lazy"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    ></iframe>
+                  ) : featuredEvent.image && featuredEvent.image.startsWith("/") ? (
                     <>
                       <img src={featuredEvent.image} alt={displayFeaturedTitle} className={`absolute inset-0 w-full h-full ${featuredEvent.imageHasText ? 'object-contain bg-black' : 'object-cover'}`} />
                       {!featuredEvent.imageHasText && (
@@ -123,19 +135,19 @@ export default function EventsPage(props: any) {
                     <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
                   )}
                   
-                  {!featuredEvent.imageHasText && (
-                    <>
-                      <span className="relative z-10 self-start text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded">
+                  {!featuredEvent.imageHasText && !featuredEvent.youtubeVideoId && (
+                    <div className="p-8 flex flex-col justify-between h-full relative z-10">
+                      <span className="self-start text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded">
                         {isEn ? "Featured Event" : "முக்கிய நிகழ்வு"}
                       </span>
                       
-                      <div className="relative z-10 mt-auto">
+                      <div className="mt-auto">
                         <span className="text-xs uppercase tracking-widest text-stone-300 font-semibold">Vaarthai Evangelical Church Inc</span>
                         <h3 className="font-serif text-2xl md:text-3xl font-bold mt-1 line-clamp-2">
                           {displayFeaturedTitle}
                         </h3>
                       </div>
-                    </>
+                    </div>
                   )}
                 </div>
 
@@ -149,7 +161,7 @@ export default function EventsPage(props: any) {
                     {displayFeaturedTitle}
                   </h2>
                   
-                  <p className="text-stone-600 text-sm leading-relaxed whitespace-pre-line line-clamp-4">
+                  <p className={`text-stone-600 text-sm leading-relaxed whitespace-pre-line ${featuredEvent.youtubeVideoId ? "" : "line-clamp-4"}`}>
                     {displayFeaturedDesc}
                   </p>
 

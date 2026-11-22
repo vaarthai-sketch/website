@@ -198,8 +198,20 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list"; b
 
   return (
     <div className="group bg-white rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
-      <div className={`${event.imageHasText ? "h-64" : "h-48"} w-full relative overflow-hidden bg-neutral-light`}>
-        {event.image && event.image.startsWith("/") ? (
+      <div className={`${event.imageHasText || event.youtubeVideoId ? "h-64" : "h-48"} w-full relative overflow-hidden bg-neutral-light`}>
+        {event.youtubeVideoId ? (
+          <iframe
+            width="100%"
+            height="100%"
+            src={`https://www.youtube.com/embed/${event.youtubeVideoId}?rel=0`}
+            title={displayTitle}
+            loading="lazy"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="w-full h-full"
+          ></iframe>
+        ) : event.image && event.image.startsWith("/") ? (
           <img 
             src={event.image} 
             alt={displayTitle} 
@@ -214,14 +226,18 @@ export const EventCard: React.FC<{ event: ChurchEvent; view?: "grid" | "list"; b
         )}
         
         {/* Absolute Date Badge */}
-        <div className="absolute top-3 left-3 bg-[#0F172A] text-center px-3 py-1.5 rounded shadow-sm border border-primary-light flex flex-col justify-center min-w-[50px]">
-          <span className="text-lg font-serif font-black text-white leading-none">{day}</span>
-          <span className="text-[9px] font-extrabold text-accent-light tracking-wider leading-none mt-0.5">{monthStr}</span>
-        </div>
+        {!event.youtubeVideoId && (
+          <div className="absolute top-3 left-3 bg-[#0F172A] text-center px-3 py-1.5 rounded shadow-sm border border-primary-light flex flex-col justify-center min-w-[50px]">
+            <span className="text-lg font-serif font-black text-white leading-none">{day}</span>
+            <span className="text-[9px] font-extrabold text-accent-light tracking-wider leading-none mt-0.5">{monthStr}</span>
+          </div>
+        )}
 
-        <span className={`absolute bottom-3 left-3 text-[9px] px-2 py-0.5 font-bold uppercase tracking-wider rounded-full border shadow-sm ${currentCategoryClass} bg-white/95`}>
-          {displayCategory}
-        </span>
+        {!event.youtubeVideoId && (
+          <span className={`absolute bottom-3 left-3 text-[9px] px-2 py-0.5 font-bold uppercase tracking-wider rounded-full border shadow-sm ${currentCategoryClass} bg-white/95`}>
+            {displayCategory}
+          </span>
+        )}
       </div>
 
       <div className="p-5 flex flex-col flex-grow">

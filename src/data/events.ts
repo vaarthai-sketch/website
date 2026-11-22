@@ -31,6 +31,7 @@ export interface ChurchEvent {
   englishOrganizer: string;
   organizerEmail: string;
   image: string;
+  youtubeVideoId?: string;
   registrationUrl?: string;
   isFeatured?: boolean;
   imageHasText?: boolean;
@@ -87,13 +88,13 @@ function getNextFourthSunday(): string {
 export const getEventsData = (): ChurchEvent[] => [
     {
     id: "sunday-worship-service",
-    title: "வாழும் ஜெபம் | The Living Prayer — யாபேசின் ஜெபம் (பாகம் 8)",
-    englishTitle: "The Living Prayer (வாழும் ஜெபம்) — The Prayer of Jabez · Part 8",
-    date: "2026-11-22",
+    title: "அவர் நாமம் | His Name Shall Be — கிறிஸ்துமஸ் கால புதிய போதனைத் தொடர்",
+    englishTitle: "His Name Shall Be (அவர் நாமம்) — Christmas Sermon Series · Isaiah 9:6",
+    date: "2026-11-29",
     startTimeIso: "10:00:00+10:00",
     endTimeIso: "12:00:00+10:00",
-    time: "காலை 10:00 மணி (10:00 AM)",
-    englishTime: "10:00 AM",
+    time: "ஞாயிறு காலை 10:00 மணி (29 நவம்பர் முதல் தொடங்குகிறது)",
+    englishTime: "Sundays at 10:00 AM (Starting Sunday, 29 November 2026)",
     location: "389 Old Logan Rd, Springfield, QLD 4300",
     englishLocation: "389 Old Logan Rd, Springfield, QLD 4300",
     venueName: "Westside Community Centre",
@@ -105,15 +106,18 @@ export const getEventsData = (): ChurchEvent[] => [
       addressCountry: "AU",
     },
     mapLink: "https://www.google.com/maps/search/?api=1&query=Westside+Community+Centre+389+Old+Logan+Rd+Springfield+QLD+4300",
+    contactPhone: "0423 424 948",
     category: "Worship",
-    englishCategory: "Sunday Worship · Series Finale",
-    description: "ஆராதிப்போம் வாருங்கள்! இந்த ஞாயிறு ஆராதனையில் (22 நவம்பர் 2026), போதகர் Ps JD Weslyn வழங்கும் 8 வார தொடர் செய்தியின் நிறைவுப் பகுதியான 'யாபேசின் ஜெபம் – பாகம் 8: வாழும் ஜெபம் (The Living Prayer)' சிறப்புச் செய்தியைக் கேட்கவும், தேவனை ஆராதிக்கவும் உங்களை அன்புடன் அழைக்கிறோம்.\n\nநிகழ்வு விவரங்கள்:\n* செய்தி: வாழும் ஜெபம் (The Living Prayer) — 8 வார தொடர் செய்தியின் நிறைவு · யாபேசின் ஜெபம் – பாகம் 8\n* செய்தியாளர்: Ps JD Weslyn\n* தேதி: ஞாயிறு, 22 நவம்பர் 2026\n* நேரம்: காலை 10:00 மணி\n* இடம்: வார்த்தை சுவிசேஷ திருச்சபை, 389 Old Logan Rd, Springfield, QLD 4300",
-    englishDescription: "Come, let us worship together! Join us this Sunday, 22 November 2026 at 10:00 AM as Ps JD Weslyn brings the conclusion of our 8-week sermon series on The Prayer of Jabez (Part 8) — 'The Living Prayer (வாழும் ஜெபம்)'.\n\nEvent Details:\n* Message: The Living Prayer (வாழும் ஜெபம்) — Conclusion of the 8-Week Series · The Prayer of Jabez – Part 8\n* Speaker: Ps JD Weslyn\n* Date: Sunday, 22 November 2026\n* Time: 10:00 AM\n* Location: Vaarthai Evangelical Church, 389 Old Logan Rd, Springfield, QLD 4300",
-    organizer: "Ps JD Weslyn",
-    englishOrganizer: "Ps JD Weslyn",
+    englishCategory: "Christmas Sermon Series · Starting 29 Nov",
+    scripture: "\"நமக்கு ஒரு பாலகன் பிறந்தார், நமக்கு ஒரு குமாரன் கொடுக்கப்பட்டார்; கர்த்தத்துவம் அவர் தோளின்மேலிருக்கும்; அவர் நாமம் அதிசயமானவர், ஆலோசனைக்கர்த்தா, வல்லமையுள்ள தேவன், நித்திய பிதா, சமாதானப்பிரபு என்னப்படும்.\" – ஏசாயா 9:6",
+    englishScripture: "\"For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.\" – Isaiah 9:6",
+    description: "\"நமக்கு ஒரு பாலகன் பிறந்தார்…\" இந்தக் கிறிஸ்துமஸ் காலத்தில், நவம்பர் 29 ஞாயிறு காலை 10:00 மணி முதல் தொடங்கும் புதிய போதனைத் தொடரில், இயேசுவின் நாமங்களை ஒவ்வொரு வாரமும் ஒன்றாகத் தியானிப்போம்: அதிசயமான ஆலோசனைக் கர்த்தர் • வல்லமையுள்ள தேவன் • நித்திய பிதா • சமாதானப்பிரபு • இம்மானுவேல்.\n\nதொடர் செய்திகளின் வரிசை:\n* வாரம் 1 (29 நவம்பர்): அதிசயமான ஆலோசனைக் கர்த்தர் (Wonderful Counsellor) — Ps Weslyn\n* வாரம் 2 (6 டிசம்பர்): வல்லமையுள்ள தேவன் (Mighty God) — Bro Varghese Rayar\n* வாரம் 3 (13 டிசம்பர்): நித்திய பிதா (Everlasting Father) — Ps Weslyn\n* வாரம் 4 (20 டிசம்பர்): சமாதானப்பிரபு (Prince of Peace) — Ps Weslyn\n* கிறிஸ்துமஸ் தினம் (25 டிசம்பர்): இம்மானுவேல் – தேவன் நம்மோடிருக்கிறார் (Emmanuel – God With Us) — Ps Weslyn\n\nஅனைவரையும் அன்புடன் அழைக்கிறோம்!",
+    englishDescription: "\"For unto us a child is born…\" This Christmas season, starting Sunday, 29 November 2026 at 10:00 AM, join us at Vaarthai Evangelical Church as we discover who Jesus is through the names He was given in Isaiah 9:6:\n\nSeries Schedule:\n* Week 1 (29 Nov): Wonderful Counsellor (அதிசயமான ஆலோசனைக் கர்த்தர்) — Ps Weslyn\n* Week 2 (6 Dec): Mighty God (வல்லமையுள்ள தேவன்) — Bro Varghese Rayar\n* Week 3 (13 Dec): Everlasting Father (நித்திய பிதா) — Ps Weslyn\n* Week 4 (20 Dec): Prince of Peace (சமாதானப்பிரபு) — Ps Weslyn\n* Christmas Day (25 Dec): Emmanuel – God With Us (இம்மானுவேல் – தேவன் நம்மோடிருக்கிறார்) — Ps Weslyn\n\nEveryone is welcome. Bring a friend!",
+    organizer: "Pastor Weslyn (0423 424 948)",
+    englishOrganizer: "Pastor Weslyn (0423 424 948)",
     organizerEmail: "pastor@vaarthai.org.au",
-    image: "/event-living-prayer-nov-22.jpg",
-    imageHasText: true,
+    image: "/hero-bg.jpg",
+    youtubeVideoId: "nnevIyxP7MM",
     isFeatured: true
   },
   {
