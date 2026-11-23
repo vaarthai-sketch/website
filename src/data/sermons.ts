@@ -27,6 +27,30 @@ export interface Sermon {
 
 export const sermonsData: Sermon[] = [
   {
+    id: "prayer-of-jabez-part-8",
+    title: "வாழும் ஜெபம் | The Living Prayer — யாபேசின் ஜெபம் · பகுதி 8",
+    englishTitle: "The Living Prayer | The Prayer of Jabez — Part 8",
+    speaker: "Ps Weslyn",
+    date: "2026-11-22",
+    scriptureReference: "யாக்கோபு 1:22–25 · 1 நாளாகமம் 4:9–10 · ஆதியாகமம் 12:2–3 · 2 கொரிந்தியர் 9:8–11 · ஏசாயா 53:3–4 · கலாத்தியர் 3:14",
+    englishScriptureReference: "James 1:22–25 · 1 Chronicles 4:9–10 · Genesis 12:2–3 · 2 Corinthians 9:8–11 · Isaiah 53:3–4 · Galatians 3:14",
+    scriptureText: "நீங்கள் உங்களை வஞ்சியாதபடிக்கு, திருவசனத்தைக் கேட்கிறவர்களாய் மாத்திரமல்ல, அதின்படி செய்கிறவர்களாயும் இருங்கள்.",
+    englishScriptureText: "But be doers of the word, and not hearers only, deceiving yourselves.",
+    series: "யாபேசின் ஜெபம் (Prayer of Jabez)",
+    englishSeries: "Prayer of Jabez",
+    topic: "ஜெபம் (Prayer)",
+    englishTopic: "Prayer",
+    description: "யாபேசின் ஜெபத்தை ஜெபித்தோம். இப்பொழுது என்ன? \"வாழும் ஜெபம்\" என்ற இந்தச் செய்தியில், ஜெபத்தை வார்த்தைகளோடு நிறுத்திவிடாமல், அதை அன்றாட வாழ்க்கையாக மாற்றுவது எப்படி என்று யாக்கோபு 1:22-25 மூலம் பார்க்கிறோம். கண்ணாடியைப் பார்த்துவிட்டு மறந்துபோகிறவர்களாக அல்ல, வசனத்தைச் செய்கிறவர்களாக வாழ அழைக்கப்படுகிறோம். தேவன் நமக்குக் கொடுக்கும் ஆசீர்வாதம் நம்மிடம் தேங்குவதற்கல்ல, நம் வழியாக மற்றவர்களுக்குப் பாய்வதற்கே.",
+    englishDescription: "We have prayed the prayer of Jabez. So now what? In this closing message of the series, Ps Weslyn turns to James 1:22–25 and the picture of a person who looks in a mirror and walks away forgetting what he saw. God calls us to be doers of the Word, not hearers only. Like Abraham, who was blessed in order to be a blessing (Genesis 12:2), we are called to be a channel rather than a storehouse. The Sea of Galilee lives because the Jordan flows in and out; blessing that stops with us helps no one, but blessing that flows through us reaches others and brings thanks to God. The message ends at the cross, where Jesus carried our sorrows so that the blessing promised to Abraham could reach us.\n\nThe prayer of Jabez, turned outward:\n• Bless me – so that I may share what You give and be a blessing to others\n• Enlarge my territory – give me opportunities to know and serve You\n• Let Your hand be with me – let my hands serve others in Your strength\n• Keep me from evil – and lead me so that I cause no one harm",
+    videoPlaceholder: "யாபேசின் ஜெபம் பிரசங்க வீடியோ (பகுதி 8)",
+    englishVideoPlaceholder: "The Prayer of Jabez Sermon Video (Part 8)",
+    youtubeId: "tyIaJylXZJg",
+    audioUrl: "#",
+    notesUrl: "#",
+    duration: "52:58",
+    thumbnail: "",
+  },
+  {
     id: "in-the-masters-hands",
     title: "எஜமானின் கரங்களிலே | In the Master's Hands – Acts 11–13",
     englishTitle: "In the Master's Hands — Acts 11–13 (Part 4)",
@@ -400,7 +424,7 @@ export const sermonSeries = [
     englishTitle: "Prayer of Jabez",
     description: "1 நாளாகமம் 4:9-10 வசனங்களின் அடிப்படையில் யாபேசின் ஜெபத்தைக் குறித்த வேத தியானத் தொடர்.",
     englishDescription: "A biblical meditation series on the Prayer of Jabez based on 1 Chronicles 4:9-10.",
-    count: 6,
+    count: 7,
     image: "series-jabez"
   },
   {
