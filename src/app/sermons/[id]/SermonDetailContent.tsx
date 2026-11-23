@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, BookOpen, Clock, Calendar, User } from "lucide-react";
+import { ArrowLeft, BookOpen, Clock, Calendar, User, Download, FileText } from "lucide-react";
 import { sermonsData } from "@/data/sermons";
 import { churchConfig } from "@/data/config";
 
@@ -68,7 +68,22 @@ export async function SermonDetail({ params, isEn = false }: { params: Promise<{
                 <span>{isEn ? "Topic:" : "தலைப்பு:"} <strong>{isEn ? (sermon.englishTopic || sermon.topic) : sermon.topic}</strong></span>
               </div>
 
-              {/* Removed Share & Download Buttons */}
+              {sermon.notesUrl && sermon.notesUrl !== "#" && (
+                <a
+                  href={sermon.notesUrl}
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent hover:bg-accent-dark text-primary font-bold text-xs shadow-sm transition-colors"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>
+                    {isEn
+                      ? sermon.englishNotesLabel || "Download PDF Prayer Calendar"
+                      : sermon.notesLabel || "ஜெப நாள்காட்டி பதிவிறக்கம் (PDF)"}
+                  </span>
+                </a>
+              )}
             </div>
 
             <div className="space-y-4">
@@ -99,6 +114,46 @@ export async function SermonDetail({ params, isEn = false }: { params: Promise<{
                 — {isEn ? (sermon.englishScriptureReference || "2 Timothy 3:16-17") : (sermon.scriptureReference || "2 தீமோத்தேயு 3:16-17")} ({churchConfig.bibleTranslation.split(" ")[0]})
               </cite>
             </div>
+
+            {/* Downloadable PDF Resource / Prayer Calendar Card */}
+            {sermon.notesUrl && sermon.notesUrl !== "#" && (
+              <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] text-white p-6 sm:p-8 rounded-xl border border-accent/30 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                <div className="space-y-2">
+                  <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-accent-light">
+                    <FileText className="w-4 h-4 text-accent" />
+                    <span>{isEn ? "Downloadable Resource · PDF" : "பதிவிறக்கக் கையேடு · PDF"}</span>
+                  </div>
+                  <h3 className="font-serif text-xl font-bold text-white">
+                    {isEn
+                      ? "Living the Prayer — Prayer Calendar (23 Nov 2026 – 3 Jan 2027)"
+                      : "ஜெபத்தை வாழ்வோம் · Living the Prayer — ஜெப நாள்காட்டி (நவம்பர் 23, 2026 – ஜனவரி 3, 2027)"}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
+                    {isEn
+                      ? "Each day: pray the Prayer of Jabez and take one small action for that week. Download or print this 2-page bilingual PDF calendar and guide."
+                      : "ஒவ்வொரு நாளும்: யாபேசின் ஜெபத்தை ஜெபியுங்கள், அந்த வாரத்திற்கான ஒரு சிறிய செயலைச் செய்யுங்கள். இந்த 2 பக்க இருமொழி PDF ஜெப நாள்காட்டியைப் பதிவிறக்கம் செய்து கொள்ளுங்கள்."}
+                  </p>
+                </div>
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+                  <a
+                    href={sermon.notesUrl}
+                    download="Living-the-Prayer-Calendar-Vaarthai-Church.pdf"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-accent hover:bg-accent-dark text-primary font-bold text-sm shadow-md transition-colors"
+                  >
+                    <Download className="w-4 h-4" />
+                    <span>{isEn ? "Download PDF" : "PDF பதிவிறக்கம்"}</span>
+                  </a>
+                  <a
+                    href={sermon.notesUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-white/25 hover:bg-white/10 text-white font-semibold text-xs transition-colors"
+                  >
+                    <span>{isEn ? "Open PDF" : "திறந்து பார்க்க"}</span>
+                  </a>
+                </div>
+              </div>
+            )}
 
           </div>
 

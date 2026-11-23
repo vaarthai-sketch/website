@@ -20,6 +20,8 @@ export interface Sermon {
   youtubeId?: string;
   audioUrl: string;
   notesUrl: string;
+  notesLabel?: string;
+  englishNotesLabel?: string;
   duration: string;
   thumbnail: string;
   seriesOrder?: number;
@@ -46,7 +48,9 @@ export const sermonsData: Sermon[] = [
     englishVideoPlaceholder: "The Prayer of Jabez Sermon Video (Part 8)",
     youtubeId: "tyIaJylXZJg",
     audioUrl: "#",
-    notesUrl: "#",
+    notesUrl: "/living-the-prayer-calendar.pdf",
+    notesLabel: "யாபேசின் ஜெபம் – 40 நாள் ஜெப நாள்காட்டி (PDF பதிவிறக்கம்)",
+    englishNotesLabel: "Living the Prayer – 40-Day Prayer Calendar (Download PDF)",
     duration: "52:58",
     thumbnail: "",
   },
