@@ -19,6 +19,7 @@ export interface ChurchEvent {
   };
   mapLink?: string;
   livestreamUrl?: string;
+  livestreamEmbedId?: string;
   contactPhone?: string;
   showCountdown?: boolean;
   category: "Community" | "Youth" | "Children" | "Worship" | "All-Church" | "Groups";
@@ -184,7 +185,8 @@ export const getEventsData = (): ChurchEvent[] => [
       addressCountry: "AU",
     },
     mapLink: "https://www.google.com/maps/search/?api=1&query=Oxley+Bowling+Club+24A+Englefield+Road+Oxley+QLD+4075",
-    livestreamUrl: "https://www.youtube.com/@Vaarthai-EC/streams",
+    livestreamUrl: "https://www.youtube.com/live/ICriBnFLEN4",
+    livestreamEmbedId: "ICriBnFLEN4",
     contactPhone: "0423 424 948",
     showCountdown: true,
     category: "All-Church",

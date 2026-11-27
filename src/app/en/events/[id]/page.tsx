@@ -173,30 +173,47 @@ export default async function EnglishEventDetailPage({ params }: PageProps) {
 
             {/* Livestream Link Card for Elderly & Overseas Family (India / Sri Lanka) */}
             {event.livestreamUrl && (
-              <div className="bg-gradient-to-r from-[#0F172A] to-[#1E293B] text-white p-6 rounded-xl border border-accent/30 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-5">
-                <div className="space-y-1.5">
-                  <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-accent-light">
-                    <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                    <Video className="w-4 h-4 text-accent" />
-                    <span>Christmas Livestream · Watch Live</span>
+              <div className="bg-gradient-to-r from-[#0F172A] to-[#1E293B] text-white p-6 rounded-xl border border-accent/30 shadow-md space-y-5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-accent-light">
+                      <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                      <Video className="w-4 h-4 text-accent" />
+                      <span>Christmas Livestream · Watch Live</span>
+                    </div>
+                    <h3 className="font-serif text-lg font-bold text-white">
+                      Joining from home, or watching with family in India, Sri Lanka &amp; around the World?
+                    </h3>
+                    <p className="text-xs text-stone-300 leading-relaxed">
+                      Elderly members, overseas family, and relatives in India, Sri Lanka &amp; around the world can watch the livestream right below or on YouTube starting at <strong>5:30 PM Brisbane (1:00 PM IST)</strong>.
+                    </p>
                   </div>
-                  <h3 className="font-serif text-lg font-bold text-white">
-                    Joining from home, or watching with family in India, Sri Lanka &amp; around the World?
-                  </h3>
-                  <p className="text-xs text-stone-300 leading-relaxed">
-                    Elderly members, overseas family, and relatives in India, Sri Lanka &amp; around the world can tune in live on YouTube starting at <strong>5:30 PM Brisbane (1:00 PM IST)</strong>.
-                  </p>
+                  <a
+                    href={event.livestreamUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-accent hover:bg-accent-dark text-primary font-bold text-sm shadow-md transition-colors"
+                  >
+                    <Video className="w-4 h-4" />
+                    <span>Watch Live</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
                 </div>
-                <a
-                  href={event.livestreamUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-accent hover:bg-accent-dark text-primary font-bold text-sm shadow-md transition-colors"
-                >
-                  <Video className="w-4 h-4" />
-                  <span>Watch Live</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
+                {event.livestreamEmbedId && (
+                  <div className="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-black shadow-lg">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${event.livestreamEmbedId}?rel=0`}
+                      title={`${displayTitle} — YouTube Livestream`}
+                      loading="lazy"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
+                  </div>
+                )}
               </div>
             )}
           </div>

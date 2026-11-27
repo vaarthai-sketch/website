@@ -163,30 +163,47 @@ export default async function EventDetailPage({ params }: PageProps) {
 
             {/* Livestream Link Card for Elderly & Overseas Family (India / Sri Lanka) */}
             {event.livestreamUrl && (
-              <div className="bg-gradient-to-r from-[#0F172A] to-[#1E293B] text-white p-6 rounded-xl border border-accent/30 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-5">
-                <div className="space-y-1.5">
-                  <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-accent-light">
-                    <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                    <Video className="w-4 h-4 text-accent" />
-                    <span>நேரலை ஒளிபரப்பு · Watch Live Online</span>
+              <div className="bg-gradient-to-r from-[#0F172A] to-[#1E293B] text-white p-6 rounded-xl border border-accent/30 shadow-md space-y-5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-accent-light">
+                      <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                      <Video className="w-4 h-4 text-accent" />
+                      <span>நேரலை ஒளிபரப்பு · Watch Live Online</span>
+                    </div>
+                    <h3 className="font-serif text-lg font-bold text-white">
+                      இல்லத்திலிருந்து இணைபவர்களுக்கும், இந்தியா, இலங்கை மற்றும் உலகெங்கும் உள்ள குடும்பத்தினருக்கும்
+                    </h3>
+                    <p className="text-xs text-stone-300 leading-relaxed">
+                      Joining from home, or watching with family in India, Sri Lanka &amp; around the World? பிரிஸ்பேன் நேரம் மாலை 5:30 மணி (இந்தியா / இலங்கை நேரம் மதியம் 1:00 மணி) முதல் கீழே உள்ள நேரலை வீடியோவிலோ அல்லது எங்கள் YouTube பக்கத்திலோ கண்டு மகிழலாம்.
+                    </p>
                   </div>
-                  <h3 className="font-serif text-lg font-bold text-white">
-                    இல்லத்திலிருந்து இணைபவர்களுக்கும், இந்தியா, இலங்கை மற்றும் உலகெங்கும் உள்ள குடும்பத்தினருக்கும்
-                  </h3>
-                  <p className="text-xs text-stone-300 leading-relaxed">
-                    Joining from home, or watching with family in India, Sri Lanka &amp; around the World? பிரிஸ்பேன் நேரம் மாலை 5:30 மணி (இந்தியா / இலங்கை நேரம் மதியம் 1:00 மணி) முதல் எங்கள் YouTube பக்கத்தில் நேரலையில் (Livestream) கண்டு மகிழலாம்.
-                  </p>
+                  <a
+                    href={event.livestreamUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-accent hover:bg-accent-dark text-primary font-bold text-sm shadow-md transition-colors"
+                  >
+                    <Video className="w-4 h-4" />
+                    <span>Watch Live · நேரலை</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
                 </div>
-                <a
-                  href={event.livestreamUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-accent hover:bg-accent-dark text-primary font-bold text-sm shadow-md transition-colors"
-                >
-                  <Video className="w-4 h-4" />
-                  <span>Watch Live · நேரலை</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
+                {event.livestreamEmbedId && (
+                  <div className="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-black shadow-lg">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${event.livestreamEmbedId}?rel=0`}
+                      title={`${event.title} — YouTube Livestream`}
+                      loading="lazy"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
+                  </div>
+                )}
               </div>
             )}
           </div>
